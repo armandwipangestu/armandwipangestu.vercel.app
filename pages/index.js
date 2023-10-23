@@ -2,10 +2,21 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
+import Metadata from "@/components/utilities/metadata";
 
 const Home = ({ posts }) => {
-  console.log(posts);
-  return <h1>test</h1>;
+  return (
+    <>
+      <Metadata
+        title="Portofolio"
+        description="Website Portofolio Dibuat Menggunakan NextJS dan TailwindCSS"
+        image="/images/metadata/root.png"
+        url="https://armandwipangestu.vercel.app"
+      />
+      <p className="pt-36">test</p>
+    </>
+  );
 };
 
 export async function getStaticProps() {
