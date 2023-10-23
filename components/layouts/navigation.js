@@ -52,7 +52,7 @@ const Navigation = () => {
 
   const menus = [
     { title: "Beranda", target: "/" },
-    { title: "Tentang Saya", target: "/about" },
+    { title: "Tentang Saya", target: "/tentang-saya" },
     { title: "Portofolio", target: "/portofolio" },
     { title: "Skills", target: "/skills" },
     { title: "Pendidikan", target: "/pendidikan" },
