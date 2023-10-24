@@ -150,14 +150,14 @@ const Navigation = () => {
                         <div
                           className={`toggle-icon rounded-full p-1 ${
                             darkMode
-                              ? "dark hover:bg-accents-200"
-                              : "light hover:bg-emphasis-200"
+                              ? "dark hover:dark:bg-cyan-300/20"
+                              : "light hover:bg-blue-200/60"
                           }`}
                         >
                           {darkMode ? (
                             <Sun className="transition duration-300 ease-in-out dark:text-slate-400" />
                           ) : (
-                            <Moon className="transition duration-300 ease-in-out text-dark" />
+                            <Moon className="transition duration-300 ease-in-out text-accents-300" />
                           )}
                         </div>
                       </label>

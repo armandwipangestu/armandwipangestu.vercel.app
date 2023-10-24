@@ -119,8 +119,8 @@ const BlogPage = ({ posts }) => {
               </h2>
 
               <a
-                href="#new_articles"
-                className="rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
+                href="#artikel-terbaru"
+                className="rounded-full bg-primary px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
               >
                 Baca Artikel
               </a>
@@ -166,7 +166,7 @@ const BlogPage = ({ posts }) => {
           <div className="mx-auto px-4 sm:px-6 md:px-4 lg:max-w-6xl lg:px-8 xl:max-w-7xl">
             <div className="space-y-10 sm:space-y-24">
               <div style={{ opacity: 1, transform: "none" }}>
-                <section id="new_articles">
+                <section id="artikel-terbaru">
                   <div className="mb-6">
                     <h2 className="text-lg font-semibold leading-6 tracking-tight dark:text-white">
                       Artikel Terbaru
@@ -233,10 +233,10 @@ const BlogPage = ({ posts }) => {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 lg:mt-10 flex justify-end">
+                  <div className="mt-10 flex justify-end">
                     <Link
                       href="/artikel"
-                      className="inline-flex items-center justify-center rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
+                      className="rounded-full bg-primary px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
                     >
                       Lihat Lebih Banyak
                     </Link>
