@@ -218,7 +218,7 @@ const BlogPage = ({ posts }) => {
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-x-1">
                               <Link
-                                href={`/${post.frontmatter.tag.toLowerCase()}`}
+                                href={`/blog/tag/${post.frontmatter.tag.toLowerCase()}`}
                               >
                                 <div className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
                                   {post.frontmatter.tag}
