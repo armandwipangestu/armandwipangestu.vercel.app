@@ -178,7 +178,7 @@ const BlogPage = ({ posts }) => {
                   <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24">
                     {posts.slice(0, 6).map((post, index) => (
                       <div key={index}>
-                        <Link href={`/blog/${post.slug}`}>
+                        <Link href={`/blog/posts/${post.slug}`}>
                           <div
                             data-radix-aspect-ratio-wrapper=""
                             style={{
@@ -207,7 +207,7 @@ const BlogPage = ({ posts }) => {
                           <div className="line-clamp-1 dark:text-white">
                             <Link
                               className="text-lg font-medium"
-                              href={`/blog/${post.slug}`}
+                              href={`/blog/posts/${post.slug}`}
                             >
                               {post.frontmatter.title}
                             </Link>
@@ -258,7 +258,7 @@ export const getStaticProps = async () => {
   // Get slug from file name and frontmatter from posts
   const posts = files.map((filename) => {
     // Create a slug from file name
-    const slug = filename.replace("md", "");
+    const slug = filename.replace(".md", "");
 
     // Get frontmatter
     const markdownWithMeta = fs.readFileSync(

@@ -34,7 +34,7 @@ const ArticleLayout = ({ posts, tag }) => {
                 <div style={{ opacity: 1, transform: "none" }}>
                   <section>
                     <div className="grid gap-y-6 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24">
-                      <Link href={`/blog/${mainCard.slug}`}>
+                      <Link href={`/blog/posts/${mainCard.slug}`}>
                         <div
                           data-radix-aspect-ratio-wrapper=""
                           style={{
@@ -63,7 +63,7 @@ const ArticleLayout = ({ posts, tag }) => {
                         <div className="line-clamp-1 dark:text-white">
                           <Link
                             className="text-lg font-medium"
-                            href={`/blog/${mainCard.slug}`}
+                            href={`/blog/posts/${mainCard.slug}`}
                           >
                             {mainCard.frontmatter.title}
                           </Link>
@@ -159,7 +159,7 @@ const ArticleLayout = ({ posts, tag }) => {
                   <div className="mt-6 flex items-center gap-x-6 lg:mt-10">
                     <Link
                       className="rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
-                      href={`/blog/${mainCard.slug}`}
+                      href={`/blog/posts/${mainCard.slug}`}
                     >
                       Baca selengkapnya
                     </Link>
@@ -192,7 +192,7 @@ const ArticleLayout = ({ posts, tag }) => {
                         inset: "0px",
                       }}
                     >
-                      <Link href={`/blog/${mainCard.slug}`}>
+                      <Link href={`/blog/posts/${mainCard.slug}`}>
                         <img
                           alt="Progressive Web Apps"
                           className="h-full w-full object-cover object-center lg:rounded-md"
@@ -219,7 +219,7 @@ const ArticleLayout = ({ posts, tag }) => {
                   <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24">
                     {cards.map((card, index) => (
                       <div key={index}>
-                        <Link href={`/blog/${card.slug}`}>
+                        <Link href={`/blog/posts/${card.slug}`}>
                           <div
                             data-radix-aspect-ratio-wrapper=""
                             style={{
@@ -248,7 +248,7 @@ const ArticleLayout = ({ posts, tag }) => {
                           <div className="line-clamp-1 dark:text-white">
                             <Link
                               className="text-lg font-medium"
-                              href={`/blog/${card.slug}`}
+                              href={`/blog/posts/${card.slug}`}
                             >
                               {card.frontmatter.title}
                             </Link>

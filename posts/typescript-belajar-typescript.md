@@ -19,7 +19,7 @@ Untuk detail lebih lanjut nya kalian bisa mengunjungi website resmi nya disini [
 
 ## Proses Development Bahasa TypeScript
 
-![Proses Development TypeScript](../images/posts/assets/belajar_typescript/proses_development_typescript.png)
+![Proses Development TypeScript](/images/posts/assets/belajar_typescript/proses_development_typescript.png)
 
 - Pada tahap pertama, kita akan membuat kode program menggunakan bahasa pemrograman TypeScript.
 - Setelah kode program yang kita buat tersebut, nantinya akan dilakukan kompilasi menggunakan `TypeScript Compiler`.
