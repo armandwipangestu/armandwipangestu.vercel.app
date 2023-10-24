@@ -70,12 +70,20 @@ code {
   /* border: 1px solid rgba(110, 118, 129, 0.4); */
 }
 
+@font-face {
+  font-family: "Fira Code Nerd Font Bold";
+  src: url("/fonts/FiraCodeNerdFont-Bold.ttf") format("truetype"); /* Berkas font bold */
+  font-weight: bold;
+  font-style: normal;
+}
+
 pre code.hljs {
   display: block;
   overflow-x: auto;
   /* margin-top: 1.5em; */
   padding: 1em;
   /* background-color: #0f1419; */
+  font-family: "Fira Code Nerd Font Bold", monospace;
 }
 
 code.hljs {
