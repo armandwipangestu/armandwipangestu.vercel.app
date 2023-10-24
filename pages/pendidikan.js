@@ -7,7 +7,7 @@ const EducationPage = () => {
         title="Portofolio - Pendidikan"
         description="Berikut adalah pendidikan yang saya tempuh"
         image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app/skills"
+        url="https://armandwipangestu.vercel.app/pendidikan"
       />
 
       <section
