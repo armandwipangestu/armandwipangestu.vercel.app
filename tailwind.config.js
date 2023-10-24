@@ -39,7 +39,63 @@ module.exports = {
       screens: {
         "2xl": "1320px",
       },
+      typography: ({}) => ({
+        DEFAULT: {
+          css: {
+            pre: {
+              // "background-color": "#0f1419",
+              "font-family": "Fira Code, monospace",
+            },
+            p: {
+              "&::before": {
+                content: '"" !important',
+              },
+              "&::after": {
+                content: '"" !important',
+              },
+            },
+            code: {
+              "&::before": {
+                content: '"" !important',
+              },
+              "&::after": {
+                content: '"" !important',
+              },
+            },
+            li: {
+              "&::marker": {
+                color: "rgb(148 163 184)",
+              },
+              // color: "rgb(148 163 184)",
+            },
+            a: {
+              "text-decoration": "none !important",
+              "&:hover": {
+                "text-decoration": "underline !important",
+                color: "#1d4ed8",
+              },
+            },
+            // "blockquote strong": {
+            //   color: "#010613",
+            //   opacity: 0.7,
+            // },
+            // table: {
+            //   "border-color": ""
+            // },
+            "--tw-prose-body": "#888",
+            "--tw-prose-headings": "#fff",
+            "--tw-prose-lead": "#ffffff",
+            "--tw-prose-links": "#3b82f6",
+            "--tw-prose-bold": "#ffffff",
+            "--tw-prose-counters": "#ffffff",
+            "--tw-prose-bullets": "#ffffff",
+            "--tw-prose-hr": "#ffffff",
+            "--tw-prose-captions": "#ffffff",
+            "--tw-prose-code": "rgb(226 232 240)",
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
