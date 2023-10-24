@@ -6,7 +6,7 @@ html {
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  @apply dark:bg-dark;
+  /* @apply dark:bg-dark; */
   width: 12px !important;
   /*background-color: transparent;*/
 }
@@ -19,6 +19,12 @@ html {
   border-style: solid;
   border-color: transparent;
   border-image: initial;
+}
+
+/* scrollbar dark mode */
+.dark {
+  background-color: #010613;
+  color-scheme: dark;
 }
 
 .navbar-fixed {

@@ -29,6 +29,8 @@ const Metadata = ({ title, description, image, url }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {/* <meta name="color-scheme" content="dark" /> */}
     </Head>
   );
 };
