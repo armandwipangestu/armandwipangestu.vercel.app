@@ -23,7 +23,7 @@ Pertanyaan nya, bagaimana dulu ketika belum ada CSS kita dapat memberikan stylin
 </font>
 ```
 
-![h1](../images/posts/assets/belajar_css/h1.png)
+![h1](/images/posts/assets/belajar_css/h1.png)
 
 Bisa kalian lihat diatas, hanya untuk membuat sebuah style pada element h1 dengan font arial, warna nya salmon kalian butuh `font-size`, `font-color`, `font-face` dan lainnya, panjang bukan? bayangkan jika kalian memiliki banyak element seperti h1 terdapat 5 buah, paragraph ada 10 buah. Kebayang bukan? sangat berantakan sekali karena mempersatukan antara content dengan style. Nah jika kalian sudah tau CSS jangan lagi lakukan hal tersebut.
 
