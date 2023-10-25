@@ -29,7 +29,7 @@ const Navigation = () => {
     const storedTheme = localStorage.getItem("dark-mode");
     storedTheme !== null ? setDarkMode(storedTheme === "true") : "";
 
-    const mediaQuery = window.matchMedia("(max-width: 600px)");
+    const mediaQuery = window.matchMedia("(max-width: 1023px)");
     setIsMobile(mediaQuery.matches);
 
     const handleMediaQuery = (e) => setIsMobile(e.matches);
@@ -129,10 +129,10 @@ const Navigation = () => {
                     href={menu.target}
                     className={`group mx-2 ${
                       isMobile ? "my-2" : ""
-                    } flex cursor-pointer rounded-full px-4 py-2 text-base text-accents-300 transition duration-300 hover:bg-blue-200/60 hover:text-cyan-600 dark:text-slate-400 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 ${
+                    } flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 hover:bg-blue-200/60 hover:text-cyan-600 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 ${
                       pathName === menu.target
                         ? "bg-cyan-200/60 text-cyan-600 dark:bg-cyan-300/30 dark:text-cyan-600"
-                        : ""
+                        : "text-accents-300 dark:text-slate-400"
                     }`}
                     key={index}
                   >
@@ -150,8 +150,8 @@ const Navigation = () => {
                         <div
                           className={`toggle-icon rounded-full p-1 ${
                             darkMode
-                              ? "dark hover:dark:bg-cyan-300/20"
-                              : "light hover:bg-blue-200/60"
+                              ? "hover:dark:bg-cyan-300/20" //dark
+                              : "hover:bg-blue-200/60" //light
                           }`}
                         >
                           {darkMode ? (
