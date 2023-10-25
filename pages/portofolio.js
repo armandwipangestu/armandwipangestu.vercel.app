@@ -6,7 +6,9 @@ const PortofolioPage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/portofolio");
+      const response = await fetch(
+        "https://portofolio-next-js-armandwipangestu.vercel.app/api/portofolio"
+      );
       const data = await response.json();
       setPortos(data.data);
     } catch (error) {
