@@ -27,6 +27,7 @@ const ArticleLayout = ({ posts, tag }) => {
                 <div className="mx-auto">
                   <div className="flex items-center justify-center border-b border-dark pb-8 dark:border-white/10">
                     <h1 className="text-dark text-lg leading-5 dark:text-white">
+                      {tag !== "posts" ? "#" : ""}
                       {tag}
                     </h1>
                   </div>

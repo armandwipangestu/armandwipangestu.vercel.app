@@ -15,7 +15,7 @@ const PostsPage = ({ posts }) => {
         url={`https://armandwipangestu.vercel.app/blog/posts`}
       />
 
-      <ArticleLayout posts={posts} />
+      <ArticleLayout posts={posts} tag="posts" />
     </>
   );
 };
