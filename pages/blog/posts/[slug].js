@@ -77,8 +77,8 @@ const DynamicSinglePagePost = ({
           "w-3",
           "rounded-full",
           "bg-red-400",
-          "border-2",
-          "dark:border-none"
+          "border-[2.5px]",
+          "border-[#696a73]"
         );
         innerDiv.appendChild(redDot);
 
@@ -88,8 +88,8 @@ const DynamicSinglePagePost = ({
           "w-3",
           "rounded-full",
           "bg-yellow-400",
-          "border-2",
-          "dark:border-none"
+          "border-[2.5px]",
+          "border-[#696a73]"
         );
         innerDiv.appendChild(yellowDot);
 
@@ -99,8 +99,8 @@ const DynamicSinglePagePost = ({
           "w-3",
           "rounded-full",
           "bg-green-400",
-          "border-2",
-          "dark:border-none"
+          "border-[2.5px]",
+          "border-[#696a73]"
         );
         innerDiv.appendChild(greenDot);
 
