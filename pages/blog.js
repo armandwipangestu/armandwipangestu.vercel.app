@@ -120,7 +120,7 @@ const BlogPage = ({ posts }) => {
 
               <a
                 href="#artikel-terbaru"
-                className="rounded-full bg-primary px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
+                className="rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
               >
                 Baca Artikel
               </a>
@@ -236,7 +236,7 @@ const BlogPage = ({ posts }) => {
                   <div className="mt-10 flex justify-end">
                     <Link
                       href="/blog/posts"
-                      className="rounded-full bg-primary px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
+                      className="rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
                     >
                       Lihat Lebih Banyak
                     </Link>

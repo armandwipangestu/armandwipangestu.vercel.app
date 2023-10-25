@@ -69,7 +69,7 @@ const Navigation = () => {
           <div className="px-4">
             <Link
               href="/"
-              className="block py-5 text-lg font-bold lowercase text-primary"
+              className="block py-5 text-lg font-bold lowercase text-dark dark:text-white"
             >
               &{">"} /dev/null
             </Link>
