@@ -235,7 +235,7 @@ const BlogPage = ({ posts }) => {
                   </div>
                   <div className="mt-10 flex justify-end">
                     <Link
-                      href="/artikel"
+                      href="/blog/posts"
                       className="rounded-full bg-primary px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
                     >
                       Lihat Lebih Banyak
