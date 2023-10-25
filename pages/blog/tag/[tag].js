@@ -36,6 +36,7 @@ export const getStaticPaths = async () => {
       { params: { tag: "sysadmin" } },
       { params: { tag: "networking" } },
       { params: { tag: "linux" } },
+      { params: { tag: "git" } },
       { params: { tag: "setup" } },
     ],
     fallback: false,
