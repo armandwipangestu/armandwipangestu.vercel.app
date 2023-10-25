@@ -1,8 +1,21 @@
 import React from "react";
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const menus = [
+  { title: "Beranda", target: "/" },
+  { title: "Tentang Saya", target: "/tentang-saya" },
+  { title: "Portofolio", target: "/portofolio" },
+  { title: "Skills", target: "/skills" },
+  { title: "Pendidikan", target: "/pendidikan" },
+  { title: "Pengalaman", target: "/pengalaman" },
+  { title: "Blog", target: "/blog" },
+];
 
 const Footer = () => {
+  const pathName = usePathname();
+
   return (
     <footer className="relative w-full border-t border-white/10 pt-12 transition duration-300 ease-in-out dark:bg-dark lg:pt-20">
       <div className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl">
@@ -47,74 +60,24 @@ const Footer = () => {
           <div className="mt-16 grid gap-8 sm:grid-cols-2 xl:mt-0">
             <div className="gap-8">
               <div>
-                <h3 className="leading text-sm font-semibold dark:text-white">
-                  Kategori Tulisan
+                <h3 className="leading text-xl font-bold dark:text-white">
+                  Tautan
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/artikel"
-                    >
-                      Artikel
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/programming"
-                    >
-                      Programming
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/sysadmin"
-                    >
-                      SysAdmin
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/networking"
-                    >
-                      Networking
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/linux"
-                    >
-                      Linux
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/setup"
-                    >
-                      Setup
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-sm leading-6 text-slate-400 hover:text-primary"
-                      href="/about"
-                    >
-                      About
-                    </Link>
-                  </li>
+                  {menus.map((menu, index) => (
+                    <li key={index}>
+                      <Link
+                        className={`text-base leading-6 ${
+                          pathName === menu.target
+                            ? "text-primary"
+                            : "text-slate-400"
+                        } hover:text-primary`}
+                        href={menu.target}
+                      >
+                        {menu.title}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
