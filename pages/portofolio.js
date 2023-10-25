@@ -1,5 +1,6 @@
 import Metadata from "@/components/utilities/metadata";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 const PortofolioPage = () => {
   const [portos, setPortos] = useState([]);
@@ -67,32 +68,38 @@ const PortofolioPage = () => {
           <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24 mt-20 px-4">
             {portos.map((porto, index) => (
               <div key={index}>
-                <div
-                  data-radix-aspect-ratio-wrapper=""
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    paddingBottom: "56.25%",
-                  }}
-                >
+                <Link href={porto.link}>
                   <div
-                    className="ring-border/50 text-accent-foreground grid place-content-center overflow-hidden rounded-[0.60rem] bg-accent font-mono text-sm ring-1 ring-black dark:ring-white"
+                    data-radix-aspect-ratio-wrapper=""
                     style={{
-                      position: "absolute",
-                      inset: "0px",
+                      position: "relative",
+                      width: "100%",
+                      paddingBottom: "56.25%",
                     }}
                   >
-                    <img
-                      alt=""
-                      height="360"
-                      width="640"
-                      src={porto.thubmnail}
-                    />
+                    <div
+                      className="ring-border/50 text-accent-foreground grid place-content-center overflow-hidden rounded-[0.60rem] bg-accent font-mono text-sm ring-1 ring-black dark:ring-white"
+                      style={{
+                        position: "absolute",
+                        inset: "0px",
+                      }}
+                    >
+                      <img
+                        alt=""
+                        height="360"
+                        width="640"
+                        src={porto.thubmnail}
+                      />
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <div className="mt-4 rounded-lg">
                   <div className="line-clamp-1 dark:text-white">
-                    {porto.title}
+                    <Link href={porto.link}>
+                      <span className="hover:text-primary transition duration-300 ease-in-out">
+                        {porto.title}
+                      </span>
+                    </Link>
                   </div>
                   <div className="mb-4 mt-2 line-clamp-2 text-sm text-slate-400">
                     {porto.excerpt}

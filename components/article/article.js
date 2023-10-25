@@ -66,7 +66,9 @@ const ArticleLayout = ({ posts, tag }) => {
                             className="text-lg font-medium"
                             href={`/blog/posts/${mainCard.slug}`}
                           >
-                            {mainCard.frontmatter.title}
+                            <span className="hover:text-primary transition duration-300 ease-in-out">
+                              {mainCard.frontmatter.title}
+                            </span>
                           </Link>
                         </div>
                         <div className="mb-4 mt-2 line-clamp-2 text-sm text-slate-400">
@@ -251,7 +253,9 @@ const ArticleLayout = ({ posts, tag }) => {
                               className="text-lg font-medium"
                               href={`/blog/posts/${card.slug}`}
                             >
-                              {card.frontmatter.title}
+                              <span className="hover:text-primary transition duration-300 ease-in-out">
+                                {card.frontmatter.title}
+                              </span>
                             </Link>
                           </div>
                           <div className="mb-4 mt-2 line-clamp-2 text-sm text-slate-400">

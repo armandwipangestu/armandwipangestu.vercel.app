@@ -209,7 +209,9 @@ const BlogPage = ({ posts }) => {
                               className="text-lg font-medium"
                               href={`/blog/posts/${post.slug}`}
                             >
-                              {post.frontmatter.title}
+                              <span className="hover:text-primary transition duration-300 ease-in-out">
+                                {post.frontmatter.title}
+                              </span>
                             </Link>
                           </div>
                           <div className="mb-4 mt-2 line-clamp-2 text-sm text-slate-400">
