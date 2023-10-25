@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import Navigation from "./navigation";
 import Footer from "./footer";
+import JumpToTop from "../utilities/JumpToTop";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
     <div className={poppins.className}>
       <Navigation />
       <main>{children}</main>
+      <JumpToTop />
       <Footer />
     </div>
   );
