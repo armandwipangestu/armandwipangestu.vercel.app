@@ -1,4 +1,5 @@
 ---
+published: true
 title: "TypeScript - Belajar TypeScript"
 tag: "Programming"
 date: "October 16 2023"
