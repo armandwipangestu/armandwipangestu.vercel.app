@@ -213,7 +213,7 @@ const DynamicSinglePagePost = ({
             <div className="md:w-6/12 w-full mx-auto flex items-center flex-col">
               <div className="flex items-center text-accents-3 dark:text-slate-400 space-x-3">
                 <div className="capitalize text-base">
-                  <Link href={`/${tag.toLowerCase()}`}>{tag}</Link>
+                  <Link href={`/blog/tag/${tag.toLowerCase()}`}>{tag}</Link>
                 </div>
                 <span>•</span>
                 <div>{date}</div>
