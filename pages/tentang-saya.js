@@ -1,4 +1,5 @@
 import Metadata from "@/components/utilities/metadata";
+import { FaGithub, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
@@ -65,6 +66,44 @@ const AboutPage = () => {
                 kasih atas kunjungannya, dan mari bersama-sama menginspirasi dan
                 memajukan dunia teknologi!
               </p>
+
+              <div className="flex items-center">
+                {/* Github */}
+                <a
+                  href="https://github.com/armandwipangestu"
+                  target="_blank"
+                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                  <FaGithub className="h-6 w-6" />
+                </a>
+
+                {/* Youtube */}
+                <a
+                  href="https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A"
+                  target="_blank"
+                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                  <FaYoutube className="h-6 w-6" />
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/devvnnull/"
+                  target="_blank"
+                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                  <FaInstagram className="h-6 w-6" />
+                </a>
+
+                {/* Linkedin */}
+                <a
+                  href="https://www.linkedin.com/in/arman-dwi-pangestu-08704a220/"
+                  target="_blank"
+                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                  <FaLinkedin className="h-6 w-6" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
