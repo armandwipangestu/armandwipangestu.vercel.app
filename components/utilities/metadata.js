@@ -19,7 +19,7 @@ const Metadata = ({ title, description, image, url }) => {
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content={`${process.env.NEXT_PUBLIC_BASE_URL}/${image}`}
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}${image}`}
       />
       {/* <meta property="og:image:width" content="460"/>
         <meta property="og:image:height" content="230"/>
@@ -36,7 +36,7 @@ const Metadata = ({ title, description, image, url }) => {
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image"
-        content={`${process.env.NEXT_PUBLIC_BASE_URL}/${image}`}
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}${image}`}
       />
 
       {/* <meta name="color-scheme" content="dark" /> */}

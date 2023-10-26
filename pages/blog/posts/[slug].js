@@ -203,7 +203,7 @@ const DynamicSinglePagePost = ({
       <Metadata
         title={title}
         description={excerpt}
-        image="metadata/root.png"
+        image={cover_image}
         url={`blog/posts/${slug}`}
       />
 
