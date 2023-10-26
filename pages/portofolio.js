@@ -68,7 +68,7 @@ const PortofolioPage = () => {
           <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24 mt-20 px-4">
             {portos.map((porto, index) => (
               <div key={index}>
-                <Link href={porto.link}>
+                <Link href={porto.link} target="_blank">
                   <div
                     data-radix-aspect-ratio-wrapper=""
                     style={{
@@ -96,7 +96,7 @@ const PortofolioPage = () => {
                 </Link>
                 <div className="mt-4 rounded-lg">
                   <div className="line-clamp-1 dark:text-white">
-                    <Link href={porto.link}>
+                    <Link href={porto.link} target="_blank">
                       <span className="hover:text-primary transition duration-300 ease-in-out">
                         {porto.title}
                       </span>
@@ -109,7 +109,7 @@ const PortofolioPage = () => {
                     <div className="flex items-center gap-x-1">
                       {porto.techs?.map((tech, index) => (
                         <div
-                          className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none"
+                          className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none cursor-default"
                           key={index}
                         >
                           {tech}
