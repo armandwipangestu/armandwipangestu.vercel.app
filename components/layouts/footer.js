@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -17,7 +17,7 @@ const Footer = () => {
   const pathName = usePathname();
 
   return (
-    <footer className="relative w-full border-t border-white/10 pt-12 transition duration-300 ease-in-out dark:bg-dark lg:pt-20">
+    <footer className="relative w-full border-t border-white/10 pt-12 transition duration-300 ease-in-out dark:bg-dark dark:opacity-80 lg:pt-20">
       <div className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl">
         <div
           className="aspect-[1500/632] w-[69.25rem] flex-none bg-gradient-to-r from-cyan-600 to-cyan-800 opacity-25 dark:block"
@@ -45,15 +45,27 @@ const Footer = () => {
             <div className="flex gap-x-1">
               <a
                 href="https://github.com/armandwipangestu"
-                className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
                 <FaGithub className="h-6 w-6" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A"
-                className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
               >
                 <FaYoutube className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/devvnnull/"
+                className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <FaInstagram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/arman-dwi-pangestu-08704a220/"
+                className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <FaLinkedin className="h-6 w-6" />
               </a>
             </div>
           </div>
