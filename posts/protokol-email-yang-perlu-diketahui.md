@@ -33,11 +33,11 @@ Untuk mempermudah mengingat apa yang dilakukan SMTP, lihat saja pada akronim ata
 
 Sebagai contoh jika Anda mengirimkan sebuah email menggunakan email client, seperti microsoft outlook dan ketika Anda menekan tombol kirim, email akan melakukan perjalanan atau terkirim dari komputer Anda ke mail server menggunakan protokol SMTP ini. Maka dari itu mail server ini juga dapat disebut atau merupakan sebuah SMTP Server.
 
-![Send Email](../images/posts/assets/protokol_email/sending_email.png)
+![Send Email](${NEXT_PUBLIC_PUBLIC_ASSETS}/protokol_email/sending_email.png)
 
 Sebagai contoh jika Anda menggunakan gmail untuk SMTP Server nya maka address yang harus di isi adalah `smtp.gmail.com` dan SMTP Server akan mengirimkan pesan ke penerima atau tujuan menggunakan SMTP
 
-![Mail Work](../images/posts/assets/protokol_email/mail_work.png)
+![Mail Work](${NEXT_PUBLIC_PUBLIC_ASSETS}/protokol_email/mail_work.png)
 
 Kemudian email akan bertahan di mail server penerima hingga user login menggunakan email dan men-download email menggunakan POP3 atau IMAP, atau mereka juga dapat melihat email secara langsung di server menggunakan webmail.
 
@@ -67,9 +67,9 @@ Sebagai contoh:
 >
 > Disini login akun email yang sama namun berbeda device atau perangkat
 
-| User1                                                           | User2                                                           |
-| --------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![User1](../images/posts/assets/protokol_email/mail_user_1.png) | ![User2](../images/posts/assets/protokol_email/mail_user_2.png) |
+| User1                                                                 | User2                                                                 |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| ![User1](${NEXT_PUBLIC_PUBLIC_ASSETS}/protokol_email/mail_user_1.png) | ![User2](${NEXT_PUBLIC_PUBLIC_ASSETS}/protokol_email/mail_user_2.png) |
 
 Secara default atau bawaan ketika menggunakan POP3, email akan dihapus di sisi mail server ketika terdownload pada sebuah device atau perangkat, sehingga _tidak ada copy_ email atau tersimpan di sisi server.
 
@@ -89,9 +89,9 @@ Sebagai contoh:
 >
 > Disini login akun email yang sama namun berbeda device atau perangkat
 
-| User1                                                           | User2                                                                |
-| --------------------------------------------------------------- | -------------------------------------------------------------------- |
-| ![User1](../images/posts/assets/protokol_email/mail_user_1.png) | ![User2](../images/posts/assets/protokol_email/mail_user_2_imap.png) |
+| User1                                                                 | User2                                                                      |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ![User1](${NEXT_PUBLIC_PUBLIC_ASSETS}/protokol_email/mail_user_1.png) | ![User2](${NEXT_PUBLIC_PUBLIC_ASSETS}/protokol_email/mail_user_2_imap.png) |
 
 Jadi ketika Anda membuka email di komputer, tablet, dan smartphone maka email tersebut akan persis sama karena semua nya tersinkronisasi.
 

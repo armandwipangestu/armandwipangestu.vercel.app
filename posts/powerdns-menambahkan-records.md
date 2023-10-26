@@ -12,7 +12,7 @@ author_image: "/images/posts/author/arman.png"
 
 ## Apa itu Zone dan Record
 
-![Zone dan Records](../images/posts/assets/pdns_records/zone-dan-records.png)
+![Zone dan Records](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/zone-dan-records.png)
 
 - Zone
 
@@ -30,7 +30,7 @@ Setelah memahami apa itu zone dan record, langkah selanjutnya adalah membuat zon
 
 - **Langkah Pertama**: Login kedalam PowerDNS Admin sebagai role admin
 
-![PowerDNS Admin](../images/posts/assets/pdns_records/pdns-admin.png)
+![PowerDNS Admin](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdns-admin.png)
 
 - **Langkah Kedua**: Pergi ke tab menu `Create Zone`
 
@@ -40,7 +40,7 @@ Setelah memahami apa itu zone dan record, langkah selanjutnya adalah membuat zon
 
 Maka sekarang akan berpindah ke halaman `dashboard` dan akan muncul zone baru dengan nama nya adalah `devnull.co.id`
 
-![PowerDNS Dashboard](../images/posts/assets/pdns_records/pdns-dashboard-zone.png)
+![PowerDNS Dashboard](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdns-dashboard-zone.png)
 
 ### Melalui Command Line Interface atau CLI
 
@@ -50,11 +50,11 @@ Untuk menambahkan zone baru melalui CLI, kalian bisa menggunakan perintah beriku
 pdnsutil create-zone <domain.tld>
 ```
 
-![PowerDNS Create Zone](../images/posts/assets/pdns_records/pdns-create-zone.png)
+![PowerDNS Create Zone](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdns-create-zone.png)
 
 Untuk melihat nya kalian bisa mengunjungi PowerDNS Admin di menu `Dashboard` maka akan muncul zone yang sudah dibuat sebelumnya
 
-![PowerDNS Dashboard CLI](../images/posts/assets/pdns_records/pdns-dashboard-zone-cli.png)
+![PowerDNS Dashboard CLI](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdns-dashboard-zone-cli.png)
 
 atau bisa menggunakan CLI dengan perintah
 
@@ -64,7 +64,7 @@ pdnsutil edit-zone <domain.tld>
 
 Maka akan masuk ke text editor dengan isian file konfigurasi zone tersebut.
 
-![PowerDNS Dashboard CLI](../images/posts/assets/pdns_records/pdnsutil-edit-zone.png)
+![PowerDNS Dashboard CLI](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdnsutil-edit-zone.png)
 
 ## Menambahkan Record A untuk Zone
 
@@ -84,7 +84,7 @@ Setelah sebelumnya membuat zone dengan nama domain `devnull.co.id`, maka sekaran
 
 - **Langkah Empat**: Apabila sudah selesai klik tombol `Save` pada bagian `Edit` kemudian klik tombol di bagian atas kanan dengan tulisan `Save Changes`. Maka sekarang seharusnya record baru berhasil ditambahkan.
 
-![PowerDNS New Records](../images/posts/assets/pdns_records/pdns-new-records.png)
+![PowerDNS New Records](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdns-new-records.png)
 
 ### Melalui Command Line Interface atau CLI
 
@@ -96,7 +96,7 @@ pdnsutil edit-zone <domain.tld>
 
 Maka akan masuk ke text editor dengan isian file konfigurasi zone tersebut.
 
-![PowerDNS Dashboard CLI](../images/posts/assets/pdns_records/pdnsutil-edit-zone2.png)
+![PowerDNS Dashboard CLI](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdnsutil-edit-zone2.png)
 
 Selanjutnya kalian cukup isikan dengan format
 
@@ -110,7 +110,7 @@ Misalkan disini saya akan menambahkan record untuk webserver saya yang berada di
 devnull.co.id   3600    IN      A       172.16.0.133
 ```
 
-![PowerDNS New Records CLI](../images/posts/assets/pdns_records/pdns-new-records-cli.png)
+![PowerDNS New Records CLI](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdns-new-records-cli.png)
 
 Setelah itu exit dan save pada text editor yang gunakan, maka akan muncul sebuah error dan konfirmasi
 
@@ -135,7 +135,7 @@ Apabila ada konfirmasi tekan `a`. Kemudian akan muncul lagi sebuah konfirmasi un
 
 Kemudian untuk menyimpan perubahan tersebut tekan `a` kembali.
 
-![PowerDNS Confirm Changes](../images/posts/assets/pdns_records/pdns-confirm-changes.png)
+![PowerDNS Confirm Changes](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/pdns-confirm-changes.png)
 
 ### Mengecek apakah DNS Record A nya berjalan atau tidak
 
@@ -145,17 +145,17 @@ Untuk melakukannya kalian bisa menggunakan package `dig` dengan perintah berikut
 
 > **Catatan**: Pastikan komputer kalian menggunakan dns dari ip address powerdns kalian, sehingga query nya akan mengambil dari powerdns
 >
-> ![DNS Configure](../images/posts/assets/pdns_records/dns-configure.png)
+> ![DNS Configure](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/dns-configure.png)
 
 ```shell
 dig -t <TYPE> <TARGET>
 ```
 
-![Dig Result](../images/posts/assets/pdns_records/dig-result.png)
+![Dig Result](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/dig-result.png)
 
 Nah, apabila sudah resolve bahwa domain `devnull.co.id` itu diarahkan ke ip address `172.16.0.133`, maka sekarang saya bisa membuka nya di URL web broswer, sehingga akan muncul tampilan dari webserver yang sudah saya siapkan.
 
-![Result Domain](../images/posts/assets/pdns_records/result-domain.png)
+![Result Domain](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/result-domain.png)
 
 ## Menambahkan Record NS untuk Zone
 
@@ -169,8 +169,8 @@ adalah contoh pengisian record NS untuk zone
 <ns2.domain.tld>    172800    IN        A       <ip_address_secondary_dns>
 ```
 
-![Add NS Record](../images/posts/assets/pdns_records/add-record-ns.png)
-![Confirm NS Record](../images/posts/assets/pdns_records/confirm-record-ns.png)
+![Add NS Record](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/add-record-ns.png)
+![Confirm NS Record](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/confirm-record-ns.png)
 
 ### Mengecek apakah DNS Record NS nya berjalan atau tidak
 
@@ -180,4 +180,4 @@ Untuk mengecek nya kalian bisa menggunakan perintah berikut ini
 dig -t NS <TARGET>
 ```
 
-![Dig NS Result](../images/posts/assets/pdns_records/dig-ns-result.png)
+![Dig NS Result](${NEXT_PUBLIC_PUBLIC_ASSETS}/pdns_records/dig-ns-result.png)

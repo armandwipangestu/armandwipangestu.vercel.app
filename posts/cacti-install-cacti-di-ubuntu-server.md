@@ -30,7 +30,7 @@ Untuk melakukan update repository dan upgrade package, jalankan perintah berikut
 sudo apt update && sudo apt upgrade -y
 ```
 
-![Ubuntu Update dan Upgrade](../images/posts/assets/ubuntu_install_cacti/ubuntu_update_upgrade.png)
+![Ubuntu Update dan Upgrade](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/ubuntu_update_upgrade.png)
 
 ### Mengatur Jam atau Timezone
 
@@ -54,7 +54,7 @@ atau
 timedatectl
 ```
 
-![Ubuntu Timezone](../images/posts/assets/ubuntu_install_cacti/ubuntu_timezone.png)
+![Ubuntu Timezone](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/ubuntu_timezone.png)
 
 ### Install Package Pendukung Cacti
 
@@ -64,7 +64,7 @@ Untuk menginstall cacti server, kita perlu paket atau package pendukung atau dep
 sudo apt install snmp php-snmp rrdtool librrds-perl unzip curl git gnupg2 -y
 ```
 
-![Dependency Cacti](../images/posts/assets/ubuntu_install_cacti/dependency_cacti.png)
+![Dependency Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/dependency_cacti.png)
 
 ### Install LAMP Stack
 
@@ -74,7 +74,7 @@ Cacti berjalan pada Webserver, Database dan PHP, jadi kita perlu menginstall LAM
 sudo apt install apache2 mariadb-server php php-mysql libapache2-mod-php php-xml php-ldap php-mbstring php-gd php-gmp php-intl -y
 ```
 
-![Ubuntu LAMP Stack](../images/posts/assets/ubuntu_install_cacti/ubuntu_lamp_stack.png)
+![Ubuntu LAMP Stack](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/ubuntu_lamp_stack.png)
 
 #### Konfigurasi PHP
 
@@ -145,7 +145,7 @@ Untuk memastikan apakah service apache nya berjalan atau running, gunakan perint
 sudo systemctl status apache2
 ```
 
-![Apache Service](../images/posts/assets/ubuntu_install_cacti/apache_service.png)
+![Apache Service](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/apache_service.png)
 
 #### Konfigurasi MariaDB
 
@@ -185,7 +185,7 @@ innodb_doublewrite          = OFF
 sort_buffer_size            = 1M
 ```
 
-![MariaDB Konfigurasi](../images/posts/assets/ubuntu_install_cacti/mariadb_konfigurasi.png)
+![MariaDB Konfigurasi](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/mariadb_konfigurasi.png)
 
 Setelah konfigurasi tersimpan, selanjutnya restart service mariadb menggunakan perintah berikut ini
 
@@ -199,7 +199,7 @@ Untuk memastikan apakah service nya sudah berjalan atau belum, gunakan perintah 
 sudo systemctl restart mariadb
 ```
 
-![MariaDB Service](../images/posts/assets/ubuntu_install_cacti/mariadb_service.png)
+![MariaDB Service](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/mariadb_service.png)
 
 #### Membuat Database dan User Untuk Cacti
 
@@ -215,7 +215,7 @@ Jika berhasil maka format prompt atau PS1 nya akan menjadi seperti berikut:
 MariaDB [(none)] >
 ```
 
-![MariaDB Login](../images/posts/assets/ubuntu_install_cacti/mariadb_login.png)
+![MariaDB Login](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/mariadb_login.png)
 
 Setelah berhasil login ke dalam database, jalankan perintah berikut ini untuk membuat database dan user cacti:
 
@@ -229,7 +229,7 @@ CREATE DATABASE cacti;
 GRANT ALL PRIVILEGES ON `cacti`.* TO 'cacti'@'localhost' IDENTIFIED BY 'password';
 ```
 
-![MariaDB Cacti](../images/posts/assets/ubuntu_install_cacti/mariadb_cacti.png)
+![MariaDB Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/mariadb_cacti.png)
 
 Selanjutnya kita flush privileges, lalu keluar dari database
 
@@ -258,7 +258,7 @@ FLUSH PRIVILEGES;
 exit;
 ```
 
-![MariaDB Timezone](../images/posts/assets/ubuntu_install_cacti/mariadb_timezone.png)
+![MariaDB Timezone](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/mariadb_timezone.png)
 
 ## Install Cacti
 
@@ -272,7 +272,7 @@ untuk mendownload versi terbaru nya, jalankan perintah berikut ini:
 wget https://www.cacti.net/downloads/cacti-latest.tar.gz --no-check-certificate
 ```
 
-![Download Cacti](../images/posts/assets/ubuntu_install_cacti/download_cacti.png)
+![Download Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/download_cacti.png)
 
 ### Extract Package Cacti
 
@@ -284,7 +284,7 @@ Setelah cacti berhasil di download, kita perlu melakukan extract menggunakan tar
 tar -zxvf cacti-latest.tar.gz
 ```
 
-![Extract Cacti](../images/posts/assets/ubuntu_install_cacti/extract_cacti.png)
+![Extract Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/extract_cacti.png)
 
 ### Setup Skema dan Koneksi Database Cacti
 
@@ -306,7 +306,7 @@ Selanjutnya import skema database cacti kedalam mariadb menggunakan perintah ber
 sudo mysql cacti < /var/www/html/cacti/cacti.sql
 ```
 
-![Setup Cacti](../images/posts/assets/ubuntu_install_cacti/setup_cacti.png)
+![Setup Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/setup_cacti.png)
 
 Setelah melakukan import skema database, sekarang edit file konfigurasi cacti untuk koneksi ke dalam database, menggunakan perintah berikut ini:
 
@@ -343,7 +343,7 @@ Setelah file log tersebut dibuat, langkah selanjutnya adalah melakukan perubahan
 sudo chown -R www-data:www-data /var/www/html/cacti && sudo chmod -R 775 /var/www/html/cacti
 ```
 
-![Permission Cacti](../images/posts/assets/ubuntu_install_cacti/permission_cacti.png)
+![Permission Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/permission_cacti.png)
 
 ### Setup Cron Scheduler Cacti Poller
 
@@ -368,19 +368,19 @@ Setelah konfigurasi di sisi server selesai, selanjutnya kita akan melakukan inst
 > - Username: `admin`
 > - Password: `admin`
 
-![Login Cacti](../images/posts/assets/ubuntu_install_cacti/login_cacti.png)
+![Login Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/login_cacti.png)
 
 ### Ganti Default Password
 
 Setelah pertama kali masuk, akan langsung di tawarkan untuk mengganti password default, maka disini anda bisa mengganti nya dengan yang anda inginkan
 
-![Password Cacti](../images/posts/assets/ubuntu_install_cacti/password_cacti.png)
+![Password Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/password_cacti.png)
 
 ### License Agreement
 
 Click tombol **Save**, maka akan dialihkan atau dipindahkan ke halaman license agreement seperti dibawah ini
 
-![License Cacti](../images/posts/assets/ubuntu_install_cacti/license_cacti.png)
+![License Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/license_cacti.png)
 
 Ceklis `Accept GPL License Agreement` dan click tombol **Begin** untuk pergi ke menu Pre-Installation Checks
 
@@ -388,71 +388,71 @@ Ceklis `Accept GPL License Agreement` dan click tombol **Begin** untuk pergi ke 
 
 Jika kalian mengikuti konfigurasi diatas hasilnya akan hijau semua.
 
-![Pre-Installation Cacti](../images/posts/assets/ubuntu_install_cacti/pre-installation_cacti.png)
+![Pre-Installation Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/pre-installation_cacti.png)
 
 ### Installation Type
 
 Click tombol **Next** untuk pergi ke menu Installation Type
 
-![Installation Type Cacti](../images/posts/assets/ubuntu_install_cacti/installation_type_cacti.png)
+![Installation Type Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/installation_type_cacti.png)
 
 ### Directory Permission Checks
 
 Click tombol **Next** untuk pengecekan hak akses folder
 
-![Directory Permission Checks Cacti](../images/posts/assets/ubuntu_install_cacti/directory_permission_checks_cacti.png)
+![Directory Permission Checks Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/directory_permission_checks_cacti.png)
 
 ### Critical Binary Locations and Versions
 
 Click tombol **Next** untuk pengecekan dependencies
 
-![Critical Binary Locations and Versions Cacti](../images/posts/assets/ubuntu_install_cacti/critical_binary_locations_and_versions_cacti.png)
+![Critical Binary Locations and Versions Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/critical_binary_locations_and_versions_cacti.png)
 
 ### Input Validation Whitelist Protection
 
 Click tombol **Next** akan muncul peringatan yang berkaitan dengan security
 
-![Input Validation Whitelist Protection Cacti](../images/posts/assets/ubuntu_install_cacti/input_validation_whitelist_protection_cacti.png)
+![Input Validation Whitelist Protection Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/input_validation_whitelist_protection_cacti.png)
 
 ### Default Profile
 
 Click tombol **Next** akan muncul konfigurasi default seperti cron interval dan automation network, disini Saya non-aktifkan fitur automation network nya
 
-![Default Profile Cacti](../images/posts/assets/ubuntu_install_cacti/default_profile_cacti.png)
+![Default Profile Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/default_profile_cacti.png)
 
 ### Template Setup
 
 Click tombol **Next** akan muncul template setup yang bisa di install, disini saya pilih semua
 
-![Template Setup Cacti](../images/posts/assets/ubuntu_install_cacti/template_setup_cacti.png)
+![Template Setup Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/template_setup_cacti.png)
 
 ### Server Collation
 
 Click tombol **Next** untuk pengecekan status database
 
-![Server Collation Cacti](../images/posts/assets/ubuntu_install_cacti/server_collation_cacti.png)
+![Server Collation Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/server_collation_cacti.png)
 
 ### Confirm Installation
 
 Click tombol **Next** untuk melakukan konfirmasi instalasi
 
-![Confirm Installation Cacti](../images/posts/assets/ubuntu_install_cacti/confirm_installation_cacti.png)
+![Confirm Installation Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/confirm_installation_cacti.png)
 
 ### Installing Cacti Server
 
 Click tombol **Next** untuk memulai penginstalan cacti, tunggu hingga proses instalasi selesai
 
-![Installing Cacti Server](../images/posts/assets/ubuntu_install_cacti/installing_cacti_server.png)
+![Installing Cacti Server](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/installing_cacti_server.png)
 
 Click tombol **Get Started** untuk masuk ke halaman admin cacti
 
-![Get Started](../images/posts/assets/ubuntu_install_cacti/get_started.png)
+![Get Started](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/get_started.png)
 
 ### Dashboard Cacti
 
 Tampilan cacti awal atau dashboard untuk admin
 
-![Dashboard Admin](../images/posts/assets/ubuntu_install_cacti/dashboard_admin.png)
+![Dashboard Admin](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/dashboard_admin.png)
 
 Sampai disini proses instalasi cacti sudah selesai, namun disini saya akan menambahkan tutorial atau langkah-langkah mengganti poller dari `cmd.php` menjadi `spine`
 
@@ -474,7 +474,7 @@ Spine dapat mengurangi waktu berkumpulnya perangkat Anda. Jika Server Cacti Anda
 
 Untuk mendownload nya anda bisa pergi ke situs resmi dari cacti disini [www.cacti.net/info/downloads](https://www.cacti.net/info/downloads). Pada halaman tersebut terdapat tombol download untuk spine, Anda hanya perlu melakukan copy link address nya
 
-![Download Spine](../images/posts/assets/ubuntu_install_cacti/download_spine.png)
+![Download Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/download_spine.png)
 
 Setelah anda copy link address nya, jalankan perintah berikut:
 
@@ -486,7 +486,7 @@ wget https://files.cacti.net/spine/cacti-spine-latest.tar.gz --no-check-certific
 
 Maka sekarang akan muncul file bernama `cacti-spine-latest.tar.gz`
 
-![Wget Spine](../images/posts/assets/ubuntu_install_cacti/wget_spine.png)
+![Wget Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/wget_spine.png)
 
 ### Install Dependencies Software Untuk Compile Spine
 
@@ -496,7 +496,7 @@ Untuk menginstal dependencies software nya, jalankan perintah berikut:
 sudo apt install build-essential autoconf automake dos2unix gzip help2man m4 make wget libtool libsnmp-dev libmariadb-dev libmariadb-dev -y
 ```
 
-![Install Dependencies Spine](../images/posts/assets/ubuntu_install_cacti/install_dependencies_spine.png)
+![Install Dependencies Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/install_dependencies_spine.png)
 
 ### Extract dan Install Spine
 
@@ -506,13 +506,13 @@ Extract spine ke directory saat ini dan masuk kedalam directory spine mengggunak
 tar -zxvf cacti-spine-latest.tar.gz
 ```
 
-![Extract Spine](../images/posts/assets/ubuntu_install_cacti/extract_spine.png)
+![Extract Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/extract_spine.png)
 
 ```shell
 cd cacti-spine-latest/
 ```
 
-![Move Directory Spine](../images/posts/assets/ubuntu_install_cacti/move_directory_spine.png)
+![Move Directory Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/move_directory_spine.png)
 
 Perintah berikut ini mengasumsikan lokasi default instalation untuk cacti di `/usr/local/spine`. Jika Anda memilih untuk menggunakan prefix lain, pastikan Anda memperbarui perintah sesuai dengan kebutuhan untuk PATH yang baru.
 
@@ -522,7 +522,7 @@ Jalankan proses bootstrap untuk membuat script konfigurasi secara otomatis.
 sudo ./bootstrap
 ```
 
-![Bootstrap Spine](../images/posts/assets/ubuntu_install_cacti/bootstrap_spine.png)
+![Bootstrap Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/bootstrap_spine.png)
 
 Jalankan proses `configure` untuk mendeteksi apa yang tersedia di sistem
 
@@ -530,7 +530,7 @@ Jalankan proses `configure` untuk mendeteksi apa yang tersedia di sistem
 sudo ./configure
 ```
 
-![Configure Spine](../images/posts/assets/ubuntu_install_cacti/configure_spine.png)
+![Configure Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/configure_spine.png)
 
 Build dan install spine
 
@@ -539,7 +539,7 @@ sudo make
 sudo make install
 ```
 
-![Build dan Install Spine](../images/posts/assets/ubuntu_install_cacti/build_dan_install_spine.png)
+![Build dan Install Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/build_dan_install_spine.png)
 
 Pastikan `spine` berjalan dengan baik dengan mengecek nya menggunakan perintah berikut ini:
 
@@ -549,7 +549,7 @@ Pastikan `spine` berjalan dengan baik dengan mengecek nya menggunakan perintah b
 /usr/local/spine/bin/spine -R -S -V 3
 ```
 
-![Test Spine](../images/posts/assets/ubuntu_install_cacti/test_spine.png)
+![Test Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/test_spine.png)
 
 ### Konfigurasi Spine
 
@@ -563,7 +563,7 @@ sudo cp /usr/local/spine/etc/spine.conf.dist /usr/local/spine/etc/spine.conf
 sudo vim /usr/local/spine/etc/spine.conf
 ```
 
-![Config Spine](../images/posts/assets/ubuntu_install_cacti/config_spine.png)
+![Config Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/config_spine.png)
 
 ```conf
 DB_Host       localhost
@@ -582,7 +582,7 @@ Cacti_Log     /var/www/html/cacti/log/cacti.log # uncomment baris berikut
 
 Login kedalam cacti, kemudian pergi ke menu `Configuration` > `Settings`
 
-![Settings Cacti](../images/posts/assets/ubuntu_install_cacti/settings_cacti.png)
+![Settings Cacti](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/settings_cacti.png)
 
 Perbarui pengaturan PATH cacti pada bagian binary dan file konfigurasi `spine`
 
@@ -591,12 +591,12 @@ Spine Binary File Location: /usr/local/spine/bin/spine
 Spine Config File Path: /usr/local/spine/etc/spine.conf
 ```
 
-![PATH Spine](../images/posts/assets/ubuntu_install_cacti/path_spine.png)
+![PATH Spine](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/path_spine.png)
 
 Perbarui Cacti `Poller` pada bagian `Poller Type` ubah dari `cmd.php` menjadi `spine`
 
-![Poller Type](../images/posts/assets/ubuntu_install_cacti/poller_type.png)
+![Poller Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/poller_type.png)
 
 Untuk memastikan `spine` berjalan dengan baik, Buka menu `Log` dan periksa method poller nya. Maka seharusnya akan berubah yang sebelumnya dari `cmd.php` menjadi `spine`.
 
-![Log Poller](../images/posts/assets/ubuntu_install_cacti/log_poller.png)
+![Log Poller](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu_install_cacti/log_poller.png)

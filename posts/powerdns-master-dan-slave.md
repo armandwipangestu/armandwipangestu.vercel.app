@@ -466,7 +466,7 @@ Setelah service powerdns di restart, selanjutnya tambahkan zone dan record pada 
 Untuk menambahkan zone dan record nya, kalian bisa melihat video dibawah ini.
 
 <video controls autoplay name="media">
-    <source src="../images/posts/assets/powerdns_master_dan_slave/powerdns-master-dan-slave.webm" type="video/webm">
+    <source src="${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns_master_dan_slave/powerdns-master-dan-slave.webm" type="video/webm">
 </video>
 
 Atau jika kalian ingin menggunakan CLI bisa ikuti langkah-langkah berikut:

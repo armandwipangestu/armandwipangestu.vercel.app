@@ -61,7 +61,7 @@ Prinsip di atas mirip dengan DNS. Namun, bagian dari buku diganti menjadi bagian
 
 Perbedaan, kode perpustakaan mulai dari depan. Sedangkan, kode pada DNS diurutkan dari belakang. Berikut penjelasan lengkapnya:
 
-![Bagian-Bagian Domain](../images/posts/assets/dns/bagian-bagian-domain.png)
+![Bagian-Bagian Domain](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/bagian-bagian-domain.png)
 
 - **Root-Level Domain**: Merupakan bagian tertinggi dari hierarki DNS. Biasanya ia berwujud titik (.) di bagian paling belakang sebuah domain.
 
@@ -71,7 +71,7 @@ Untuk mengecek nya anda bisa menggunakan tool `dig` dengan perintah
 dig -t A <nama_domain.tld>
 ```
 
-![Root Domain](../images/posts/assets/dns/root-domain.png)
+![Root Domain](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/root-domain.png)
 
 - **Top-Level Domain**: Adalah ekstensi yang berada di bagian depan root-level domain. Terdapat dua jenis `TLD` yang umumnya dipakai. Keduanya, yaitu Generic-Top-Level Domain (`GTLD`) dan Country Code Top Level Domain (`CCLTD`).
 
@@ -89,7 +89,7 @@ Setelah memperlajari pengertian DNS dan Bagian-bagian dari DNS, saatnya mengetah
 
 ## Cara Kerja DNS
 
-![How DNS Work](../images/posts/assets/dns/dns-work.png)
+![How DNS Work](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dns-work.png)
 
 DNS bekerja dalam beberapa tahapan.
 
@@ -165,7 +165,7 @@ Informasi yang diminta user dalam sistem DNS disebut DNS Record. Ada beberapa je
 
 A Record atau Address Record, berfungsi untuk menyimpan informasi soal hostname, time to live (TTL) dan IPv4 Address.
 
-![A Type](../images/posts/assets/dns/a-type.png)
+![A Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/a-type.png)
 
 Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` dengan type `A`. Dan hasil dari query tersebut mengembalikan sebuah alamat ip yaitu `172.16.0.133`
 
@@ -173,13 +173,13 @@ Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` denga
 dig -t A <domain.tld>
 ```
 
-![Dig A](../images/posts/assets/dns/dig-a.png)
+![Dig A](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dig-a.png)
 
 ### AAAA Record atau AAAA Type
 
 Sama halnya dengan record A namun pada record ini yang di simpan adalah informasi dari IPv6 Address.
 
-![AAA Type](../images/posts/assets/dns/aaa-type.png)
+![AAA Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/aaa-type.png)
 
 Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` dengan type `AAAA`. Dan hasil dari query tersebut mengembalikan sebuah alamat ip yaitu `::ffff:172.16.0.133`
 
@@ -187,13 +187,13 @@ Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` denga
 dig -t AAAA <domain.tld>
 ```
 
-![Dig AAA](../images/posts/assets/dns/dig-aaaa.png)
+![Dig AAA](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dig-aaaa.png)
 
 ### MX Record atau MX Type
 
 MX atau Mail Exchange merupakan record yang berfungsi untuk menyimpan SMTP (Simple Mail Transfer Protocol) Server yang bertanggung jawab untuk menerima email yang ditunjukan ke suatu domain. MX Record ini menunjukkan alamat IP atau nama host server email yang harus dituju saat mengirim email ke domain tertentu.
 
-![MX Type](../images/posts/assets/dns/mx-type.png)
+![MX Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/mx-type.png)
 
 Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` dengan type `MX`. Dan hasil dari query tersebut mengembalikan sebuah alamat domain yaitu `mail.armandwipangestu.co.id`
 
@@ -201,13 +201,13 @@ Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` denga
 dig -t MX <domain.tld>
 ```
 
-![Dig MX](../images/posts/assets/dns/dig-mx.png)
+![Dig MX](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dig-mx.png)
 
 ### CNAME Record atau CNAME Type
 
 CNAME (Canonical Name) Record ini digunakan untuk alias dari domain ataupun subdomain ke sebuah IP Address. Lewat fungsi satu ini, anda tak perlu memperbarui DNS Record.
 
-![CNAME Type](../images/posts/assets/dns/cname-type.png)
+![CNAME Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/cname-type.png)
 
 Disini saya akan melakukan query dns untuk domain `www.armandwipangestu.co.id` dengan type `CNAME`. Dan hasil dari query tersebut mengembalikan sebuah alamat domain yaitu `armandwipangestu.co.id`
 
@@ -215,13 +215,13 @@ Disini saya akan melakukan query dns untuk domain `www.armandwipangestu.co.id` d
 dig -t CNAME <subdomain.domain.tld>
 ```
 
-![Dig CNAME](../images/posts/assets/dns/dig-cname.png)
+![Dig CNAME](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dig-cname.png)
 
 ### NS Record atau NS Type
 
 NS (Name Server) merujuk pada subdomain di Authoritative Server. Record ini berfungsi sebagai informasi yang mengelola zona domain yang dituju.
 
-![NS Type](../images/posts/assets/dns/ns-type.png)
+![NS Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/ns-type.png)
 
 Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` dengan type `NS`. Dan hasil dari query tersebut mengembalikan sebuah alamat domain yaitu `ns1.armandwipangestu.co.id`
 
@@ -229,7 +229,7 @@ Disini saya akan melakukan query dns untuk domain `armandwipangestu.co.id` denga
 dig -t NS <domain.tld>
 ```
 
-![Dig NS](../images/posts/assets/dns/dig-ns.png)
+![Dig NS](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dig-ns.png)
 
 ### PTR Record atau PTR Type
 
@@ -237,7 +237,7 @@ PTR (Pointer) memberikan izin pada DNS Resolver untuk menyediakan informasi soal
 
 Pada record ini format penulisan ip address dibalik kemudian ditambahkan text `in-addr.arpa`. Misalkan alamat ip address nya adalah `172.16.0.133` maka penulisan pada PTR record ini menjadi `133.0.16.172.in-addr.arpa`. Namun untuk penulisan zone nya disini cukup memasukan network dari address nya. Apabila ip address nya adalah `172.16.0.133/24` maka penulisan zone nya disini adalah `0.16.172.in-addr.arpa`.
 
-![PTR Type](../images/posts/assets/dns/ptr-type.png)
+![PTR Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/ptr-type.png)
 
 Disini saya akan melakukan query dns untuk ip address `172.16.0.133` dengan type `PTR`. Dan hasil dari query tersebut mengembalikan sebuah alamat domain yaitu `armandwipangestu.co.id`
 
@@ -245,7 +245,7 @@ Disini saya akan melakukan query dns untuk ip address `172.16.0.133` dengan type
 dig -x <ip_address>
 ```
 
-![Dig PTR](../images/posts/assets/dns/dig-ptr.png)
+![Dig PTR](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dig-ptr.png)
 
 ### SOA Record atau SOA Type
 
@@ -273,7 +273,7 @@ SOA record sering ditempatkan di atas file zona DNS dan menjadi catatan pertama 
 >
 > SOA record adalah salah satu komponen penting dalam manajemen zona DNS. Record ini mengontrol otoritas utama atas zona DNS dan memperngaruhi bagaimana server DNS lainnya berinteraksi dengan zona tersebut.
 
-![SOA Type](../images/posts/assets/dns/soa-type.png)
+![SOA Type](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/soa-type.png)
 
 Disini saya akan melakukan query dns untuk domain `armnandwipangestu.co.id` dengan type `SOA`. Dan hasil dari query tersebut mengembalikan sebuah alamat domain yaitu `ns1.armandwipangestu.co.id`.
 
@@ -281,7 +281,7 @@ Disini saya akan melakukan query dns untuk domain `armnandwipangestu.co.id` deng
 dig -t SOA <domain.tld>
 ```
 
-![Dig SOA](../images/posts/assets/dns/dig-soa.png)
+![Dig SOA](${NEXT_PUBLIC_PUBLIC_ASSETS}/dns/dig-soa.png)
 
 ## Penutup
 

@@ -36,11 +36,11 @@ Jika kalian tidak yakin ke mana arah domain kalian saat ini, kalian dapat menggu
 dig -t NS +short <domain.tld>
 ```
 
-![nslookup](../images/posts/assets/domain_pointing_ke_vps/nslookup.png)
+![nslookup](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/nslookup.png)
 
 Sekarang setelah kalian mengetahui ke mana domain kalian diarahkan, buka konfigurasi DNS record di registrar domain kalian. Misalkan disini saya menggunakan niagahoster
 
-![DNS Record](../images/posts/assets/domain_pointing_ke_vps/dns_record.png)
+![DNS Record](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/dns_record.png)
 
 ### Menambahkan DNS Record
 
@@ -67,7 +67,7 @@ Kedua opsi diatas akan memberikan kalian hasil yang sama. Yang membedakan dari k
 
 Misalkan disini saya memilih menggunakan dua A record
 
-![Two A Record](../images/posts/assets/domain_pointing_ke_vps/two_a_record.png)
+![Two A Record](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/two_a_record.png)
 
 ### Melakukan Pencarian DNS
 
@@ -80,7 +80,7 @@ Setelah melakukan pointing domain ke VPS kalian, saatnya untuk memeriksa apakah 
 dig -t A +short <domain.tld>
 ```
 
-![nslookup2](../images/posts/assets/domain_pointing_ke_vps/nslookup2.png)
+![nslookup2](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/nslookup2.png)
 
 Jika output atau hasil dari perintah diatas menunjukkan IP Address VPS kalian sebagai record A, semuanya telah dilakukan dengan benar! Bagian yang tersisa sedang menunggu DNS untuk disebarkan sepenuhnya ke seluruh dunia. Untuk mempercepat proses, kalian bisa melakukan flush dns.
 
@@ -88,9 +88,9 @@ Jika output atau hasil dari perintah diatas menunjukkan IP Address VPS kalian se
 >
 > Misalkan disini saya mempunyai webserver nginx yang berjalan pada port 81
 >
-> ![netstat nginx](../images/posts/assets/domain_pointing_ke_vps/netstat_nginx.png)
+> ![netstat nginx](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/netstat_nginx.png)
 >
-> ![netstat page](../images/posts/assets/domain_pointing_ke_vps/nginx_page.png)
+> ![netstat page](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/nginx_page.png)
 
 ## Metode 2 Pointing Domain ke VPS melalui Custom Nameservers
 
@@ -100,7 +100,7 @@ Pointing domain ke VPS melalui custom nameservers sedikit lebih rumit, karena ka
 
 Untuk melakukannya, pertama - tama isikan custom nameservers di bagian `Child Nameservers` melalui registrar domain kalian. Masing - masing custom nameservers tersebut di arahkan atau di pointing ke IP Public VPS.
 
-![Child Nameservers](../images/posts/assets/domain_pointing_ke_vps/child_ns.png)
+![Child Nameservers](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/child_ns.png)
 
 ### Menyiapkan DNS Zone di VPS
 
@@ -126,7 +126,7 @@ Sebelum menambahkan record, kita perlu membuat zone terlebih dahulu dengan cara
 pdnsutil create-zone <domain.tld>
 ```
 
-![pdnsutil create-zone](../images/posts/assets/domain_pointing_ke_vps/pdns_create_zone.png)
+![pdnsutil create-zone](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/pdns_create_zone.png)
 
 - Menambahkan record untuk zone
 
@@ -148,7 +148,7 @@ ns2.<domain.tld>    3600    IN      A       <ip_public_ns2>
 www.<domain.tld>    3600    IN      A       <ip_public>
 ```
 
-![pdns record](../images/posts/assets/domain_pointing_ke_vps/pdns_record.png)
+![pdns record](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/pdns_record.png)
 
 Setelah itu berikan AXFR notify ke slave
 
@@ -156,7 +156,7 @@ Setelah itu berikan AXFR notify ke slave
 pdns_control notify <domain.tld>
 ```
 
-![pdns_control notify](../images/posts/assets/domain_pointing_ke_vps/axfr_notify.png)
+![pdns_control notify](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/axfr_notify.png)
 
 - Restart Service PowerDNS
 
@@ -174,7 +174,7 @@ Untuk memastikan bahwa powerdns berjalan pada ip public, kalian bisa melihat nya
 netstat -tunlp | grep pdns_server
 ```
 
-![netstat pdns_server](../images/posts/assets/domain_pointing_ke_vps/netstat_pdns_server.png)
+![netstat pdns_server](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/netstat_pdns_server.png)
 
 ### Mengubah Nameservers
 
@@ -184,7 +184,7 @@ Setelah DNS Zone disiapkan di VPS, selanjutnya kita arahkan nameservers pada dom
 | -------------- | -------------- |
 | ns1.domain.tld | ns2.domain.tld |
 
-![nameservers](../images/posts/assets/domain_pointing_ke_vps/nameservers.png)
+![nameservers](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/nameservers.png)
 
 > **Catatan**: Perlu diingat bahwa propagasi DNS dapat memakan waktu hingga 24 jam, jadi kalian harus menunggu setidaknya satu atau dua jam sebelum semuanya beroprasi penuh. Untuk mempercepat, kalian bisa melakukan flush DNS kembali.
 
@@ -196,4 +196,4 @@ dig -t NS +short <domain.tld>
 
 Maka sekarang output nya akan mengarah ke nameserver kalian, bukan lagi menggarah ke nameserver registrar
 
-![nslookup3](../images/posts/assets/domain_pointing_ke_vps/nslookup3.png)
+![nslookup3](${NEXT_PUBLIC_PUBLIC_ASSETS}/domain_pointing_ke_vps/nslookup3.png)

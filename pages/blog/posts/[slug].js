@@ -280,10 +280,10 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
 
-  // Ganti `${NEXT_PUBLIC_BASE_URL}` dengan nilai yang benar dalam konten
+  // Ganti `${NEXT_PUBLIC_PUBLIC_ASSETS}` dengan nilai yang benar dalam konten
   const contentWithReplacedBaseUrl = content.replace(
-    /\$\{NEXT_PUBLIC_BASE_URL\}/g,
-    process.env.NEXT_PUBLIC_BASE_URL
+    /\$\{NEXT_PUBLIC_PUBLIC_ASSETS\}/g,
+    process.env.NEXT_PUBLIC_PUBLIC_ASSETS
   );
 
   const files = fs.readdirSync(path.join("posts"));

@@ -22,7 +22,7 @@ Perbedaan dari kedua tool tersebut adalah, Prometheus sendiri adalah salah satu 
 dikeluarkan oleh sebuah exporter. Sedangkan Grafana sendiri dia berfungsi untuk memvisualisasikan data metric, sehingga kurang lebih nanti
 tampilan nya bisa menjadi seperti ini.
 
-![Grafana Showcase](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_showcase.png)
+![Grafana Showcase](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_showcase.png)
 
 Bisa di ibaratkan, masing-masing panel tersebut nantinya dapat kita customize sesuai dengan kebutuhan kita. Seperti apa yang akan kita
 monitoring bisa kita tampilkan secara custom, sehingga kita dapat memodifikasi nantinya.
@@ -46,7 +46,7 @@ terminal
 wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
 ```
 
-![Prometheus Download](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_download.png)
+![Prometheus Download](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_download.png)
 
 ### Download Node Exporter
 
@@ -65,7 +65,7 @@ ini didalam terminal
 wget https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
 ```
 
-![Node Exporter Download](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_download.png)
+![Node Exporter Download](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_download.png)
 
 Untuk melihat apakah package nya sudah ter-download atau belum, kalian bisa menggunakan perintah
 
@@ -77,7 +77,7 @@ ls
 >
 > Dapat dilihat pada gambar dibawah ini, sudah terdapat 2 package yaitu `prometheus-2.46.0.linux-amd64.tar.gz` dan juga `node_exporter-1.6.1.linux-amd64.tar.gz`
 
-![List Package](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/list_package.png)
+![List Package](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/list_package.png)
 
 ### Extract Package Prometheus
 
@@ -87,11 +87,11 @@ Untuk melakukan extract pada package prometheus yang sudah di download, kalian b
 tar xvf prometheus-2.46.0.linux-amd64.tar.gz
 ```
 
-![Extract Prometheus](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/extract_prometheus.png)
+![Extract Prometheus](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/extract_prometheus.png)
 
 Setelah proses extract selesai, maka sekarang akan muncul sebuah directory atau folder dengan nama sesuai package yang di download
 
-![Prometheus Directory](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_directory.png)
+![Prometheus Directory](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_directory.png)
 
 Selanjutnya kita pindah kedalam directory tersebut dengan perintah
 
@@ -101,7 +101,7 @@ cd prometheus-2.46.0.linux-amd64
 
 ### Penjelasan Isi Dari Package Prometheus
 
-![Prometheus Directory](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_directory_content.png)
+![Prometheus Directory](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_directory_content.png)
 
 Jika kita lihat isian dari directory prometheus tersebut terdapat beberapa file dan folder, jika diperhatikan terdapat sebuah file yang
 berwarna hijau.
@@ -141,7 +141,7 @@ which prometheus
 
 maka akan muncul keseluruhan PATH dari binary file tersebut
 
-![Which Prometheus](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/which_prometheus.png)
+![Which Prometheus](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/which_prometheus.png)
 
 Untuk mengecek versi dari `prometheus`, anda dapat menggunakan perintah berikut ini
 
@@ -195,7 +195,7 @@ stat /var/lib/prometheus
 
 maka akan muncul seperti gambar dibawah ini
 
-![Permission Folder Prometheus](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/permission_folder_prometheus.png)
+![Permission Folder Prometheus](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/permission_folder_prometheus.png)
 
 Dapat dilihat bahwa saat ini owner dari user dan group directory tersebut dimiliki oleh `root`, kita akan ubah menjadi dimiliki oleh user dan group `prometheus`. Untuk melakukan perubahan permission directory atau file tersebut kalian bisa menggunakan perintah berikut ini:
 
@@ -205,7 +205,7 @@ sudo chown -R prometheus:prometheus /var/lib/prometheus
 
 Maka sekarang permission user dan group dari directory tersebut dimiliki oleh `prometheus`
 
-![Permission Change Prometheus](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/permission_change_prometheus.png)
+![Permission Change Prometheus](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/permission_change_prometheus.png)
 
 Selanjutnya kita pindahkan directory dan file yang sudah saya sebutkan diatas kedalam directory `/etc/prometheus` menggunakan perintah:
 
@@ -318,7 +318,7 @@ Selanjutnya cek status dari service prometheus nya, menggunakan perintah
 sudo systemctl status prometheus.service
 ```
 
-![Status Service Prometheus](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/status_service_prometheus.png)
+![Status Service Prometheus](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/status_service_prometheus.png)
 
 Maka hasilnya adalah inactive seperti gambar diatas, agar service tersebut menjadi active dan otomatis dijalankan apabila server mengalami
 sesuatu hal seperti reboot atau shutdown. Gunakan perintah berikut ini:
@@ -327,7 +327,7 @@ sesuatu hal seperti reboot atau shutdown. Gunakan perintah berikut ini:
 sudo systemctl enable --now prometheus.service
 ```
 
-![Status Service Prometheus 2](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/status_service_prometheus2.png)
+![Status Service Prometheus 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/status_service_prometheus2.png)
 
 Maka sekarang service tersebut akan active seperti gambar diatas. Secara default atau bawaan, prometheus ini berjalan pada port `9090`, untuk
 mengecek apakah prometheus tersebut berjalan pada port tersebut, gunakan berikut ini:
@@ -336,7 +336,7 @@ mengecek apakah prometheus tersebut berjalan pada port tersebut, gunakan berikut
 sudo lsof -n -i | grep prometheus
 ```
 
-![Prometheus Running Port 9090](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_running_port_9090.png)
+![Prometheus Running Port 9090](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_running_port_9090.png)
 
 ### Membuka Web Interface Prometheus
 
@@ -346,14 +346,14 @@ Maka sekarang kita dapat mengakses prometheus tersebut menggunakan web browser d
 http://ip_server:9090
 ```
 
-![Prometheus Web](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_web.png)
+![Prometheus Web](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_web.png)
 
 Kurang lebih seperti itulah tampilan dari prometheus nya, sehingga nanti kalian bisa melakukan semacam query. Namun, disini bahasanya
 adalah menggunakan PromQL
 
 Sebelum kesana kalian bisa arahkan ke menu `Status` > `Targets`
 
-![Menu Status Target Prometheus](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/menu_status_target_prometheus.png)
+![Menu Status Target Prometheus](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/menu_status_target_prometheus.png)
 
 Pada menu ini di ibaratkan nantinya pada saat kita akan melakukan konfigurasi prometheus nya akan banyak job yang tertera di menu tersebut,
 namun by default hanya satu yaitu `Prometheus (1/1 up)` yang dimana sesuai dengan konfigurasi sebelumnya yang berada di file `/etc/prometheus/prometheus.yml`
@@ -366,7 +366,7 @@ namun by default hanya satu yaitu `Prometheus (1/1 up)` yang dimana sesuai denga
 
 Apabila jika ingin tahu bentuk dari metric itu seperti apa, kalian bisa akses job tersebut di alamat url `http://ip_server:9090/metrics`
 
-![Data Metric](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/data_metric.png)
+![Data Metric](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/data_metric.png)
 
 Kurang lebih bentuk dari metric itu seperti gambar diatas, jadi di ibaratkan dia semacam kayak data yang akan meng-counter. Cuman memang
 prometheus sendiri belum bisa memvisualisasikan, sehingga cukup repot jika kita ingin membaca data seperti ini.
@@ -377,7 +377,7 @@ nanti dapat kita visualisasikan menggunakan `Grafana`.
 
 Atau anda juga dapat menampilkan data dari sebuah metric pada menu `Graph` dengan PromQL `prometheus_build_info`
 
-![Prometheus Graph PromQL](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_graph_promql.png)
+![Prometheus Graph PromQL](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/prometheus_graph_promql.png)
 
 Walaupun sebetulnya sampai dengan tahapan ini, kita belum bisa melakukan query terhadap metric yang berkaitan dengan komponen-komponen server
 seperti CPU, Memory dsb. Karena apa? karena tadi, kita disini baru menjalankan default saja yaitu menjalankan Job Prometheus nya saja.
@@ -395,7 +395,7 @@ perintah berikut ini:
 tar xvf node_exporter-1.6.1.linux-amd64.tar.gz
 ```
 
-![Extract Node Exporter](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/extract_node_exporter.png)
+![Extract Node Exporter](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/extract_node_exporter.png)
 
 Selanjutnya kita pindah kedalam directory tersebut dengan perintah
 
@@ -405,7 +405,7 @@ cd node_exporter-1.6.1.linux-amd64
 
 Pada folder ini hanya terdapat satu binary file yaitu `node_exporter`
 
-![Node Exporter Binary](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_binary.png)
+![Node Exporter Binary](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_binary.png)
 
 Sama seperti `prometheus`, binary file ini dapat kita jalankan langsung dengan `./node_exporter`. Namun, jika melakukan hal tersebut
 diibaratkan kita akan sulit memanage proses tersebut.
@@ -427,7 +427,7 @@ Sekarang jika kita gunakan perintah `which`, maka akan muncul output full PATH d
 which node_exporter
 ```
 
-![Which Node Exporter](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/which_node_exporter.png)
+![Which Node Exporter](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/which_node_exporter.png)
 
 Untuk mengecek versi nya, kalian bisa menggunakan perintah:
 
@@ -486,7 +486,7 @@ sudo systemctl enable --now node-exporter.service
 
 maka sekarang service daemon node-exporter tersebut sudah running atau berjalan
 
-![Node Exporter Status](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_status.png)
+![Node Exporter Status](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_status.png)
 
 Nah untuk `node_exporter` itu sendiri, dia berjalan pada port `9100`, untuk mengecek nya gunakan perintah berikut ini:
 
@@ -494,7 +494,7 @@ Nah untuk `node_exporter` itu sendiri, dia berjalan pada port `9100`, untuk meng
 sudo lsof -n -i | grep node
 ```
 
-![Node Exporter Port](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_port.png)
+![Node Exporter Port](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_port.png)
 
 ### Membuka Web Interface Node Exporter
 
@@ -504,7 +504,7 @@ Untuk membuka nya kalian bisa membuka alamat URL berikut ini di web browser kali
 http://ip_server:9100/metrics
 ```
 
-![Node Exporter Metric](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_metric.png)
+![Node Exporter Metric](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_metric.png)
 
 Metric disini berbeda dengan metric yang ada di `Prometheus` sebelumnya. Bisa kita lihat disini terdapat beberapa metric
 yang berkaitan dengan node, misalkan seperti komponen CPU, Disk, File System, Memory, Network dan masih banyak lagi.
@@ -551,19 +551,19 @@ sudo systemctl restart prometheus.service
 
 Maka sekarang jika kita lihat di menu `Status` > `Targets`, sekarang terdapat satu job baru yaitu `node-exporter`
 
-![Node Exporter Job](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_job.png)
+![Node Exporter Job](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_job.png)
 
 Jika sudah seperti itu, maka sekarang kalian dapat melakukan query PromQL terhadap data yang di expose oleh job `node-exporter`
 
-![Node Exporter Query](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_query.png)
+![Node Exporter Query](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_query.png)
 
 Atau kita bisa coba query lain seperti `node_memory_MemTotal_bytes`.
 
-![Node Exporter Query Memory](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_query_memory.png)
+![Node Exporter Query Memory](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_query_memory.png)
 
 Data metric ini menggunakan satuan `bytes` jika ingin konversi menjadi megabytes gunakan query berikut ini `node_memory_MemTotal_bytes/1024/1024`
 
-![Node Exporter Query Memory Konversi](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_query_memory_konversi.png)
+![Node Exporter Query Memory Konversi](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/node_exporter_query_memory_konversi.png)
 
 Pada contoh diatas, memory yang saya gunakan pada server sebesar `4GB`.
 
@@ -575,7 +575,7 @@ yang penting prometheus nya kita install kemudian kita tambahkan extension node_
 
 Untuk melalukan instalasi nya kalian bisa mengunjungi web dokumentasi dari grafana nya melalui tautan berikut ini [grafana.com/docs/grafana/latest/setup-grafana/installation/debian](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
 
-![Grafana Dokumentasi](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_dokumentasi.png)
+![Grafana Dokumentasi](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_dokumentasi.png)
 
 Pertama kita jalankan perintah berikut ini:
 
@@ -614,7 +614,7 @@ Setelah package grafana tersintall, selanjutnya cek apakah service nya sudah run
 sudo systemctl status grafana-server.service
 ```
 
-![Grafana Service](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_service.png)
+![Grafana Service](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_service.png)
 
 Bisa kalian lihat service `grafana-server` status nya masih `inactive (dead)`. Untuk menjalankan nya gunakan perintah berikut:
 
@@ -629,7 +629,7 @@ perintah berikut:
 sudo lsof -n -P -i | grep grafana
 ```
 
-![Grafana Port](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_port.png)
+![Grafana Port](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_port.png)
 
 ### Membuka Web Interface Grafana
 
@@ -639,7 +639,7 @@ Untuk membuka web interface dari grafana kalian bisa masukan alamat URL berikut 
 http://ip_server:3000
 ```
 
-![Grafana Web](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_web.png)
+![Grafana Web](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_web.png)
 
 Login default dari grafana adalah
 
@@ -653,13 +653,13 @@ hal tersebut. Disini saya akan skip saja.
 
 Maka sekarang akan dialihkan ke dashboard grafana
 
-![Grafana Dashboard](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_dashboard.png)
+![Grafana Dashboard](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_dashboard.png)
 
 ### Menambahkan Data Source
 
 Untuk menambahkan data source, kalian bisa pergi ke menu `Connections` > `Data Source`
 
-![Grafana Data Source](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_data_source.png)
+![Grafana Data Source](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_data_source.png)
 
 Kemudian klik tombol `Add Data Source`
 
@@ -683,34 +683,34 @@ Jika sudah klik tombol `Save & Test` di bagian paling bawah.
 
 Apabila berhasil maka akan muncul sebuah alert dengan background hijau
 
-![Grafana Alert](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_alert.png)
+![Grafana Alert](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_alert.png)
 
 ### Membuat Dashboard Baru
 
 Selanjutnya kita kembali ke menu atau halaman Home, secara default pada home tersebut belum ada dashboard apapun. Namun, kita dapat
 membuatkan dashboard sederhana dengan cara pergi ke menu `Dasboard` > `New` > `New Dashboard` (jika kalian ingin membuat secara manual)
 
-![Grafana New Dashboard](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_new_dashboard.png)
+![Grafana New Dashboard](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_new_dashboard.png)
 
 Setelah itu klik tombol `Add Visualization`
 
-![Grafana Add Visualization](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_add_visualization.png)
+![Grafana Add Visualization](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_add_visualization.png)
 
 Selanjutnya pilih `Prometheus` sebagai data source nya
 
-![Grafana Select Data Source](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_select_data_source.png)
+![Grafana Select Data Source](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_select_data_source.png)
 
 Namun jika kalian memang ingin menambahkan atau membuat dashboard sendiri, kalian harus paham terlebih dahulu mengenai PromQL atau query
 terhadap PromQL nya.
 
 Untuk yang paling sederhana disini saya akan tampilkan memory
 
-![Grafana Add Query Memory](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_add_query_memory.png)
+![Grafana Add Query Memory](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_add_query_memory.png)
 
 Secara default bentuk nya adalah `Time series`, kita bisa ubah bentuk visualization nya pada pojok kanan atas, disini saya akan memilih
 `Stat`
 
-![Grafana Stat](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_stat.png)
+![Grafana Stat](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_stat.png)
 
 Kita juga bisa mengubah konfigurasi lain seperti:
 
@@ -720,13 +720,13 @@ Kita juga bisa mengubah konfigurasi lain seperti:
 
 Maka sekarang hasil dari chart nya akan seperti berikut
 
-![Grafana Custom](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_custom.png)
+![Grafana Custom](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_custom.png)
 
 Untuk menyimpan nya, klik tombol `Apply` di pojok kanan atas.
 
 Sekarang dashboard baru sudah dibuat
 
-![Grafana Result](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_result.png)
+![Grafana Result](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_result.png)
 
 Namun masalah nya jika kita buatkan satu persatu agak ribet, apalagi jika kalian baru mencoba grafana ini. Yang dimana kita perlu paham
 juga mengenai PromQL untuk menampilkan data-data seperti ini. Tapi untuk kalian yang mungkin baru coba gk perlu khawatir karena kita akan
@@ -738,14 +738,14 @@ Untuk melakukan import kalian bisa mengujungi website resmi dari grafana dengan 
 
 Setelah dibuka, kalian klik tombol `Copy ID Clipboard`.
 
-![Grafana Copy Id](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_copy_id.png)
+![Grafana Copy Id](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_copy_id.png)
 
 Setelah itu kembali ke web grafana nya lalu buka menu `Dashboard` > `Import dashboard` kemudian paste id yang sudah di copy sebelumnya kedalam
 form `Import via grafana.com`
 
-![Grafana Import](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import.png)
+![Grafana Import](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import.png)
 
-![Grafana Import ID](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import_id.png)
+![Grafana Import ID](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import_id.png)
 
 Setelah itu klik tombol `Load`
 
@@ -756,13 +756,13 @@ Selanjutnya sesuaikan dengan yang kalian inginkan seperti:
 
 Yang pasti pilih data source nya adalah prometheus
 
-![Grafana Import Dashboard](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import_dashboard.png)
+![Grafana Import Dashboard](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import_dashboard.png)
 
 Setelah itu klik tombol `Import`
 
 Maka sekarang tampilan nya akan seperti berikut ini, disini kita bisa pilih juga time frame nya seperti `Last 1 Hour` dsb
 
-![Grafana Import Dashboard Result](../images/posts/assets/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import_dashboard_result.png)
+![Grafana Import Dashboard Result](${NEXT_PUBLIC_PUBLIC_ASSETS}/monitoring_server_menggunakan_grafana_dan_prometheus/grafana_import_dashboard_result.png)
 
 ## Kesimpulan
 

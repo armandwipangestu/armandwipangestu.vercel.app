@@ -49,7 +49,7 @@ Untuk persiapan ini, kita harus membuat beberapa DNS record diantaranya adalah
 > |             | pop  | A    | 3600 | 112.16.21.20 |
 > |             | imap | A    | 3600 | 112.16.21.20 |
 
-![DNS Record](../images/posts/assets/email_postifx_dovecot_dan_roundcube/dns_record.png)
+![DNS Record](${NEXT_PUBLIC_PUBLIC_ASSETS}/email_postifx_dovecot_dan_roundcube/dns_record.png)
 
 ## Install dan Konfigurasi Postfix
 
@@ -61,15 +61,15 @@ sudo apt install -y postfix
 
 maka akan muncul Postfix Configuration seperti gambar dibawah ini, tekan `TAB` dan `ENTER` untuk melanjutkan
 
-![Postfix Screen Configurtion](../images/posts/assets/email_postifx_dovecot_dan_roundcube/postfix_configuration_screen.webp)
+![Postfix Screen Configurtion](${NEXT_PUBLIC_PUBLIC_ASSETS}/email_postifx_dovecot_dan_roundcube/postfix_configuration_screen.webp)
 
 Pada menu selanjutnya, pilih `Internet Site` kemudian tekan `TAB` dan `ENTER`
 
-![Postfix Screen Configurtion 2](../images/posts/assets/email_postifx_dovecot_dan_roundcube/postfix_configuration_screen_2.webp)
+![Postfix Screen Configurtion 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/email_postifx_dovecot_dan_roundcube/postfix_configuration_screen_2.webp)
 
 Selanjutnya masukan nama email sistem, yang merupakan nama domain anda. Misalnya, nama servernya adalah `email.example.com`, jadi masukan `example.com` di sini.
 
-![Postfix Screen Configurtion 3](../images/posts/assets/email_postifx_dovecot_dan_roundcube/postfix_configuration_screen_3.webp)
+![Postfix Screen Configurtion 3](${NEXT_PUBLIC_PUBLIC_ASSETS}/email_postifx_dovecot_dan_roundcube/postfix_configuration_screen_3.webp)
 
 langkah selanjutnya adalah melakukan backup konfigurasi postfix di PATH `/etc/postfix/main.cf` dengan cara
 
@@ -514,11 +514,11 @@ sudo apt install -y roundcube
 
 Tekan `ENTER` untuk konfigurasi database untuk menggunakan roundcube
 
-![Roundcube](../images/posts/assets/email_postifx_dovecot_dan_roundcube/roundcube.webp)
+![Roundcube](${NEXT_PUBLIC_PUBLIC_ASSETS}/email_postifx_dovecot_dan_roundcube/roundcube.webp)
 
 Pada menu selanjutnya, masukan MySQL password untuk menggunakan roundcube
 
-![Roundcube 2](../images/posts/assets/email_postifx_dovecot_dan_roundcube/roundcube2.webp)
+![Roundcube 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/email_postifx_dovecot_dan_roundcube/roundcube2.webp)
 
 Tekan `TAB` dan `ENTER`
 
@@ -630,4 +630,4 @@ https://mail.example.com
 
 Anda dapat melihat tampilan yang sama seperti ini. Masukan username dan password yang telah di definisikan pada file `/etc/dovecot/dovecot-users`
 
-![Roundcube](../images/posts/assets/email_postifx_dovecot_dan_roundcube/roundcube.png)
+![Roundcube](${NEXT_PUBLIC_PUBLIC_ASSETS}/email_postifx_dovecot_dan_roundcube/roundcube.png)
