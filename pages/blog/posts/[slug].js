@@ -280,6 +280,12 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
 
+  // Ganti `${NEXT_PUBLIC_BASE_URL}` dengan nilai yang benar dalam konten
+  const contentWithReplacedBaseUrl = content.replace(
+    /\$\{NEXT_PUBLIC_BASE_URL\}/g,
+    process.env.NEXT_PUBLIC_BASE_URL
+  );
+
   const files = fs.readdirSync(path.join("posts"));
 
   const posts = files.map((filename) => {
@@ -302,7 +308,7 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       frontmatter,
       slug,
-      content,
+      content: contentWithReplacedBaseUrl, // Gunakan konten yang telah diganti baseUrl
       posts: posts.sort(sortPostsByDate),
     },
   };
