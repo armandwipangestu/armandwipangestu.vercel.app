@@ -203,8 +203,8 @@ const DynamicSinglePagePost = ({
       <Metadata
         title={title}
         description={excerpt}
-        image="/metadata/root.png"
-        url={`https://armandwipangestu.vercel.app/blog/posts/${slug}`}
+        image="metadata/root.png"
+        url={`blog/posts/${slug}`}
       />
 
       <div className="pb-36 pt-36 transition duration-300 ease-in-out dark:bg-dark">

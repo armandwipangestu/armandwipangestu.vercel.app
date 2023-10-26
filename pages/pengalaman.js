@@ -6,8 +6,8 @@ const ExperiencePage = () => {
       <Metadata
         title="Portofolio - Pengalaman"
         description="Berikut adalah pengalaman kerja yang saya miliki"
-        image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app/pengalaman"
+        image="metadata/root.png"
+        url="pengalaman"
       />
 
       <section

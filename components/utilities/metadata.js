@@ -10,11 +10,17 @@ const Metadata = ({ title, description, image, url }) => {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
       {/* Facebook Meta Tags */}
-      <meta property="og:url" content={url} />
+      <meta
+        property="og:url"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}/${url}`}
+      />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta
+        property="og:image"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}/${image}`}
+      />
       {/* <meta property="og:image:width" content="460"/>
         <meta property="og:image:height" content="230"/>
         <meta property="og:image:type" content="image/png"/>
@@ -28,7 +34,10 @@ const Metadata = ({ title, description, image, url }) => {
         <meta property="twitter:url" content="https://armandwipangestu.vercel.app" /> */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta
+        name="twitter:image"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}/${image}`}
+      />
 
       {/* <meta name="color-scheme" content="dark" /> */}
     </Head>

@@ -6,8 +6,8 @@ const EducationPage = () => {
       <Metadata
         title="Portofolio - Pendidikan"
         description="Berikut adalah pendidikan yang saya tempuh"
-        image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app/pendidikan"
+        image="metadata/root.png"
+        url="pendidikan"
       />
 
       <section

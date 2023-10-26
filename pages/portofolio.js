@@ -8,7 +8,7 @@ const PortofolioPage = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://portofolio-next-js-armandwipangestu.vercel.app/api/portofolio"
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/portofolio`
       );
       const data = await response.json();
       setPortos(data.data);
@@ -26,8 +26,8 @@ const PortofolioPage = () => {
       <Metadata
         title="Portofolio"
         description="Berikut adalah list portofolio yang saya miliki"
-        image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app/portofolio"
+        image="metadata/root.png"
+        url="portofolio"
       />
 
       <section className="pt-36 pb-36 transition duration-300 ease-in-out dark:bg-dark">

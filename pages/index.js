@@ -9,8 +9,8 @@ const HomePage = () => {
       <Metadata
         title="Portofolio"
         description="Website Portofolio Dibuat Menggunakan NextJS dan TailwindCSS"
-        image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app"
+        image="metadata/root.png"
+        url=""
       />
 
       <section className="pt-36 pb-36 transition duration-300 ease-in-out dark:bg-dark">

@@ -86,8 +86,8 @@ const BlogPage = ({ posts }) => {
       <Metadata
         title="Blog"
         description="Dokumentasi kegiatan belajar sehari-hari seputar Programming, Networking, dan System Administrator"
-        image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app/blog"
+        image="metadata/root.png"
+        url="blog"
       />
 
       <section className="pb-36 pt-36 transition-all duration-300 dark:bg-dark">

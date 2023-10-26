@@ -31,8 +31,8 @@ const SkillsPage = () => {
       <Metadata
         title="Portofolio - Skills"
         description="Berikut adalah list Teknologi, Programming Laguage dan Tools yang saya kuasai."
-        image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app/skills"
+        image="metadata/root.png"
+        url="skills"
       />
 
       <section

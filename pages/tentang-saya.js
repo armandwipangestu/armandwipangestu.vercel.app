@@ -6,8 +6,8 @@ const AboutPage = () => {
       <Metadata
         title="Portofolio - Tentang Saya"
         description="Saya adalah seorang Junior Web Developer, Network Technician, System Administrator"
-        image="/metadata/root.png"
-        url="https://armandwipangestu.vercel.app/tentang-saya"
+        image="metadata/root.png"
+        url="tentang-saya"
       />
 
       <section className="pb-32 pt-32 transition duration-300 ease-in-out dark:bg-dark lg:pt-44">

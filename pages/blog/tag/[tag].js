@@ -20,8 +20,8 @@ const DynamicTagPage = ({ posts }) => {
       <Metadata
         title={`Blog - ${tag}`}
         description={`Tag - ${tag}`}
-        image="/metadata/root.png"
-        url={`https://armandwipangestu.vercel.app/blog/tag/${tag}`}
+        image="metadata/root.png"
+        url={`blog/tag/${tag}`}
       />
 
       <ArticleLayout posts={sortPostByDynamicTag} tag={tag} />
