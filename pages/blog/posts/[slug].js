@@ -7,6 +7,8 @@ import hljs from "highlight.js";
 import Toc from "@/components/utilities/toc";
 import { useRef, useEffect, useState } from "react";
 import { GoCopy, GoCheck } from "react-icons/go";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 import useReadingTime from "use-reading-time";
 import Metadata from "@/components/utilities/metadata";
 import { sortPostsByDate } from "@/utilities/sortPostsByDate";
@@ -141,7 +143,9 @@ const DynamicSinglePagePost = ({
           "hover:text-green-600",
           "dark:hover:text-green-400"
         );
+        // Menggunakan Text
         copyDiv.innerText = "Copy";
+
         innerDiv.appendChild(copyDiv);
 
         copyDiv.addEventListener("click", () => {
@@ -167,8 +171,11 @@ const DynamicSinglePagePost = ({
             }
           }
 
+          // Menggunakan Text
           copyDiv.innerText = "Copied!";
+
           setTimeout(() => {
+            // Menggunakan Text
             copyDiv.innerText = "Copy";
           }, 2000);
         });
