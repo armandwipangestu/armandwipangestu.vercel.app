@@ -20,7 +20,7 @@ const DynamicTagPage = ({ posts }) => {
       <Metadata
         title={`Blog - ${tag}`}
         description={`Tag - ${tag}`}
-        image="metadata/root.png"
+        image="/metadata/root.png"
         url={`blog/tag/${tag}`}
       />
 

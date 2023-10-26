@@ -6,7 +6,7 @@ const ExperiencePage = () => {
       <Metadata
         title="Portofolio - Pengalaman"
         description="Berikut adalah pengalaman kerja yang saya miliki"
-        image="metadata/root.png"
+        image="/metadata/root.png"
         url="pengalaman"
       />
 
