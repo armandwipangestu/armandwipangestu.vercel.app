@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Proxmox - #1 Installation Process"
 tag: "SysAdmin"
 date: "June 26 2023"

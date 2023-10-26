@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Codeigniter - Configurasi Dasar"
 tag: "Programming"
 date: "February 4 2023"

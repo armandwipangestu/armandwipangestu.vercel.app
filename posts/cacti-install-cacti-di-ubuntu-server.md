@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Cacti - Instalasi dan Konfigurasi Monitoring Traffic Menggunakan Cacti di Ubuntu Server"
 tag: "SysAdmin"
 date: "August 30 2023"

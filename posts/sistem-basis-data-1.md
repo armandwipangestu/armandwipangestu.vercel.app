@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Sistem Basis Data - 1"
 tag: "Programming"
 date: "October 6 2023"

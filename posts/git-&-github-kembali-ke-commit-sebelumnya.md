@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Git - Kembali Ke Commit Sebelumnya"
 tag: "Git"
 date: "January 17 2023"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Email - Protokol Email Yang Wajib Diketahui"
 tag: "SysAdmin"
 date: "August 15 2023"

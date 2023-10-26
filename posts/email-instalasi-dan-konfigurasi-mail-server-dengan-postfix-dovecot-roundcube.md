@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Email - Instalasi dan Konfigurasi Mail Server dengan Postfix, Dovecot dan Roundcube"
 tag: "SysAdmin"
 date: "August 23 2023"

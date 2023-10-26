@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Arch Linux - Mengaktifkan Mod Rewrite Pada Configurasi Apache"
 tag: "Linux"
 date: "January 24 2023"

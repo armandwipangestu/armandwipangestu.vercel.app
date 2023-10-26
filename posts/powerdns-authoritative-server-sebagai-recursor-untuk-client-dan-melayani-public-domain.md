@@ -1,4 +1,5 @@
 ---
+published: true
 title: "PowerDNS - Authoritative Server Sebagai Recursor Untuk Client dan Melayani Public Domains"
 tag: "SysAdmin"
 date: "August 01 2023"

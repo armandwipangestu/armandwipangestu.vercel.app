@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Ubuntu - Instalasi dan Konfigurasi LEMP Stack"
 tag: "Linux"
 date: "August 30 2023"

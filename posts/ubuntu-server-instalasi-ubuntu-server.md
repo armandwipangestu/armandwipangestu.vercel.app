@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Ubuntu Server - Instalasi Ubuntu Server 22.04"
 tag: "Linux"
 date: "June 21 2023"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "PowerDNS - Konfigurasi Master dan Slave"
 tag: "SysAdmin"
 date: "July 14 2023"

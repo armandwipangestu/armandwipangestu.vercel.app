@@ -1,4 +1,5 @@
 ---
+published: true
 title: "PHP JS - Select Option Form Input"
 tag: "Programming"
 date: "January 24 2023"

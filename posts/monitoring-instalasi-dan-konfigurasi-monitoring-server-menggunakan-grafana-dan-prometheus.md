@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Monitoring - Instalasi dan Konfigurasi Monitoring Server Menggunakan Grafana dan Prometheus"
 tag: "SysAdmin"
 date: "August 25 2023"

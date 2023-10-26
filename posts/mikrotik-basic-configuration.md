@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Mikrotik - Basic Configuration"
 tag: "Networking"
 date: "January 17 2023"

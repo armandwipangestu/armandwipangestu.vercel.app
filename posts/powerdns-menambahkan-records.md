@@ -1,4 +1,5 @@
 ---
+published: true
 title: "PowerDNS - Menambahkan DNS Records pada DNS Server"
 tag: "SysAdmin"
 date: "July 12 2023"

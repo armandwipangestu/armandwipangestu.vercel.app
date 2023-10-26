@@ -1,4 +1,5 @@
 ---
+published: true
 title: "DNS - Apa itu DNS? Pengertian, Fungsi dan Cara Kerja"
 tag: "SysAdmin"
 date: "July 11 2023"

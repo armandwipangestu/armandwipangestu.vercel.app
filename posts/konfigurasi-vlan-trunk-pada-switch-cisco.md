@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Cisco - Konfigurasi VLAN Trunk Pada Switch Cisco"
 tag: "Networking"
 date: "January 17 2023"

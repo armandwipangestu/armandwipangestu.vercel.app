@@ -1,4 +1,5 @@
 ---
+published: true
 title: "PowerDNS - Install PowerDNS di Ubuntu Server"
 tag: "SysAdmin"
 date: "July 04 2023"

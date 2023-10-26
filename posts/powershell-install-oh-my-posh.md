@@ -1,4 +1,5 @@
 ---
+published: true
 title: "PowerShell - Install Oh-My-Posh"
 tag: "Setup"
 date: "January 24 2023"

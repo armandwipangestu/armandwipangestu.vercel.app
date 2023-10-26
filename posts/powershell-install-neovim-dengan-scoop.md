@@ -1,4 +1,5 @@
 ---
+published: true
 title: "PowerShell - Install Neovim Menggunakan Scoop"
 tag: "Setup"
 date: "January 24 2023"

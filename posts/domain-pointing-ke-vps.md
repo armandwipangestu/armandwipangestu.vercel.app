@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Domain - Pointing ke VPS"
 tag: "SysAdmin"
 date: "July 21 2023"

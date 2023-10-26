@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Ubiquiti - PowerBeam M5 400 Sebagai Client (Station Mode)"
 tag: "Networking"
 date: "April 23 2023"

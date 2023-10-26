@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Git - Squash Commit"
 tag: "Git"
 date: "January 17 2023"

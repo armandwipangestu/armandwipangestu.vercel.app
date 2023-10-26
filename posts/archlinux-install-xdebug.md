@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Arch Linux - Install Xdebug"
 tag: "Linux"
 date: "March 01 2023"
