@@ -9,7 +9,7 @@ const HomePage = () => {
       <Metadata
         title="Portofolio"
         description="Website Portofolio Dibuat Menggunakan NextJS dan TailwindCSS"
-        image="/metadata/root.png"
+        image="/metadata/home.png"
         url=""
       />
 
