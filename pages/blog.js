@@ -199,6 +199,7 @@ const BlogPage = ({ posts }) => {
                                 height="360"
                                 width="640"
                                 src={post.frontmatter.cover_image}
+                                className="transition duration-300 ease-in-out hover:scale-110"
                               />
                             </div>
                           </div>

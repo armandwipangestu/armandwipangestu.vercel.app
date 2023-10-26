@@ -89,6 +89,7 @@ const PortofolioPage = () => {
                         height="360"
                         width="640"
                         src={porto.thubmnail}
+                        className="transition duration-300 ease-in-out hover:scale-110"
                       />
                     </div>
                   </div>

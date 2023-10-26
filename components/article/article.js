@@ -56,6 +56,7 @@ const ArticleLayout = ({ posts, tag }) => {
                               height="360"
                               width="640"
                               src={mainCard.frontmatter.cover_image}
+                              className="transition duration-300 ease-in-out hover:scale-110"
                             />
                           </div>
                         </div>
@@ -198,7 +199,7 @@ const ArticleLayout = ({ posts, tag }) => {
                       <Link href={`/blog/posts/${mainCard.slug}`}>
                         <img
                           alt="Progressive Web Apps"
-                          className="h-full w-full object-cover object-center lg:rounded-md"
+                          className="h-full w-full object-cover object-center lg:rounded-md transition duration-300 ease-in-out hover:scale-110"
                           height="720"
                           width="1280"
                           src={mainCard.frontmatter.cover_image}
@@ -243,6 +244,7 @@ const ArticleLayout = ({ posts, tag }) => {
                                 height="360"
                                 width="640"
                                 src={card.frontmatter.cover_image}
+                                className="transition duration-300 ease-in-out hover:scale-110"
                               />
                             </div>
                           </div>

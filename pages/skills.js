@@ -9,11 +9,16 @@ const SkillsPage = () => {
     const animateGrayscale = () => {
       if (activeIndex < grayscales.length) {
         grayscales[activeIndex].classList.remove("grayscale", "opacity-60");
-        grayscales[activeIndex].classList.add("grayscale-0", "opacity-100");
+        grayscales[activeIndex].classList.add(
+          "grayscale-0",
+          "opacity-100",
+          "scale-110"
+        );
         setTimeout(() => {
           grayscales[activeIndex].classList.remove(
             "grayscale-0",
-            "opacity-100"
+            "opacity-100",
+            "scale-110"
           );
           grayscales[activeIndex].classList.add("grayscale", "opacity-60");
           setActiveIndex(activeIndex + 1);
@@ -68,7 +73,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.w3.org/html/"
                 target="_blank"
-                className="mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/html.png" alt="HTML" />
                 {/* <div class="absolute left-2 top-0 inline-flex items-center justify-center rounded-full border-2 bg-primary px-2 text-xs font-bold text-white">
@@ -80,7 +85,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.w3schools.com/css/"
                 target="_blank"
-                className="mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/css.svg" alt="CSS" />
                 {/* <div class='absolute left-2 top-0 inline-flex items-center justify-center rounded-full border-2 bg-primary px-2 text-xs font-bold text-white'>
@@ -92,7 +97,7 @@ const SkillsPage = () => {
               <a
                 href="https://getbootstrap.com/"
                 target="_blank"
-                className="mx-4 max-w-[65px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[65px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/bootstrap.svg" alt="Bootstrap" />
                 {/* <div class='absolute left-2 top-0 inline-flex items-center justify-center rounded-full border-2 bg-primary px-2 text-xs font-bold text-white'>
@@ -104,7 +109,7 @@ const SkillsPage = () => {
               <a
                 href="https://tailwindcss.com/"
                 target="_blank"
-                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/tailwindcss.png" alt="Tailwind CSS" />
                 {/* <div class='absolute left-2 top-0 inline-flex items-center justify-center rounded-full border-2 bg-primary px-2 text-xs font-bold text-white'>
@@ -116,7 +121,7 @@ const SkillsPage = () => {
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                 target="_blank"
-                className="mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/javascript.png" alt="Javascript" />
                 {/* <div class='absolute left-2 top-0 inline-flex items-center justify-center rounded-full border-2 bg-primary px-2 text-xs font-bold text-white'>
@@ -128,7 +133,7 @@ const SkillsPage = () => {
               <a
                 href="https://react.dev/"
                 target="_blank"
-                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/reactjs.svg" alt="ReactJS" />
                 {/* <div class='absolute left-2 top-4 inline-flex items-center justify-center rounded-full border-2 bg-primary px-2 text-xs font-bold text-white'>
@@ -140,7 +145,7 @@ const SkillsPage = () => {
               <a
                 href="https://nodejs.org/en"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/nodejs.svg" alt="NodeJS" />
                 {/* <div class='absolute left-2 top-0 inline-flex items-center justify-center rounded-full border-2 bg-primary px-2 text-xs font-bold text-white'>
@@ -152,7 +157,7 @@ const SkillsPage = () => {
               <a
                 href="https://expressjs.com/"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/express.png" alt="Express JS" />
               </a>
@@ -161,7 +166,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.php.net/"
                 target="_blank"
-                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/php-2.svg" alt="PHP" />
               </a>
@@ -170,7 +175,7 @@ const SkillsPage = () => {
               <a
                 href="https://codeigniter.com/"
                 target="_blank"
-                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/codeigniter.svg" alt="Codeigniter" />
               </a>
@@ -179,7 +184,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.mysql.com/"
                 target="_blank"
-                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/mysql.svg" alt="MySQL" />
               </a>
@@ -188,7 +193,7 @@ const SkillsPage = () => {
               <a
                 href="https://git-scm.com/"
                 target="_blank"
-                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/git.svg" alt="Git" />
               </a>
@@ -197,7 +202,7 @@ const SkillsPage = () => {
               <a
                 href="https://github.com"
                 target="_blank"
-                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/github.svg" alt="GitHub" />
               </a>
@@ -206,7 +211,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.linux.org/"
                 target="_blank"
-                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/linux.png" alt="Linux" />
               </a>
@@ -215,7 +220,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.gnu.org/software/bash/"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/gnu-bash.svg" alt="Bash" />
               </a>
@@ -224,7 +229,7 @@ const SkillsPage = () => {
               <a
                 href="https://httpd.apache.org/"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/apache.svg" alt="Apache HTTP Web Server" />
               </a>
@@ -233,7 +238,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.nginx.com/"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/nginx.svg" alt="Nginx" />
               </a>
@@ -242,7 +247,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.powerdns.com"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/powerdns.svg" alt="PowerDNS" />
               </a>
@@ -251,7 +256,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.proxmox.com"
                 target="_blank"
-                className="mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/proxmox.svg" alt="Proxmox" />
               </a>
@@ -260,7 +265,7 @@ const SkillsPage = () => {
               <a
                 href="https://mikrotik.com"
                 target="_blank"
-                className="mx-4 max-w-[150px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[150px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/mikrotik.png" alt="Mikrotik" />
               </a>
@@ -269,7 +274,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.ruijienetworks.com"
                 target="_blank"
-                className="mx-4 max-w-[110px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[110px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/ruijie.png" alt="Rujie" />
               </a>
@@ -278,7 +283,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.ui.com"
                 target="_blank"
-                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/ubiquiti.svg" alt="Ubiquiti" />
               </a>
@@ -287,7 +292,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.figma.com"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/figma.svg" alt="Figma" />
               </a>
@@ -296,7 +301,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.postman.com"
                 target="_blank"
-                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/postman.svg" alt="Postman" />
               </a>
@@ -305,7 +310,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.arduino.cc"
                 target="_blank"
-                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+                className="mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/arduino.svg" alt="Arduino Uno" />
               </a>
