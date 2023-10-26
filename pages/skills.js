@@ -31,7 +31,7 @@ const SkillsPage = () => {
       <Metadata
         title="Portofolio - Skills"
         description="Berikut adalah list Teknologi, Programming Laguage dan Tools yang saya kuasai."
-        image="/metadata/root.png"
+        image="/metadata/home.png"
         url="skills"
       />
 

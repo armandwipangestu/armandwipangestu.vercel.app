@@ -6,7 +6,7 @@ const EducationPage = () => {
       <Metadata
         title="Portofolio - Pendidikan"
         description="Berikut adalah pendidikan yang saya tempuh"
-        image="/metadata/root.png"
+        image="/metadata/home.png"
         url="pendidikan"
       />
 

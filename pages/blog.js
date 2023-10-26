@@ -86,7 +86,7 @@ const BlogPage = ({ posts }) => {
       <Metadata
         title="Blog"
         description="Dokumentasi kegiatan belajar sehari-hari seputar Programming, Networking, dan System Administrator"
-        image="/metadata/root.png"
+        image="/metadata/blog.png"
         url="blog"
       />
 

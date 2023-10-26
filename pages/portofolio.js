@@ -26,7 +26,7 @@ const PortofolioPage = () => {
       <Metadata
         title="Portofolio"
         description="Berikut adalah list portofolio yang saya miliki"
-        image="/metadata/root.png"
+        image="/metadata/home.png"
         url="portofolio"
       />
 

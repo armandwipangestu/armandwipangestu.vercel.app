@@ -7,7 +7,7 @@ const AboutPage = () => {
       <Metadata
         title="Portofolio - Tentang Saya"
         description="Saya adalah seorang Junior Web Developer, Network Technician, System Administrator"
-        image="/metadata/home2.png"
+        image="/metadata/home.png"
         url="tentang-saya"
       />
 
