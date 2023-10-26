@@ -16,6 +16,14 @@ export default async function handler(req, res) {
 
 const data = [
   {
+    link: "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
+    thubmnail: "/portofolio/portofolio.png",
+    alt: "NextJS - Web Portofolio",
+    title: "NextJS - Web Portofolio",
+    excerpt: "Web Portofolio dibuat menggunakan NextJS dan Tailwind CSS",
+    techs: ["NextJS", "ReactJS", "TailwindCSS", "Markdown"],
+  },
+  {
     link: "https://github.com/armandwipangestu/beasiswa",
     thubmnail: "/portofolio/beasiswa.png",
     alt: "CodeIgniter - Beasiswa",
@@ -32,15 +40,6 @@ const data = [
     excerpt:
       "Aplikasi toko alat olahraga yang memiliki fitur CRUD pada Excel, proyek ini merupakan tugas dari mata kuliah Mini Project 1.",
     techs: ["Visual Basic Application", "Excel"],
-  },
-  {
-    link: "https://github.com/armandwipangestu/next-markdown-blog",
-    thubmnail: "/portofolio/blog.png",
-    alt: "NextJS - Blog",
-    title: "NextJS - Blog",
-    excerpt:
-      "Aplikasi Blog pribadi untuk menyimpan catatan artikel mengenai teknologi yang dipelajari dan lainnya.",
-    techs: ["NextJS", "ReactJS", "TailwindCSS", "Markdown"],
   },
   {
     link: "https://github.com/armandwipangestu/openai-project",
