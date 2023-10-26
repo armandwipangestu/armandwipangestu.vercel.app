@@ -13,7 +13,8 @@ html {
 
 ::-webkit-scrollbar-thumb {
   width: 5px !important;
-  background: content-box #31b5d5;
+  /* background: content-box #31b5d5; */
+  background: content-box rgba(94, 109, 122, 0.54);
   border-radius: 17px;
   border-width: 3px;
   border-style: solid;
