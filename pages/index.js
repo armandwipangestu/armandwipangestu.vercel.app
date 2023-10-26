@@ -52,6 +52,14 @@ const HomePage = () => {
               >
                 Tentang Saya
               </Link>
+
+              <Link
+                href="/Curriculum Vitae.pdf"
+                target="_blank"
+                className="ml-5 rounded-full bg-dark text-white dark:bg-white dark:text-dark px-7 py-2.5 text-base font-semibold transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
+              >
+                Download CV
+              </Link>
             </div>
 
             <div className="w-full self-end px-4 lg:w-1/2">
