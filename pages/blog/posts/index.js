@@ -37,15 +37,23 @@ export const getStaticProps = async () => {
 
     const { data: frontmatter } = matter(markdownWithMeta);
 
+    // Set a default value for 'published' if it's not defined
+    if (frontmatter.published === undefined) {
+      frontmatter.published = true; // Default to published
+    }
+
     return {
       slug,
       frontmatter,
     };
   });
 
+  // Filter posts based on the 'published' property
+  const publishedPosts = posts.filter((post) => post.frontmatter.published);
+
   return {
     props: {
-      posts: posts.sort(sortPostsByDate),
+      posts: publishedPosts.sort(sortPostsByDate),
     },
   };
 };
