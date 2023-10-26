@@ -45,24 +45,28 @@ const Footer = () => {
             <div className="flex gap-x-1">
               <a
                 href="https://github.com/armandwipangestu"
+                target="_blank"
                 className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary dark:hover:border-primary dark:hover:bg-primary hover:text-white"
               >
                 <FaGithub className="h-6 w-6" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A"
+                target="_blank"
                 className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary dark:hover:border-primary dark:hover:bg-primary hover:text-white"
               >
                 <FaYoutube className="h-6 w-6" />
               </a>
               <a
                 href="https://www.instagram.com/devvnnull/"
+                target="_blank"
                 className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary dark:hover:border-primary dark:hover:bg-primary hover:text-white"
               >
                 <FaInstagram className="h-6 w-6" />
               </a>
               <a
                 href="https://www.linkedin.com/in/arman-dwi-pangestu-08704a220/"
+                target="_blank"
                 className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-500 text-slate-400 dark:border-slate-300 dark:text-slate-300 hover:border-primary hover:bg-primary dark:hover:border-primary dark:hover:bg-primary hover:text-white"
               >
                 <FaLinkedin className="h-6 w-6" />
