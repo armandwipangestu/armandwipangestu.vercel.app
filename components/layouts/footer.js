@@ -108,7 +108,7 @@ const Footer = () => {
         <p className="text-center text-xs font-medium text-accents-300 dark:text-white/80 mt-2">
           Dibuat dengan <span className="text-pink-500">❤️</span> oleh{" "}
           <a
-            href="https://github.com/armandwipangestu/portofolio"
+            href="https://github.com/armandwipangestu/armandwipangestu.vercel.app"
             target="_blank"
             className="font-bold text-primary"
           >
