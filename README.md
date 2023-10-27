@@ -43,6 +43,7 @@ pages
 ├── _document.js
 ├── _index_default.js
 ├── api
+│  └── menu.js
 │  └── portofolio.js
 ├── blog
 │  ├── posts
@@ -74,4 +75,5 @@ utilities
 
 | Endpoint          | METHOD |
 | ----------------- | ------ |
+| `/api/menu`       | GET    |
 | `/api/portofolio` | GET    |
