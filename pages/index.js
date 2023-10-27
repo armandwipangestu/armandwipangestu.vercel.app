@@ -48,7 +48,7 @@ const HomePage = () => {
 
               <Link
                 href="/tentang-saya"
-                className="rounded-full bg-primary px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
+                className="rounded-full bg-primary px-5 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
               >
                 Tentang Saya
               </Link>
@@ -56,7 +56,7 @@ const HomePage = () => {
               <Link
                 href="/Curriculum Vitae.pdf"
                 target="_blank"
-                className="ml-5 rounded-full bg-dark text-white dark:bg-white dark:text-dark px-7 py-2.5 text-base font-semibold transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
+                className="ml-2 md:ml-5 rounded-full bg-dark text-white dark:bg-white dark:text-dark px-5 py-2.5 text-base font-semibold transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
               >
                 Download CV
               </Link>
