@@ -176,7 +176,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <FaNodeJs className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.0.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   NodeJS
                 </span>
               </a>
@@ -188,7 +188,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiExpress className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.0.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span class="absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   ExpressJS
                 </span>
               </a>
@@ -200,7 +200,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <TbBrandNextjs className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.0.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.7rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   NextJS
                 </span>
               </a>
