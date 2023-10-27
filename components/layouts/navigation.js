@@ -62,7 +62,7 @@ const Navigation = () => {
 
   return (
     <header
-      className={`navbar-fixed fixed top-0 z-10 w-full items-center border-b border-white/20 bg-transparent transition-all duration-300 ease-in-out`}
+      className={`navbar-fixed fixed top-0 z-10 w-full items-center border-b border-dark/20 dark:border-white/20 bg-transparent transition-all duration-300 ease-in-out`}
     >
       <div className="container">
         <div className="relative flex items-center justify-between">
