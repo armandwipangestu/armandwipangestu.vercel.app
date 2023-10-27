@@ -62,7 +62,7 @@ const Navigation = () => {
 
   return (
     <header
-      className={`navbar-fixed fixed top-0 z-10 w-full items-center border-b border-white/10 bg-transparent transition-all duration-300 ease-in-out`}
+      className={`navbar-fixed fixed top-0 z-10 w-full items-center border-b border-white/20 bg-transparent transition-all duration-300 ease-in-out`}
     >
       <div className="container">
         <div className="relative flex items-center justify-between">
@@ -100,8 +100,8 @@ const Navigation = () => {
                   <div
                     className={`toggle-icon rounded-full p-1 ${
                       darkMode
-                        ? "dark hover:bg-accents-200"
-                        : "light hover:bg-emphasis-200"
+                        ? "hover:dark:bg-cyan-300/20"
+                        : "hover:bg-emphasis-200"
                     }`}
                   >
                     {darkMode ? (
@@ -117,11 +117,11 @@ const Navigation = () => {
             )}
 
             <nav
-              className={`${
-                hamburger ? "mt-1 transition duration-300" : "hidden"
-              } ${
-                isMobile ? "border dark:border-white dark:bg-dark z-[9999]" : ""
-              } absolute right-0 top-full w-full max-w-full rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none`}
+              className={`${hamburger ? "mt-1" : "hidden"} ${
+                isMobile
+                  ? "border dark:border-white/20 dark:bg-dark z-[9999]"
+                  : ""
+              } transition duration-300 ease-in-out absolute right-0 top-full w-full max-w-full rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none`}
             >
               <ul className="block lg:flex">
                 {menus.map((menu, index) => (
@@ -155,9 +155,9 @@ const Navigation = () => {
                           }`}
                         >
                           {darkMode ? (
-                            <Sun className="transition duration-300 ease-in-out dark:text-slate-400" />
+                            <Sun className="transition duration-300 ease-in-out dark:text-white" />
                           ) : (
-                            <Moon className="transition duration-300 ease-in-out text-accents-300" />
+                            <Moon className="transition duration-300 ease-in-out text-dark" />
                           )}
                         </div>
                       </label>
