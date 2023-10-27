@@ -98,16 +98,26 @@ const Navigation = () => {
                   onClick={handleDarkMode}
                 >
                   <div
-                    className={`toggle-icon rounded-full p-1 ${
+                    className={`group toggle-icon rounded-full p-1 ${
                       darkMode
                         ? "hover:dark:bg-cyan-300/20"
                         : "hover:bg-emphasis-200"
                     }`}
                   >
                     {darkMode ? (
-                      <Sun className="transition duration-300 ease-in-out dark:text-white" />
+                      <>
+                        <Sun className="transition duration-300 ease-in-out dark:text-white" />
+                        {/* <span class="absolute top-[3rem] -right-8 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                          ✨ Light Mode
+                        </span> */}
+                      </>
                     ) : (
-                      <Moon className="transition duration-300 ease-in-out text-dark" />
+                      <>
+                        <Moon className="transition duration-300 ease-in-out text-dark" />
+                        {/* <span class="absolute top-[3rem] -right-8 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                          ✨ Dark Mode
+                        </span> */}
+                      </>
                     )}
                   </div>
                 </label>
@@ -148,16 +158,26 @@ const Navigation = () => {
                         onClick={handleDarkMode}
                       >
                         <div
-                          className={`toggle-icon rounded-full p-1 ${
+                          className={`group toggle-icon rounded-full p-1 ${
                             darkMode
                               ? "hover:dark:bg-cyan-300/20" //dark
                               : "hover:bg-blue-200/60" //light
                           }`}
                         >
                           {darkMode ? (
-                            <Sun className="transition duration-300 ease-in-out dark:text-white" />
+                            <>
+                              <Sun className="transition duration-300 ease-in-out dark:text-white" />
+                              <span class="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                                ✨ Light Mode
+                              </span>
+                            </>
                           ) : (
-                            <Moon className="transition duration-300 ease-in-out text-dark" />
+                            <>
+                              <Moon className="transition duration-300 ease-in-out text-dark" />
+                              <span class="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                                ✨ Dark Mode
+                              </span>
+                            </>
                           )}
                         </div>
                       </label>
