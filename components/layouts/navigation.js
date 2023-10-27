@@ -4,11 +4,24 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navigation = () => {
+  // const [menus, setMenus] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const pathName = usePathname();
+
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`
+  //     );
+  //     const data = await response.json();
+  //     setMenus(data.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const handleDarkMode = () => {
     const currentTheme = !darkMode;
@@ -26,6 +39,8 @@ const Navigation = () => {
   }, [darkMode]);
 
   useEffect(() => {
+    // fetchData();
+
     const storedTheme = localStorage.getItem("dark-mode");
     storedTheme !== null ? setDarkMode(storedTheme === "true") : "";
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaGithub, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,24 @@ const menus = [
 ];
 
 const Footer = () => {
+  // const [menus, setMenus] = useState([]);
   const pathName = usePathname();
+
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`
+  //     );
+  //     const data = await response.json();
+  //     setMenus(data.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchData();
+  // });
 
   return (
     <footer className="relative w-full border-t border-dark/20 dark:border-white/20 pt-12 transition duration-300 ease-in-out dark:bg-dark dark:opacity-90 lg:pt-20">
