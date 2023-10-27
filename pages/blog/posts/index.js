@@ -11,7 +11,7 @@ const PostsPage = ({ posts }) => {
       <Metadata
         title={`Blog - Posts`}
         description={`Daftar artikel yang saya terbitkan`}
-        image="/metadata/root.png"
+        image="/metadata/blog.png"
         url={`https://armandwipangestu.vercel.app/blog/posts`}
       />
 
