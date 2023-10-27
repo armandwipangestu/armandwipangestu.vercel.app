@@ -30,8 +30,17 @@ const Metadata = ({ title, description, image, url }) => {
 
       {/* Twitter or X Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      {/* <meta property="twitter:domain" content="armandwipangestu.vercel.app" />
-        <meta property="twitter:url" content="https://armandwipangestu.vercel.app" /> */}
+      <meta
+        property="twitter:url"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL.replace(
+          /^https?:\/\//,
+          ""
+        )}`}
+      />
+      <meta
+        property="twitter:url"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}`}
+      />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta
