@@ -68,7 +68,7 @@ const SkillsPage = () => {
           </div>
 
           <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center">
+            <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 gap-4 items-center justify-center">
               {/* HTML */}
               <a
                 href="https://www.w3.org/html/"
