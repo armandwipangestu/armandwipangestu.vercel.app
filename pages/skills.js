@@ -162,6 +162,15 @@ const SkillsPage = () => {
                 <img src="./skills/express.png" alt="Express JS" />
               </a>
 
+              {/* Next JS */}
+              <a
+                href="https://nextjs.org/"
+                target="_blank"
+                className="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <img src="./skills/nextjs-dark.svg" alt="NextJS" />
+              </a>
+
               {/* PHP */}
               <a
                 href="https://www.php.net/"
