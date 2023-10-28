@@ -76,8 +76,13 @@ const Navigation = () => {
   ];
 
   return (
+    // <header
+    //   className={`navbar-fixed fixed top-0 z-10 w-full items-center border-b border-dark/20 dark:border-white/20 bg-transparent transition-all duration-300 ease-in-out`}
+    // >
     <header
-      className={`navbar-fixed fixed top-0 z-10 w-full items-center border-b border-dark/20 dark:border-white/20 bg-transparent transition-all duration-300 ease-in-out`}
+      className={`absolute left-0 top-0 z-10 flex w-full items-center bg-transparent ${
+        navbar ? "navbar-fixed" : ""
+      } transition duration-300 ease-in-out`}
     >
       <div className="container">
         <div className="relative flex items-center justify-between">
@@ -122,14 +127,14 @@ const Navigation = () => {
                     {darkMode ? (
                       <>
                         <Sun className="transition duration-300 ease-in-out dark:text-white" />
-                        {/* <span className="absolute top-[3rem] -right-8 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                        {/* <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-200 ease-in-out font-bold">
                           ✨ Light Mode
                         </span> */}
                       </>
                     ) : (
                       <>
                         <Moon className="transition duration-300 ease-in-out text-dark" />
-                        {/* <span className="absolute top-[3rem] -right-8 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                        {/* <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-200 ease-in-out font-bold">
                           ✨ Dark Mode
                         </span> */}
                       </>
@@ -182,14 +187,14 @@ const Navigation = () => {
                           {darkMode ? (
                             <>
                               <Sun className="transition duration-300 ease-in-out dark:text-white" />
-                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-200 ease-in-out font-bold">
                                 ✨ Light Mode
                               </span>
                             </>
                           ) : (
                             <>
                               <Moon className="transition duration-300 ease-in-out text-dark" />
-                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-200 ease-in-out font-bold">
                                 ✨ Dark Mode
                               </span>
                             </>
