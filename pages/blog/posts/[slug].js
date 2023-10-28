@@ -217,40 +217,124 @@ const DynamicSinglePagePost = ({
       <div className="pb-36 pt-36 transition duration-300 ease-in-out dark:bg-dark">
         <div className="container">
           <div className="mx-auto px-4 sm:px-6 md:px-4 lg:max-w-6xl lg:px-8 xl:max-w-7xl">
-            <div className="md:w-6/12 w-full mx-auto flex items-center flex-col">
-              <div className="flex items-center text-accents-3 dark:text-slate-400 space-x-3">
-                <div className="capitalize text-base">
-                  <Link href={`/blog/tag/${tag.toLowerCase()}`}>{tag}</Link>
+            <div className="-mt-24 lg:mt-[-9rem] border-b border-dark/20 dark:border-white/20">
+              <div className="relative isolate pt-14">
+                <div
+                  className="absolute inset-x-0 midnight:hidden -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                  aria-hidden="true"
+                >
+                  <div
+                    className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-cyan-800/90 to-cyan-800/90 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                    style={{
+                      clipPath:
+                        "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                    }}
+                  ></div>
                 </div>
-                <span>•</span>
-                <div>{date}</div>
-              </div>
-              <div className="text-accents-3 dark:text-slate-400 mt-3">
-                {readingTime} Menit Baca
-              </div>
-              <h2 className="text-2xl mt-4 text-center dark:text-white">
-                {title}
-              </h2>
-              <div className="flex items-center mt-5">
-                <img
-                  src={author_image}
-                  className="w-14 h-14 rounded-full object-cover"
-                />
-                <div className="ml-4">
-                  <h3 className="text-accents-3 dark:text-slate-400">
-                    {author_name}
-                  </h3>
-                  <div className="text-accents-3 dark:text-slate-400 text-sm mt-1">
-                    {author_title}
+                {/* <svg
+                  className="absolute inset-0 -z-10 h-full w-full dark:stroke-accent/50 dark:[mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <pattern
+                      id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+                      width="200"
+                      height="200"
+                      x="50%"
+                      y="-1"
+                      patternUnits="userSpaceOnUse"
+                    >
+                      <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+                    </pattern>
+                  </defs>
+                  <svg
+                    x="50%"
+                    y="-1"
+                    className="dark:overflow-visible dark:fill-accent/20"
+                  >
+                    <path
+                      d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                      strokeWidth="0"
+                    ></path>
+                  </svg>
+                  <rect
+                    width="100%"
+                    height="100%"
+                    strokeWidth="0"
+                    fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
+                  ></rect>
+                </svg> */}
+                <div className="pt-16 sm:pt-16 md:pt-16 md:pb-0 max-w-screen-2xl mx-auto overflow-hidden lg:grid lg:grid-cols-12 lg:items-center lg:pt-40 lg:pb-28">
+                  <div className="col-span-6 sm:px-6 lg:pl-0 max-w-2xl px-4 col-start-2 lg:px-0 ml-0 lg:ml-[-1rem] xl:ml-[-0.5rem] lg:flex-auto lg:pr-16">
+                    <h1 className="lg:max-w-lg text-2xl font-bold tracking-tighter text-foreground sm:text-3xl lg:text-4xl/[2.5rem]">
+                      {title}
+                    </h1>
+                    <p className="mt-2 lg:max-w-xl leading-relaxed text-slate-400 sm:mt-4 sm:text-lg sm:leading-7">
+                      {excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-x-1 mt-4">
+                        <Link
+                          className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs tracking-tight font-medium transition-colors focus:outline-none border-cyan-500/40 bg-cyan-500/10 text-cyan-500 hover:bg-cyan-500/20"
+                          href={`/blog/tag/${tag.toLowerCase()}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {tag}
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="my-8 flex items-center justify-between gap-x-2">
+                      <div className="tracking-tighter text-sm text-muted-foreground">
+                        <div className="flex">
+                          <div className="mr-4 flex-shrink-0">
+                            <div className="LazyLoad is-visible">
+                              <img
+                                className="rounded-full w-12 h-12"
+                                src={author_image}
+                                loading="lazy"
+                                style={{ opacity: 1 }}
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-foreground">
+                              {author_name}
+                            </h4>
+                            <p className="mt-1 text-slate-400">
+                              <span>{date}</span>
+                              <span className="mx-1">•</span>
+                              <span>{readingTime} min read</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-6 sm:mt-8 lg:mr-4 lg:mt-0 col-span-5 lg:flex-shrink-0 lg:flex-grow">
+                    <div
+                      data-radix-aspect-ratio-wrapper=""
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        paddingBottom: "56.25%",
+                      }}
+                    >
+                      <div
+                        className="grid place-content-center overflow-hidden lg:rounded-lg lg:ring-1 lg:ring-border/70 lg:ring-black font-mono text-xl font-medium tracking-tighter text-accent-foreground dark:shadow-xl"
+                        style={{ position: "absolute", inset: "0px" }}
+                      >
+                        <img
+                          className="object-cover object-center w-full h-full rounded-md"
+                          height="720"
+                          width="1280"
+                          src={cover_image}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="md:w-10/12 w-full mx-auto my-10">
-              <img
-                src={cover_image}
-                className="w-full rounded-lg ring-border/50 ring-1 ring-black"
-              />
             </div>
             <div className="w-full rounded-lg mx-auto mb-5 md:max-w-3xl lg:max-w-5xl transition duration-300 ease-in-out prose prose-pre:mt-0 prose-pre:rounded-t-none prose-pre:rounded-b-lg prose-code:text-[#696a73] prose-code:dark:text-[#8B99AE] prose-code:font-bold prose-code:bg-[#E6ECF3] prose-code:dark:bg-[#0f1419] prose-code:py-1 prose-code:px-2 prose-code:rounded-md prose-table:border-collapse prose-blockquote:border-amber-500 prose-blockquote:bg-amber-300 prose-blockquote:bg-opacity-10 prose-blockquote:text-slate-500 prose-blockquote:dark:text-slate-400 prose-blockquote:not-italic prose-blockquote:px-5 prose-blockquote:py-2 prose-blockquote:rounded prose-headings:text-dark prose-headings:dark:text-white prose-strong:text-dark prose-strong:dark:text-white prose-p:text-accents-3 prose-p:dark:text-slate-400 prose-hr:border-slate-400 prose-li:text-accents-3 prose-li:dark:text-slate-400 prose-img:rounded prose-img:w-full prose-pre:bg-[#E6ECF3] prose-pre:dark:bg-[#0f1419]">
               <Toc content={content} />
