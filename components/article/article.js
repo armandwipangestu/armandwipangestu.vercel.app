@@ -102,18 +102,18 @@ const ArticleLayout = ({ posts, tag }) => {
           <div className="mx-auto px-4 sm:px-6 md:px-4 lg:max-w-6xl lg:px-8 xl:max-w-full">
             <div className="relative isolate pt-14">
               <div
-                className="midnight:hidden absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                 aria-hidden="true"
               >
                 <div
-                  className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-sky-800/90 to-blue-800/90 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                  className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-cyan-800/90 to-cyan-800/90 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
                   style={{
                     clipPath:
                       "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
                   }}
                 ></div>
               </div>
-              <svg
+              {/* <svg
                 className="midnight:hidden absolute inset-0 -z-10 h-full w-full stroke-accent/50 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
                 aria-hidden="true"
               >
@@ -141,7 +141,7 @@ const ArticleLayout = ({ posts, tag }) => {
                   strokeWidth="0"
                   fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
                 ></rect>
-              </svg>
+              </svg> */}
               <div className="mx-auto max-w-screen-2xl overflow-hidden pt-16 sm:pt-16 md:pb-0 md:pt-16 lg:grid lg:grid-cols-12 lg:items-center lg:pb-28 lg:pt-40">
                 <div className="col-span-6 col-start-2 ml-0 max-w-2xl px-4 sm:px-6 lg:ml-[-1rem] lg:flex-auto lg:px-0 lg:pl-0 lg:pr-16 xl:ml-[-0.5rem]">
                   <h1 className="text-2xl font-bold tracking-tighter dark:text-white sm:text-3xl lg:max-w-lg lg:text-4xl/[2.5rem]">
