@@ -277,8 +277,6 @@ const DynamicSinglePagePost = ({
                         <Link
                           className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs tracking-tight font-medium transition-colors focus:outline-none border-cyan-500/40 bg-cyan-500/10 text-cyan-500 hover:bg-cyan-500/20"
                           href={`/blog/tag/${tag.toLowerCase()}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
                         >
                           {tag}
                         </Link>
