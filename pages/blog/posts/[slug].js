@@ -302,7 +302,7 @@ const DynamicSinglePagePost = ({
                             <p className="mt-1 text-slate-400">
                               <span>{formatDate(date)}</span>
                               <span className="mx-1">•</span>
-                              <span>{readingTime} min read</span>
+                              <span>{readingTime} menit baca</span>
                             </p>
                           </div>
                         </div>
