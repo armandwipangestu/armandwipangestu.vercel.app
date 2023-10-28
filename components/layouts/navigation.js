@@ -122,14 +122,14 @@ const Navigation = () => {
                     {darkMode ? (
                       <>
                         <Sun className="transition duration-300 ease-in-out dark:text-white" />
-                        {/* <span class="absolute top-[3rem] -right-8 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                        {/* <span className="absolute top-[3rem] -right-8 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                           ✨ Light Mode
                         </span> */}
                       </>
                     ) : (
                       <>
                         <Moon className="transition duration-300 ease-in-out text-dark" />
-                        {/* <span class="absolute top-[3rem] -right-8 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                        {/* <span className="absolute top-[3rem] -right-8 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                           ✨ Dark Mode
                         </span> */}
                       </>
@@ -182,14 +182,14 @@ const Navigation = () => {
                           {darkMode ? (
                             <>
                               <Sun className="transition duration-300 ease-in-out dark:text-white" />
-                              <span class="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                                 ✨ Light Mode
                               </span>
                             </>
                           ) : (
                             <>
                               <Moon className="transition duration-300 ease-in-out text-dark" />
-                              <span class="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                                 ✨ Dark Mode
                               </span>
                             </>
