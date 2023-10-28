@@ -72,36 +72,48 @@ const AboutPage = () => {
                 <a
                   href="https://github.com/armandwipangestu"
                   target="_blank"
-                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <FaGithub className="h-6 w-6" />
+                  <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 w-[3.6rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                    GitHub
+                  </span>
                 </a>
 
                 {/* Youtube */}
                 <a
                   href="https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A"
                   target="_blank"
-                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <FaYoutube className="h-6 w-6" />
+                  <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 w-[4.3rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                    YouTube
+                  </span>
                 </a>
 
                 {/* Instagram */}
                 <a
                   href="https://www.instagram.com/devvnnull/"
                   target="_blank"
-                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <FaInstagram className="h-6 w-6" />
+                  <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 w-[5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                    Instagram
+                  </span>
                 </a>
 
                 {/* Linkedin */}
                 <a
                   href="https://www.linkedin.com/in/arman-dwi-pangestu-08704a220/"
                   target="_blank"
-                  className="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <FaLinkedin className="h-6 w-6" />
+                  <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 w-[4.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                    LinkedIn
+                  </span>
                 </a>
               </div>
             </div>
