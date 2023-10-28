@@ -129,20 +129,25 @@ const BlogPage = ({ posts }) => {
             <div className="mt-10 w-full self-center rounded-lg px-4 lg:w-1/2">
               <div className="w-full rounded-lg shadow-2xl shadow-primary/[0.25]">
                 <div className="flex h-9 w-full items-center justify-start space-x-1.5 rounded-t-lg bg-slate-400/30 px-3 transition-all duration-300 dark:bg-slate-800">
-                  <div className="h-3 w-3 rounded-full bg-red-400"></div>
-                  <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
-                  <div className="h-3 w-3 rounded-full bg-green-400"></div>
+                  <div className="h-3 w-3 rounded-full bg-red-400 border-[2.5px] border-[#696a73]"></div>
+                  <div className="h-3 w-3 rounded-full bg-yellow-400 border-[2.5px] border-[#696a73]"></div>
+                  <div className="h-3 w-3 rounded-full bg-green-400 border-[2.5px] border-[#696a73]"></div>
                   <div className="flex-grow"></div>
                   <div className="text-center text-sm font-semibold text-white">
                     <span className="text-slate-400">{languageText}</span>
                   </div>
                   <div className="flex-grow"></div>
                   <div
-                    className="cursor-pointer text-center text-sm font-semibold text-white"
+                    className="group cursor-pointer text-center text-sm font-semibold text-white"
                     id="copy-code"
                   >
                     {copyButtonText === "Copy" ? (
-                      <GoCopy className="text-dark transition-all duration-300 dark:text-white" />
+                      <>
+                        <GoCopy className="text-dark transition-all duration-300 dark:text-white" />
+                        <span className="absolute mt-4 right-[19rem] scale-0 rounded p-2 text-xs bg-dark text-white dark:bg-white dark:text-dark group-hover:scale-100 w-[4.5rem] whitespace-normal transition duration-200 ease-in-out font-bold">
+                          ✨ Copy
+                        </span>
+                      </>
                     ) : (
                       <GoCheck className="text-lg text-green-400" />
                     )}
