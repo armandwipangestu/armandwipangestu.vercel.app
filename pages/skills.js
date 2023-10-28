@@ -34,6 +34,8 @@ const SkillsPage = () => {
 
   useEffect(() => {
     const grayscales = document.querySelectorAll(".grayscale");
+    const iconSkills = document.querySelectorAll(".icon-skill");
+
     const animateGrayscale = () => {
       if (activeIndex < grayscales.length) {
         grayscales[activeIndex].classList.remove("grayscale", "opacity-60");
@@ -42,13 +44,21 @@ const SkillsPage = () => {
           "opacity-100",
           "scale-110"
         );
+
+        iconSkills[activeIndex].classList.remove("scale-0");
+        iconSkills[activeIndex].classList.add("scale-110");
+
         setTimeout(() => {
           grayscales[activeIndex].classList.remove(
             "grayscale-0",
             "opacity-100",
             "scale-110"
           );
+
+          iconSkills[activeIndex].classList.remove("scale-110");
+
           grayscales[activeIndex].classList.add("grayscale", "opacity-60");
+          iconSkills[activeIndex].classList.add("scale-0");
           setActiveIndex(activeIndex + 1);
         }, 500);
       } else {
@@ -104,7 +114,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiHtml5 className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   HTML5
                 </span>
               </a>
@@ -116,7 +126,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiCss3 className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[2.9rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[2.9rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   CSS3
                 </span>
               </a>
@@ -128,7 +138,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[65px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiBootstrap className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Bootstrap
                 </span>
               </a>
@@ -140,7 +150,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiTailwindcss className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   TailwindCSS
                 </span>
               </a>
@@ -152,7 +162,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiJavascript className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.9rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.9rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   JavaScript
                 </span>
               </a>
@@ -164,7 +174,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiReact className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.1rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.1rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   ReactJS
                 </span>
               </a>
@@ -176,7 +186,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <FaNodeJs className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   NodeJS
                 </span>
               </a>
@@ -188,7 +198,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiExpress className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.8rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   ExpressJS
                 </span>
               </a>
@@ -200,7 +210,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <TbBrandNextjs className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.7rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.7rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   NextJS
                 </span>
               </a>
@@ -212,7 +222,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiPhp className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[2.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[2.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   PHP
                 </span>
               </a>
@@ -224,7 +234,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiCodeigniter className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.8rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.6rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.8rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.6rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   CodeIgniter
                 </span>
               </a>
@@ -236,7 +246,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiMysql className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[1.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[7.3rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[1.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[7.3rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   MySQL/MariaDB
                 </span>
               </a>
@@ -248,7 +258,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiPostgresql className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   PostgreSQL
                 </span>
               </a>
@@ -260,7 +270,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiGit className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[2.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[2.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Git
                 </span>
               </a>
@@ -272,7 +282,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiGithub className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.7rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.7rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   GitHub
                 </span>
               </a>
@@ -284,7 +294,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiLinux className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.1rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.1rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   GNU/Linux
                 </span>
               </a>
@@ -296,7 +306,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiGnubash className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   BASH
                 </span>
               </a>
@@ -308,7 +318,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiApache className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Apache
                 </span>
               </a>
@@ -320,7 +330,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <DiNginx className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Nginx
                 </span>
               </a>
@@ -332,7 +342,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/powerdns.svg" alt="PowerDNS" />
-                <span class="absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.1rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[5.1rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   PowerDNS
                 </span>
               </a>
@@ -344,7 +354,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiProxmox className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.5rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Proxmox
                 </span>
               </a>
@@ -356,7 +366,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[150px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiMikrotik className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Mikrotik
                 </span>
               </a>
@@ -368,7 +378,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[110px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <img src="./skills/ruijie.png" alt="Rujie" />
-                <span class="absolute top-[5.5rem] -right-[2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[7rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[7rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Ruijie/ReyeeOS
                 </span>
               </a>
@@ -380,7 +390,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiUbiquiti className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[1.6rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[6/2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[1.6rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[6/2rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Unifi/Ubiquiti
                 </span>
               </a>
@@ -392,7 +402,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiFigma className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[3.4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Figma
                 </span>
               </a>
@@ -404,7 +414,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiPostman className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4.4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Postman
                 </span>
               </a>
@@ -416,7 +426,7 @@ const SkillsPage = () => {
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiArduino className="w-16 h-16" />
-                <span class="absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 w-[4rem] whitespace-normal transition duration-300 ease-in-out font-bold">
                   Arduino
                 </span>
               </a>
