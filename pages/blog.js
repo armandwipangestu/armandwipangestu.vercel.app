@@ -5,7 +5,7 @@ import { marked } from "marked";
 import hljs from "highlight.js";
 // import "highlight.js/styles/github-dark.css";
 import Link from "next/link";
-import { sortPostsByDate } from "@/utilities/sortPostsByDate";
+import { sortPostsByDate, formatDate } from "@/utilities/sortPostsByDate";
 import Metadata from "@/components/utilities/metadata";
 import React, { useState, useEffect } from "react";
 import ReactTyped from "react-typed";
@@ -234,7 +234,7 @@ const BlogPage = ({ posts }) => {
                               </Link>
                             </div>
                             <div className="font-mono text-xs tracking-tighter text-slate-400">
-                              {post.frontmatter.date}
+                              {formatDate(post.frontmatter.date)}
                             </div>
                           </div>
                         </div>

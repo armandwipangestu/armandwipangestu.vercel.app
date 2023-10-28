@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { formatDate } from "@/utilities/sortPostsByDate";
 import { useRouter } from "next/router";
 
 const ArticleLayout = ({ posts, tag }) => {
@@ -86,7 +87,7 @@ const ArticleLayout = ({ posts, tag }) => {
                             </Link>
                           </div>
                           <div className="font-mono text-xs tracking-tighter text-slate-400">
-                            {mainCard.frontmatter.date}
+                            {formatDate(mainCard.frontmatter.date)}
                           </div>
                         </div>
                       </div>
@@ -171,7 +172,7 @@ const ArticleLayout = ({ posts, tag }) => {
                   <div className="my-8 flex items-center justify-between gap-x-2">
                     <div className="font-mono text-sm tracking-tighter text-slate-400">
                       <span>
-                        {mainCard.frontmatter.date}
+                        {formatDate(mainCard.frontmatter.date)}
                         <a className="hover:text-foreground" href="#">
                           {" "}
                         </a>
@@ -274,7 +275,7 @@ const ArticleLayout = ({ posts, tag }) => {
                               </Link>
                             </div>
                             <div className="font-mono text-xs tracking-tighter text-slate-400">
-                              {card.frontmatter.date}
+                              {formatDate(card.frontmatter.date)}
                             </div>
                           </div>
                         </div>

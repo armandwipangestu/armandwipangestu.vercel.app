@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 import useReadingTime from "use-reading-time";
 import Metadata from "@/components/utilities/metadata";
-import { sortPostsByDate } from "@/utilities/sortPostsByDate";
+import { sortPostsByDate, formatDate } from "@/utilities/sortPostsByDate";
 
 const DynamicSinglePagePost = ({
   frontmatter: {
@@ -300,7 +300,7 @@ const DynamicSinglePagePost = ({
                               {author_name}
                             </h4>
                             <p className="mt-1 text-slate-400">
-                              <span>{date}</span>
+                              <span>{formatDate(date)}</span>
                               <span className="mx-1">•</span>
                               <span>{readingTime} min read</span>
                             </p>
