@@ -64,7 +64,7 @@ module.exports = {
             },
             li: {
               "&::marker": {
-                color: "rgb(148 163 184)",
+                color: "#31B5D5",
               },
               // color: "rgb(148 163 184)",
             },
