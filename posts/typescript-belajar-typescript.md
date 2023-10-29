@@ -432,7 +432,7 @@ const namaFunction = function(parameter: tipedata): tipedata {
 }
 ```
 
-### Kode Tipe Data Primitif
+### Kode: Tipe Data Primitif
 
 Misalkan disini saya mempunyai kode seperti berikut pada file `tests/tipe-data.test.ts`:
 
@@ -558,7 +558,7 @@ Untuk menjalankan unit test, kita mengggunakan Jest dan Babel, banyak programmer
 
 Oleh karena itu, error pada TypeScript yang sering harusnya terjadi di Unit Test terkadang tidak terjadi karena kode TypeScript nya dihapus oleh Babel. Maka dari itu, kita harus secara reguler melakukan pengecekan menggunakan perintah `npx tsc` untuk memastikan tidak ada kode TypeScript kita yang bermasalah.
 
-### Kode Error TypeScript
+### Kode: Error TypeScript
 
 Misalkan disini saya mempunyai kode seperti berikut ini:
 
@@ -598,7 +598,7 @@ Perintah diatas akan mengecek setiap perubahan pada program kita, apabila terdap
 
 Tipe data Array pada TypeScript itu sama juga dengan yang ada di JavaScript, dari mulai cara pembuatannya dan juga cara penggunaannya. Di TypeScript tipe data Array bisa menggunakan tanda `TipeData[]` atau `Array<TipeData>`.
 
-### Kode Tipe Data Array
+### Kode: Tipe Data Array
 
 Misalkan disini kita mempunyai sebuah variable `names` array yang isinya adalah string dan variable `values` array yang isinya number. Kalian bisa buat file unit test nya dengan nama `array.test.ts`
 
@@ -618,7 +618,7 @@ describe("Array", function () {
 
 Pada TypeScript, kita bisa membuat sebuah Array dengan tipe readonly atau tidak bisa diubah lagi dengan menggunakan tipe data `ReadonlyArray<TipeData>`. Sehingga jika kalian mempunyai kode program, kemudian kalian mencoba mengubah value dari array dengan readonly, maka akan di reject. Namun, sebetulnya jika kode program nya sudah di ubah menjadi JavaScript, value nya tetap bisa diubah. Sehingga yang menjaga agar value nya tidak bisa diubah si TypeScript compiler nya.
 
-### Kode Read Only Array
+### Kode: Read Only Array
 
 ```ts
 describe("Array", function () {
@@ -641,7 +641,7 @@ Nah pada kode program yang mengubah value index ke-0 dari array `hobbies` menjad
 
 Apa itu tipe data Tuple? tuple adalah tipe data Array, namun panjang array dan juga tipe data pada setiap index nya sudah ditentukan. Pada tipe data Tuple ini, kita juga bisa memberikan sifat readonly atau tidak bisa diubah dengan cara menambahkan keyword atau kata kunci `readonly`.
 
-### Kode Tipe Data Tuple
+### Kode: Tipe Data Tuple
 
 ```ts
 describe("Array", function () {
@@ -685,7 +685,7 @@ Walaupun tipe data ini ada, sebaiknya kalian jangan terlalu banyak menggunakan t
 
 Sehingga penggunaan tipe data ini lebih kedalam kondisi urgent atau mendesak yang dimana kita membutuhkan sebuah tipe data dinamis.
 
-### Kode Tipe Data Any
+### Kode: Tipe Data Any
 
 Buat file unit test baru dengan nama file `any.test.ts`, kemudian isikan file tersebut dengan kode berikut ini:
 
@@ -710,7 +710,7 @@ describe("Any", function () {
 
 Seperti yang kita ketahui, JavaScript sebetulnya bisa menyimpan berbagai jenis tipe data di variabel yang sama. Namun, di TypeScript hal itu dilarang karena praktek yang buruk. Pada kasus jika kita ingin membuat variabel yang bisa berubah bentuk tipe data, kita bisa memberi tahunya menggunakan `Union Type`. Maka secara otomatis TypeScript akan membolehkan kita mengubah tipe data nya, namun sesuai yang sudah ditentukan di union type nya.
 
-### Kode Tipe Data Union Type
+### Kode: Tipe Data Union Type
 
 Kalian bisa buat file unit test baru dengan nama `union.test.ts` kemudian isikan dengan kode berikut ini:
 
@@ -748,7 +748,7 @@ Maka akan muncul error `Type 'never[]' is not assignable to type 'string | numbe
 
 Saat kita membuat union type, kita perlu berhati-hati ketika memanggil method terhadap variable tersebut. Hal ini karena tipe datanya bisa berubah, oleh karena itu ada baiknya kita melakukan pengecekan tipe data terlebih dahulu menggunakan keyword atau kata kunci `typeof`.
 
-### Kode Menggunakan Union Type
+### Kode: Menggunakan Union Type
 
 Misalkan disini kita mempunyai sebuah method dengan nama `process`, yang dimana method tersebut mempunyai sebuah parameter dengan nama `value` dan parameter tersebut memperbolehkan tipe data `number`, `string` dan `boolean`. Maka kita bisa gunakan operator `typeof` untuk mengecek tipe data nya.
 
@@ -782,7 +782,7 @@ describe("Union Type", function () {
 
 Ketika menggunakan tipe data Any, sebenarnya hal tersebut tidak direkomendasikan. Biasanya kita akan menggunakan tipe data Any, jika memang data yang akan kita gunakan misal dari library orang lain yang sudah tidak bisa diubah atau memang ketika attribute nya tidak pasti datanya. Contoh nya ketika memanggil data dari sebuah function tetapi return value nya bisa berubah-ubah isi datanya, maka mungkin tipe data Any bisa kita gunakan. Nah, namun pada kasus jika kita membuat tipe data JavaScript object sendiri, yang dimana kita bisa mengontrol isi dari attribute nya terdapat apa saja, maka kita bisa membuat alias untuk struktur tipe data objectnya.
 
-### Kode Alias
+### Kode: Alias
 
 Kalian bisa buat file src baru dengan nama file `type-alias.ts`, kemudian isikan dengan kode berikut:
 
@@ -802,7 +802,7 @@ export type Product = {
 
 Sehingga nantinya ketika kita mempunyai sebuah object yang struktur nya seperti type diatas, kita bisa gunakan tipe data nya tersebut atau bisa dibilang seperti blueprint atau kerangka nya.
 
-### Kode Test Alias
+### Kode: Test Alias
 
 Setelah kita membuat kerangka object nya menggunakan type alias, selanjutnya kalian bisa buat file unit test baru dengan nama `type-alias.test.ts` kemudian isikan kode nya seperti berikut ini:
 
@@ -899,5 +899,31 @@ describe("Type Alias", function () {
 
     ...
   ...
+});
+```
+
+## Object Type
+
+Pada kasus yang sederhana, terkadang membuat alias itu terlalu bertele-tele, kita juga bisa membuat tipe data JavaScript Object secara langsung dengan mendeklarasikan detail type nya ketika membuat variabel nya. Hal ini lebih sederhana dibandingkan membuat Type terlebih dahulu. Cara penggunaanya sebetulnya cukup sama seperti saat menggunakan type alias, namun pada kasus ini berbeda yang dimana jika kasus nya sederhana dan hanya sekali, kita bisa langsung mendefine atau mendefinisikan attribute dan tipe data apa saja yang ada sebagai tipe data dari property nya, sehingga kita tidak membuat type alias terlebih dahulu. Namun, apabila dalam kasus tipe data nya akan digunakan dibanyak tempat, maka sangat disarankan membuat type terlebih dahulu agar menjadi reusable.
+
+### Kode: Object Type
+
+Untuk membuat nya, kalian bisa membuat sebuah unit test file baru dengan nama `object.test.ts`, kemudian isikan dengan kode seperti berikut ini:
+
+```ts
+describe("Object", function () {
+  it("should support in typescript", function () {
+    const person: { id: string; name: string } = {
+      id: "1",
+      name: "Arman",
+    };
+
+    console.info(person);
+
+    person.id = "2";
+    person.name = "Dwi Pangestu";
+
+    console.info(person);
+  });
 });
 ```
