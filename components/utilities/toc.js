@@ -22,17 +22,62 @@ export default function Toc({ content }) {
               {headings.map((heading, i) => {
                 const id = getValidId(heading.text);
 
-                return (
-                  <li
-                    key={i}
-                    data-depth={heading.depth}
-                    className={`ml-${heading.depth * 4}`}
-                  >
-                    <Link href={`#${id}`} legacyBehavior>
-                      <a>{heading.text}</a>
-                    </Link>
-                  </li>
-                );
+                switch (heading.depth) {
+                  case 1: {
+                    return (
+                      <li key={i} data-depth={heading.depth}>
+                        <Link href={`#${id}`} legacyBehavior>
+                          <a>{heading.text}</a>
+                        </Link>
+                      </li>
+                    );
+                  }
+                  case 2: {
+                    return (
+                      <li key={i} data-depth={heading.depth} className="ml-4">
+                        <Link href={`#${id}`} legacyBehavior>
+                          <a>{heading.text}</a>
+                        </Link>
+                      </li>
+                    );
+                  }
+                  case 3: {
+                    return (
+                      <li key={i} data-depth={heading.depth} className="ml-8">
+                        <Link href={`#${id}`} legacyBehavior>
+                          <a>{heading.text}</a>
+                        </Link>
+                      </li>
+                    );
+                  }
+                  case 4: {
+                    return (
+                      <li key={i} data-depth={heading.depth} className="ml-12">
+                        <Link href={`#${id}`} legacyBehavior>
+                          <a>{heading.text}</a>
+                        </Link>
+                      </li>
+                    );
+                  }
+                  case 5: {
+                    return (
+                      <li key={i} data-depth={heading.depth} className="ml-16">
+                        <Link href={`#${id}`} legacyBehavior>
+                          <a>{heading.text}</a>
+                        </Link>
+                      </li>
+                    );
+                  }
+                  case 6: {
+                    return (
+                      <li key={i} data-depth={heading.depth} className="ml-20">
+                        <Link href={`#${id}`} legacyBehavior>
+                          <a>{heading.text}</a>
+                        </Link>
+                      </li>
+                    );
+                  }
+                }
               })}
             </ul>
           </nav>
@@ -41,3 +86,17 @@ export default function Toc({ content }) {
     </>
   );
 }
+
+// const id = getValidId(heading.text);
+
+// return (
+//   <li
+//     key={i}
+//     data-depth={heading.depth}
+//     className={`ml-${heading.depth * 4}`}
+//   >
+//     <Link href={`#${id}`} legacyBehavior>
+//       <a>{heading.text}</a>
+//     </Link>
+//   </li>
+// );
