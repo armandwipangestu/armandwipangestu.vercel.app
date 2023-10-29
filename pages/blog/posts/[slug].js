@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
+import Image from "next/image";
 import hljs from "highlight.js";
 import Toc from "@/components/utilities/toc";
 import { useRef, useEffect, useState } from "react";
@@ -214,7 +215,7 @@ const DynamicSinglePagePost = ({
         url={`blog/posts/${slug}`}
       />
 
-      <div className="pb-36 pt-36 transition duration-300 ease-in-out dark:bg-dark">
+      <div className="pb-36 pt-24 transition duration-300 ease-in-out dark:bg-dark">
         <div className="container">
           <div className="mx-auto px-4 sm:px-6 md:px-4 lg:max-w-6xl lg:px-8 xl:max-w-7xl">
             <div className="-mt-24 lg:mt-[-9rem] border-b border-dark/20 dark:border-white/20">
@@ -265,7 +266,7 @@ const DynamicSinglePagePost = ({
                   ></rect>
                 </svg> */}
                 <div className="pt-16 sm:pt-16 md:pt-16 md:pb-0 max-w-screen-2xl mx-auto overflow-hidden lg:grid lg:grid-cols-12 lg:items-center lg:pt-40 lg:pb-28">
-                  <div className="col-span-6 sm:px-6 lg:pl-0 max-w-2xl px-4 col-start-2 lg:px-0 ml-0 lg:ml-[-1rem] xl:ml-[-0.5rem] lg:flex-auto lg:pr-16">
+                  <div className="col-span-6 sm:px-6 lg:pl-0 max-w-2xl col-start-2 lg:px-0 ml-0 lg:ml-[-1rem] xl:ml-[-0.5rem] lg:flex-auto lg:pr-16">
                     <h1 className="lg:max-w-lg text-2xl font-bold tracking-tighter text-foreground sm:text-3xl lg:text-4xl/[2.5rem]">
                       {title}
                     </h1>
@@ -309,7 +310,7 @@ const DynamicSinglePagePost = ({
                       </div>
                     </div>
                   </div>
-                  <div className="mt-6 sm:mt-8 lg:mr-4 lg:mt-0 col-span-5 lg:flex-shrink-0 lg:flex-grow">
+                  <div className="mt-6 sm:mt-8 lg:mr-4 lg:mt-0 col-span-5 lg:flex-shrink-0 lg:flex-grow mb-7">
                     <div
                       data-radix-aspect-ratio-wrapper=""
                       style={{
@@ -322,7 +323,7 @@ const DynamicSinglePagePost = ({
                         className="grid place-content-center overflow-hidden lg:rounded-lg lg:ring-1 lg:ring-border/70 lg:ring-black font-mono text-xl font-medium tracking-tighter text-accent-foreground dark:shadow-xl"
                         style={{ position: "absolute", inset: "0px" }}
                       >
-                        <img
+                        <Image
                           className="object-cover object-center w-full h-full rounded-md"
                           height="720"
                           width="1280"

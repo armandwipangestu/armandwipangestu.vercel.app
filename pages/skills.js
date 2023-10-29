@@ -105,7 +105,7 @@ const SkillsPage = () => {
             </div>
           </div>
 
-          <div className="w-full px-4">
+          <div className="w-full pr-5">
             <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 gap-4 items-center justify-center">
               {/* HTML */}
               <a
