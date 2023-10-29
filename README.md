@@ -1,7 +1,14 @@
 <h1 align="center">Web Portofolio</h1>
 <p align="center">Repository ini merupakan web portofolio yang saya buat menggunakan teknologi NextJS dan Tailwind CSS</p>
 
-<img src="./public/metadata/home.png" alt="Portofolio">
+<img src="./public/metadata/home.png" alt="Portofolio" href="https://armandwipangestu.vercel.app">
+
+## Daftar Isi
+
+- [Menjalankan di Localhost](#menjalankan-di-localhost)
+- [Struktur Folder dan File](#struktur-folder-dan-file)
+- [List Dynamic Routes](#list-dynamic-routes)
+- [List NextJS API](#list-nextjs-api)
 
 ## Menjalankan di Localhost
 
@@ -15,6 +22,17 @@ git clone --depth=1 https://github.com/armandwipangestu/armandwipangestu.vercel.
 
 ```bash
 cd portofolio && yarn install
+```
+
+- Copy `.env.example` to `.env.local`
+
+```bash
+cp .env.example .env.local
+```
+
+```bash
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+NEXT_PUBLIC_PUBLIC_ASSETS="$NEXT_PUBLIC_BASE_URL/images/posts/assets"
 ```
 
 - Menjalankan di development
@@ -43,7 +61,7 @@ pages
 ├── _document.js
 ├── _index_default.js
 ├── api
-│  └── menu.js
+│  ├── menu.js
 │  └── portofolio.js
 ├── blog
 │  ├── posts
@@ -64,7 +82,7 @@ utilities
 └── sortPostsByDate.js
 ```
 
-## List SSG (Static Site Generator)
+## List Dynamic Routes
 
 | File                    | Function              |
 | ----------------------- | --------------------- |
@@ -73,7 +91,7 @@ utilities
 
 ## List NextJS API
 
-| Endpoint          | METHOD |
+| Endpoint          | Method |
 | ----------------- | ------ |
 | `/api/menu`       | GET    |
 | `/api/portofolio` | GET    |
