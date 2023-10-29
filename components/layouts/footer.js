@@ -13,6 +13,15 @@ const menus = [
   { title: "Blog", target: "/blog" },
 ];
 
+const tags = [
+  { title: "Programming", target: "/blog/tag/programming" },
+  { title: "SysAdmin", target: "/blog/tag/sysadmin" },
+  { title: "Networking", target: "/blog/tag/networking" },
+  { title: "Linux", target: "/blog/tag/linux" },
+  { title: "Git", target: "/blog/tag/git" },
+  { title: "Setup", target: "/blog/tag/setup" },
+];
+
 const Footer = () => {
   // const [menus, setMenus] = useState([]);
   const pathName = usePathname();
@@ -57,7 +66,7 @@ const Footer = () => {
               href="mailto:armandwi.pangestu7@gmail.com"
               className="hover:text-primary text-accents-300 dark:text-white/80 dark:hover:text-primary"
             >
-              <p>armandwi.pangestu7@gmail.com</p>
+              <span>armandwi.pangestu7@gmail.com</span>
             </a>
             <div className="flex gap-x-1">
               <a
@@ -120,6 +129,29 @@ const Footer = () => {
                         href={menu.target}
                       >
                         {menu.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="gap-8">
+              <div>
+                <h3 className="leading text-xl font-bold dark:text-white">
+                  Tag
+                </h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {tags.map((tag, index) => (
+                    <li key={index}>
+                      <Link
+                        className={`text-base leading-6 ${
+                          pathName === tag.target
+                            ? "text-primary"
+                            : "text-slate-400"
+                        } hover:text-primary`}
+                        href={tag.target}
+                      >
+                        {tag.title}
                       </Link>
                     </li>
                   ))}
