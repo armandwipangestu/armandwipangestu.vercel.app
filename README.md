@@ -24,11 +24,13 @@ git clone --depth=1 https://github.com/armandwipangestu/armandwipangestu.vercel.
 cd portofolio && yarn install
 ```
 
-- Copy `.env.example` to `.env.local`
+- Copy file `.env.example` ke file `.env.local`
 
 ```bash
 cp .env.example .env.local
 ```
+
+- Isikan `.env.local`
 
 ```bash
 NEXT_PUBLIC_BASE_URL="http://localhost:3000"
