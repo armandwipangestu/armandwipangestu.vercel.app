@@ -18,8 +18,8 @@ const data = [
   {
     link: "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
     thubmnail: "/portofolio/portofolio.png",
-    alt: "NextJS - Web Portofolio",
-    title: "NextJS - Web Portofolio",
+    alt: "NextJS - Web Portofolio & Blog",
+    title: "NextJS - Web Portofolio & Blog",
     excerpt: "Web Portofolio dibuat menggunakan NextJS dan Tailwind CSS",
     techs: ["NextJS", "ReactJS", "TailwindCSS", "Markdown"],
   },
