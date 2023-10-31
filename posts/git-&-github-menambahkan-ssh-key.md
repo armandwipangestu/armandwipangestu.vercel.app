@@ -114,3 +114,13 @@ Selanjutnya cukup tekan tombol `Add SSH Key`. Maka sekarang akan muncul list SSH
 ### Mencoba menggunakan SSH key
 
 Untuk mencoba nya kalian bisa menggunakan perintah `git fetch`, `git pull` atau `git push`. Disini saya akan mencoba melakukan commit dan push pada repository
+
+![Test SSH Key](${NEXT_PUBLIC_PUBLIC_ASSETS}/git-dan-github-menambahkan-ssh-key/test-ssh-key.png)
+
+Maka sekarang pada bagian list SSH key nya, key yang digunakan akan menjadi berwarna hijau dan akan ada keterangan kapan terakhir digunakan
+
+![Update List SSH Key](${NEXT_PUBLIC_PUBLIC_ASSETS}/git-dan-github-menambahkan-ssh-key/update-list-key.png)
+
+## Penutup
+
+Saya rasa cukup mudah bukan untuk menambahkah SSH Key pada git (local) dan github (remote).
