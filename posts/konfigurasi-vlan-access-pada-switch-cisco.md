@@ -48,9 +48,7 @@ Switch(config-vlan)#exit
 Switch(config)#do show vlan brief
 ```
 
-<a href="https://i.ibb.co/HV2CYBw/image.png" target="_blank">
-  <img src="https://i.ibb.co/HV2CYBw/image.png" alt="https://i.ibb.co/HV2CYBw/image.png" class="img-fluid rounded mx-auto d-block" />
-</a>
+![VLAN Brief](${NEXT_PUBLIC_PUBLIC_ASSETS}/cisco_vlan_access/vlan_brief.png)
 
 | VLAN | Name               | Status | Ports                                                                                                                                                                            |
 | ---- | ------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -104,9 +102,7 @@ Switch(config-if)#exit
 Switch(config)#do show vlan brief
 ```
 
-<a href="https://i.ibb.co/rZCw5RT/image.png" target="_blank">
-  <img src="https://i.ibb.co/rZCw5RT/image.png" alt="https://i.ibb.co/rZCw5RT/image.png" class="img-fluid rounded mx-auto d-block" />
-</a>
+![VLAN Brief 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/cisco_vlan_access/vlan_brief2.png)
 
 | VLAN | Name               | Status | Ports                                                                                                                  |
 | ---- | ------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------- |
@@ -118,6 +114,4 @@ Switch(config)#do show vlan brief
 | 1004 | fddinet-default    | active |                                                                                                                        |
 | 1005 | trnet-default      | active |                                                                                                                        |
 
-<a href="https://i.ibb.co/vJM1SBV/image.png" target="_blank">
-  <img src="https://i.ibb.co/vJM1SBV/image.png" alt="https://i.ibb.co/vJM1SBV/image.png" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Topologi](${NEXT_PUBLIC_PUBLIC_ASSETS}/cisco_vlan_access/topologi.png)
