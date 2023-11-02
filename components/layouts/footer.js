@@ -143,7 +143,7 @@ const Footer = () => {
                 <ul role="list" className="mt-6 space-y-4">
                   {tags.map((tag, index) => (
                     <li key={index}>
-                      <Link
+                      <a
                         className={`text-base leading-6 ${
                           pathName === tag.target
                             ? "text-primary"
@@ -152,7 +152,7 @@ const Footer = () => {
                         href={tag.target}
                       >
                         {tag.title}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
