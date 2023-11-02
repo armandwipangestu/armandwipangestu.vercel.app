@@ -20,9 +20,7 @@ pada bagian ini kita akan mengubah value dari Router Identity nya yang dimana be
 
 Untuk mengubah nya kita cukup pergi ke menu `/System/Identity`
 
-<a href="https://user-images.githubusercontent.com/64394320/166403747-ac2c3936-f476-4938-8ba8-8d09fd6e4d10.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166403747-ac2c3936-f476-4938-8ba8-8d09fd6e4d10.png" alt="System/Identity" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Router Identity](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/router_identity.png)
 
 Disini saya akan mengganti identity nya menjadi
 
@@ -30,32 +28,24 @@ Disini saya akan mengganti identity nya menjadi
 RO-DEFAULT-CONFIG
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166404851-98a5c905-d16e-4e70-bd00-deb7d493b76d.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166404851-98a5c905-d16e-4e70-bd00-deb7d493b76d.png" alt="Identity Name" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Router Identity 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/router_identity2.png)
 
 Untuk melihat apakah identity berhasil berubah, kita bisa melihat dibagian
 
 - title bar
 
-<a href="https://user-images.githubusercontent.com/64394320/166405248-c020d807-03ac-4e28-a84d-5f63835899a8.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166405248-c020d807-03ac-4e28-a84d-5f63835899a8.png" alt="Title Bar" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Router Identity Title Bar](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/router_identity_title_bar.png)
 
 - login winbox
 
-<a href="https://user-images.githubusercontent.com/64394320/166405384-cef1ea35-b5d6-4bc7-bdc9-ed20c9fb950d.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166405384-cef1ea35-b5d6-4bc7-bdc9-ed20c9fb950d.png" alt="Login WinBox" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Login WinBox](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/login_winbox.png)
 
 ## Clock
 
 Clock merupakan jam atau waktu saat ini pada Router, untuk mengubah nya kita cukup pergi
 ke menu `/System/Clock`
 
-<a href="https://user-images.githubusercontent.com/64394320/166405853-b730d2aa-1a03-4ebd-b65a-71c3001a48e5.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166405853-b730d2aa-1a03-4ebd-b65a-71c3001a48e5.png" alt="System/Clock" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Clock](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/clock.png)
 
 Disini saya akan mengganti `Time Zone` nya menjadi
 
@@ -63,15 +53,11 @@ Disini saya akan mengganti `Time Zone` nya menjadi
 Asia/Jakarta
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166406068-c00d3d15-2d89-45c9-999d-9aa9222cd3fd.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166406068-c00d3d15-2d89-45c9-999d-9aa9222cd3fd.png" alt="Time Zone" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Timezone](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/timezone.png)
 
 Untuk melihat apakah clock atau jam berhasil berubah kita bisa menyamakan dengan jam laptop kita
 
-<a href="https://user-images.githubusercontent.com/64394320/166406227-243e1849-255b-403a-877e-23cef1d19599.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166406227-243e1849-255b-403a-877e-23cef1d19599.png" alt="Clock" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Clock Time](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/clock_time.png)
 
 ## Security
 
@@ -101,9 +87,7 @@ masuk ke router kita
 
 Untuk mengubah default login user mikrotik kita cukup pergi ke bagian menu `/System/Users`
 
-<a href="https://user-images.githubusercontent.com/64394320/166408181-c712b188-9efe-4d48-930f-ae0938be4fa2.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166408181-c712b188-9efe-4d48-930f-ae0938be4fa2.png" alt="System/Users" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Users](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/users.png)
 
 Untuk membuat user baru kita click di tanda `+` lalu isikan dengan format sebagai berikut:
 
@@ -114,9 +98,7 @@ Password: *****
 Confirm Password: *****
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166408550-c029aebb-92ea-4fb3-a029-70febb3d9250.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166408550-c029aebb-92ea-4fb3-a029-70febb3d9250.png" alt="New User" class="img-fluid rounded mx-auto d-block" />
-</a>
+![New User](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/new_user.png)
 
 > **Penjelasan Singkat**:
 >
@@ -126,34 +108,24 @@ Confirm Password: *****
 
 Jika user berhasil dibuat maka akan muncul di tabel `User List`
 
-<a href="https://user-images.githubusercontent.com/64394320/166409126-078de5b5-b06a-4bf0-b3d2-1853f8e9070e.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166409126-078de5b5-b06a-4bf0-b3d2-1853f8e9070e.png" alt="User List" class="img-fluid rounded mx-auto d-block" />
-</a>
+![User List](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/user_list.png)
 
 Setelah User baru berhasil dibuat selanjutnya kita akan menonaktifkan atau disable default user `admin`, untuk disable default user
 kita cukup click di bagian admin lalu click tanda `x`
 
-<a href="https://user-images.githubusercontent.com/64394320/166409305-c55be8ad-37b2-43ef-87dc-c99930efedba.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166409305-c55be8ad-37b2-43ef-87dc-c99930efedba.png" alt="Disable User" class="img-fluid rounded mx-auto d-block" />
-</a>
+![User List Disable](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/user_list_disable.png)
 
 Selanjutnya kita akan mencoba login ke dalam router menggunakan user baru, click menu `New Winbox` lalu `Exit`
 
-<a href="https://user-images.githubusercontent.com/64394320/166409496-30858412-d835-4a2d-b1c7-0b07211be6d7.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166409496-30858412-d835-4a2d-b1c7-0b07211be6d7.png" alt="New WinBox" class="img-fluid rounded mx-auto d-block" />
-</a>
+![New Session](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/new_session.png)
 
 Sekarang pada bagian form login, masukan user baru yang sudah dibuat sebelumnya
 
-<a href="https://user-images.githubusercontent.com/64394320/166409648-a2dd20a4-14a0-4885-a5c7-d16e46454010.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166409648-a2dd20a4-14a0-4885-a5c7-d16e46454010.png" alt="Form Login" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Login With New User](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/login_with_new_user.png)
 
 Untuk melihat apakah kita login menggunakan user mana, kita bisa melihat nya pada bagian titlebar
 
-<a href="https://user-images.githubusercontent.com/64394320/166409738-37ae88f8-09ab-4288-a856-c6ff45c2feca.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166409738-37ae88f8-09ab-4288-a856-c6ff45c2feca.png" alt="User Login" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Login With New User 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/login_with_new_user2.png)
 
 ### IP Services
 
@@ -174,9 +146,7 @@ Disini saya akan menonaktifkan service port yang tidak diperlukan dan mengganti 
 | www     | 8000 | Enable  | Default Port: 80 (Enable karena digunakan untuk remote melalui WebFig)   |
 | www-ssl | 443  | Disable | Tidak akan digunakan                                                     |
 
-<a href="https://user-images.githubusercontent.com/64394320/166418704-424efdef-3302-4d7a-a295-1eb61e4e84b0.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166418704-424efdef-3302-4d7a-a295-1eb61e4e84b0.png" alt="IP Services" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Service List](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/service_list.png)
 
 ## Membuat Jaringan WAN
 
@@ -213,16 +183,12 @@ fitur ini.
 
 Untuk membuat DHCP Client nya kita cukup pergi ke menu `/IP/DHCP Client`
 
-<a href="https://user-images.githubusercontent.com/64394320/166421182-ab46d6ce-8df8-443e-ba01-304af06ccbc9.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166421182-ab46d6ce-8df8-443e-ba01-304af06ccbc9.png" alt="IP/DHCP Client" class="img-fluid rounded mx-auto d-block" />
-</a>
+![DHCP Client](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/dhcp_client.png)
 
 Pada menu `DHCP Client` kita cukup menambahkan DHCP Client baru dengan menekan tanda `+` dan pada bagian `interface`
 sesuaikan dengan port yang anda gunakan untuk terhubung ke ISP (biasanya atau default nya adalah `ether1` untuk ke internet)
 
-<a href="https://user-images.githubusercontent.com/64394320/166421481-ef85b5cd-305c-4003-a277-d21bb145081d.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166421481-ef85b5cd-305c-4003-a277-d21bb145081d.png" alt="DHCP Client" class="img-fluid rounded mx-auto d-block" />
-</a>
+![DHCP Client Detail](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/dhcp_client_detail.png)
 
 Jika `DHCP Client` berhasil maka akan muncul informasi sebagai berikut:
 
@@ -230,9 +196,7 @@ Jika `DHCP Client` berhasil maka akan muncul informasi sebagai berikut:
 | --------- | ------------ | ----------------- | ------------------------------------------- | ---------------------------------- | ------ |
 | ether1    | yes          | yes               | 192.168.20.254/24 (Tergantung dari ISP nya) | 00:10:00 (Tergantung dari ISP nya) | bound  |
 
-<a href="https://user-images.githubusercontent.com/64394320/166424236-60b45e63-7b00-4188-b01d-08edb7ff1684.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166424236-60b45e63-7b00-4188-b01d-08edb7ff1684.png" alt="DHCP Information" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Ping Google](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/ping_google.png)
 
 Untuk mengecek apakah sudah terhubung ke internet atau belum kita bisa melakukan ping ke dns public google melalui terminal, dengan cara
 click menu `New Terminal` lalu ketikan di dalamnya
@@ -243,9 +207,7 @@ ping 8.8.8.8
 
 apabila respon atau output nya reply maka router kita sudah terhubung ke internet
 
-<a href="https://user-images.githubusercontent.com/64394320/166426375-7780527f-5b77-4932-96e4-a2309a6d084f.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166426375-7780527f-5b77-4932-96e4-a2309a6d084f.png" alt="ping dns google" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Ping Domain Google](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/ping_domain_google.png)
 
 atau ping ke domain google
 
@@ -253,9 +215,7 @@ atau ping ke domain google
 ping google.com
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166427017-6fbcf08a-60a1-4b5e-aba0-0fd23fcac7b5.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166427017-6fbcf08a-60a1-4b5e-aba0-0fd23fcac7b5.png" alt="Ping google.com" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Ping Domain Google 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/ping_domain_google2.png)
 
 ### Static IP
 
@@ -274,9 +234,7 @@ Untuk menggunakan Static IP kita harus mengetahui beberapa hal, antara lain:
 Apabila kalian sudah mengetahui ke 3 tersebut, langkah pertama kita akan menambahkan IP Address nya dengan
 cara pergi ke menu `/IP/Address/`
 
-<a href="https://user-images.githubusercontent.com/64394320/166430697-bcdf99a0-edcb-47dd-800d-0eea051cb26b.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166430697-bcdf99a0-edcb-47dd-800d-0eea051cb26b.png" alt="IP/Address" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Static Address](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/static_address.png)
 
 Pada menu `Address List` kita akan menambahkan IP Address secara manual mulai dari alamat ip nya dan subnet mask nya,
 click icon `+` lalu isikan dengan format sebagai berikut:
@@ -287,23 +245,17 @@ Network:
 Interface: etherX
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166431407-d81d2f56-388b-424f-b9c9-9ae7313e933b.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166431407-d81d2f56-388b-424f-b9c9-9ae7313e933b.png" alt="New Address" class="img-fluid rounded mx-auto d-block" />
-</a>
+![New Address](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/new_address.png)
 
 Setelah Address baru ditambahkan maka akan muncul di tabel `Address List`
 
-<a href="https://user-images.githubusercontent.com/64394320/166431479-35436686-b473-4df5-9a20-8423fce8a21f.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166431479-35436686-b473-4df5-9a20-8423fce8a21f.png" alt="Address List" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Address List](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/address_list.png)
 
 #### Static Route
 
 Selanjutnya kita akan menambahkan route atau ip gateway dengan cara pergi ke menu `/IP/Routes`
 
-<a href="https://user-images.githubusercontent.com/64394320/166431957-b6a2aaa9-085d-441c-9568-3232776fe1f6.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166431957-b6a2aaa9-085d-441c-9568-3232776fe1f6.png" alt="IP/Routes" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Statuc Route](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/static_route.png)
 
 Pada Menu `Route List` kita akan menambahkan IP Gateway secara manual mulai dari dst address nya dan gateway nya, click icon
 `+` lalu isikan dengan format sebagai berikut:
@@ -313,15 +265,11 @@ Dst. Address: 0.0.0.0/0
 Gateway: ip_gateway_kamu
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166432200-26bb23e4-76bd-43e5-8336-2c31c76c252c.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166432200-26bb23e4-76bd-43e5-8336-2c31c76c252c.png" alt="New Route" class="img-fluid rounded mx-auto d-block" />
-</a>
+![New Route](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/new_route.png)
 
 Apabila status dari gateway nya adalah `reachable` maka gateway berhasil ditambahkan
 
-<a href="https://user-images.githubusercontent.com/64394320/166432803-7a53cc25-f8cc-429b-a1a2-7b01745ef0ba.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166432803-7a53cc25-f8cc-429b-a1a2-7b01745ef0ba.png" alt="Route List" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Route List](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/route_list.png)
 
 Untuk mengecek nya kamu bisa melakukan ping ke gateway dengan terminal (apabila statusnya reply maka berhasil)
 
@@ -329,17 +277,13 @@ Untuk mengecek nya kamu bisa melakukan ping ke gateway dengan terminal (apabila 
 ping ip_gateway_kamu
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166433106-7d1207c7-3df4-46f7-89a9-594a97802eec.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166433106-7d1207c7-3df4-46f7-89a9-594a97802eec.png" alt="ping gateway" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Route List With Ping](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/route_list_with_ping.png)
 
 #### Static DNS
 
 Setelah menambahkan IP Gateway, langkah selanjutnya adalah menambahkan IP DNS dengan cara pergi ke menu `/IP/DNS`
 
-<a href="https://user-images.githubusercontent.com/64394320/166433453-c47480d3-a51e-409d-8235-a3e7e0d63a2d.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166433453-c47480d3-a51e-409d-8235-a3e7e0d63a2d.png" alt="IP/DNS" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Static DNS](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/static_dns.png)
 
 Pada Menu `DNS Settings` kita akan menambahkan IP DNS secara manual, kita bisa menggunakan IP DNS Public dari google
 ataupun dari ISP nya, click icon `+` lalu isikan dengan format sebagai berikut:
@@ -350,9 +294,7 @@ Servers: ip_dns_kamu
          8.8.4.4
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166433824-6376e940-0ad9-44cd-86bd-d05c435113e3.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166433824-6376e940-0ad9-44cd-86bd-d05c435113e3.png" alt="DNS Settings" class="img-fluid rounded mx-auto d-block" />
-</a>
+![DNS Setting](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/dns_setting.png)
 
 Seharusnya sekarang router sudah terhubung ke internet, untuk mengecek nya kalian bisa ping ke domain google menggunakan
 terminal
@@ -361,9 +303,7 @@ terminal
 ping google.com
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166434133-e3364ec4-132b-493e-b48c-95a53069ded6.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166434133-e3364ec4-132b-493e-b48c-95a53069ded6.png" alt="ping google.com" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Ping With DNS](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/ping_with_dns.png)
 
 ### PPPoE Client
 
@@ -382,15 +322,11 @@ Untuk menambahkan akun PPPoE Client kita harus mengetahui beberapa hal, antara l
 Apabila kalian sudah mengetahui kedua hal tersebut, langkah pertama kita akan langsung menambahkan
 PPPoE Client pada router kita dengan cara pergi ke menu `/PPP/`
 
-<a href="https://user-images.githubusercontent.com/64394320/166439273-9bf81132-0142-4da4-8443-ff22288d4781.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166439273-9bf81132-0142-4da4-8443-ff22288d4781.png" alt="PPP" class="img-fluid rounded mx-auto d-block" />
-</a>
+![PPP](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/ppp.png)
 
 Pada menu `PPP` kita cukup menambahkan `Interface` baru yaitu `PPPoE Client` dengan cara menekan tanda `+`
 
-<a href="https://user-images.githubusercontent.com/64394320/166439664-7ed7d649-5bd8-4db4-b07a-bee2104744dc.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166439664-7ed7d649-5bd8-4db4-b07a-bee2104744dc.png" alt="New Interface/PPPoE Client" class="img-fluid rounded mx-auto d-block" />
-</a>
+![PPPoE Client](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/pppoe_client.png)
 
 Pada menu `New Interface/General` masukan dengan format sebagai berikut:
 
@@ -399,9 +335,7 @@ Name: nama_interface_pppoe_anda
 Interface: etherX (yang mengarah ke ISP)
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166440534-f80c5684-5933-46f1-a725-57216c762da9.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166440534-f80c5684-5933-46f1-a725-57216c762da9.png" alt="New Interface/General" class="img-fluid rounded mx-auto d-block" />
-</a>
+![New Interface](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/new_interface.png)
 
 Pada menu `New Interface/Dial Out` kita akan menambahkan user PPPoE nya dengan format sebagai berikut
 
@@ -412,22 +346,16 @@ Profile: profile_pppoe
 Use Peer DNS: yes
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166440690-ce255439-b7b3-4945-8888-86be11924d55.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166440690-ce255439-b7b3-4945-8888-86be11924d55.png" alt="New Interface/Dial Out" class="img-fluid rounded mx-auto d-block" />
-</a>
+![New Interface 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/new_interface2.png)
 
 Apabila username dan password benar maka seharusnya sekarang sudah terhubung, untuk mengeceknya kalian bisa melalui status
 ataupun traffic nya
 
-<a href="https://user-images.githubusercontent.com/64394320/166440890-d86f2212-aa82-4d00-a00f-35ca44351533.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166440890-d86f2212-aa82-4d00-a00f-35ca44351533.png" alt="PPPoE Status" class="img-fluid rounded mx-auto d-block" />
-</a>
+![Interface PPPoE](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/interface_pppoe.png)
 
 Setelah PPPoE terhubung maka akan muncul dynamic ip, route, dan dns
 
-<a href="https://user-images.githubusercontent.com/64394320/166443450-c6ed0760-cded-49bb-9e41-e53026039e45.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166443450-c6ed0760-cded-49bb-9e41-e53026039e45.png" alt="PPPoE Dynamic" class="img-fluid rounded mx-auto d-block" />
-</a>
+![PPPoE Detail](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/pppoe_detail.png)
 
 Seharusnya sekarang sudah dapat terhubung ke internet, untuk mengecek nya kalian bisa
 ping ke domain google melalui terminal
@@ -436,6 +364,4 @@ ping ke domain google melalui terminal
 ping google.com
 ```
 
-<a href="https://user-images.githubusercontent.com/64394320/166447336-cb2c4495-6e00-42c5-9bb4-1fcce9a4fb9a.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/64394320/166447336-cb2c4495-6e00-42c5-9bb4-1fcce9a4fb9a.png" alt="ping google.com" class="img-fluid rounded mx-auto d-block" />
-</a>
+![PPPoE Test Ping](${NEXT_PUBLIC_PUBLIC_ASSETS}/mikrotik_basic_configuration/pppoe_test_ping.png)
