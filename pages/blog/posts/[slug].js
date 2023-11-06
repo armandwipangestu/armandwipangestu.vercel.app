@@ -289,7 +289,7 @@ const DynamicSinglePagePost = ({
                           <div className="mr-4 flex-shrink-0">
                             <div className="LazyLoad is-visible">
                               <img
-                                className="rounded-full w-12 h-12"
+                                className="rounded-full w-12 h-12 transition duration-300 ease-in-out hover:scale-110"
                                 src={author_image}
                                 loading="lazy"
                                 style={{ opacity: 1 }}
@@ -324,7 +324,7 @@ const DynamicSinglePagePost = ({
                         style={{ position: "absolute", inset: "0px" }}
                       >
                         <Image
-                          className="object-cover object-center w-full h-full rounded-md"
+                          className="object-cover object-center w-full h-full rounded-md transition duration-300 ease-in-out hover:scale-110"
                           height="720"
                           width="1280"
                           src={cover_image}
