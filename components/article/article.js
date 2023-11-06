@@ -46,7 +46,7 @@ const ArticleLayout = ({ posts, tag }) => {
                           }}
                         >
                           <div
-                            className="ring-border/50 text-accent-foreground z-10 grid place-content-center overflow-hidden rounded-[0.60rem] bg-accent font-mono text-sm ring-1 ring-black"
+                            className="ring-border/50 text-accent-foreground grid place-content-center overflow-hidden rounded-[0.60rem] bg-accent font-mono text-sm ring-1 ring-black"
                             style={{
                               position: "absolute",
                               inset: "0px",
