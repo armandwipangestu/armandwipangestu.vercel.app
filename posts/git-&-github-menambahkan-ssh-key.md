@@ -233,6 +233,12 @@ Selanjutnya cukup tekan tombol `Add SSH Key`. Maka sekarang akan muncul list SSH
 
 Untuk mencoba nya kalian bisa menggunakan perintah `git fetch`, `git pull` atau `git push`. Disini saya akan mencoba melakukan commit dan push pada repository
 
+![Test SSH Key Windows](${NEXT_PUBLIC_PUBLIC_ASSETS}/git-dan-github-menambahkan-ssh-key/test-ssh-key-windows.png)
+
+Maka sekarang pada bagian list SSH key nya, key yang digunakan akan menjadi berwarna hijau dan akan ada keterangan kapan terakhir digunakan
+
+![Update List Key Windows](${NEXT_PUBLIC_PUBLIC_ASSETS}/git-dan-github-menambahkan-ssh-key/update-list-key-windows.png)
+
 ## Linux
 
 Pada artikel ini dibuat saya menggunakan linux distribusi archlinux, namun jangan khawatir karena untuk mengenerate SSH key pada distribusi lain juga akan kurang lebih sama.
