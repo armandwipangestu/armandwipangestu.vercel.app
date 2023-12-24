@@ -207,7 +207,7 @@ const Footer = () => {
             className="font-bold text-sky-500"
           >
             NextJS
-          </a>{" "}
+          </a>
           ,{" "}
           <a
             href="https://tailwindcss.com"
