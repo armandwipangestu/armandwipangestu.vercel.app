@@ -1,5 +1,11 @@
 import Metadata from "@/components/utilities/metadata";
-import { FaGithub, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaGitlab,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const AboutPage = () => {
   return (
@@ -77,6 +83,18 @@ const AboutPage = () => {
                   <FaGithub className="h-6 w-6" />
                   <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                     GitHub
+                  </span>
+                </a>
+
+                {/* GitLab */}
+                <a
+                  href="https://gitlab.com/armandwipangestu"
+                  target="_blank"
+                  className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                  <FaGitlab className="h-6 w-6" />
+                  <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                    GitLab
                   </span>
                 </a>
 
