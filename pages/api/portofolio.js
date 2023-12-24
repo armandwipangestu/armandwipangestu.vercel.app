@@ -22,7 +22,7 @@ const data = [
     title: "CodeIgniter 3 - E-PERPUS SOLO",
     excerpt:
       "Web perpustakaan online atau LMS (Library Management System), proyek ini merupakan tugas dari mata kuliah Sistem Basis Data",
-    techs: ["CodeIgniter 3", "Mazer", "ApexCharts", "MySQL/MariaDB"],
+    techs: ["CodeIgniter", "Mazer", "ApexCharts", "MySQL/MariaDB"],
   },
   {
     link: "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
