@@ -16,6 +16,15 @@ export default async function handler(req, res) {
 
 const data = [
   {
+    link: "https://github.com/armandwipangestu/e-perpus-solo",
+    thubmnail: "/portofolio/e-perpus-solo.png",
+    alt: "CodeIgniter 3 - E-PERPUS SOLO",
+    title: "CodeIgniter 3 - E-PERPUS SOLO",
+    excerpt:
+      "Web perpustakaan online atau LMS (Library Management System), proyek ini merupakan tugas dari mata kuliah Sistem Basis Data",
+    techs: ["CodeIgniter 3", "Bootstrap", "Mazer", "ApexCharts"],
+  },
+  {
     link: "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
     thubmnail: "/portofolio/portofolio.png",
     alt: "NextJS - Web Portofolio & Blog",
