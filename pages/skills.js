@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import {
   SiHtml5,
+  SiMarkdown,
   SiCss3,
   SiBootstrap,
   SiTailwindcss,
@@ -118,6 +119,18 @@ const SkillsPage = () => {
                 <SiHtml5 className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   HTML5
+                </span>
+              </a>
+
+              {/* Markdown */}
+              <a
+                href="https://www.markdownguide.org/"
+                target="_blank"
+                className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiMarkdown className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Markdown
                 </span>
               </a>
 
