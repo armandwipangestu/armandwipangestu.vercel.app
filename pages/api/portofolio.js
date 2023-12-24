@@ -22,7 +22,7 @@ const data = [
     title: "CodeIgniter 3 - E-PERPUS SOLO",
     excerpt:
       "Web perpustakaan online atau LMS (Library Management System), proyek ini merupakan tugas dari mata kuliah Sistem Basis Data",
-    techs: ["CodeIgniter 3", "Mazer", "ApexCharts", "MySQL/MariaDB"],
+    techs: ["CodeIgniter 3", "Mazer", "ApexCharts", "MySQL"],
   },
   {
     link: "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
@@ -39,7 +39,7 @@ const data = [
     title: "CodeIgniter 3 - Beasiswa",
     excerpt:
       "Aplikasi pencatatan pengajuan penerima beasiswa, proyek ini merupakan tugas dari mata kuliah Mini Project 2.",
-    techs: ["CodeIgniter 3", "Bootstrap", "Stisla", "MySQL/MariaDB"],
+    techs: ["CodeIgniter 3", "Bootstrap", "Stisla", "MySQL"],
   },
   {
     link: "https://github.com/armandwipangestu/vba-toko-alat-olahraga",
@@ -75,6 +75,6 @@ const data = [
     title: "PHP - Blog",
     excerpt:
       "Blog sederhana dibuat menggunakan php native dan content menggunakan markdown. Dibuat ketika pertama kali mempelajari bahasa pemrograman PHP",
-    techs: ["PHP", "Bootstrap", "Markdown", "MySQL/MariaDB"],
+    techs: ["PHP", "Bootstrap", "Markdown", "MySQL"],
   },
 ];
