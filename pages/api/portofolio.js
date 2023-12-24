@@ -22,7 +22,7 @@ const data = [
     title: "CodeIgniter 3 - E-PERPUS SOLO",
     excerpt:
       "Web perpustakaan online atau LMS (Library Management System), proyek ini merupakan tugas dari mata kuliah Sistem Basis Data",
-    techs: ["CodeIgniter 3", "Bootstrap", "Mazer", "ApexCharts"],
+    techs: ["CodeIgniter 3", "Mazer", "ApexCharts", "MySQL/MariaDB"],
   },
   {
     link: "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
@@ -35,11 +35,11 @@ const data = [
   {
     link: "https://github.com/armandwipangestu/beasiswa",
     thubmnail: "/portofolio/beasiswa.png",
-    alt: "CodeIgniter - Beasiswa",
-    title: "CodeIgniter - Beasiswa",
+    alt: "CodeIgniter 3 - Beasiswa",
+    title: "CodeIgniter 3 - Beasiswa",
     excerpt:
       "Aplikasi pencatatan pengajuan penerima beasiswa, proyek ini merupakan tugas dari mata kuliah Mini Project 2.",
-    techs: ["CodeIgniter", "Bootstrap", "Stisla"],
+    techs: ["CodeIgniter 3", "Bootstrap", "Stisla", "MySQL/MariaDB"],
   },
   {
     link: "https://github.com/armandwipangestu/vba-toko-alat-olahraga",
