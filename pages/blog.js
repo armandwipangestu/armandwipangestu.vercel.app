@@ -98,7 +98,7 @@ const BlogPage = ({ posts }) => {
                 <span className="mt-1 block text-3xl font-bold text-dark dark:text-gray dark:text-white lg:text-5xl">
                   Belajar Itu Mudah Bukan?{" "}
                   <span className="animate-gradient-pulse from-background to-background text-foreground ml-1 inline-block -rotate-1 rounded-xl bg-gradient-to-r via-primary/10 px-4 py-1.5 text-lg tracking-tight shadow-2xl shadow-primary/[0.25] ring-2 ring-dark/70 dark:ring-white/70 sm:px-4 sm:py-3 sm:text-3xl lg:text-4xl">
-                    Bukan
+                    Bukan!
                   </span>
                 </span>
               </h1>
