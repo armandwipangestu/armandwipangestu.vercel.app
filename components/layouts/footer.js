@@ -208,13 +208,21 @@ const Footer = () => {
           >
             NextJS
           </a>{" "}
-          dan{" "}
+          ,{" "}
           <a
             href="https://tailwindcss.com"
             target="_blank"
             className="font-bold text-sky-500"
           >
             Tailwind CSS
+          </a>{" "}
+          dan{" "}
+          <a
+            href="https://www.markdownguide.org"
+            target="_blank"
+            className="font-bold text-sky-500"
+          >
+            Markdown
           </a>
         </p>
       </div>
