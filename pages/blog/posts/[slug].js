@@ -320,7 +320,7 @@ const DynamicSinglePagePost = ({
                       }}
                     >
                       <div
-                        className="grid place-content-center overflow-hidden lg:rounded-lg lg:ring-1 lg:ring-border/70 lg:ring-black font-mono text-xl font-medium tracking-tighter text-accent-foreground dark:shadow-xl"
+                        className="grid place-content-center overflow-hidden border border-dark/20 dark:border-white/20 rounded-lg font-mono text-xl font-medium tracking-tighter text-accent-foreground dark:shadow-xl"
                         style={{ position: "absolute", inset: "0px" }}
                       >
                         <Image
