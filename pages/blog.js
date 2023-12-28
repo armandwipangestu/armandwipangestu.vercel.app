@@ -34,6 +34,7 @@ export default App;
 const BlogPage = ({ posts }) => {
   const [copyButtonText, setCopyButtonText] = useState("Copy");
   const [languageText, setLanguageText] = useState("");
+  const [isHoveredIndex, setIsHoveredIndex] = useState(null);
 
   const copyButton = () => {
     const codeBlock = document.querySelector("pre code");
@@ -204,7 +205,11 @@ const BlogPage = ({ posts }) => {
                                 height="360"
                                 width="640"
                                 src={post.frontmatter.cover_image}
-                                className="transition duration-300 ease-in-out hover:scale-110"
+                                className={`transition duration-300 ease-in-out hover:scale-110 ${
+                                  isHoveredIndex === index ? "scale-110" : ""
+                                }`}
+                                onMouseEnter={() => setIsHoveredIndex(index)}
+                                onMouseLeave={() => setIsHoveredIndex(null)}
                               />
                             </div>
                           </div>
@@ -215,7 +220,13 @@ const BlogPage = ({ posts }) => {
                               className="text-lg font-medium"
                               href={`/blog/posts/${post.slug}`}
                             >
-                              <span className="hover:text-primary transition duration-300 ease-in-out">
+                              <span
+                                onMouseEnter={() => setIsHoveredIndex(index)}
+                                onMouseLeave={() => setIsHoveredIndex(null)}
+                                className={`hover:text-primary transition duration-300 ease-in-out ${
+                                  isHoveredIndex === index ? "text-primary" : ""
+                                }`}
+                              >
                                 {post.frontmatter.title}
                               </span>
                             </Link>

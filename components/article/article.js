@@ -7,6 +7,8 @@ const ArticleLayout = ({ posts, tag }) => {
   const [mainCard, setMainCard] = useState(posts[0]);
   const [cards, setCards] = useState(posts.slice(1));
   const [isMobile, setIsMobile] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isHoveredIndex, setIsHoveredIndex] = useState(null);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 600px)");
@@ -57,7 +59,11 @@ const ArticleLayout = ({ posts, tag }) => {
                               height="360"
                               width="640"
                               src={mainCard.frontmatter.cover_image}
-                              className="transition duration-300 ease-in-out hover:scale-110"
+                              className={`transition duration-300 ease-in-out hover:scale-110 ${
+                                isHovered ? "scale-110" : ""
+                              }`}
+                              onMouseEnter={() => setIsHovered(true)}
+                              onMouseLeave={() => setIsHovered(false)}
                             />
                           </div>
                         </div>
@@ -68,7 +74,13 @@ const ArticleLayout = ({ posts, tag }) => {
                             className="text-lg font-medium"
                             href={`/blog/posts/${mainCard.slug}`}
                           >
-                            <span className="hover:text-primary transition duration-300 ease-in-out">
+                            <span
+                              className={`hover:text-primary transition duration-300 ease-in-out ${
+                                isHovered ? "text-primary" : ""
+                              }`}
+                              onMouseEnter={() => setIsHovered(true)}
+                              onMouseLeave={() => setIsHovered(false)}
+                            >
                               {mainCard.frontmatter.title}
                             </span>
                           </Link>
@@ -163,7 +175,11 @@ const ArticleLayout = ({ posts, tag }) => {
                   </div>
                   <div className="mt-6 flex items-center gap-x-6 lg:mt-10">
                     <Link
-                      className="rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                      className={`rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3 ${
+                        isHovered ? "opacity-80 shadow-lg" : ""
+                      }`}
                       href={`/blog/posts/${mainCard.slug}`}
                     >
                       Baca selengkapnya
@@ -200,10 +216,14 @@ const ArticleLayout = ({ posts, tag }) => {
                       <Link href={`/blog/posts/${mainCard.slug}`}>
                         <img
                           alt="Progressive Web Apps"
-                          className="h-full w-full object-cover object-center lg:rounded-md transition duration-300 ease-in-out hover:scale-110"
+                          className={`h-full w-full object-cover object-center lg:rounded-md transition duration-300 ease-in-out hover:scale-110 ${
+                            isHovered ? "scale-110" : ""
+                          }`}
                           height="720"
                           width="1280"
                           src={mainCard.frontmatter.cover_image}
+                          onMouseEnter={() => setIsHovered(true)}
+                          onMouseLeave={() => setIsHovered(false)}
                         />
                       </Link>
                     </div>
@@ -245,7 +265,11 @@ const ArticleLayout = ({ posts, tag }) => {
                                 height="360"
                                 width="640"
                                 src={card.frontmatter.cover_image}
-                                className="transition duration-300 ease-in-out hover:scale-110"
+                                className={`transition duration-300 ease-in-out hover:scale-110 ${
+                                  isHoveredIndex === index ? "scale-110" : ""
+                                }`}
+                                onMouseEnter={() => setIsHoveredIndex(index)}
+                                onMouseLeave={() => setIsHoveredIndex(null)}
                               />
                             </div>
                           </div>
@@ -256,7 +280,13 @@ const ArticleLayout = ({ posts, tag }) => {
                               className="text-lg font-medium"
                               href={`/blog/posts/${card.slug}`}
                             >
-                              <span className="hover:text-primary transition duration-300 ease-in-out">
+                              <span
+                                onMouseEnter={() => setIsHoveredIndex(index)}
+                                onMouseLeave={() => setIsHoveredIndex(null)}
+                                className={`hover:text-primary transition duration-300 ease-in-out ${
+                                  isHoveredIndex === index ? "text-primary" : ""
+                                }`}
+                              >
                                 {card.frontmatter.title}
                               </span>
                             </Link>

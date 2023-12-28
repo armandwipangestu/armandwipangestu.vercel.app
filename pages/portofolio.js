@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const PortofolioPage = () => {
   const [portos, setPortos] = useState([]);
+  const [isHoveredIndex, setIsHoveredIndex] = useState(null);
 
   const fetchData = async () => {
     try {
@@ -89,7 +90,11 @@ const PortofolioPage = () => {
                         height="360"
                         width="640"
                         src={porto.thubmnail}
-                        className="transition duration-300 ease-in-out hover:scale-110"
+                        className={`transition duration-300 ease-in-out hover:scale-110 ${
+                          isHoveredIndex === index ? "scale-110" : ""
+                        }`}
+                        onMouseEnter={() => setIsHoveredIndex(index)}
+                        onMouseLeave={() => setIsHoveredIndex(null)}
                       />
                     </div>
                   </div>
@@ -97,7 +102,13 @@ const PortofolioPage = () => {
                 <div className="mt-4 rounded-lg">
                   <div className="line-clamp-1 dark:text-white">
                     <Link href={porto.link} target="_blank">
-                      <span className="hover:text-primary transition duration-300 ease-in-out">
+                      <span
+                        onMouseEnter={() => setIsHoveredIndex(index)}
+                        onMouseLeave={() => setIsHoveredIndex(null)}
+                        className={`hover:text-primary transition duration-300 ease-in-out ${
+                          isHoveredIndex === index ? "text-primary" : ""
+                        }`}
+                      >
                         {porto.title}
                       </span>
                     </Link>
