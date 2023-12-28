@@ -193,7 +193,7 @@ const BlogPage = ({ posts }) => {
                             }}
                           >
                             <div
-                              className="ring-border/50 text-accent-foreground z-10 grid place-content-center overflow-hidden rounded-[0.60rem] bg-accent font-mono text-sm  ring-1 ring-black"
+                              className="text-accent-foreground z-10 grid place-content-center overflow-hidden font-mono text-sm border border-dark/20 dark:border-white/20 rounded-[0.60rem]"
                               style={{
                                 position: "absolute",
                                 inset: "0px",
