@@ -27,7 +27,7 @@ const AboutPage = () => {
 
               <h2 className="mb-5 max-w-lg text-3xl font-bold text-dark dark:text-white lg:text-4xl">
                 Menghubungkan Kreativitas Dengan{" "}
-                <span className="animate-gradient-pulse from-background to-background text-foreground ml-1 inline-block -rotate-1 rounded-xl bg-gradient-to-r via-primary/10 px-4 py-1.5 text-lg tracking-tight shadow-2xl shadow-primary/[0.25] ring-2 ring-dark/70 dark:ring-white/70 sm:px-4 sm:py-3 sm:text-3xl lg:text-4xl">
+                <span className="ml-1 inline-block -rotate-1 rounded-xl bg-gradient-to-r via-primary/20 px-4 py-1.5 text-lg tracking-tight shadow-2xl shadow-primary/[0.50] ring-2 ring-dark/70 dark:ring-white/70 sm:px-4 sm:py-3 sm:text-3xl lg:text-4xl">
                   Kode.
                 </span>
               </h2>
