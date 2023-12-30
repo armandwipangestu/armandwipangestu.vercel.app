@@ -79,7 +79,7 @@ const Footer = () => {
               <a
                 href="https://github.com/armandwipangestu"
                 target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
               >
                 <FaGithub className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -91,7 +91,7 @@ const Footer = () => {
               <a
                 href="https://gitlab.com/armandwipangestu"
                 target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
               >
                 <FaGitlab className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -103,7 +103,7 @@ const Footer = () => {
               <a
                 href="https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A"
                 target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
               >
                 <FaYoutube className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -115,7 +115,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/devvnnull/"
                 target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
               >
                 <FaInstagram className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -127,7 +127,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/arman-dwi-pangestu"
                 target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
               >
                 <FaLinkedin className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -149,8 +149,8 @@ const Footer = () => {
                         className={`text-base leading-6 ${
                           pathName === menu.target
                             ? "text-primary"
-                            : "text-slate-400"
-                        } hover:text-primary`}
+                            : "text-slate-500 dark:text-slate-400"
+                        } hover:text-primary dark:hover:text-primary`}
                         href={menu.target}
                       >
                         {menu.title}
@@ -172,8 +172,8 @@ const Footer = () => {
                         className={`text-base leading-6 ${
                           pathName === tag.target
                             ? "text-primary"
-                            : "text-slate-400"
-                        } hover:text-primary`}
+                            : "text-slate-500 dark:text-slate-400"
+                        } hover:text-primary dark:hover:text-primary`}
                         href={tag.target}
                       >
                         {tag.title}
@@ -196,7 +196,7 @@ const Footer = () => {
           <a
             href="https://github.com/armandwipangestu/armandwipangestu.vercel.app"
             target="_blank"
-            className="font-bold text-primary"
+            className="font-bold text-primary hover:text-primary/80"
           >
             Arman Dwi Pangestu
           </a>
@@ -204,7 +204,7 @@ const Footer = () => {
           <a
             href="https://nextjs.org"
             target="_blank"
-            className="font-bold text-sky-500"
+            className="font-bold text-sky-500 hover:text-sky-500/80"
           >
             NextJS
           </a>
@@ -212,7 +212,7 @@ const Footer = () => {
           <a
             href="https://tailwindcss.com"
             target="_blank"
-            className="font-bold text-sky-500"
+            className="font-bold text-sky-500 hover:text-sky-500/80"
           >
             Tailwind CSS
           </a>{" "}
@@ -220,7 +220,7 @@ const Footer = () => {
           <a
             href="https://www.markdownguide.org"
             target="_blank"
-            className="font-bold text-sky-500"
+            className="font-bold text-sky-500 hover:text-sky-500/80"
           >
             Markdown
           </a>
