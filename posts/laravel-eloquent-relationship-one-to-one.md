@@ -471,17 +471,21 @@ class User extends Model
 ```
 
 Argument pertama yang dikirimkan di method `hasOne` adalah nama class model yang terkait dengan relation nya. Setelah relationship ditentukan, sekarang kita dapat mengambil data terkait menggunakan
-dynamic property atau variable Eloquent. Dynamic property ini memungkinkan kalian mengakses relationship method yang sudah dibuat di model `User`. Untuk mencoba nya kalian bisa menggunakan `tinker` dengan cara masuk terlebih dahulu kedalam shell nya dengan perintah berikut ini
+dynamic property atau variable Eloquent. Dynamic property ini memungkinkan kalian mengakses relationship method yang sudah dibuat di model `User`.
+
+#### Mengakses atau Menjalankan Relation One to One
+
+Untuk mencoba nya kalian bisa menggunakan `tinker` dengan cara masuk terlebih dahulu kedalam shell nya dengan perintah berikut ini
 
 ```shell
 php artisan tinker
 ```
 
-Jika sudah didalam shell nya, sekarang kita bisa buat sebuah variable dengan nama `phone` yang value nya adalah men-chaining model `User` dengan method relationship atau dynamic property nya
+Jika sudah didalam shell nya, sekarang kita bisa buat sebuah variable dengan nama `phone` yang value nya adalah model `User` men-chaining method relationship atau dynamic property nya
 
 > **Catatan**: Tips
 >
-> Nama dari dynamic property Eloquent `phone` berikut ini adalah merepresetasikan nama method yang ada di model `User`
+> Nama dari dynamic property Eloquent `phone` berikut ini adalah merepresetasikan nama method relationship yang ada di model `User`
 
 ```php
 $phone = User::find(1)->phone
@@ -501,3 +505,180 @@ Maka seharusnya perintah diatas tersebut akan me-return value data nomor telepon
 ```
 
 ![Tinker Get Phone User](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-one-to-one/tinker-get-phone-user.png)
+
+### Format atau Aturan Penulisan
+
+#### Foreign Key
+
+Eloquent menentukan `foreign key` pada suatu relationship berdasarkan sesuai dengan nama parent atau induk model nya. Pada kasus ini, model `Phone` secara otomatis `diasumsikan` memiliki
+sebuah column untuk menampung foreign key dengan nama `user_id`. Jika kalian ingin mengesampikan aturan ini, kalian dapat menambahkan nama custom column foreign key pada argument kedua di
+method `hasOne` nya:
+
+```php
+public function phone(): HasOne
+{
+    return $this->hasOne(Phone::class, 'foreign_key');
+}
+```
+
+#### Primary Key
+
+Selain hal tersebut, Eloquent juga berasumsi bahwa `foreign key` tersebut harus memiliki nilai yang cocok atau sama dengan column `primary key` di parent atau induk model nya. Dengan kata lain,
+Eloquent akan mencari nilai user id (foreign key) pada column `user_id` di data `Phone` kemudian membadingkannya dengan nilai user id (primary key) pada column `id` di data `User` nya.
+Jika kalian ingin relationship tersebut menggunakan nilai `primary key` selain column `id` atau property `$primaryKey` pada model, kalian bisa menambahkan nama custom column primary key pada argument ketiga di method `hasOne` nya:
+
+```php
+public function phone(): HasOne
+{
+    return $this->hasOne(Phone::class, 'foreign_key', 'local_key');
+}
+```
+
+## Inverse Relationship
+
+Setelah mendefinisikan relationship `hasOne` atau `One to One` dari model `User` ke model `Phone`, maka kita sekarang dapat mengkases model `Phone` secara langsung dari model `User` dengan
+cara men-chaining method `phone` pada instance `User`. Selanjutnya, kita akan tentukan relationship pada model `Phone` ke model `User` atau invers (kebalikan) relationship yang memungkinkan kita dapat mengakses data user yang memiliki nomor telepon. Kita dapat mendefinisikan invers relationship dari method `hasOne` dengan menggunakan method `belongsTo`.
+
+Agar lebih terbayang, kalian bisa lihat gambar dibawah ini mengenai relationship `hasOne` dari model `User` ke model `Phone` dan `belongsTo` (inverse) dari model `Phone` ke model `User`
+
+![Invers Relation Design](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-one-to-one/invers-relation-design.png)
+
+### Membuat Method belongsTo
+
+Untuk membuat inverse relation nya, kita perlu membuat sebuah method dengan nama `user` di model `Phone`. Method `user` tersebut harus memanggil method `belongsTo` dan mengembalikan nilai atau return value nya.
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class Phone extends Model
+{
+    use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+```
+
+Saat memanggil method `user`, Eloquent akan berusaha menemukan model `User` yang memiliki id yang cocok dengan column `user_id` pada model `Phone`.
+
+Eloquent menentukan nama `foreign key` dengan memeriksa nama method relationship nya dan menambahkan nama akhiran atau suffix method dengan format `_id`. Jadi, dalam hal ini, Eloquent `mengasumsikan` bahwa model `Phone` memiliki column `user_id`. Namun, jika nama column `foreign key` di model `Phone` bukan `user_id`, kalian dapat menambahkan argument kedua di method `belongsTo`
+
+```php
+public function user(): BelongsTo
+{
+    return $this->belongsTo(User::class, 'foreign_key');
+}
+```
+
+Jika parent atau induk model tidak menggunakan column `id` sebagai `primary key` nya, atau mungkin kalian ingin mencari model terkait menggunakan column yang berbeda, Anda dapat menambahkan argument ketiga di method `belongsTo` untuk menentukan nama custom key column di parent atau induk model nya
+
+```php
+public function user(): BelongsTo
+{
+    return $this->belongsTo(User::class, 'foreign_key', 'owner_key');
+}
+```
+
+#### Mengakses atau Menjalankan Relation belongsTo
+
+Untuk mencoba nya kalian bisa gunakan `tinker` kembali, namun kita perlu me-restart session shell nya agar terupdate, kalian bisa exit terlebih dahulu dari session nya kemudian masuk kembali menggunakan perintah artisan
+
+```shell
+php artisan tinker
+```
+
+Jika sudah didalam shell nya, sekarang kita bisa buat sebuah variable dengan nama `user` yang value nya adalah model `Phone` men-chaining method relationship atau dynamic property nya
+
+> **Catatan**: Tips
+>
+> Nama dari dynamic property Eloquent `user` berikut ini adalah merepresetasikan nama method relationship yang ada di model `Phone`
+
+```php
+$user = App\Models\Phone::find(1)->user
+```
+
+Maka seharusnya perintah diatas akan me-return value data user yang terkait dengan nomor telepon nya
+
+```php
+= App\Models\User {#6031
+    id: 1,
+    name: "Arman Dwi Pangestu",
+    username: "devnull",
+    email: "arman@example.net",
+    created_at: "2024-01-20 19:32:51",
+    updated_at: "2024-01-20 19:32:51",
+  }
+```
+
+![Tinker Get User Phone](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-one-to-one/tinker-get-user-phone.png)
+
+## Membuat Eloquent Relationship Agar Dapat Diakses Melalui Web
+
+Untuk membuat agar Eloquent Relationship yang sudah kita buat sebelumnya dapat diakses melalui web, kita bisa buat sebuah controller baru dengan nama `RelationController`. Untuk membuat nya kita bisa gunakan perintah php artisan berikut ini
+
+```shell
+php artisan make:controller RelationController
+```
+
+Selanjutnya kita buat sebuah method untuk menangani route yang akan kita tentukan sesuai dengan relationship yang sudah kita buat, untuk melakukannya kita bisa buat method tersebut di file `app\Models\Http\Controllers\RelationController.php`
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Phone;
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class RelationController extends Controller
+{
+    public function hasOne(Request $request)
+    {
+        $phone = User::find($request->id)->phone;
+        return $phone;
+    }
+
+    public function belongsTo(Request $request)
+    {
+        $user = Phone::find($request->id)->user;
+        return $user;
+    }
+}
+```
+
+Setelah controller nya siap, sekarang kita tinggal routing agar method di controller tersebut dapat digunakan, untuk melakukannya kita bisa tambahkan route di file `routes\web.php`
+
+```php
+<?php
+
+use App\Http\Controllers\RelationController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/relation/hasOne', [RelationController::class, 'hasOne']);
+Route::get('/relation/belongsTo', [RelationController::class, 'belongsTo']);
+```
+
+Maka sekarang kita bisa langsung mengakses method relationship `hasOne` atau `One to One` dan `belongsTo` atau `Invers One to One` tersebut melalui web dengan syarat kita mengirimkan request `id` di alamat URL nya.
+
+![Eloquent Relationship Via Web](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-one-to-one/eloquent-relationship-via-web.png)
+
+### Kelebihan Akses Melalui Web
+
+Nah berhubung sekarang kita bisa mengakses response dari relationship nya melalui web, maka kita bisa intip raw query SQL yang dijalankan nya itu seperti apa sih dengan menggunakan clockwork
+
+![Clockwork See Query](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-one-to-one/clockwork-see-query.png)
