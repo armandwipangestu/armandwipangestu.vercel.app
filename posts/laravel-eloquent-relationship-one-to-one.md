@@ -643,13 +643,13 @@ use Illuminate\Http\Request;
 
 class RelationController extends Controller
 {
-    public function hasOne(Request $request)
+    public function oneToOne(Request $request)
     {
         $phone = User::find($request->id)->phone;
         return $phone;
     }
 
-    public function belongsTo(Request $request)
+    public function oneToOneInverse(Request $request)
     {
         $user = Phone::find($request->id)->user;
         return $user;
@@ -669,8 +669,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/relation/hasOne', [RelationController::class, 'hasOne']);
-Route::get('/relation/belongsTo', [RelationController::class, 'belongsTo']);
+Route::get('/relation/oneToOne', [RelationController::class, 'oneToOne']);
+Route::get('/relation/oneToOneInverse', [RelationController::class, 'oneToOneInverse']);
 ```
 
 Maka sekarang kita bisa langsung mengakses method relationship `hasOne` atau `One to One` dan `belongsTo` atau `Invers One to One` tersebut melalui web dengan syarat kita mengirimkan request `id` di alamat URL nya.
