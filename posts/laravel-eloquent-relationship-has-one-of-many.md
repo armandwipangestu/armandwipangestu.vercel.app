@@ -427,3 +427,87 @@ Sekarang kita bisa akses route tersebut dengan endpoint `/relation/hasOneOfMany`
 ![Has One of Many Via Web](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-has-one-of-many/has-one-of-many-via-web.png)
 
 Bisa kalian lihat RAW Query SQL yang dijalankan adalah menggunakan aggregate function yaitu `MIN` dan `MAX`
+
+## Tips Tambahan
+
+### Converting "Many" Relationship ke Has One Relationship
+
+Mungkin kalian tidak menggunakan relationship `Has One of Many` pada studi kasus model `User` ke model `Order`, yang dimana relationship Has One of Many tersebut adalah `hasOne` (One to One) yang men-chaining method `ofMany`. Namun, kalian mungkin menggunakan atau sudah mempunyai relationship `hasMany` (One to Many) dari model `User` ke model `Order` seperti berikut ini
+
+![Converting Has Many to Has One of Many](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-has-one-of-many/converting-has-many-to-has-one-of-many.png)
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
+class User extends Model
+{
+    use HasFactory;
+
+    protected $guarded = ['id'];
+
+    ...
+
+    /**
+     * Get the user's orders.
+     */
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
+}
+```
+
+Nah, didalam Laravel kita dapat dengan mudah mengubah relationship tersebut menjadi "has one" relationship dengan men-chaining atau menerapkan method `one` pada relationship tersebut:
+
+> **Catatan**:
+>
+> Hal ini juga berlaku untuk method
+>
+> - `latestOfMany`
+> - `oldestOfMany`
+> - `ofMany`
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
+class User extends Model
+{
+    use HasFactory;
+
+    protected $guarded = ['id'];
+
+    ...
+
+    /**
+     * Get the user's orders.
+     */
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    /**
+     * Get the user's largest order.
+     */
+    public function largestOrder(): HasOne
+    {
+        return $this->orders()->one()->ofMany('price', 'max');
+    }
+}
+```
+
+Jika kalian belum terbayang, simpel nya adalah jika kita sudah memiliki relationship `hasMany` (One to Many) seperti method `orders` diatas, kita bisa lakukan convert relationship tersebut agar menjadi `Has One of Many` mengunakan method `one` dan diikuti dengan method selanjutnya seperti `latestOfMany`, `oldestOfMany` atau `ofMany`.
+
+![Explain Convert Many Relationship to Has One](${NEXT_PUBLIC_PUBLIC_ASSETS}/laravel-eloquent/relationship-has-one-of-many/explain-convert-many-relationship-to-has-one.png)
