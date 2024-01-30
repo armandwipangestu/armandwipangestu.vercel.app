@@ -124,7 +124,7 @@ return new class extends Migration
 
 #### Factory Order
 
-Selanjutnya kita siapkan data dummy untuk model `Factory` tersebut menggunakan faker di file factory `database\factories\OrderFactory.php`
+Selanjutnya kita siapkan data dummy untuk model `Order` tersebut menggunakan faker di file factory `database\factories\OrderFactory.php`
 
 ```php
 <?php
