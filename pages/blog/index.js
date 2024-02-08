@@ -21,7 +21,7 @@ const App = ({ props }) => {
             <div className='tagline-content'>
                 <h1>Tidak ada kata berhenti untuk belajar ✨</h1>
                 <p>Tingkatkan terus skill mu</p>
-                <button >Mulai Sekarang 🚀</button>
+                <button>Mulai Sekarang 🚀</button>
             </div>
         </section>
     )
