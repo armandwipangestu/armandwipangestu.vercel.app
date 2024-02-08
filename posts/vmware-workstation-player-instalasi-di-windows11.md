@@ -103,3 +103,25 @@ Maka proses instalasi akan berjalan. Setelah proses instalasi selesai, selanjutn
 Pada tahap ini seharusnya Anda sudah berhasil menginstall VMware Workstation Player
 
 ![VMware Run VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-run-vm.png)
+
+## Konfigurasi Network atau Jaringan Pada VMware
+
+Untuk melakukan perubahan konfigurasi jaringan pada VMware, kita memerlukan software `Virtual Network Editor`.
+
+![VMware Virtual Network Editor](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-virtual-network-editor.png)
+
+Untuk mengubahnya, kita perlu menjalankan dengan mode `Administrator` dengan cara click pada bagian tombol dengan tulisan `Change Settings`.
+
+![VMware Network Change Settings](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-network-change-settings.png)
+
+Setelah menjalankan dengan mode `Administrator` selanjutnya kita akan mengubah network untuk interface `VMnet8` menjadi network `192.168.232.0/24`. Untuk melakukannya ikuti gambar dibawah ini.
+
+![VMware Change Network](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-change-network.png)
+
+Untuk mengecek apakah sudah berhasil berubah atau belum, Anda bisa membuka `cmd` atau `PowerShell` kemudian ketikan perintah
+
+```shell
+ipconfig
+```
+
+![VMware Network Update](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-network-update.png)
