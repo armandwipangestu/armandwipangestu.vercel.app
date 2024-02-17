@@ -36,31 +36,31 @@ Dengan keuntungan-keuntungan tersebut, VMware Workstation Player menjadi pilihan
 
 Sebelum melakukan instalasi, kita perlu mendownload software nya terlebih dahulu. Untuk melakukannya cukup mudah yaitu kalian bisa mengunjungi situs resmi dari VMware nya disini [wwww.vmware.com/products/workstation-player/workstation-player-evaluation.html](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
 
-![VMware Web](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-web.png)
+![VMware Web](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-web.png)
 
 ## Instalasi VMware Workstation Player
 
 Setelah sebelumnya Anda berhasil mendownload software VMware nya, langkah selanjutnya adalah melakukan instalasi VMware nya. Untuk instalasi nya cukup mudah, Anda cukup pergi ke lokasi dimana software tersebut disimpan (saat proses mendownload). Disini saya menyimpan nya di folder `D:/Downloads/VM/VMware-player-full-17.0.0-20800274.exe`
 
-![VMware Software](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-software.png)
+![VMware Software](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-software.png)
 
 ### Setup Wizard
 
 Selanjutnya Anda cukup double click pada file tersebut maka akan muncul sebuah pop up atau wizard dari `VMware Workstation Player Setup`
 
-![VMware Wizard](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-wizard.png)
+![VMware Wizard](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-wizard.png)
 
 ### License Aggrement
 
 Selanjutnya click pada tombol dengan tulisan `Next`. Setelah itu kita konfirmasi mengenai `End-User License Aggrement` dan click tulisan `Next` lagi.
 
-![VMware License Aggrement](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-license-aggrement.png)
+![VMware License Aggrement](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-license-aggrement.png)
 
 ### Install Hypervisor
 
 Sekarang seharusnya akan muncul menu untuk instalasi `Windows Hypervisor Platform (WHP)` secara otomatis. Agar VMware Workstation Player berfungsi dengan baik. Anda harus menginstal atau mengaktifkan fitur tersebut.
 
-![VMware Install Hypervisor](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-install-hypervisor.png)
+![VMware Install Hypervisor](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-install-hypervisor.png)
 
 ### Custom Setup
 
@@ -70,53 +70,53 @@ Setelah menu `WHP` tersebut, selanjutnya terdapat `Custom Setup` seperti `Enhanc
 >
 > Pada menu ini juga kalian bisa melakukan custom PATH atau lokasi directory instalasi dari VMware Workstation Player nya. Disini saya akan biarkan secara default di install pada lokasi `C:\Program Files (x86)\VMware\Vmware Player\`
 
-![VMware Custom Setup](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-custom-setup.png)
+![VMware Custom Setup](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-custom-setup.png)
 
 ### User Experience Settings
 
 Selanjutnya terdapat menu `User Experience Settings`, pada menu tersebut terdapat beberapa konfigurasi seperti mengecek update dari VMware ketika program pertama kali dijalankan dan mengirim data untuk meningkatkan program. Disini saya tidak akan mengaktifkan kedua fitur tersebut.
 
-![VMware User Experience Settings](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-user-experience-settings.png)
+![VMware User Experience Settings](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-user-experience-settings.png)
 
 ### Shortcuts
 
 Selanjutnya terdapat menu `Shortcuts`, disini saya akan menceklis fitur `Desktop` dan `Start Menu Programs Folder`.
 
-![VMware Shortcuts](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-shortcuts.png)
+![VMware Shortcuts](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-shortcuts.png)
 
 ### Ready to Install
 
 Setelah semua konfigurasi diatas selesai, maka VMware Workstation Player sudah siap di install. Cukup click tombol dengan tulisan `Install`.
 
-![VMware Ready To Install](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-ready-to-install.png)
+![VMware Ready To Install](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-ready-to-install.png)
 
-![VMware Installing](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-installing.png)
+![VMware Installing](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-installing.png)
 
 ### Complete Setup
 
 Maka proses instalasi akan berjalan. Setelah proses instalasi selesai, selanjutnya click tombol dengan tulisan `Finish` kemudian restart komputer Anda.
 
-![VMware Complete Setup](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-complete-setup.png)
+![VMware Complete Setup](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-complete-setup.png)
 
 ### Run VM
 
 Pada tahap ini seharusnya Anda sudah berhasil menginstall VMware Workstation Player
 
-![VMware Run VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-run-vm.png)
+![VMware Run VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-run-vm.png)
 
 ## Konfigurasi Network atau Jaringan Pada VMware
 
 Untuk melakukan perubahan konfigurasi jaringan pada VMware, kita memerlukan software `Virtual Network Editor`.
 
-![VMware Virtual Network Editor](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-virtual-network-editor.png)
+![VMware Virtual Network Editor](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-virtual-network-editor.png)
 
 Untuk mengubahnya, kita perlu menjalankan dengan mode `Administrator` dengan cara click pada bagian tombol dengan tulisan `Change Settings`.
 
-![VMware Network Change Settings](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-network-change-settings.png)
+![VMware Network Change Settings](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-network-change-settings.png)
 
 Setelah menjalankan dengan mode `Administrator` selanjutnya kita akan mengubah network untuk interface `VMnet8` menjadi network `192.168.232.0/24`. Untuk melakukannya ikuti gambar dibawah ini.
 
-![VMware Change Network](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-change-network.png)
+![VMware Change Network](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-change-network.png)
 
 Untuk mengecek apakah sudah berhasil berubah atau belum, Anda bisa membuka `cmd` atau `PowerShell` kemudian ketikan perintah
 
@@ -124,4 +124,4 @@ Untuk mengecek apakah sudah berhasil berubah atau belum, Anda bisa membuka `cmd`
 ipconfig
 ```
 
-![VMware Network Update](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-windows11/vmware-network-update.png)
+![VMware Network Update](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/instalasi-di-windows-11/vmware-network-update.png)

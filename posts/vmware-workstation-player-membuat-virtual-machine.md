@@ -20,7 +20,7 @@ Jika kalian ingin mengikuti artikel ini pastikan kalian juga sudah men-download 
 
 Untuk membuat sebuah VM kita membutuhkan yang namanya ISO File, oleh karena itu kita perlu mendownload nya terlebih dahulu di website resmi Debian nya dengan cara mengunjungi nya disini [www.debian.org/distrib/](https://www.debian.org/distrib/)
 
-![Debian Distrib](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/debian-distrib.png)
+![Debian Distrib](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/debian-distrib.png)
 
 Pada halaman tersebut terdapat 2 macam instalasi image:
 
@@ -29,27 +29,27 @@ Pada halaman tersebut terdapat 2 macam instalasi image:
 
 Perbedaan dari kedua image tersebut terletak pada package atau isian yang sudah pre-install. Sehingga sesuaikan dengan kebutuhan kalian, disini saya memilih yang `complete installation image` karena isian nya sudah lengkap dan juga tidak perlu membutuhkan koneksi internet untuk proses instalasi nya.
 
-![Complete Installation Image](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/complete-installation-image.png)
+![Complete Installation Image](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/complete-installation-image.png)
 
 Setelah memilih `complete installation image` selanjutnya pilih metode download yang akan digunakan, disini saya akan menggunakan `HTTP`.
 
-![Download Using HTTP](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/download-using-http.png)
+![Download Using HTTP](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/download-using-http.png)
 
 Selanjutnya pilih versi yang `stable` release.
 
-![Stable Release](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/stable-release.png)
+![Stable Release](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/stable-release.png)
 
 Setelah itu pilih tipe arsitektur yang akan digunakan, disini saya akan memilih `amd64`.
 
-![Arsitektur amd64](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/arsitektur-amd64.png)
+![Arsitektur amd64](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/arsitektur-amd64.png)
 
 Selanjutnya download file dengan tulisan `debian-12.1.0-amd64-netinst.iso`.
 
-![Debian Netinst ISO](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/debian-netinst-iso.png)
+![Debian Netinst ISO](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/debian-netinst-iso.png)
 
 Kemudian pilih folder untuk hasil download ISO File tersebut. Disini saya memilih menyimpannya di lokasi `D:\Downloads\ISO File\OS`.
 
-![PATH Download](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/path-download.png)
+![PATH Download](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/path-download.png)
 
 ## Membuat VM Linux Debian
 
@@ -57,62 +57,62 @@ Setelah mempunyai ISO File nya, proses selanjutnya adalah membuat VM Linux Debia
 
 Untuk membuatnya, kalian buka software tersebut.
 
-![VMware App](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/vmware-app.png)
+![VMware App](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/vmware-app.png)
 
 Pada menu utama VMware Workstation Player, click pada tulisan `Create a New Virtual Machine`.
 
-![Create a New Virtual Machine](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/create-a-new-virtual-machine.png)
+![Create a New Virtual Machine](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/create-a-new-virtual-machine.png)
 
 ### Pemilihan ISO File dan Operating System
 
 Kemudian pilih atau arahkan `Installer disc image file (iso)` nya dengan ISO File yang sudah di download sebelumnya dengan cara click `Browse...`.
 
-![Installer Disc Image ISO](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/installer-disc-image-iso.png)
+![Installer Disc Image ISO](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/installer-disc-image-iso.png)
 
 Selanjutnya, arahkan ke folder penyimpanan ISO File Debian yang sudah di download, kemudian click atau pilih ISO File nya.
 
-![Select Debian ISO File](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/select-debian-iso-file.png)
+![Select Debian ISO File](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/select-debian-iso-file.png)
 
-![Next Menu](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/next-menu.png)
+![Next Menu](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/next-menu.png)
 
 Setelah itu click tombol `Next >` dan pilih `Guest operating system` nya dengan versi `Other Linux 5.x kernel 64-bit` atau kalian bisa pilih versi `Debian 11.x 64-bit`.
 
-![Select Guest Operating System](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/select-guest-operating-system.png)
+![Select Guest Operating System](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/select-guest-operating-system.png)
 
 ### Pengisian Nama VM, Lokasi Penyimpanan VM, dan Ukuran Penyimpanan VM
 
 Isikan nama VM nya sesuai dengan kegunaannya, misalkan disini saya akan membuat VM untuk konfigurasi webserver, maka akan saya beri nama dengan `Debian 12 - Webserver`.
 
-![Virtual Machine Name](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/virtual-machine-name.png)
+![Virtual Machine Name](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/virtual-machine-name.png)
 
 Kemudian setelah pemilihan nama VM, kalian juga dapat memilih lokasi penyimpanan VM yang akan dibuat dengan cara click pada bagian `Browse...` lalu sesuaikan dengan keinginan kalian.
 
 Setelah pemilihan nama VM dan lokasi penyimpanan, langkah selantjutnya adalah memberikan size atau ukuran untuk penyimpanan VM nya, disini saya akan memberikan sebesar `20 GB` dan `Split virtual disk into multiple files`.
 
-![Specify Disk Capacity](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/specify-disk-capacity.png)
+![Specify Disk Capacity](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/specify-disk-capacity.png)
 
 ### Ringkasan atau Rangkuman Spesifikasi VM
 
 Terakhir terdapat menu summary atau ringkasan mengenai konfigurasi VM yang sudah dibuat.
 
-![Summary VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/summary-vm.png)
+![Summary VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/summary-vm.png)
 
 Disini saya akan mengubah ukuran RAM atau `Memory` untuk VM nya menjadi sebesar `1 GB` dan `Network Adapter` nya akan saya arahkan atau menggunakan `NAT` atau `VMnet8`.
 
 Untuk melakukan perubahan konfigurasi click pada tulisan `Customize Hardware`.
 
-![Customize Hardware](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/customize-hardware.png)
+![Customize Hardware](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/customize-hardware.png)
 
-![Network Adapter](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/network-adapter.png)
+![Network Adapter](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/network-adapter.png)
 
 atau
 
-![Network Adapter 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/network-adapter-2.png)
+![Network Adapter 2](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/network-adapter-2.png)
 
 Setelah mengubah konfigurasi VM nya, selanjutnya click pada tulisan `Finish` untuk menyelesaikan pembuatan VM nya.
 
-![Finish Create VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/finish-create-vm.png)
+![Finish Create VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/finish-create-vm.png)
 
 Maka seharusnya sekarang terdapat VM dengan tulisan `Debian 12 - Webserver`.
 
-![List VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player-membuat-virtual-machine/list-vm.png)
+![List VM](${NEXT_PUBLIC_PUBLIC_ASSETS}/vmware-workstation-player/membuat-virtual-machine/list-vm.png)
