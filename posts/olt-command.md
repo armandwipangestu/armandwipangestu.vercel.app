@@ -12,6 +12,19 @@ author_image: "/images/posts/author/arman.png"
 
 ## Cek ONT Uptime dan History
 
+> **Catatan**:
+>
+> GPON ONU pada OLT mempunyai format berikut ini
+>
+> ```shell
+> gpon-onu_W/X/Y:Z
+> ```
+>
+> - `W` = Mengacu pada nomor slot fisik di OLT
+> - `X` = Card number
+> - `Y` = Nomor Port atau PON
+> - `Z` = Index ONU
+
 Pada perangkat OLT kita bisa mengecek status detail dari perangkat ONU atau ONT, perintah berikut ini menghasilkan sebuah output mengenai detail perangkat diantaranya terdapat status `uptime` atau total nyala perangkat.
 
 - Command
