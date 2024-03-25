@@ -27,6 +27,16 @@ import {
   SiFigma,
   SiPostman,
   SiArduino,
+  SiDocker,
+  SiKubernetes,
+  SiGooglecloud,
+  SiCpanel,
+  SiFirebase,
+  SiGrafana,
+  SiPrometheus,
+  SiVmware,
+  SiTypescript,
+  SiJsonwebtokens,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiNodejs, DiNginx } from "react-icons/di";
@@ -182,6 +192,18 @@ const SkillsPage = () => {
                 </span>
               </a>
 
+              {/* TypeScript */}
+              <a
+                href="https://www.typescriptlang.org"
+                target="_blank"
+                className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiTypescript className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.9rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  TypeScript
+                </span>
+              </a>
+
               {/* ReactJS */}
               <a
                 href="https://react.dev/"
@@ -190,7 +212,7 @@ const SkillsPage = () => {
               >
                 <SiReact className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  ReactJS
+                  React.js
                 </span>
               </a>
 
@@ -202,7 +224,7 @@ const SkillsPage = () => {
               >
                 <FaNodeJs className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  NodeJS
+                  Node.js
                 </span>
               </a>
 
@@ -214,7 +236,7 @@ const SkillsPage = () => {
               >
                 <SiExpress className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  ExpressJS
+                  Express.js
                 </span>
               </a>
 
@@ -226,7 +248,7 @@ const SkillsPage = () => {
               >
                 <TbBrandNextjs className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  NextJS
+                  Next.js
                 </span>
               </a>
 
@@ -266,6 +288,18 @@ const SkillsPage = () => {
                 </span>
               </a>
 
+              {/* JWT */}
+              <a
+                href="https://jwt.io/"
+                target="_blank"
+                className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiJsonwebtokens className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[-0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  JWT
+                </span>
+              </a>
+
               {/* MySQL */}
               <a
                 href="https://www.mysql.com/"
@@ -287,6 +321,18 @@ const SkillsPage = () => {
                 <SiPostgresql className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   PostgreSQL
+                </span>
+              </a>
+
+              {/* Firebase */}
+              <a
+                href="https://firebase.google.com/"
+                target="_blank"
+                className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiFirebase className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Firebase
                 </span>
               </a>
 
@@ -374,6 +420,54 @@ const SkillsPage = () => {
                 </span>
               </a>
 
+              {/* Docker */}
+              <a
+                href="https://www.docker.com/"
+                target="_blank"
+                className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiDocker className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Docker
+                </span>
+              </a>
+
+              {/* Kubernetes */}
+              <a
+                href="https://kubernetes.io/"
+                target="_blank"
+                className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiKubernetes className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[-1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Kubernetes
+                </span>
+              </a>
+
+              {/* Google Cloud Platform (GCP) */}
+              <a
+                href="https://cloud.google.com/"
+                target="_blank"
+                className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiGooglecloud className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  GCP
+                </span>
+              </a>
+
+              {/* Cpanel */}
+              <a
+                href="https://cpanel.net/"
+                target="_blank"
+                className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiCpanel className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  cPanel
+                </span>
+              </a>
+
               {/* PowerDNS */}
               <a
                 href="https://www.powerdns.com"
@@ -395,6 +489,42 @@ const SkillsPage = () => {
                 <SiProxmox className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   Proxmox
+                </span>
+              </a>
+
+              {/* VMware */}
+              <a
+                href="https://www.vmware.com"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiVmware className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  VMware
+                </span>
+              </a>
+
+              {/* Grafana */}
+              <a
+                href="https://grafana.com"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiGrafana className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Grafana
+                </span>
+              </a>
+
+              {/* Prometheus */}
+              <a
+                href="https://prometheus.io"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiPrometheus className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[1.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Prometheus
                 </span>
               </a>
 
