@@ -206,7 +206,7 @@ const Footer = () => {
             target="_blank"
             className="font-bold text-sky-500 hover:text-sky-500/80"
           >
-            NextJS
+            Next.js
           </a>
           ,{" "}
           <a
