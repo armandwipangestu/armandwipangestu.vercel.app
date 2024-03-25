@@ -91,10 +91,7 @@ const SkillsPage = () => {
         url="skills"
       />
 
-      <section
-        id="skills"
-        className="pt-36 pb-36 transition duration-300 ease-in-out dark:bg-dark"
-      >
+      <section id="skills" className="pt-36 pb-36 dark:bg-dark">
         <div className="container">
           <div className="w-full px-4">
             <div className="mx-auto mb-16 text-center">
