@@ -37,6 +37,7 @@ import {
   SiVmware,
   SiTypescript,
   SiJsonwebtokens,
+  SiCisco,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiNodejs, DiNginx } from "react-icons/di";
@@ -534,6 +535,18 @@ const SkillsPage = () => {
                 <SiMikrotik className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   Mikrotik
+                </span>
+              </a>
+
+              {/* Cisco */}
+              <a
+                href="https://www.cisco.com"
+                target="_blank"
+                className="group mx-4 max-w-[150px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiCisco className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[-0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Cisco
                 </span>
               </a>
 
