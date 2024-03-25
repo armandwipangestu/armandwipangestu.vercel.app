@@ -31,36 +31,35 @@ const ExperiencePage = () => {
                   <div className="flex-start flex items-center pt-3">
                     <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-primary"></div>
                     <p className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
-                      Juni 2021 - Juni 2023
+                      Febuari 2024 - Sekarang
                     </p>
                   </div>
                   <div className="mb-6 ml-4 mt-2">
                     <h4 className="tex-dark mb-1.5 text-xl font-semibold dark:text-white">
-                      PT CITRA JELAJAH INFORMATIKA
+                      BANGKIT ACADEMY 2024 BATCH 1
                     </h4>
                     <p className="mb-3 text-neutral-500 dark:text-neutral-300">
-                      Teknisi Jaringan
+                      Cloud Computing
                     </p>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Menganalisa, merancang dan instalasi kebutuhan jaringan
-                        di gedung, mall, sekolah, hotel, dsb.
+                        Google Cloud Platform
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Network Operation Center (NOC)
+                        Backend with Node.js
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Monitoring Traffic
+                        IT Support
                       </p>
                     </div>
                   </div>
@@ -107,6 +106,46 @@ const ExperiencePage = () => {
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
                         Virtulisasi (Proxmox dan VMware ESXI)
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                {/* Thrid Item */}
+                <li>
+                  <div className="flex-start flex items-center pt-3">
+                    <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-primary"></div>
+                    <p className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
+                      Juni 2021 - Juni 2023
+                    </p>
+                  </div>
+                  <div className="mb-6 ml-4 mt-2">
+                    <h4 className="tex-dark mb-1.5 text-xl font-semibold dark:text-white">
+                      PT CITRA JELAJAH INFORMATIKA
+                    </h4>
+                    <p className="mb-3 text-neutral-500 dark:text-neutral-300">
+                      Teknisi Jaringan
+                    </p>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Menganalisa, merancang dan instalasi kebutuhan jaringan
+                        di gedung, mall, sekolah, hotel, dsb.
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Network Operation Center (NOC)
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Monitoring Traffic
                       </p>
                     </div>
                   </div>
