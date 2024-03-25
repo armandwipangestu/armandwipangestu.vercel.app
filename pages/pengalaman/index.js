@@ -31,7 +31,7 @@ const ExperiencePage = () => {
                   <div className="flex-start flex items-center pt-3">
                     <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-primary"></div>
                     <p className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
-                      Febuari 2024 - Sekarang
+                      Februari 2024 - Sekarang
                     </p>
                   </div>
                   <div className="mb-6 ml-4 mt-2">
