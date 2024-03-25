@@ -15,7 +15,7 @@ const markdown = `
   \`\`\`jsx
 import React from 'react';
 
-const App = ({ props }) => {
+const App = (props) => {
     return (
         <section id='tagline'>
             <div className='tagline-content'>
