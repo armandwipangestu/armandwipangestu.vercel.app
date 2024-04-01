@@ -111,6 +111,7 @@ const BlogPage = ({ posts }) => {
                     "Programming",
                     "Networking",
                     "System Administrator",
+                    "Cloud Computing",
                   ]}
                   typeSpeed={40}
                   loop

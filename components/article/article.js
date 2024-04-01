@@ -38,7 +38,7 @@ const ArticleLayout = ({ posts, tag }) => {
                 <div style={{ opacity: 1, transform: "none" }}>
                   <section>
                     <div className="grid gap-y-6 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24">
-                      <Link href={`/blog/posts/${mainCard.slug}`}>
+                      <Link href={`/blog/posts/${mainCard?.slug}`}>
                         <div
                           data-radix-aspect-ratio-wrapper=""
                           style={{
@@ -58,7 +58,7 @@ const ArticleLayout = ({ posts, tag }) => {
                               alt=""
                               height="360"
                               width="640"
-                              src={mainCard.frontmatter.cover_image}
+                              src={mainCard?.frontmatter.cover_image}
                               className={`transition duration-300 ease-in-out hover:scale-110 ${
                                 isHovered ? "scale-110" : ""
                               }`}
@@ -72,7 +72,7 @@ const ArticleLayout = ({ posts, tag }) => {
                         <div className="line-clamp-1 dark:text-white">
                           <Link
                             className="text-lg font-medium"
-                            href={`/blog/posts/${mainCard.slug}`}
+                            href={`/blog/posts/${mainCard?.slug}`}
                           >
                             <span
                               className={`hover:text-primary transition duration-300 ease-in-out ${
@@ -81,25 +81,25 @@ const ArticleLayout = ({ posts, tag }) => {
                               onMouseEnter={() => setIsHovered(true)}
                               onMouseLeave={() => setIsHovered(false)}
                             >
-                              {mainCard.frontmatter.title}
+                              {mainCard?.frontmatter.title}
                             </span>
                           </Link>
                         </div>
                         <div className="mb-4 mt-2 line-clamp-2 text-sm text-slate-400">
-                          {mainCard.frontmatter.excerpt}
+                          {mainCard?.frontmatter.excerpt}
                         </div>
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-x-1">
                             <Link
-                              href={`/blog/tag/${mainCard.frontmatter.tag.toLowerCase()}`}
+                              href={`/blog/tag/${mainCard?.frontmatter.tag.toLowerCase()}`}
                             >
                               <div className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
-                                {mainCard.frontmatter.tag}
+                                {mainCard?.frontmatter.tag}
                               </div>
                             </Link>
                           </div>
                           <div className="font-mono text-xs tracking-tighter text-slate-400">
-                            {formatDate(mainCard.frontmatter.date)}
+                            {formatDate(mainCard?.frontmatter.date)}
                           </div>
                         </div>
                       </div>
@@ -158,18 +158,18 @@ const ArticleLayout = ({ posts, tag }) => {
               <div className="mx-auto max-w-screen-2xl overflow-hidden pt-16 sm:pt-16 md:pb-0 md:pt-16 lg:grid lg:grid-cols-12 lg:items-center lg:pb-28 lg:pt-40">
                 <div className="col-span-6 col-start-2 ml-0 max-w-2xl px-4 sm:px-6 lg:ml-[-1rem] lg:flex-auto lg:px-0 lg:pl-0 lg:pr-16 xl:ml-[-0.5rem]">
                   <h1 className="text-2xl font-bold tracking-tighter dark:text-white sm:text-3xl lg:max-w-lg lg:text-4xl/[2.5rem]">
-                    {mainCard.frontmatter.title}
+                    {mainCard?.frontmatter.title}
                   </h1>
                   <p className="mt-2 leading-relaxed text-slate-400 sm:mt-4 sm:text-lg sm:leading-7 lg:max-w-xl">
-                    {mainCard.frontmatter.excerpt}
+                    {mainCard?.frontmatter.excerpt}
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="mt-4 flex items-center gap-x-1">
                       <Link
                         className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none"
-                        href={`/blog/tag/${mainCard.frontmatter.tag.toLowerCase()}`}
+                        href={`/blog/tag/${mainCard?.frontmatter.tag.toLowerCase()}`}
                       >
-                        {mainCard.frontmatter.tag}
+                        {mainCard?.frontmatter.tag}
                       </Link>
                     </div>
                   </div>
@@ -180,7 +180,7 @@ const ArticleLayout = ({ posts, tag }) => {
                       className={`rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3 ${
                         isHovered ? "opacity-80 shadow-lg" : ""
                       }`}
-                      href={`/blog/posts/${mainCard.slug}`}
+                      href={`/blog/posts/${mainCard?.slug}`}
                     >
                       Baca selengkapnya
                     </Link>
@@ -188,7 +188,7 @@ const ArticleLayout = ({ posts, tag }) => {
                   <div className="my-8 flex items-center justify-between gap-x-2">
                     <div className="font-mono text-sm tracking-tighter text-slate-400">
                       <span>
-                        {formatDate(mainCard.frontmatter.date)}
+                        {formatDate(mainCard?.frontmatter.date)}
                         <a className="hover:text-foreground" href="#">
                           {" "}
                         </a>
@@ -213,7 +213,7 @@ const ArticleLayout = ({ posts, tag }) => {
                         inset: "0px",
                       }}
                     >
-                      <Link href={`/blog/posts/${mainCard.slug}`}>
+                      <Link href={`/blog/posts/${mainCard?.slug}`}>
                         <img
                           alt="Progressive Web Apps"
                           className={`h-full w-full object-cover object-center lg:rounded-md transition duration-300 ease-in-out hover:scale-110 ${
@@ -221,7 +221,7 @@ const ArticleLayout = ({ posts, tag }) => {
                           }`}
                           height="720"
                           width="1280"
-                          src={mainCard.frontmatter.cover_image}
+                          src={mainCard?.frontmatter.cover_image}
                           onMouseEnter={() => setIsHovered(true)}
                           onMouseLeave={() => setIsHovered(false)}
                         />
