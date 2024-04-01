@@ -38,6 +38,7 @@ import {
   SiTypescript,
   SiJsonwebtokens,
   SiCisco,
+  SiTerraform,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiNodejs, DiNginx } from "react-icons/di";
@@ -454,51 +455,15 @@ const SkillsPage = () => {
                 </span>
               </a>
 
-              {/* Cpanel */}
+              {/* Terraform */}
               <a
-                href="https://cpanel.net/"
+                href="https://cloud.google.com/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
-                <SiCpanel className="w-16 h-16" />
-                <span className="icon-skill absolute top-[5.5rem] right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  cPanel
-                </span>
-              </a>
-
-              {/* PowerDNS */}
-              <a
-                href="https://www.powerdns.com"
-                target="_blank"
-                className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
-              >
-                <img src="./skills/powerdns.svg" alt="PowerDNS" />
-                <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  PowerDNS
-                </span>
-              </a>
-
-              {/* Proxmox */}
-              <a
-                href="https://www.proxmox.com"
-                target="_blank"
-                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
-              >
-                <SiProxmox className="w-16 h-16" />
-                <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  Proxmox
-                </span>
-              </a>
-
-              {/* VMware */}
-              <a
-                href="https://www.vmware.com"
-                target="_blank"
-                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
-              >
-                <SiVmware className="w-16 h-16" />
-                <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  VMware
+                <SiTerraform className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[-0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Terraform
                 </span>
               </a>
 
@@ -526,6 +491,54 @@ const SkillsPage = () => {
                 </span>
               </a>
 
+              {/* Proxmox */}
+              <a
+                href="https://www.proxmox.com"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiProxmox className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Proxmox
+                </span>
+              </a>
+
+              {/* VMware */}
+              <a
+                href="https://www.vmware.com"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiVmware className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  VMware
+                </span>
+              </a>
+
+              {/* Cpanel */}
+              <a
+                href="https://cpanel.net/"
+                target="_blank"
+                className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiCpanel className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  cPanel
+                </span>
+              </a>
+
+              {/* PowerDNS */}
+              <a
+                href="https://www.powerdns.com"
+                target="_blank"
+                className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <img src="./skills/powerdns.svg" alt="PowerDNS" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  PowerDNS
+                </span>
+              </a>
+                           
               {/* Mikrotik */}
               <a
                 href="https://mikrotik.com"
