@@ -31,6 +31,7 @@ const HomePage = () => {
                     "Junior Web Developer",
                     "Network Technician",
                     "System Administrator",
+                    "Cloud Engineer",
                   ]}
                   typeSpeed={40}
                   loop
