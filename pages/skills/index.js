@@ -457,7 +457,7 @@ const SkillsPage = () => {
 
               {/* Terraform */}
               <a
-                href="https://cloud.google.com/"
+                href="https://www.terraform.io/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
