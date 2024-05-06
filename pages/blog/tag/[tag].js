@@ -34,6 +34,7 @@ export const getStaticPaths = async () => {
     paths: [
       { params: { tag: "programming" } },
       { params: { tag: "cloud" } },
+      { params: { tag: "devops" } },
       { params: { tag: "sysadmin" } },
       { params: { tag: "networking" } },
       { params: { tag: "linux" } },
