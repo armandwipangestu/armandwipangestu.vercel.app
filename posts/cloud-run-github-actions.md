@@ -734,7 +734,7 @@ git commit -m "feat(endpoint): update message"
 
 Setelah semuanya sudah siap, sekarang kita bisa lakukan push ke remote repository dengan perintah berikut ini:
 
-> **Catatan**: Pada saat melakukan push, maka trigger GitHub Actions nya akan langsung active dan melakukan build docker image dengan base kode yang terbaru dan melakukan deployment ke Cloud Run menggunakan image tersebut
+> **Catatan**: Pada saat melakukan push, maka trigger GitHub Actions nya akan langsung active dan melakukan build docker image dengan kode base yang terbaru dan melakukan deployment ke Cloud Run menggunakan image tersebut
 
 ```bash
 git push
@@ -767,8 +767,12 @@ Akhirnya selesai juga perjalan yang sangat panjang ini 🚀 (cape ngetik karena 
 > - Passing argument `env` sesuai dengan environment nya ketika melakukan build docker image di workflow GitHub Actions
 > - Pemisahan Workflow file sesuai dengan branch nya (misalkan terdapat branch `dev`, `staging`, dan `production`) maka setiap workflow nya akan active ke-trigger ketika terdapat perubahan di masing-masing branch nya.
 > - Pemisahan Service (Artifact Registry dan Cloud Run Deployment) sesuai dengan `env` nya
+> - Kalian juga bisa melakukan pengecekan unit testing seperti menggunakan Jest pada saat job di GitHub Actions ke-trigger
+> - Formatting code seperti menggunakan ESLint sebelum mem-build docker image
+> 
+> Beikut contoh arsitektur diagram atau topologi dengan pemisahan `env` 
 >
-> Beikut contoh arsitektur diagram atau topologi dengan pemisahan `env` > ![Containerized App Env](${NEXT_PUBLIC_PUBLIC_ASSETS}/cloud-run-github-actions/containerized-app-env.gif)
+> ![Containerized App Env](${NEXT_PUBLIC_PUBLIC_ASSETS}/cloud-run-github-actions/containerized-app-env.gif)
 >
 > Jangan lupa simpan credentials yang sensitive (seperti database `user`, `password`, `db_name` dsb) di `secrets` agar tetap aman 👍
 
