@@ -45,21 +45,21 @@ const ExperiencePage = () => {
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Google Cloud Platform
+                        Handle Deployment on Google Cloud Platform Resources for Capstone Project (Infrastructure, Designing Architecture)
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Backend with Node.js
+                        Creating Back-End RESTful API with Modern Stack and Secure using Docker, JWT, etc
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        IT Support
+                        Handle DevOps CI/CD Pipeline on Deployment Using GitHub Actions to Build Docker Image and Deploy to Cloud Run
                       </p>
                     </div>
                   </div>
