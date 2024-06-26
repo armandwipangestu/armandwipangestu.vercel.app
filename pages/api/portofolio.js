@@ -16,6 +16,15 @@ export default async function handler(req, res) {
 
 const data = [
   {
+    link: "https://github.com/finboost/finboost-backend",
+    thubmnail: "/portofolio/finboost-backend.png",
+    alt: "FinBoost Back-End",
+    title: "FinBoost Back-End",
+    excerpt:
+      "Membuat backend untuk aplikasi mobile tentang penasihat keuangan yang bertujuan untuk menyediakan berbagai fitur seperti otentikasi, chat, dan lainnya",
+    techs: ["Node.js", "Prisma", "MySQL", "Zod", "Docker", "JWT"],
+  },
+  {
     link: "https://github.com/armandwipangestu/e-perpus-solo",
     thubmnail: "/portofolio/e-perpus-solo.png",
     alt: "CodeIgniter 3 - E-PERPUS SOLO",

@@ -41,6 +41,27 @@ const EducationPage = () => {
                     <p className="mb-3 text-neutral-500 dark:text-neutral-300">
                       S1 Teknik Informatika
                     </p>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Software Engineering
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Database
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Internet of Things
+                      </p>
+                    </div>
                   </div>
                 </li>
 
@@ -59,6 +80,20 @@ const EducationPage = () => {
                     <p className="mb-3 text-neutral-500 dark:text-neutral-300">
                       TKJ (Teknik Komputer dan Jaringan)
                     </p>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Computer
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Networking
+                      </p>
+                    </div>
                   </div>
                 </li>
               </ol>

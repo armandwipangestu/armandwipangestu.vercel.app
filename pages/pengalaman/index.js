@@ -45,21 +45,26 @@ const ExperiencePage = () => {
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Handle Deployment on Google Cloud Platform Resources for Capstone Project (Infrastructure, Designing Architecture)
+                        Menangani Deployment Resources Google Cloud Platform
+                        untuk Proyek Capstone (Infrastruktur, Perancangan
+                        Arsitektur)
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Creating Back-End RESTful API with Modern Stack and Secure using Docker, JWT, etc
+                        Membuat Back-End RESTful API dengan Modern Stack dan
+                        Secure menggunakan Docker, JWT, dll
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Handle DevOps CI/CD Pipeline on Deployment Using GitHub Actions to Build Docker Image and Deploy to Cloud Run
+                        Menangani DevOps CI/CD Pipeline pada Deployment
+                        Menggunakan GitHub Actions untuk Build Docker Image dan
+                        Men-deploy ke Cloud Run
                       </p>
                     </div>
                   </div>
