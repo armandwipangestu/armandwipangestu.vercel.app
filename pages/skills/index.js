@@ -32,6 +32,9 @@ import {
   SiGooglecloud,
   SiCpanel,
   SiFirebase,
+  SiMongodb,
+  SiGithubactions,
+  SiJenkins,
   SiGrafana,
   SiPrometheus,
   SiVmware,
@@ -39,6 +42,10 @@ import {
   SiJsonwebtokens,
   SiCisco,
   SiTerraform,
+  SiNotion,
+  SiTrello,
+  SiGooglecolab,
+  SiJupyter,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiNodejs, DiNginx } from "react-icons/di";
@@ -335,6 +342,18 @@ const SkillsPage = () => {
                 </span>
               </a>
 
+              {/* MongoDB */}
+              <a
+                href="https://www.mongodb.com/"
+                target="_blank"
+                className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiMongodb className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  MongoDB
+                </span>
+              </a>
+
               {/* Git */}
               <a
                 href="https://git-scm.com/"
@@ -356,6 +375,30 @@ const SkillsPage = () => {
                 <SiGithub className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   GitHub
+                </span>
+              </a>
+
+              {/* GitHub Actions */}
+              <a
+                href="https://github.com/features/actions"
+                target="_blank"
+                className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiGithubactions className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  GitHub Actions
+                </span>
+              </a>
+
+              {/* Jenkins */}
+              <a
+                href="https://www.jenkins.io/"
+                target="_blank"
+                className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiJenkins className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Jenkins
                 </span>
               </a>
 
@@ -538,7 +581,7 @@ const SkillsPage = () => {
                   PowerDNS
                 </span>
               </a>
-                           
+
               {/* Mikrotik */}
               <a
                 href="https://mikrotik.com"
@@ -619,7 +662,55 @@ const SkillsPage = () => {
               >
                 <SiArduino className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  Arduino
+                  Arduino Uno
+                </span>
+              </a>
+
+              {/* Notion */}
+              <a
+                href="https://www.notion.so/"
+                target="_blank"
+                className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiNotion className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Notion
+                </span>
+              </a>
+
+              {/* Trello */}
+              <a
+                href="https://www.trello.com/"
+                target="_blank"
+                className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiTrello className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Trello
+                </span>
+              </a>
+
+              {/* Google Colab */}
+              <a
+                href="https://colab.research.google.com/"
+                target="_blank"
+                className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiGooglecolab className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Google Colab
+                </span>
+              </a>
+
+              {/* Jupyter Notebook */}
+              <a
+                href="https://jupyter.org/"
+                target="_blank"
+                className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiJupyter className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Jupyter Notebook
                 </span>
               </a>
             </div>

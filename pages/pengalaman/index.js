@@ -31,50 +31,6 @@ const ExperiencePage = () => {
                   <div className="flex-start flex items-center pt-3">
                     <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-primary"></div>
                     <p className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
-                      Februari 2024 - Sekarang
-                    </p>
-                  </div>
-                  <div className="mb-6 ml-4 mt-2">
-                    <h4 className="tex-dark mb-1.5 text-xl font-semibold dark:text-white">
-                      BANGKIT ACADEMY 2024 BATCH 1
-                    </h4>
-                    <p className="mb-3 text-neutral-500 dark:text-neutral-300">
-                      Cloud Computing
-                    </p>
-
-                    <div className="flex-start flex items-center">
-                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Menangani Deployment Resources Google Cloud Platform
-                        untuk Proyek Capstone (Infrastruktur, Perancangan
-                        Arsitektur)
-                      </p>
-                    </div>
-
-                    <div className="flex-start flex items-center">
-                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Membuat Back-End RESTful API dengan Modern Stack dan
-                        Secure menggunakan Docker, JWT, dll
-                      </p>
-                    </div>
-
-                    <div className="flex-start flex items-center">
-                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Menangani DevOps CI/CD Pipeline pada Deployment
-                        Menggunakan GitHub Actions untuk Build Docker Image dan
-                        Men-deploy ke Cloud Run
-                      </p>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Second Item */}
-                <li>
-                  <div className="flex-start flex items-center pt-3">
-                    <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-primary"></div>
-                    <p className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
                       Juni 2023 - Oktober 2023
                     </p>
                   </div>
@@ -89,28 +45,25 @@ const ExperiencePage = () => {
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Instalasi, konfigurasi dan memelihara server
+                        Menginstal, mengonfigurasi, dan memelihara server DNS
+                        (PowerDNS, BIND), Web (Apache, Nginx), Basis Data (MySQL
+                        / MariaDB, MongoDB), Mail (Postfix, Dovecot, Roundcube),
+                        Pemantauan (Grafana, Prometheus, Cacti, PRTG, Zabbix,
+                        The Dude)
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        DNS, Web, dan Mail Server
+                        Menangani server cPanel & CentOS CWP
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        cPanel
-                      </p>
-                    </div>
-
-                    <div className="flex-start flex items-center">
-                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Virtulisasi (Proxmox dan VMware ESXI)
+                        Virtualisasi (Proxmox dan VMware ESXi)
                       </p>
                     </div>
                   </div>
@@ -129,28 +82,46 @@ const ExperiencePage = () => {
                       PT CITRA JELAJAH INFORMATIKA
                     </h4>
                     <p className="mb-3 text-neutral-500 dark:text-neutral-300">
-                      Teknisi Jaringan
+                      Network Engineer
                     </p>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Menganalisa, merancang dan instalasi kebutuhan jaringan
-                        di gedung, mall, sekolah, hotel, dsb.
+                        Menganalisa, mendesain, dan memasang kebutuhan jaringan
+                        di gedung, mall, sekolah, hotel, dll.
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Network Operation Center (NOC)
+                        Engineer on Site
                       </p>
                     </div>
 
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Monitoring Traffic
+                        Menangani Perangkat Wireless (Ruijie, Ubiquiti / Unifi,
+                        TP-Link), Router (Mikrotik, Cisco), Switch Management
+                        (Cisco, Arista)
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Bekerja di Network Operation Center (NOC) dan Registrasi
+                        Modem menggunakan GPON OLT ZTE
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Memonitoring Lalu Lintas Jaringan menggunakan The Dude,
+                        Zabbix, Cacti
                       </p>
                     </div>
                   </div>
