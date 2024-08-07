@@ -29,7 +29,7 @@ const HomePage = () => {
                 <ReactTyped
                   strings={[
                     "Junior Web Developer",
-                    "Network Technician",
+                    "Network Engineer",
                     "System Administrator",
                     "Cloud Engineer",
                   ]}
