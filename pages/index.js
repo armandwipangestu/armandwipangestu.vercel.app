@@ -25,10 +25,10 @@ const HomePage = () => {
               </h1>
 
               <h2 className="mb-8 mt-2 text-md md:text-lg font-medium text-accents-300 dark:text-white/80 lg:mt-3 lg:text-xl">
-                Saya Seorang -{" "}
+                Saya Seorang Junior -{" "}
                 <ReactTyped
                   strings={[
-                    "Junior Web Developer",
+                    "Web Developer",
                     "Network Engineer",
                     "System Administrator",
                     "Cloud Engineer",
