@@ -16,6 +16,15 @@ export default async function handler(req, res) {
 
 const data = [
   {
+    link: "https://github.com/armandwipangestu/laracamp-bwa",
+    thubmnail: "/portofolio/laracamp.png",
+    alt: "Laracamp",
+    title: "Laracamp",
+    excerpt:
+      "Membuat web aplikasi tentang bootcamp dimana user bisa melakukan checkout camp dengan payment gateway midtrans, login menggunakan google, dan admin bisa melihat list pengguna yang melakukan checkout",
+    techs: ["Laravel", "Breeze", "Socialite", "Midtrans", "Mailtrap"],
+  },
+  {
     link: "https://github.com/finboost/finboost-backend",
     thubmnail: "/portofolio/finboost-backend.png",
     alt: "FinBoost Back-End",
