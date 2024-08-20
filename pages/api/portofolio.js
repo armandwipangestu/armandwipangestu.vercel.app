@@ -22,7 +22,7 @@ const data = [
     title: "Magabwa",
     excerpt:
       "Membuat web portal berita menggunakan Laravel, CMS (Content Management System) dengan Filament, Docker, Nginx",
-    techs: ["Laravel", "Filament", "Docker", "Nginx"],
+    techs: ["Laravel", "Filament", "TailwindCSS", "Docker", "Nginx"],
   },
   {
     link: "https://github.com/armandwipangestu/laracamp-bwa",
