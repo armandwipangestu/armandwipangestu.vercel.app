@@ -4,24 +4,24 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navigation = () => {
-  // const [menus, setMenus] = useState([]);
+  const [menus, setMenus] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [hamburger, setHamburger] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const pathName = usePathname();
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`
-  //     );
-  //     const data = await response.json();
-  //     setMenus(data.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`
+      );
+      const data = await response.json();
+      setMenus(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleDarkMode = () => {
     const currentTheme = !darkMode;
@@ -39,7 +39,7 @@ const Navigation = () => {
   }, [darkMode]);
 
   useEffect(() => {
-    // fetchData();
+    fetchData();
 
     const storedTheme = localStorage.getItem("dark-mode");
     storedTheme !== null ? setDarkMode(storedTheme === "true") : "";
@@ -65,15 +65,15 @@ const Navigation = () => {
     };
   }, []);
 
-  const menus = [
-    { title: "Beranda", target: "/" },
-    { title: "Tentang Saya", target: "/tentang-saya" },
-    { title: "Portofolio", target: "/portofolio" },
-    { title: "Skills", target: "/skills" },
-    { title: "Pendidikan", target: "/pendidikan" },
-    { title: "Pengalaman", target: "/pengalaman" },
-    { title: "Blog", target: "/blog" },
-  ];
+  // const menus = [
+  //   { title: "Beranda", target: "/" },
+  //   { title: "Tentang Saya", target: "/tentang-saya" },
+  //   { title: "Portofolio", target: "/portofolio" },
+  //   { title: "Skills", target: "/skills" },
+  //   { title: "Pendidikan", target: "/pendidikan" },
+  //   { title: "Pengalaman", target: "/pengalaman" },
+  //   { title: "Blog", target: "/blog" },
+  // ];
 
   return (
     // <header

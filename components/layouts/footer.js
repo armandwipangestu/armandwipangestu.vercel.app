@@ -9,15 +9,15 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const menus = [
-  { title: "Beranda", target: "/" },
-  { title: "Tentang Saya", target: "/tentang-saya" },
-  { title: "Portofolio", target: "/portofolio" },
-  { title: "Skills", target: "/skills" },
-  { title: "Pendidikan", target: "/pendidikan" },
-  { title: "Pengalaman", target: "/pengalaman" },
-  { title: "Blog", target: "/blog" },
-];
+// const menus = [
+//   { title: "Beranda", target: "/" },
+//   { title: "Tentang Saya", target: "/tentang-saya" },
+//   { title: "Portofolio", target: "/portofolio" },
+//   { title: "Skills", target: "/skills" },
+//   { title: "Pendidikan", target: "/pendidikan" },
+//   { title: "Pengalaman", target: "/pengalaman" },
+//   { title: "Blog", target: "/blog" },
+// ];
 
 const tags = [
   { title: "Programming", target: "/blog/tag/programming" },
@@ -31,24 +31,24 @@ const tags = [
 ];
 
 const Footer = () => {
-  // const [menus, setMenus] = useState([]);
+  const [menus, setMenus] = useState([]);
   const pathName = usePathname();
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`
-  //     );
-  //     const data = await response.json();
-  //     setMenus(data.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`
+      );
+      const data = await response.json();
+      setMenus(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // useEffect(() => {
-  //   fetchData();
-  // });
+  useEffect(() => {
+    fetchData();
+  });
 
   return (
     <footer className="relative w-full border-t border-dark/20 dark:border-white/20 pt-12 transition duration-300 ease-in-out dark:bg-dark dark:opacity-90 lg:pt-20">
