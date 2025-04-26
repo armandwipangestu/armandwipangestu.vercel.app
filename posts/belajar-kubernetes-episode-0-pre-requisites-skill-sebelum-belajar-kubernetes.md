@@ -81,3 +81,9 @@ Setelah mengetahui skill-skill dasar yang wajib dimiliki sebelum belajar Kuberne
 Untuk episode 0 pada series belajar kubernetes kali ini mungkin cukup sampai disini pembahasannya, pada episode selanjutnya kita akan membahas topik yang tidak kalah seru yaitu mengenal sejarah deployment aplikasi dan juga sejarah Kubernetes mengapa tercpita. Oleh karena itu pastikan kalian tetap terus semangat untuk mempelajari Kubernetes di series ini karena perjalanannya masih panjang 😁
 
 > **Catatan**: Pastikan semua skill dan tools di atas sudah kalian miliki dan siapkan. Jika belum, boleh sambil disiapkan pelan-pelan.
+
+Untuk kalian yang ingin lanjut membaca, bisa click gambar thumbnail episode 1 di bawah ini
+
+<a href="belajar-kubernetes-episode-1-mengenal-sejarah-deployment-aplikasi-dan-kubernetes">
+    <img src="/images/posts/Belajar Kubernetes - Episode 1 - MENGENAL SEJARAH DEPLOYMENT APLIKASI & KUBERNETES.png" />
+</a>
