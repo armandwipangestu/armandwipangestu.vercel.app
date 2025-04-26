@@ -65,11 +65,11 @@ Skill ini bisa dibilang opsional dan akan menjadi nilai tambah jika kalian sudah
 
 ## Tools Software / Hardware yang Perlu Disiapkan
 
-Setelah mengetahui skill-skill dasar yang wajib dimiliki sebelum belajar Kubernetes, selanjutnya adalah membahas terkait Tools Software / Hardware yang perlu disiapkan sebelum belajar Kubernetes. Berikut adalah beberapa list Tools Sofwate / Hardware nya:
+Setelah mengetahui skill-skill dasar yang wajib dimiliki sebelum belajar Kubernetes, selanjutnya adalah membahas terkait Tools Software / Hardware yang perlu disiapkan sebelum belajar Kubernetes. Berikut adalah beberapa list Tools Software / Hardware nya:
 
 | No  | Tool                      | Type     | Level    | Keterangan                                                                                                                                                          |
 | --- | ------------------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.  | Laptop / Mini PC / PC     | Hardware | Wajib    | Untuk menjalankan Kubernetes Cluster                                                                                                                                |
+| 1.  | Laptop / Mini PC / PC     | Hardware | Wajib    | Untuk menjalankan Kubernetes Cluster, kalian juga bisa menggunakan VM di Cloud Platform                                                                             |
 | 2.  | Hypervisor / Virtualisasi | Software | Opsional | Untuk yang ingin menjalankan Kubernetes Cluster secara isolasi atau terpisah dengan lingkungan Main OS, bisa menggunakan `VMware`, `Proxmox`, `VirtualBox`, dsb nya |
 | 3.  | Container Runtime         | Software | Wajib    | Untuk menjalankan Kubernetes Container, bisa menggunakan `Docker` atau `Containerd`, `CRI-O`, dsb nya                                                               |
 | 4.  | Text Editor               | Software | Wajib    | Untuk membuat, mengedit konfigurasi Kubernetes Cluster melalui YAML file                                                                                            |
