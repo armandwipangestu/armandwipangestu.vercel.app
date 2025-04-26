@@ -42,7 +42,7 @@ Selain perintah-perintah dasar Linux dan lingkungan berbasis CLI, kita juga haru
 7. Routing: `Static`, `Dynamic`
 8. Firewall: `NAT`
 
-### Docker / Containerization
+### Docker atau Containerization
 
 Setelah memiliki skill dasar linux dan juga komputer jaringan, kita juga harus bisa mengoperasikan aplikasi yang berjalan di atas lingkungan container, salah satu yang populer adalah Docker, walaupun banyak sekali alternative selain Docker misalkan seperti Podman, namun secara konsep tidak beda jauh. Skill pengoperasian containerization ini juga akan menjadi skill fundamental yang akan sangat membantu sekali ketika akan terjun ke dunia orchestration seperti Kubernetes, karena Kubernetes sendiri adalah tools yang mengabstraksi kerumitan menghandle banyak nya container. Sebagai contoh beberapa skill pengoperasian containerization yang harus kita bisa adalah:
 
@@ -55,7 +55,7 @@ Setelah memiliki skill dasar linux dan juga komputer jaringan, kita juga harus b
 
 YAML Syntax erat kaitannya dengan Docker Compose, dan Kubernetes sendiri juga menggunakan format YAML file untuk pengoperasiannya, oleh karena itu kita harus bisa dan familiar dengan format penulisan YAML, seperti `Indentasi Tab`, `Struktur Key dan Value`.
 
-### Opsional Cloud / Virtualisasi
+### Opsional Cloud atau Virtualisasi
 
 Skill ini bisa dibilang opsional dan akan menjadi nilai tambah jika kalian sudah pernah atau terbiasa mengoperasikan di lingkungan Cloud / Virtualisasi, karena beberapa skill dasar yang sudah disebutkan di atas dan kubernetes sendiri itu kebanyakan kita bisa mempelajari nya tanpa Cloud / Virtualisasi. Sebagai contoh beberapa skill cloud / virtualisasi yang akan sangat membantu atau menjadi nilai tambah adalah:
 
@@ -63,7 +63,7 @@ Skill ini bisa dibilang opsional dan akan menjadi nilai tambah jika kalian sudah
 2. Cloud Service: `IaaS`, `PaaS/FaaS`, `SaaS`, `IAM`, `Network / VPC`, `Firewall`, `Instance Group`
 3. Virtualisasi: `VMware`, `Proxmox`, `VirtualBox`
 
-## Tools Software / Hardware yang Perlu Disiapkan
+## Tools Software atau Hardware yang Perlu Disiapkan
 
 Setelah mengetahui skill-skill dasar yang wajib dimiliki sebelum belajar Kubernetes, selanjutnya adalah membahas terkait Tools Software / Hardware yang perlu disiapkan sebelum belajar Kubernetes. Berikut adalah beberapa list Tools Software / Hardware nya:
 
