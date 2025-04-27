@@ -146,9 +146,9 @@ Deployment aplikasi ini dimana aplikasi akan disimpan dengan cara berbagi resour
 
 Berbeda dengan shared hosting, deployment aplikasi menggunakan Virtualized ini lebih ekslusif karena biasanya hanya satu user satu mesin, sehingga tidak ada lagi berbagi resource atau komputasi dengan user lain, jika kalian familiar salah satu contohnya adalah Virtual Private Server (VPS). Sehingga aplikasi yang di deploy menggunakan Virtualized ini dapat melayani traffic dari client lebih dari shared hosting, karena sudah tidak lagi berbagi resource atau komputasi dengan aplikasi lain.
 
-Walaupun deployment menggunakan virtualisasi ini lebih eksklusif, tetap saja ada kelemahannya, dimana akan sangat merepotkan untuk scalling aplikasi nya, dimana kita perlu membuat virtual machine nya, setup OS nya hingga ke setup aplikasi nya, walaupun sebetulnya kita bisa mengatasi masalah tersebut dengan salah satu contohnya adalah membuat VM template, namun tetap saja dari segi uptime akan sangat lama.
+Walaupun deployment menggunakan virtualisasi ini lebih eksklusif, tetap saja ada kelemahannya, dimana akan sangat merepotkan untuk scalling aplikasi nya, dimana kita perlu membuat virtual machine nya, setup OS nya hingga ke setup aplikasi nya, walaupun sebetulnya kita bisa mengatasi masalah tersebut dengan salah satu contohnya adalah membuat VM template, namun tetap saja dari segi booting akan sangat lama.
 
-Oleh karena itu, munculah solusi lain yaitu Containerized, dimana containerized ini mengabstraksi layer Operating System (OS) yang ada di Virtual Machine, sehingga untuk melakukan scalling aplikasi akan sangat mudah dan dari segi uptime juga akan sangat lebih cepat. Deployment berbasis container inilah yang menjadi fondasi Kubernetes.
+Oleh karena itu, munculah solusi lain yaitu Containerized, dimana containerized ini mengabstraksi layer Operating System (OS) yang ada di Virtual Machine, sehingga untuk melakukan scalling aplikasi akan sangat mudah dan dari segi booting juga akan sangat lebih cepat. Deployment berbasis container inilah yang menjadi fondasi Kubernetes.
 
 #### Cloud Computing Deployment
 
@@ -170,7 +170,7 @@ Oleh karena itu, munculah solusi baru yaitu teknologi container orchestration, s
 
 ## Sejarah Kubernetes
 
-Dari dulu Google sudah menjalankan ratusan juta container per minggu menggunakan sistem internal mereka yang berama `Borg`, lalu teknologi tersebut dikembangkan lagi dan berganti nama menjadi `Omega`, nah teknologi tersebut lah yang melakukan manage seperti automation scalling dan deployment container di Google. Lalu pada tahun 2014, Google membuat ulang sistem container orchestrator tersebut namun dengan versi open-source berdasarkan pengalaman dari internal nya tersebu, dan teknologi tersebut diberi nama `Kubernetes`.
+Dari dulu Google sudah menjalankan ratusan juta container per minggu menggunakan sistem internal mereka yang berama `Borg`, lalu teknologi tersebut dikembangkan lagi dan berganti nama menjadi `Omega`, nah teknologi tersebut lah yang melakukan manage seperti automation scalling dan deployment container di Google. Lalu pada tahun 2014, Google membuat ulang sistem container orchestrator tersebut namun dengan versi open-source berdasarkan pengalaman dari internal nya tersebut, dan teknologi tersebut diberi nama `Kubernetes`.
 
 ### Fun Fact
 
