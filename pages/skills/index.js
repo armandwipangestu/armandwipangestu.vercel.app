@@ -35,8 +35,16 @@ import {
   SiMongodb,
   SiGithubactions,
   SiJenkins,
+  SiMinio,
+  SiCeph,
+  SiApachehadoop,
+  SiTrino,
+  SiApachehive,
+  SiApacheparquet,
+  SiApachenifi,
   SiGrafana,
   SiPrometheus,
+  SiThanos,
   SiVmware,
   SiTypescript,
   SiJsonwebtokens,
@@ -510,6 +518,90 @@ const SkillsPage = () => {
                 </span>
               </a>
 
+              {/* MinIO */}
+              <a
+                href="https://www.min.io"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiMinio className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  MinIO
+                </span>
+              </a>
+
+              {/* Ceph */}
+              <a
+                href="https://ceph.io"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiCeph className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Ceph
+                </span>
+              </a>
+
+              {/* Apache Hadoop */}
+              <a
+                href="https://hadoop.apache.org"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiApachehadoop className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Apache Hadoop
+                </span>
+              </a>
+
+              {/* Trino */}
+              <a
+                href="https://trino.io"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiTrino className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Trino
+                </span>
+              </a>
+
+              {/* Apache Hive */}
+              <a
+                href="https://hive.apache.org"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiApachehive className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Apache Hive
+                </span>
+              </a>
+
+              {/* Apache Parquet */}
+              <a
+                href="https://parquet.apache.org"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiApacheparquet className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Apache Parquet
+                </span>
+              </a>
+
+              {/* Apache NiFi */}
+              <a
+                href="https://nifi.apache.org"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiApachenifi className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Apache NiFi
+                </span>
+              </a>
+
               {/* Grafana */}
               <a
                 href="https://grafana.com"
@@ -531,6 +623,18 @@ const SkillsPage = () => {
                 <SiPrometheus className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   Prometheus
+                </span>
+              </a>
+
+              {/* Thanos */}
+              <a
+                href="https://thanos.io"
+                target="_blank"
+                className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+              >
+                <SiThanos className="w-16 h-16" />
+                <span className="icon-skill absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Thanos
                 </span>
               </a>
 
