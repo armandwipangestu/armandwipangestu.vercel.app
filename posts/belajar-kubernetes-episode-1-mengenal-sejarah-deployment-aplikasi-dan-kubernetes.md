@@ -12,7 +12,13 @@ author_image: "/images/posts/author/arman.png"
 
 ## Pendahuluan
 
-Setelah di episode sebelumnya kita mempersipakan skill apa saja yang harus dimiliki sebelum belajar Kubernetes, pada episode kali ini kita akan membahas mengenai sejarah atau history deployment aplikasi dan juga sejarah dari Kubernetes itu sendiri. Alasan mengapa penting mengenal sejarah deployment aplikasi dan juga sejarah Kubernetes adalah agar kita mengerti kenapa teknologi Kubernetes tersebut itu ada.
+> **Catatan**: Untuk kalian yang ingin membaca episode sebelumnya, bisa click gambar thumbnail episode 0 di bawah ini
+>
+> <a href="belajar-kubernetes-episode-0-pre-requisites-skill-sebelum-belajar-kubernetes">
+>    <img src="/images/posts/Belajar Kubernetes - Episode 0 - PRE-REQUISITES SKILL SEBELUM BELAJAR KUBERNETES.png" />
+> </a>
+
+Setelah di episode 0 sebelumnya kita mempersipakan skill apa saja yang harus dimiliki sebelum belajar Kubernetes, pada episode kali ini kita akan membahas mengenai sejarah atau history deployment aplikasi dan juga sejarah dari Kubernetes itu sendiri. Alasan mengapa penting mengenal sejarah deployment aplikasi dan juga sejarah Kubernetes adalah agar kita mengerti kenapa teknologi Kubernetes tersebut itu ada.
 
 ## Evolusi Model Infrastruktur
 
@@ -182,4 +188,10 @@ Dari dulu Google sudah menjalankan ratusan juta container per minggu menggunakan
 
 Kubernetes lahir karena dari perjalanan evolusi yang panjang baik itu dari infrastruktur, arsitektur, hingga ke deployment aplikasi. Kubernetes juga lahir karena kompleksitas nya microservice dan container yang butuh sistem manajemen otomatis, teknologi Kubernetes sendiri bukan solusi yang pertama, tapi saat ini adalah solusi paling banyak diadopsi.
 
-Seru bukan episode 1 kali ini? Kita sudah membahas evolusi dari awal hingga lahirnya Kubernetes 😅. Pastikan semangat kalian masih tetap ada, karena di episode 2 selanjutnya kita akan mulai terjun membahas mengenai Konsep dan Arsitektur Kubernetes nya. So pastikan tetap semangat 😁
+Seru bukan episode 1 kali ini? Kita sudah membahas evolusi dari awal hingga lahirnya Kubernetes 😅. Pastikan semangat kalian masih tetap ada, karena di episode 2 selanjutnya kita akan mulai terjun membahas mengenai Konsep dan Arsitektur Kubernetes nya. So pastikan tetap semangat 😁.
+
+> **Catatan**: Untuk kalian yang ingin lanjut membaca, bisa click gambar thumbnail episode 2 di bawah ini
+>
+> <a href="belajar-kubernetes-episode-2-mengenal-konsep-dan-arsitektur-kubernetes">
+>    <img src="/images/posts/Belajar Kubernetes - Episode 2 - MENGENAL KONSEP DAN ARSITEKTUR KUBERNETES.png" />
+> </a>
