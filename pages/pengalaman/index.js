@@ -53,10 +53,13 @@ const ExperiencePage = () => {
                     <div className="flex-start flex items-center">
                       <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
-                        Melakukan deployment Big Data teknologi menggunakan
-                        MinIO, Ceph, Dremio, Zookeeper, Nessie, MariaDB, Apache
-                        NiFi, Nginx, beserta monitoring system menggunakan
-                        Prometheus, Grafana, Thanos, Loki, dan Alloy.
+                        Melakukan deployment Big Data teknologi di server
+                        On-Premise yang berjalan di atas Hypervisor Proxmox
+                        menggunakan MinIO, Ceph, Dremio, Trino, Apache Hue,
+                        Zookeeper, Nessie, MariaDB, Galera Cluster, HAProxy,
+                        Keepalived, Apache NiFi, Nginx, beserta monitoring
+                        system menggunakan Prometheus, Grafana, Thanos, Loki,
+                        dan Alloy.
                       </p>
                     </div>
 
@@ -74,7 +77,8 @@ const ExperiencePage = () => {
                       <p className="text-sm text-neutral-500 dark:text-neutral-300">
                         Membuat Single Sign On (SSO) service menggunakan
                         Keycloak untuk kebutuhan Authentication yang mendukung
-                        OIDC (OpenID Connect) yang berjalan di atas OAuth 2.
+                        OIDC (OpenID Connect) yang berjalan di atas framework
+                        OAuth 2.
                       </p>
                     </div>
 
