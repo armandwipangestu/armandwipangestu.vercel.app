@@ -116,3 +116,9 @@ Kubernetes adalah sistem yang cukup kompleks, tapi jika kita pecah menjadi kompo
 Bagaimana episode 2 kali ini, apakah sudah mulai pusing memahami arsitektur Kubernetes 😅? It's oke untuk pertama kali melihat dan mencoba memahami arsitektur dari Kubernetes cluster memang cukup membingungkan, namun percayalah dengan seiring nya waktu dan banyak nya latihan akan membuat kerumitan tersebut menjadi hal yang **kecil** atau mudah.
 
 Nah agar kita bisa hands-on praktek langsung membuat Kubernetes cluster, di episode 3 selanjutnya, kita akan bahas terkait instalasi Kubernetes cluster, baik itu Control Plane (Master Node) dan Data Plane (Worker Node). Pastikan Tools software atau hardware yang sudah dijelaskan di episode 0 sudah disiapkan, sehingga kita bisa langsung melakukan instalasi Kubernetes cluster nya.
+
+> **Catatan**: Untuk kalian yang ingin lanjut membaca, bisa click gambar thumbnail episode 3 di bawah ini
+>
+> <a href="belajar-kubernetes-episode-3-instalasi-kubernetes-cluster-master-dan-worker-node">
+>    <img src="/images/posts/Belajar Kubernetes - Episode 3 - INSTALASI KUBERNETES CLUSTER (MASTER & WORKER NODE).png" />
+> </a>
