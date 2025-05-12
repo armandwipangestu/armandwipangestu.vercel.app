@@ -3,7 +3,7 @@ published: true
 title: "Belajar Kubernetes - Episode 1 - Mengenal Sejarah Deployment Aplikasi dan Kubernetes"
 tag: "DevOps"
 date: "April 26 2025"
-excerpt: "Pada artikel ini kita akan mengenal sejarah deployment aplikasi mulai dari infrastruktur, lalu perpindahan dari VM ke Container, deployment monolith ke microservice, hingga ke sejarah Kubernetes"
+excerpt: "Di episode ini kita akan mengenal sejarah deployment aplikasi mulai dari infrastruktur, lalu perpindahan dari VM ke Container, deployment monolith ke microservice, hingga ke sejarah Kubernetes"
 cover_image: "/images/posts/Belajar Kubernetes - Episode 1 - MENGENAL SEJARAH DEPLOYMENT APLIKASI & KUBERNETES.png"
 author_name: "Arman Dwi Pangestu"
 author_title: "Web Developer"

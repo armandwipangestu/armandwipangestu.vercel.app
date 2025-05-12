@@ -3,7 +3,7 @@ published: true
 title: "Belajar Kubernetes - Episode 0 - Pre-Requisites Skill Sebelum Belajar Kubernetes"
 tag: "DevOps"
 date: "April 25 2025"
-excerpt: "Pada artikel ini kita akan mempelajari teknologi container orchestration yaitu Kubernetes, namun sebelum itu, skill apa saja sih yang perlu kita kuasai sebelum mempelajari Kubernetes?"
+excerpt: "Di episode ini kita akan mempelajari teknologi container orchestration yaitu Kubernetes, namun sebelum itu, skill apa saja sih yang perlu kita kuasai sebelum mempelajari Kubernetes?"
 cover_image: "/images/posts/Belajar Kubernetes - Episode 0 - PRE-REQUISITES SKILL SEBELUM BELAJAR KUBERNETES.png"
 author_name: "Arman Dwi Pangestu"
 author_title: "Web Developer"
