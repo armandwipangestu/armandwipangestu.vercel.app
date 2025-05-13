@@ -33,7 +33,7 @@ Dikarenakan orchestration container terus berkembang, para developer memiliki ba
 
 ### Minikube
 
-Minikube adalah tool yang diadopsi secara luas yang dirancang untuk menjalankan Kubernetes Cluster pada berbagai sistem operasi, termasuk `macOS`, `Linux`, dan `Windows`. Minikube menyediakan cara yang sederhana bagi para developer untuk menjalankan Kubernetes secara local dan ideal untuk menguji aplikasi dalam lingkungan yang terkendali. Minikube mendukung beberapa hypervisor seperti `VirtualBox`, `VMware`, dan `HyperKit`, membuatnya fleksibel untuk berbagai infrastruktur. Selain itu, minikube menawarkan fitur-fitur seperti kemampuan untuk mengaktifkan atau menonaktifkan komponen Kubernetes tertentu, yang memungkinkan para developer untuk menyesuaikan lingkungan mereka agar sesuai dengan pengaturan production. Fleksibilitas ini sangat penting untuk melakukan untuk melakukan debug dan memastikan bahwa aplikasi berperilaku seperti yang diharapkan sebelum deployment.
+Minikube adalah tool yang diadopsi secara luas yang dirancang untuk menjalankan Kubernetes Cluster pada berbagai sistem operasi, termasuk `macOS`, `Linux`, dan `Windows`. Minikube menyediakan cara yang sederhana bagi para developer untuk menjalankan Kubernetes secara local dan ideal untuk menguji aplikasi dalam lingkungan yang terkendali. Minikube mendukung beberapa hypervisor seperti `VirtualBox`, `VMware`, dan `HyperKit`, membuatnya fleksibel untuk berbagai infrastruktur. Selain itu, minikube menawarkan fitur-fitur seperti kemampuan untuk mengaktifkan atau menonaktifkan komponen Kubernetes tertentu, yang memungkinkan para developer untuk menyesuaikan lingkungan mereka agar sesuai dengan pengaturan production. Fleksibilitas ini sangat penting untuk melakukan debug dan memastikan bahwa aplikasi berperilaku seperti yang diharapkan sebelum deployment.
 
 ### Kind
 
@@ -41,7 +41,7 @@ Kind, singkatan dari **Kubernetes in Docker**, adalah opsi lain yang memungkinka
 
 ### K3s
 
-K3s, di sisi lain, adalah distribusi Kubernetes ringan yang dikembangkan oleh [Rancher Labs](https://www.rancher.com/). Distribusi ini bertujuan untuk menyediakan versi Kubernetes yang disederhanakan, sehingga cocok utnuk lingkungan dengan resouce atau sumber daya yang terbatas. K3s sangat bermanfaat untuk `edge computing`, `aplikasi IoT`, dan skenario di mana instalasi Kubernetes yang lengkap tidak dapat dilakukan karena keterbatasn hardware. Dengan ukuran binary yang kurang dari `100 MB`, K3s dirancang untuk berjalan di perangkat berdaya rendah, seperti Raspberry Pi, dan dapat digunakan dengan cepat dan mudah. Selain itu, K3s dilengkapi dengan dukungan bawaan untuk Helm, sehingga memudahkan untuk mengelola aplikasi dan layanan di dalam cluster, dan secara otomatis menangani tugas-tugas umum seperti mengelola certificate dan jaringan, yang secara siginifikan dapat mengurangi biaya operasional bagi pengguna.
+K3s, di sisi lain, adalah distribusi Kubernetes ringan yang dikembangkan oleh [Rancher Labs](https://www.rancher.com/). Distribusi ini bertujuan untuk menyediakan versi Kubernetes yang disederhanakan, sehingga cocok utnuk lingkungan dengan resouce atau sumber daya yang terbatas. K3s sangat bermanfaat untuk `edge computing`, `aplikasi IoT`, dan skenario di mana instalasi Kubernetes yang lengkap tidak dapat dilakukan karena keterbatasan hardware. Dengan ukuran binary yang kurang dari `100 MB`, K3s dirancang untuk berjalan di perangkat berdaya rendah, seperti Raspberry Pi, dan dapat digunakan dengan cepat dan mudah. Selain itu, K3s dilengkapi dengan dukungan bawaan untuk Helm, sehingga memudahkan untuk mengelola aplikasi dan layanan di dalam cluster, dan secara otomatis menangani tugas-tugas umum seperti mengelola certificate dan jaringan, yang secara siginifikan dapat mengurangi biaya operasional bagi pengguna.
 
 ### K8s (Kubernetes)
 
@@ -53,7 +53,7 @@ Ketika membandingkan fitur-fitur utama Minikube, Kind, K3s, dan K8s, sangat pent
 
 ### Kebutuhan Sumber Daya
 
-Minikube umumnya membutuhkan lebih banyak sumber daya, karena menjalankan Kubernetes Cluster penuh dalam Virtual Machine (tergantung sistem operasi, jika Minikube berjalan di Linux, maka bisa langsung berjalan di container). Kind, meskipun lebih ringan daripada Minikube, masih membutuhakn resource Docker. K3s dioptimalkan untuk konsumsi resource minimal, sedangkan K8s sendiri diperuntukan untuk lingkungan production dan akan sangat memakan resource dibandingkan dengan tool yang lain.
+Minikube umumnya membutuhkan lebih banyak sumber daya, karena menjalankan Kubernetes Cluster penuh dalam Virtual Machine (tergantung sistem operasi, jika Minikube berjalan di Linux, maka bisa langsung berjalan di container). Kind, meskipun lebih ringan daripada Minikube, masih membutuhkan resource Docker. K3s dioptimalkan untuk konsumsi resource minimal, sedangkan K8s sendiri diperuntukan untuk lingkungan production dan akan sangat memakan resource dibandingkan dengan tool yang lain.
 
 ### Kompleksitas Instalasi
 
@@ -69,11 +69,11 @@ Minikube mendukung add-ons yang dapat meningkatkan fungsionalitas dengan mudah. 
 
 Aspek penting lainnya yang perlu dipertimbangkan adalah skenario kasus penggunaan untuk setiap tool. Minikube sangat bermanfaat bagi para developer yang ingin menguji aplikasi dalam environment yang sangat mirip dengan Kubernetes Cluster production. Hal ini membuatnya ideal bagi mereka yang perlu memvalidasi aplikasi mereka terhadap API Kubernetes secara penuh. Di sisi lain, Kind bersinar di environment CI/CD, di mana spin-up dan tear-down cluster yang cepat sangat penting untuk pengujian otomatis. Kemampuannya untuk membuat cluster dalam Docker container membuatnya menjadi favorit di antara para developer yang ingin mengintegrasikan pengujian Kubernetes ke dalam workflow mereka yang sudah ada.
 
-Selain itu, dukungan komunitas dan dokumentasi seputar tool ini dapat secara signifikan mempengaruhi adopsi mereka. Minikube memiliki komunitas yang kuat dan dokumentasi yang ekstensif, sehingga memudahkan pada pendatang baru untuk menemukan resource dan memecahkan masalah. Kind, meskipun masih baru, telah mendapat manfaat dari dukungan komunias Kubernetes, yang memastikan bahwa dokumentasinya terus diperbarui. K3s, yang dikembangkan oleh Rancher Labs, juga memiliki keterlibatan komunitas yang kuat dan menawarkan resource yang komprehensif, terutama bagi mereka yang tertarik untuk menerapkan Kubernetes Cluster yang ringan dalam skenario edge computing atau perangkat IoT.
+Selain itu, dukungan komunitas dan dokumentasi seputar tool ini dapat secara signifikan mempengaruhi adopsi mereka. Minikube memiliki komunitas yang kuat dan dokumentasi yang ekstensif, sehingga memudahkan para pendatang baru untuk menemukan resource dan memecahkan masalah. Kind, meskipun masih baru, telah mendapat manfaat dari dukungan komunias Kubernetes, yang memastikan bahwa dokumentasinya terus diperbarui. K3s, yang dikembangkan oleh Rancher Labs, juga memiliki keterlibatan komunitas yang kuat dan menawarkan resource yang komprehensif, terutama bagi mereka yang tertarik untuk menerapkan Kubernetes Cluster yang ringan dalam skenario edge computing atau perangkat IoT.
 
 ## Performance Metrics: Tool mana yang paling unggul?
 
-Untuk mengevaluasi kinerja di seluruh Minikube, Kind, dan K3 membutuhkan pemeriksaan berbagai metrics, seperti waktu startup, pemanfaatan resource atau sumber daya, dan stabilitas opersaional.
+Untuk mengevaluasi kinerja di seluruh Minikube, Kind, dan K3s membutuhkan pemeriksaan berbagai metrics, seperti waktu startup, pemanfaatan resource atau sumber daya, dan stabilitas opersaional.
 
 ### Waktu Startup
 
@@ -839,7 +839,7 @@ sudo apt update
 
 #### Install kubeadm, kubelet, kubectl, dan cni
 
-Setelah repository Kubernetes nya berhasil ditambahkan, selanjutnya adala lakukan install komponen yang dibutuhkan menggunakan perintah berikut ini
+Setelah repository Kubernetes nya berhasil ditambahkan, selanjutnya adalah lakukan install komponen yang dibutuhkan menggunakan perintah berikut ini
 
 ```bash
 sudo apt install kubeadm kubelet kubectl kubernetes-cni -y
