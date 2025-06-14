@@ -1256,3 +1256,9 @@ Setelah mengenal berbagai tool seperti `Minikube`, `Kind`, `K3s`, dan `K8s`, sek
 Dengan memahami tool-tool ini, kita bisa lebih bijak memilih mana yang sesuai dengan kebutuhan dan resource yang tersedia.
 
 Bagaimana seru bukan episode 3 kali ini? Kita sudah praktik langsung menyiapkan Kubernetes Cluster, kemudian mengenal berbagai tool yang bisa digunakan, bahkan hingga mencoba deployment Nginx default sampai bisa diakses. Di episode 4 nanti, kita akan coba bahas mengenai salah satu Kubernetes Objects yaitu `Node`. So, pastikan tetap jaga semangat belajar nya.
+
+> **Catatan**: Untuk kalian yang ingin lanjut membaca, bisa click gambar thumbnail episode 4 di bawah ini
+>
+> <a href="belajar-kubernetes-episode-4-pengenalan-dan-penjelasan-object-node">
+>    <img src="/images/posts/Belajar Kubernetes - Episode 4 - PENGENALAN DAN PENJELASAN OBJECT NODE.png" />
+> </a>
