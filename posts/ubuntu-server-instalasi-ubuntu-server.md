@@ -14,7 +14,7 @@ author_image: "/images/posts/author/arman.png"
 
 Ketika ubuntu server pertama kali dinyalakan, akan muncul sebuah menu untuk memilih bahasa yang akan digunakan, disini saya akan memilih bahasa `English`.
 
-![image](https://i.ibb.co/kqfD51q/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-language.png)
 
 ## Optional Update
 
@@ -22,7 +22,7 @@ Apabila versi ubuntu server yang kalian pilih sudah terdapat update yang terbaru
 
 Disini saya tidak akan melakukan update nya, maka disini saya memlihih `Continue without updating`.
 
-![image](https://i.ibb.co/BwV53xc/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-update-option.png)
 
 ## Konfigurasi Keyboard
 
@@ -31,7 +31,7 @@ Pada menu ke 3 atau setelah menu [Optional Update](#optional-update), selanjutny
 - Layout: `English (US)`
 - Variant: `English (US)`
 
-![image](https://i.ibb.co/McqKDgm/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-keyboard-option.png)
 
 ## Memilih Tipe Instalasi
 
@@ -42,13 +42,13 @@ Selanjutnya, terdapat menu untuk memilih tipe instalasi yang akan digunakan, ter
 
 Sesuaikan dengan kebutuhan kalian masing-masing, disini saya akan memilih opsi pertama
 
-![image](https://i.ibb.co/4V1fq37/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-type.png)
 
 ## Konfigurasi Jaringan
 
 Setelah memilih tipe instalasi, selanjutnya memilih konfigurasi jaringan yang akan digunakan pada host ubuntu server nya, sesuaikan dengan konfigurasi jaringan yang digunakan. Pada konfigurasi jaringan ini terdapat 2 pilihan, diantaranya adalah:
 
-![image](https://i.ibb.co/JjJTrmq/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-network.png)
 
 - [DHCP Client](#dhcp-client)
 - [Manual (Static)](#manual-static)
@@ -57,7 +57,7 @@ Setelah memilih tipe instalasi, selanjutnya memilih konfigurasi jaringan yang ak
 
 Default atau bawaan yang dipilih adalah DHCP IPv4
 
-![image](https://i.ibb.co/gFxpYQt/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-network-2.png)
 
 ### Manual (Static)
 
@@ -73,7 +73,7 @@ Name Servers: 8.8.8.8,8.8.4.4
 Search Domain:
 ```
 
-![image](https://i.ibb.co/j6Vv7J5/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-network-3.png)
 
 Setelah itu `Save`
 
@@ -83,7 +83,7 @@ Setelah melakukan konfigurasi jaringan, menu selanjutnya adalah konfigurasi prox
 
 Disini saya tidak akan menggunakan proxy sehingga tidak akan saya isi
 
-![image](https://i.ibb.co/qWRYDyW/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-proxy.png)
 
 ## Konfigurasi Ubuntu Archive Mirror
 
@@ -93,19 +93,19 @@ Pada konfigurasi ini, isikan dengan URL mirror terdekat dari server kalian. Berh
 http://id.arcive.ubuntu.com/ubuntu
 ```
 
-![image](https://i.ibb.co/KKwG44X/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-mirror.png)
 
 Apabila kalian ingin melihat list ubuntu mirror pada setiap negara, kalian bisa mengunjungi website berikut ini [launchpad.net/ubuntu/+archivemirrors](https://launchpad.net/ubuntu/+archivemirrors)
 
 Untuk melihat nya, kalian cukup hover pada bagian tulisan href `http` atau `rsync` maka akan muncul URL mirror nya
 
-![imgae](https://i.ibb.co/02MPK4B/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-mirror-2.png)
 
 ## Konfigurasi Penyimpanan
 
 Pada konfigurasi penyimpanan ini terdapat 2 pilihan, yang pertama adalah konfigurasi bawaan dari ubuntu nya langsung dan yang kedua adalah kustom konfigurasi. Disini saya akan memilih kustom konfigurasi
 
-![image](https://i.ibb.co/FmgwYgj/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-storage.png)
 
 ### Boot Partisi
 
@@ -119,7 +119,7 @@ Format: Leave unformatted
 Mount:
 ```
 
-![image](https://i.ibb.co/c10SdKH/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-storage-partition.png)
 
 ### Swap Partisi
 
@@ -133,7 +133,7 @@ Format: swap
 Mount:
 ```
 
-![image](https://i.ibb.co/5514d9s/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-storage-partition-2.png)
 
 ### Root Partisi
 
@@ -149,17 +149,17 @@ Format: ext4
 Mount: /
 ```
 
-![image](https://i.ibb.co/qrh8XVw/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-storage-partition-3.png)
 
 Setelah semua konfigurasi selesai, kalian bisa melihat summary konfigurasi penyimpanan nya
 
-![image](https://i.ibb.co/80537bc/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-storage-partition-summary.png)
 
 Apabila anda sudah yakin dengan konfigurasi penyimpanan nya, pilih `Done`
 
 Maka akan muncul konfirmasi pemberitahuan, pilih `Continue` apabila yakin
 
-![image](https://i.ibb.co/8bh6SHm/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-confirmation.png)
 
 ## Konfigurasi Profil
 
@@ -173,7 +173,7 @@ Choose a password:
 Confirm your password:
 ```
 
-![image](https://i.ibb.co/sWSds7m/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-profile-setup.png)
 
 Untuk konfigurasi ini sesuaikan dengan keinginan kalian
 
@@ -181,7 +181,7 @@ Untuk konfigurasi ini sesuaikan dengan keinginan kalian
 
 Selanjutnya adalah melakukan konfigurasi SSH, konfigurasi SSH disini optional, jika kalian ingin menginstal openssh server langsung ketika instalasi ubuntu server nya, bisa aktifkan konfigurasi ini. Apabila tidak ingin menginstal nya kalian bisa disable konfigurasi ini
 
-![image](https://i.ibb.co/ZW7VQKH/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-ssh-setup.png)
 
 ## Konfigurasi Snap Package
 
@@ -189,10 +189,10 @@ Ubuntu menawarkan konfigurasi snap package populer yang sering digunakan di ling
 
 Jika tidak atau sudah memilih package nya, bisa tekan `Done`
 
-![image](https://i.ibb.co/b7XctvW/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-snap.png)
 
 ## Selesai
 
 Setelah semua konfigurasi dilakukan, maka sistem operasi ubuntu-server akan di install
 
-![image](https://i.ibb.co/pZMWvZZ/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/ubuntu-server-instalasi-ubuntu-server/ubuntu-installation-system.png)

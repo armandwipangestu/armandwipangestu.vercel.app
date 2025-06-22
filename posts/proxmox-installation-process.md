@@ -22,7 +22,7 @@ Untuk melakukan instalasi `Proxmox VE` kita membutuhkan beberapa bahan diantaran
 Untuk mendapatkan ISO File `Proxmox VE` anda bisa mengunjungi web resmi proxmox kemudian mendownload image atau ISO File nya.
 
 [https://www.proxmox.com/en/downloads/category/iso-images-pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)
-![image](https://i.ibb.co/KbqbkkK/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-iso-file.png)
 
 Setelah ISO File terdownload, selanjutnya burn ISO File tersebut kedalam flashdisk atau penyimpanan lainnya. Untuk melakukan burning tersebut anda bisa menggunakan [ventoy](https://www.ventoy.net/en/index.html), [balenaetcher](https://etcher.balena.io/), [rufus](https://rufus.ie/en/), dsb.
 
@@ -32,11 +32,11 @@ Setelah mempersiapkan bahan - bahan untuk instalasi nya, selanjutnya adalah mela
 
 Setelah masuk kedalam `Boot Menu` langkah selanjutnya adalah memilih boot nya, disini pilih boot berdasarkan Flashdisk atau penyimpanan yang sudah kita burn dengan ISO File Proxmox VE nya
 
-![image](https://i.ibb.co/W54WvB1/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/bios-select.png)
 
 Setelah memilih boot berdasarkan Flashdisk atau penyimpanan yang terdapat Proxmox VE nya, maka tampilan selanjutnya adalah seperti gambar dibawah ini
 
-![image](https://i.ibb.co/NpzWp2W/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-welcome-boot.png)
 
 Selanjutnya untuk melakukan instalasi proxmox nya, disini pilih menu `Install Proxmox VE`
 
@@ -48,23 +48,23 @@ Setelah kita mempersiapkan bahan - bahan dan booting kedalam Proxmox VE langkah 
 
 Pada halaman pertama ketika instalasi proxmox, maka akan muncul sebuah `End User License Agreement (EULA)`
 
-![image](https://i.ibb.co/5ccD6fN/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-license-agreement.png)
 
 ### Memilih Penyimpanan untuk Instalasi Proxmox VE
 
 Pada menu kali ini, disini kita perlu memilih target penyimpanan untuk sistem operasi Proxmox VE nya. Sesuaikan dengan yang kalian inginkan, disini kita bebas ingin menginstall di SSD atau HDD (jika SSD lebih baik karena lebih cepat).
 
-![image](https://i.ibb.co/719K9DM/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-disk-selection.png)
 
 Namun, sebelum masuk ke langkah selanjutnya. Disini kita dapat melakukan konfigurasi pada `Filesystem` yang akan digunakan sistem operasi Proxmox VE nya.
 
 Untuk melakukan konfigurasi tersebut, kalian cukup klik pada tulisan `Options`. Maka akan muncul sebuah pop up `Harddisk options`
 
-![image](https://i.ibb.co/9Zhj1wg/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-disk-selection-size.png)
 
 Default atau bawaan `Filesystem` yang digunakan adalah `ext4`. Namun kalian bisa mengganti nya dengan selera yang kalian inginkan, berikut adalah penjelasan mengenai masing - masing filesystem yang tersedia pada Proxmox VE.
 
-![image](https://i.ibb.co/jZ3zVYt/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-disk-selection-format.png)
 
 #### Filesystem
 
@@ -91,7 +91,7 @@ Pada filesystem, terdapat pilihan atau opsi BTRFS. Namun pada tutorial kali ini 
 
 ### Lokasi dan Zona Waktu
 
-![image](https://i.ibb.co/pLrQt0Q/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-location-timezone.png)
 
 Setelah melakukan konfigurasi penyimpanan, selanjutnya adalah melakukan konfigurasi `Lokasi dan Zona Waktu` yang akan digunakan. Sangat penting bagi anda untuk mengatur ini dengan benar, proxmox sangat bergantung pada waktu untuk menyinkronkan semuanya.
 
@@ -105,7 +105,7 @@ Anda dapat memilih `Lokasi dan Zona Waktu` dengan konfigurasi sebagai berikut
 
 ### Administration Password dan Alamat Email
 
-![image](https://i.ibb.co/5BPYcQ1/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-admin-password.png)
 
 #### Password
 
@@ -117,7 +117,7 @@ Disini saya merekomendasikan untuk mengisikan dengan email yang valid apabila an
 
 ### Konfigurasi Jaringan
 
-![image](https://i.ibb.co/Wth0Nqj/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-management-network.png)
 
 Pada konfigurasi ini, anda akan melakukan konfigurasi default jaringan yang anda gunakan untuk proxmox.
 
@@ -125,11 +125,11 @@ Pada konfigurasi ini, anda akan melakukan konfigurasi default jaringan yang anda
 
 Pada bagian `Management Interface` terdapat list atau daftar Network Card yang digunakan. Pilih dengan konfigurasi yang ingin anda gunakan
 
-![image](https://i.ibb.co/g3cRZRM/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-management-network-2.png)
 
 #### Hostname
 
-![image](https://i.ibb.co/dfJTnsX/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-fqdn.png)
 
 Pada konfigurasi ini, anda perlu mengisikan dengan hostname proxmox yang ingin digunakan. Disini saya mengisikan dengan `pve1`.
 
@@ -137,7 +137,7 @@ Perlu di ingat bahwa pemilihan nama hostname disini sangat penting apabila nanti
 
 #### IP Address, Gateway, DNS Server
 
-![image](https://i.ibb.co/my4SNHq/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-network.png)
 
 Di konfigurasi ini kita perlu mengisikan IP Address, Default Gateway dan DNS Server untuk management interface nya. Sesuaikan dengan konfigurasi jaringan yang anda gunakan
 
@@ -148,30 +148,29 @@ Di konfigurasi ini kita perlu mengisikan IP Address, Default Gateway dan DNS Ser
 > nmap -sP -PR <segment_ip.*>
 > ```
 >
-> ![image](https://i.ibb.co/W6XbSfF/image.png)
+> ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/nmap-scan-ip-address.png)
 >
-> ![image](https://i.ibb.co/j4n15nm/image.png)
+> ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/nmap-scan-ip-address-2.png)
 > Pada gambar diatas, dapat kita lihat bahwa ip network nya menggunakan /24 yang dimana dapat menampung 254 host, anda cukup memilih ip address yang kosong pada network /24 nya.
 >
-> ![image](https://i.ibb.co/NFssTny/image.png)
+> ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/nmap-scan-ip-address-3.png)
 > Misalkan disini terdapat ip address `.184` dan `.186` maka anda dapat menggunakan `.185`
 
 ### Summary atau Ringkasan
 
-![image](https://i.ibb.co/dPTnwZY/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-summary.png)
 
 Setelah semua konfigurasi dilakukan, langkah terakhir adalah melihat summary atau ringkasan dari semua konfigurasi yang kita lakukan untuk memastikan bahwa semua konfigurasi yang dilakukan benar.
 
 Setelah anda memastikan bahwa semua konfigurasi yang dilakukan benar, klik `Install`, maka proses instalasi akan berjalan.
 
-![image](https://i.ibb.co/hMBCkhb/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-installation-process.png)
 
 ### Selesai
 
 Apabila instalasi proxmox selesai, maka akan muncul seperti gambar dibawah ini.
 
-![image](https://i.ibb.co/c8bzJxg/image.png)
-![image](https://i.ibb.co/yd8MtCC/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-banner.png)
 
 ### Membuka Web User Interface Proxmox
 
@@ -181,7 +180,7 @@ Untuk membuka `Web UI (User Interface) Proxmox` anda dapat menggunakan browser k
 https://<ip_address_proxmox>:8006
 ```
 
-![image](https://i.ibb.co/FD8KChS/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-web-ui.png)
 
 Pada form input login, anda dapat mengisikan dengan username dan password yang sama pada server proxmox nya.
 
@@ -192,6 +191,6 @@ Pada form input login, anda dapat mengisikan dengan username dan password yang s
 >
 > Namun jika anda tidak menginginkan subscription nya, anda dapat menghiraukan peringatan tersebut dengan cara
 > menekan tombol oke atau close.
-> ![image](https://i.ibb.co/KbXC7GW/image.png)
+> ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-subscription-alert.png)
 
-![image](https://i.ibb.co/YpP4xCm/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/proxmox-installation-process/proxmox-web-ui-2.png)

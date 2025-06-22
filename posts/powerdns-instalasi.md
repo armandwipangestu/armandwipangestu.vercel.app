@@ -56,7 +56,7 @@ Selain itu langkah-langkah ada tambahan instalasi untuk setup untuk `PowerDNS Ad
 sudo apt update && sudo apt upgrade
 ```
 
-![image](https://i.ibb.co/hdpkrLG/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/update-dan-upgrade.png)
 
 - Install MariaDB Server dan Client:
 
@@ -64,7 +64,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install mariadb-server mariadb-client
 ```
 
-![image](https://i.ibb.co/1fGhZdj/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-mariadb-server.png)
 
 - Membuat database untuk powerdns di MariaDB
 
@@ -82,7 +82,7 @@ CREATE DATABASE `powerdns` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 GRANT ALL PRIVILEGES ON `powerdns`.* TO 'powerdnsuser'@'localhost' IDENTIFIED BY 'YOUR_PASSWORD_HERE';
 ```
 
-![image](https://i.ibb.co/yY5PqGY/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/membuat-user-powerdns-mariadb.png)
 
 ### Langkah 2: Install PowerDNS
 
@@ -92,7 +92,7 @@ GRANT ALL PRIVILEGES ON `powerdns`.* TO 'powerdnsuser'@'localhost' IDENTIFIED BY
 sudo systemctl disable --now systemd-resolved
 ```
 
-![image](https://i.ibb.co/pwXjBfX/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/non-aktif-systemd-resolve.png)
 
 - Menghapus file konfigurasi system service
 
@@ -106,7 +106,7 @@ sudo rm -rf /etc/resolv.conf
 sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
 ```
 
-![image](https://i.ibb.co/VDQGB45/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/add-dns-server.png)
 
 - Install package PowerDNS Server dan PowerDNS Database Backend
 
@@ -114,7 +114,7 @@ sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
 sudo apt-get install pdns-server pdns-backend-mysql -y
 ```
 
-![image](https://i.ibb.co/ZJ45Hpr/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-powerdns.png)
 
 - Membuat skema database dari bawaan PowerDNS
 
@@ -122,7 +122,7 @@ sudo apt-get install pdns-server pdns-backend-mysql -y
 sudo mysql -u root -p powerdns < /usr/share/doc/pdns-backend-mysql/schema.mysql.sql
 ```
 
-![image](https://i.ibb.co/6rX7NGL/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/import-schema-database-powerdns.png)
 
 ### Langkah 3: Konfigurasi PowerDNS
 
@@ -162,7 +162,7 @@ webserver-allow-from=127.0.0.1,<your_second_ip>
 webserver-password=<YOUR_WEB_SERVER_PASSWORD>
 ```
 
-![image](https://i.ibb.co/S6d0Lhw/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/konfigurasi-powerdns.png)
 
 - Menonaktifkan service `pdns`
 
@@ -184,7 +184,7 @@ sudo pdns_server --daemon=no --guardian=no --loglevel=9
 > gmysql Connection successful. Connected to database 'powerdns' on '127.0.0.1'.
 > ```
 
-![image](https://i.ibb.co/8XJ7JHg/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/test-powerdns-koneksi-database.png)
 
 - Menjalankan service powerdns
 
@@ -209,7 +209,7 @@ sudo ss -alnp4 | grep pdns
 > tcp   LISTEN 0      128          0.0.0.0:53        0.0.0.0:*    users:(("pdns_server",pid=27734,fd=7))
 > ```
 
-![image](https://i.ibb.co/bBzGLGd/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/test-binding-port-powerdns.png)
 
 ### Langkah 4: Install PowerDNS Admin Dependencies
 
@@ -221,7 +221,7 @@ PowerDNS Admin membantu me-manage PowerDNS dengan Web Interface. Untuk menginsta
 sudo apt install -y python3-dev git libsasl2-dev libldap2-dev python3-venv libmariadb-dev pkg-config build-essential curl libpq-dev
 ```
 
-![image](https://i.ibb.co/FqrN4Rh/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-dependency-powerdns-admin.png)
 
 - Install NodeJS
 
@@ -229,13 +229,13 @@ sudo apt install -y python3-dev git libsasl2-dev libldap2-dev python3-venv libma
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 ```
 
-![image](https://i.ibb.co/xfnrd18/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-nodejs.png)
 
 ```shell
 sudo apt install -y nodejs
 ```
 
-![image](https://i.ibb.co/GHQRQjV/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-nodejs-2.png)
 
 - Install yarn package manager untuk build asset file
 
@@ -245,7 +245,7 @@ echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/deb
 sudo apt update && sudo apt install -y yarn
 ```
 
-![image](https://i.ibb.co/WtR5Qs3/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-yarn.png)
 
 - Masuk sebagai root user
 
@@ -266,7 +266,7 @@ cd /opt/web/powerdns-admin
 python3 -mvenv ./venv
 ```
 
-![image](https://i.ibb.co/Q8yPQjF/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/membuat-virtualenv.png)
 
 - Aktifkan virtual environment
 
@@ -274,7 +274,7 @@ python3 -mvenv ./venv
 source ./venv/bin/activate
 ```
 
-![image](https://i.ibb.co/CWT4J2x/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/activate-virtualenv.png)
 
 - Upgrade pip ke versi terbaru
 
@@ -282,7 +282,7 @@ source ./venv/bin/activate
 pip install --upgrade pip
 ```
 
-![image](https://i.ibb.co/6mNpXqk/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/upgrade-pip.png)
 
 - Install dependencies atau requirements dari file `requirements.txt`
 
@@ -298,7 +298,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-![image](https://i.ibb.co/47p7SSB/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-dependency-pip.png)
 
 ### Langkah 5: Melakukan konfigurasi dan menjalankan PowerDNS Admin
 
@@ -308,7 +308,7 @@ pip install -r requirements.txt
 cp configs/development.py configs/production.py
 ```
 
-![image](https://i.ibb.co/4VFnCmS/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/copy-file.png)
 
 - Membuka file konfigurasi `production.py`
 
@@ -326,7 +326,7 @@ vim configs/production.py
 > python -c 'import os; print(os.urandom(16))'
 > ```
 >
-> ![image](https://i.ibb.co/1JtT6Pt/image.png)
+> ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/generate-secret-key.png)
 
 ```python
 import os
@@ -359,7 +359,7 @@ CAPTCHA_SESSION_KEY = 'captcha_image'
 SESSION_TYPE = 'sqlalchemy'
 ```
 
-![image](https://i.ibb.co/DgRRfkK/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/edit-configuration.png)
 
 Dikarenakan default config flask menggunakan database `SQLite` maka kita perlu mengubah konfigurasi nya agar menggunakan `MySQL`.
 Untuk melakukan nya masih di dalam file yang sama yaitu `production.py` di baris `30 - 49`
@@ -387,7 +387,7 @@ SQLALCHEMY_DATABASE_URI = 'mysql://{}:{}@{}/{}'.format(
 #SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'pdns.db')
 ```
 
-![image](https://i.ibb.co/qjqx3jG/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/update-database-configuration.png)
 
 - Export konfigurasi production ke dalam variable `FLASK_CONF`
 
@@ -407,7 +407,7 @@ export FLASK_APP=powerdnsadmin/__init__.py
 flask db upgrade
 ```
 
-![image](https://i.ibb.co/1GjTdH4/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/upgrdae-schema-database.png)
 
 - Install project dependencies menggunakan `yarn`
 
@@ -415,7 +415,7 @@ flask db upgrade
 yarn install --pure-lockfile
 ```
 
-![image](https://i.ibb.co/dpkjmrJ/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/yarn-install-dependency.png)
 
 - Build assets untuk aplikasi flask
 
@@ -423,7 +423,7 @@ yarn install --pure-lockfile
 flask assets build
 ```
 
-![image](https://i.ibb.co/hYdQcW4/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/flask-build.png)
 
 - Menjalankan aplikasi flask di `virtual env`
 
@@ -431,7 +431,7 @@ flask assets build
 ./run.py
 ```
 
-![image](https://i.ibb.co/mJs1F1B/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/test-run-app.png)
 
 - Membuka aplikasi yang sudah di running pada port `9191`
 
@@ -443,7 +443,7 @@ flask assets build
 > http://<ip_address>:9191
 > ```
 
-![image](https://i.ibb.co/3M2tkWR/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-admin-login-page.png)
 
 > **Catatan**:
 >
@@ -451,7 +451,7 @@ flask assets build
 >
 > Error tersebut terjadi karena pada aplikasi flask (PowerDNS Admin) ini menggunakan library `pillow` untuk mengenerate `CAPTCHA`
 >
-> ![image](https://i.ibb.co/rypFz53/image.png)
+> ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-admin-error.png)
 
 - Menghapus package pillow
 
@@ -459,7 +459,7 @@ flask assets build
 pip uninstall pillow
 ```
 
-![image](https://i.ibb.co/jhV5WHB/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/pip-uninstall-pillow.png)
 
 - Install pillow versi `9.4.0`
 
@@ -467,7 +467,7 @@ pip uninstall pillow
 pip install pillow==9.4.0
 ```
 
-![image](https://i.ibb.co/XDzcgrz/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/pip-install-pillow.png)
 
 - Menjalankan kembali aplikasi flask di `virtual env`
 
@@ -475,7 +475,7 @@ pip install pillow==9.4.0
 ./run.py
 ```
 
-![image](https://i.ibb.co/xfLzN1z/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/test-run-app-2.png)
 
 Sampai proses ini, kita telah berhasil melakukan install PowerDNS sebagai DNS Service, MySQL sebagai backend dari PowerDNS dan PowerDNS Admin sebagai web interface nya.
 
@@ -498,7 +498,7 @@ Untuk mematikannya cukup tekan `CTRL + C` pada terminal nya
 deactivate
 ```
 
-![image](https://i.ibb.co/5FtfK8z/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/deactivate-virtualenv.png)
 
 - Membuat file systemd service untuk PowerDNS Admin
 
@@ -529,7 +529,7 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-![image](https://i.ibb.co/vd1RD1R/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/print-powerdns-admin-systemd-file.png)
 
 - Membuat unit file
 
@@ -544,9 +544,9 @@ systemctl edit --force powerdns-admin.service
 Environment="FLASK_CONF=../configs/production.py"
 ```
 
-| Membuat Unit File                            | Hasil                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| ![image](https://i.ibb.co/MNxhGK4/image.png) | ![image](https://i.ibb.co/p2d8hy7/image.png) |
+| Membuat Unit File                                                               | Hasil                                                               |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/membuat-unit-file.png) | ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/hasil.png) |
 
 - Membuat socket file
 
@@ -567,7 +567,7 @@ ListenStream=/run/powerdns-admin/socket
 WantedBy=sockets.target
 ```
 
-![image](https://i.ibb.co/5nYqggn/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-admin-socket.png)
 
 - Membuat environment file
 
@@ -581,7 +581,7 @@ vim /etc/tmpfiles.d/powerdns-admin.conf
 d /run/powerdns-admin 0755 pdns pdns -
 ```
 
-![image](https://i.ibb.co/F7gtz51/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/print-powerdns-tmp.png)
 
 - Reload daemon
 
@@ -596,7 +596,7 @@ systemctl start powerdns-admin.service powerdns-admin.socket
 systemctl enable powerdns-admin.service powerdns-admin.socket
 ```
 
-![image](https://i.ibb.co/C8SGRZh/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/start-enable-powerdns-admin.png)
 
 - Mengecek status service dan socket yang sudah dijalankan
 
@@ -604,7 +604,7 @@ systemctl enable powerdns-admin.service powerdns-admin.socket
 systemctl status powerdns-admin.service powerdns-admin.socket
 ```
 
-![image](https://i.ibb.co/KxyhzFy/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/check-service-powerdns-admin.png)
 
 ### Langkah 7: Install dan Konfigurasi Web Server Nginx
 
@@ -618,7 +618,7 @@ Untuk melakukan konfigurasi web server lainnya kalian bisa membaca dokumentasi r
 apt install nginx -y
 ```
 
-![image](https://i.ibb.co/zmpjGzm/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/install-nginx.png)
 
 - Menambahkan konfigurasi Nginx untuk aplikasi PowerDNS Admin
 
@@ -667,7 +667,7 @@ server {
 }
 ```
 
-![image](https://i.ibb.co/rdhC5Nz/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/print-powerdns-nginx-configuration.png)
 
 - Mengecek atau melakukan konfirmasi file nginx yang dibuat tidak ada syntax error
 
@@ -675,7 +675,7 @@ server {
 nginx -t
 ```
 
-![image](https://i.ibb.co/BCqZ0Z1/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/check-nginx-config.png)
 
 - Mengubah permission folder `/opt/web/powerdns-admin` agar menjadi milik `www-data:www-data`
 
@@ -683,7 +683,7 @@ nginx -t
 chown -R www-data:www-data /opt/web/powerdns-admin
 ```
 
-![image](https://i.ibb.co/BsGr192/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/check-permission-powerdns-file.png)
 
 - Restart service Nginx
 
@@ -701,7 +701,7 @@ netstat -tunlp | grep nginx
 >
 > Dapat dilihat digambar dibawah inih, bahwa webserver Nginx berjalan di port `80`
 
-![image](https://i.ibb.co/BC9syFg/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/restart-nginx-service.png)
 
 - Membuka aplikasi yang sudah running di port `80`
 
@@ -713,7 +713,7 @@ netstat -tunlp | grep nginx
 > http://<ip_address>
 > ```
 
-![image](https://i.ibb.co/0XDb4YC/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/restart-nginx-service.png)
 
 Apabila muncul nya seperti gambar diatas maka ada konfigurasi yang kurang pada nginx nya, ikuti langkah dibawah ini
 agar default page pada port `80` yang dibuka nya adalah aplikasi `PowerDNS Admin`
@@ -732,7 +732,7 @@ vim /etc/nginx/nginx.conf
 ...
 ```
 
-![image](https://i.ibb.co/bPTWBdm/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/comment-nginx-configuration.png)
 
 - Restart kembali service nginx nya, agar konfigurasi yang sudah diubah tadi digunakan
 
@@ -740,11 +740,11 @@ vim /etc/nginx/nginx.conf
 systemctl restart nginx
 ```
 
-![image](https://i.ibb.co/vPr0XCt/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/restart-nginx-service-2.png)
 
 - Buka kembali alamat url `http://<ip_address>` di web browser
 
-![image](https://i.ibb.co/CHfxr7g/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-admin-login-page-2.png)
 
 Sekarang aplikasi Flask PowerDNS Admin sudah berjalan dengan web server nginx di port 80.
 
@@ -761,19 +761,19 @@ Untuk melakukan konfigurasi PowerDNS API, ikuti langkah dibawah ini
 > Jika kalian pertama kali, buat akun terlebih dahulu.
 > Default atau bawaan akun yang pertama kali dibuat akan otomatis role user nya adalah `Administrator`
 >
-> ![image](https://i.ibb.co/NmGBNNV/image.png)
+> ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/check-role-powerdns-user.png)
 
 - Buka tab `API Keys` pada menu sidebar
 
-![image](https://i.ibb.co/x6nXTYm/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-api-key.png)
 
 - Klik `Create Key`
 
-![image](https://i.ibb.co/LxftTQt/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-api-key-create.png)
 
 - Pada bagian `Role` pilih `Administrator` dan untuk `Description` isikan `My Key`
 
-![image](https://i.ibb.co/XZNSMPp/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-api-key-create-2.png)
 
 - Klik `Create API Key`
 
@@ -781,7 +781,7 @@ Setelah memilih role dan mengisikan description untuk API Key selanjutnya tekan 
 
 Apabila terdapat alert konfirmasi, copy `API Key` nya kemudian klik `Confirm`
 
-![image](https://i.ibb.co/TvYDhG3/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-api-key-create-3.png)
 
 - Mengisikan `PowerDNS API URL`, `PowerDNS API Key`, `PowerDNS Version`
 
@@ -790,11 +790,11 @@ Apabila terdapat alert konfirmasi, copy `API Key` nya kemudian klik `Confirm`
 > Untuk mengetahui `PowerDNS API URL` dan `PowerDNS Version` kalian bisa lihat di server
 >
 > - Mengecek PowerDNS API URL:
->   ![image](https://i.ibb.co/LQSN7b4/image.png)
+>   ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/print-powerdns-configuration.png)
 > - Mengecek PowerDNS Version:
->   ![image](https://i.ibb.co/51s9VjJ/image.png)
+>   ![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/check-powerdns-version.png)
 
-![image](https://i.ibb.co/TLKdRpk/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-setting.png)
 
 - Mengganti API Key PowerDNS Server agar sesuai dengan PowerDNS Admin
 
@@ -806,7 +806,7 @@ Setelah mengubah nya, jangan lupa restart service `pdns` agar perubahan nya ters
 systemctl restart pdns
 ```
 
-![image](https://i.ibb.co/vqgBhzm/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/powerdns-api-key-configuration.png)
 
 Untuk mencoba apakah API nya berjalan kalian bisa menggunakan curl
 
@@ -815,7 +815,7 @@ curl -v -H 'X-API-Key: YOUR_SECRET_KEY' http://127.0.0.1:8081/api/v1/servers/loc
 curl -v -H 'X-API-Key: YOUR_SECRET_KEY' http://127.0.0.1:8081/api/v1/servers/localhost/zones | jq .
 ```
 
-![image](https://i.ibb.co/RTs77Yv/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/powerdns-instalasi/test-api-powerdns.png)
 
 ## Kesimpulan
 

@@ -83,8 +83,8 @@ Sekarang kita mempunyai 2 SSH Keys berbeda yang sudah dibuat:
 ~/.ssh/id_rsa_turorial2
 ```
 
-<a href="https://i.ibb.co/R0xyV5T/Screenshot-2022-01-11-12-14-21-X.png" target="_blank">
-   <img src="https://i.ibb.co/R0xyV5T/Screenshot-2022-01-11-12-14-21-X.png" class="img-fluid rounded mx-auto d-block" />
+<a href="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key.png" target="_blank">
+   <img src="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key.png" class="img-fluid rounded mx-auto d-block" />
 </a>
 
 ## Menambahkan SSH Keys baru ke akun GitHub yang dipakai
@@ -104,16 +104,16 @@ dan login kedalam GitHub yang ingin ditambahkan:
 3. Klik dibagian `New SSH Keys`, isikan judul yang sesuai, dan paste public yang sudah di copy tadi di bawahnya
 4. Klik `Add key` - dan selesai!
 
-<a href="https://i.ibb.co/X2mfrPK/image.png" target="_blank">
-   <img src="https://i.ibb.co/X2mfrPK/image.png" class="img-fluid rounded mx-auto d-block" />
+<a href="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/github-add-ssh-key.png" target="_blank">
+   <img src="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/github-add-ssh-key.png" class="img-fluid rounded mx-auto d-block" />
 </a>
 
 > **Catatan**:
 >
 > Lakukan hal yang sama untuk public key yang kedua `~/.ssh/id_rsa_tutorial2.pub` (copy dan daftarkan kedalam akun github)
 
-<a href="https://i.ibb.co/rFDw5Kk/image.png" target="_blank">
-   <img src="https://i.ibb.co/rFDw5Kk/image.png" class="img-fluid rounded mx-auto d-block" />
+<a href="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/github-add-ssh-key-2.png" target="_blank">
+   <img src="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/github-add-ssh-key-2.png" class="img-fluid rounded mx-auto d-block" />
 </a>
 
 ## Mendaftarkan SSH Keys baru dengan ssh-agent
@@ -131,8 +131,8 @@ ssh-add ~/.ssh/id_rsa_tutorial
 ssh-add ~/.ssh/id_rsa_tutorial2
 ```
 
-<a href="https://i.ibb.co/09znr31/image.png" target="_blank">
-   <img src="https://i.ibb.co/09znr31/image.png" class="img-fluid rounded mx-auto d-block" />
+<a href="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key-add.png" target="_blank">
+   <img src="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key-add.png" class="img-fluid rounded mx-auto d-block" />
 </a>
 
 Untuk mengecek apakah `keys` nya sudah terdaftar di `ssh-agent` menggunakan command
@@ -141,8 +141,8 @@ Untuk mengecek apakah `keys` nya sudah terdaftar di `ssh-agent` menggunakan comm
 ssh-add -l
 ```
 
-<a href="https://i.ibb.co/68VRdMF/image.png" target="_blank">
-   <img src="https://i.ibb.co/68VRdMF/image.png" class="img-fluid rounded mx-auto d-block" />
+<a href="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key-add-list.png" target="_blank">
+   <img src="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key-add-list.png" class="img-fluid rounded mx-auto d-block" />
 </a>
 
 Dan untuk menghapus `keys` yang terdaftar di `ssh-agent` menggunakan command:
@@ -151,8 +151,8 @@ Dan untuk menghapus `keys` yang terdaftar di `ssh-agent` menggunakan command:
 ssh-add -D
 ```
 
-<a href="https://i.ibb.co/Q9MJpJ2/image.png" target="_blank">
-   <img src="https://i.ibb.co/Q9MJpJ2/image.png" class="img-fluid rounded mx-auto d-block" />
+<a href="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key-add-delete.png" target="_blank">
+   <img src="${NEXT_PUBLIC_PUBLIC_ASSETS}/git-&-github-multiple-user-account/ssh-key-add-delete.png" class="img-fluid rounded mx-auto d-block" />
 </a>
 
 </b>

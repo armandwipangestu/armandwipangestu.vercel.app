@@ -129,7 +129,7 @@ show pon power attenuation gpon-onu_1/1/1:1
 
 Tentunya kita membutuhkan pengecekan MAC Address yang terhubung ke perangkat ONU atau ONT kita, kita bisa melihat MAC Address yang terhubung tersebut mengggunakan perintah dibawah ini. Untuk mengecek vendor perangkat yang digunakan, kalian bisa menggunakan website berikut ini [macvendors.com](https://macvendors.com/)
 
-![image](https://i.ibb.co/2PkrY21/image.png)
+![image](${NEXT_PUBLIC_PUBLIC_ASSETS}/olt-command/show-mac-address.png)
 
 - Command
 
