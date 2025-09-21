@@ -2,7 +2,7 @@
 published: true
 title: "Belajar Kubernetes - Episode 5 - Pengenalan dan Penjelasan Object Pod"
 tag: "DevOps"
-date: "June 24 2025"
+date: "September 21 2025"
 excerpt: "Di episode ini kita akan coba bahas salah satu object yang ada di Kubernetes yaitu Pod. Kita akan mempelajari lebih dalam terkait apa itu Pod dalam konteks Kubernetes"
 cover_image: "/images/posts/Belajar Kubernetes - Episode 5 - PENGENALAN DAN PENJELASAN OBJECT POD.png"
 author_name: "Arman Dwi Pangestu"
