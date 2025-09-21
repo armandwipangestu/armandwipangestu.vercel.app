@@ -220,3 +220,9 @@ Dengan memahami konsep Node, kita jadi tahu bagaimana Kubernetes mengelola resou
 Semoga penjelasan di episode ini bisa membantu kalian memahami peran Node dalam arsitektur Kubernetes. Jangan ragu untuk bereksperimen langsung di cluster masing-masing agar semakin paham.
 
 Bagaimana, makin paham kan tentang Node di Kubernetes? Di episode berikutnya, kita akan membahas object Kubernetes lainnya yang tidak kalah penting yaitu `Pod`. Jadi, pastikan tetap semangat belajar nya.
+
+> **Catatan**: Untuk kalian yang ingin lanjut membaca, bisa click gambar thumbnail episode 5 di bawah ini
+>
+> <a href="belajar-kubernetes-episode-5-pengenalan-dan-penjelasan-object-pod">
+>    <img src="/images/posts/Belajar Kubernetes - Episode 5 - PENGENALAN DAN PENJELASAN OBJECT POD.png" />
+> </a>
