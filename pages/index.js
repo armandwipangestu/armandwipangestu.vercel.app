@@ -25,13 +25,10 @@ const HomePage = () => {
               </h1>
 
               <h2 className="mb-8 mt-2 text-md md:text-lg font-medium text-accents-300 dark:text-white/80 lg:mt-3 lg:text-xl">
-                Saya Seorang Junior -{" "}
+                Saya Seorang -{" "}
                 <ReactTyped
                   strings={[
-                    "Web Developer",
-                    "Network Engineer",
-                    "System Administrator",
-                    "Cloud Engineer",
+                    "Software Engineer",
                   ]}
                   typeSpeed={40}
                   loop
