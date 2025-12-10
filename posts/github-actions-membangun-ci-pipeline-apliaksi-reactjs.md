@@ -1470,3 +1470,5 @@ Untuk security kalian bisa terapkan terkait secret rotation, sehingga value dari
 ## Penutup
 
 Dengan mengimplementasikan CI Pipeline yang comprehensive seperti yang telah kita bahas, kalian tidak hanya mengotomatiskan proses build dan deployment, tetapi juga menciptakan safety net yang kuat untuk memastikan setiap perubahan kode melalui tahap validasi yang ketat sebelum mencapai production. Kombinasi dari semantic versioning, conventional commit, dan automation GitHub Actions akan membuat tim development kalian lebih produktif dan confident dalam merilis fitur baru. Jangan ragu untuk mengadaptasi konfigurasi ini sesuai dengan kebutuhan spesifik project kalian, dan terus eksplorasi kemungkinan-kemungkinan improvement lainnya seperti CD Pipeline dan GitOps modern untuk menciptakan development workflow yang truly robust dan scalable.
+
+Semoga tulisan ini bisa bermanfaat bagi kalian yang membaca, terima kasih.
