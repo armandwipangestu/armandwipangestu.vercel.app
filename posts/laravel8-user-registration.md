@@ -6,7 +6,7 @@ date: "December 31 2023"
 excerpt: "Pada pembahasan kali ini kita akan membuat feature registrasi untuk aplikasi blog laravel kita."
 cover_image: "/images/posts/Laravel 8 - User Registration.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

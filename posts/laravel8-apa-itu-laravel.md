@@ -6,7 +6,7 @@ date: "December 19 2023"
 excerpt: "Introduction Laravel 8, apa sih Laravel itu? Apa itu Web Application Framework? Siapa pembuat Laravel? Tujuan Laravel dibuat?"
 cover_image: "/images/posts/Laravel 8 - Apa itu Laravel.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

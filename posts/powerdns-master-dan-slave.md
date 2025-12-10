@@ -6,7 +6,7 @@ date: "July 14 2023"
 excerpt: "Pada artikel ini saya akan melakukan konfigurasi master dan slave pada 2 DNS Server"
 cover_image: "/images/posts/PowerDNS - Master Slave.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

@@ -6,7 +6,7 @@ date: "June 21 2023"
 excerpt: "Pada artikel ini kita akan melakukan instalasi pada sistem operasi ubuntu server 22.04"
 cover_image: "/images/posts/default.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

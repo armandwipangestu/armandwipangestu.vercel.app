@@ -6,7 +6,7 @@ date: "May 06 2024"
 excerpt: "Pada artikel ini kita akan melakukan deployment simpel app Express.js menggunakan Cloud Run dan meng-implementasikan CI/CD Pipeline menggunakan GitHub Actions"
 cover_image: "/images/posts/Cloud Run - Implementasi DevOps CI CD Pipeline Menggunakan GitHub Actions.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 
@@ -769,8 +769,8 @@ Akhirnya selesai juga perjalan yang sangat panjang ini 🚀 (cape ngetik karena 
 > - Pemisahan Service (Artifact Registry dan Cloud Run Deployment) sesuai dengan `env` nya
 > - Kalian juga bisa melakukan pengecekan unit testing seperti menggunakan Jest pada saat job di GitHub Actions ke-trigger
 > - Formatting code seperti menggunakan ESLint sebelum mem-build docker image
-> 
-> Beikut contoh arsitektur diagram atau topologi dengan pemisahan `env` 
+>
+> Beikut contoh arsitektur diagram atau topologi dengan pemisahan `env`
 >
 > ![Containerized App Env](${NEXT_PUBLIC_PUBLIC_ASSETS}/cloud-run-github-actions/containerized-app-env.gif)
 >

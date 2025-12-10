@@ -6,7 +6,7 @@ date: "January 17 2023"
 excerpt: "Pada artikel ini kita akan mencoba berpindah ke commit sebelumnya pada git"
 cover_image: "/images/posts/default.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

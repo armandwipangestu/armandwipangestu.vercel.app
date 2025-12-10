@@ -6,7 +6,7 @@ date: "December 20 2023"
 excerpt: "Bagaimana cara instalasi dan konfigurasi Laravel pada sistem operasi Windows, macOS dan Linux?"
 cover_image: "/images/posts/Laravel 8 - Instalasi dan Konfigurasi.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

@@ -6,7 +6,7 @@ date: "June 14 2025"
 excerpt: "Di episode ini kita akan coba bahas salah satu object yang ada di Kubernetes yaitu Node. Kita akan mempelajari lebih dalam terkait apa itu Node dalam konteks Kubernetes"
 cover_image: "/images/posts/Belajar Kubernetes - Episode 4 - PENGENALAN DAN PENJELASAN OBJECT NODE.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

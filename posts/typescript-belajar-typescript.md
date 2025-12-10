@@ -6,7 +6,7 @@ date: "October 16 2023"
 excerpt: "Pada artikel kali ini, saya akan membahas mengenai typescript"
 cover_image: "/images/posts/TypeScript - Belajar TypeScript.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

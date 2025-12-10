@@ -6,7 +6,7 @@ date: "October 31 2023"
 excerpt: "GitHub saat ini wajib menggunakan SSH Public atau Private keypair untuk melakukan autentikasi dari local (git) ke remote (github), oleh karena itu pada artikel kali ini saya akan membahas bagaimana cara generate SSH key nya."
 cover_image: "/images/posts/Git Github - SSH key.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

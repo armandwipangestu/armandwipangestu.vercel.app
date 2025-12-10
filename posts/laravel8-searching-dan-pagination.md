@@ -6,7 +6,7 @@ date: "December 30 2023"
 excerpt: "Pada pembahasan kali ini kita akan menambahkan 2 feature keren kedalam aplikasi blog kita yaitu Searching dan Pagination."
 cover_image: "/images/posts/Laravel 8 - Searching dan Pagination.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

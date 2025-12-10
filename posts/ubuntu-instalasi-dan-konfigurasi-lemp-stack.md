@@ -6,7 +6,7 @@ date: "August 30 2023"
 excerpt: "Pada artikel ini saya akan melakukan instalasi dan konfigurasi LEMP atau Linux, Nginx, MariaDB, dan PHP pada sistem operasi Ubuntu Server 22.04"
 cover_image: "/images/posts/Ubuntu - Instalasi dan Konfigurasi LEMP Stack.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

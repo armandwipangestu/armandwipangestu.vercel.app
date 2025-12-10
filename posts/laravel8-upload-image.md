@@ -6,7 +6,7 @@ date: "January 6 2024"
 excerpt: "Pada pembahasan kali ini kita akan mencoba menambahkan sebuah feature untuk melengkapi CRUD dari blog kita, yaitu menambahkan feature upload gambar yang dimana nantinya user dapat mengupload gambar sendiri dari komputer nya untuk menggantikan gambar yang sebelumnya kita ambil dari API nya Unsplash."
 cover_image: "/images/posts/Laravel 8 - Upload Image.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

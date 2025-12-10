@@ -6,7 +6,7 @@ date: "August 01 2023"
 excerpt: "Pada artikel ini saya akan melakukan konfigurasi DNS Server (PowerDNS) Authoritative Server agar berfungsi sebagai recursor untuk client dan sekaligus melayani public domains"
 cover_image: "/images/posts/PowerDNS - Authoritative As Recursor for Clients and serving public domains.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

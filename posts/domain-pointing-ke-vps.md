@@ -6,7 +6,7 @@ date: "July 21 2023"
 excerpt: "Pada artikel ini saya akan melakukan konfigurasi domain dari registrar agar mengarah ke VPS"
 cover_image: "/images/posts/Domain - Pointing ke VPS.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

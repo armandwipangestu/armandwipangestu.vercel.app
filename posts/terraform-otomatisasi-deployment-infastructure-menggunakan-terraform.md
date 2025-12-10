@@ -6,7 +6,7 @@ date: "April 01 2024"
 excerpt: "Pada pembahasan kali ini saya akan mencoba menggunakan Terraform untuk mendeploy infrastructure pada Google Cloud Platform (GCP)"
 cover_image: "/images/posts/Terraform - Otomatisasi Deployment Infrastructure Menggunakan Terraform.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

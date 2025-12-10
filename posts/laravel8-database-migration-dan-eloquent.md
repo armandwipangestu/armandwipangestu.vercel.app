@@ -6,7 +6,7 @@ date: "December 23 2023"
 excerpt: "Laravel, sebagai salah satu framework PHP yang paling populer, menyediakan pendekatan yang kuat dan efisien dalam mengelola basis data. Dalam artikel ini, kita akan menjelajahi aspek-aspek kunci terkait database di Laravel, dengan penekanan khusus pada konsep migrasi (migration) dan Eloquent, sistem ORM bawaan Laravel."
 cover_image: "/images/posts/Laravel 8 - Database, Migration dan Eloquent.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

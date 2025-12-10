@@ -6,7 +6,7 @@ date: "January 7 2024"
 excerpt: "Pada pembahasan kali ini, kita akan membuat feature terakhir dari sistem blog kita, feature tersebut yaitu Authorization atau Otorisasi, setelah sebelumnya kita sudah membuat feature Autentikasi untuk login dan registrasi, sekarang kita akan membuat agar user yang tadi sudah berhasil registrasi dan juga login itu memiliki peran yang berbeda. Contohnya adalah terdapat user biasa dan juga user administrator."
 cover_image: "/images/posts/Laravel 8 - Authorization.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

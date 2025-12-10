@@ -6,7 +6,7 @@ date: "May 12 2025"
 excerpt: "Di episode ini kita akan mulai masuk ke praktik hands-on, melakukan instalasi Kubernetes Cluster menggunakan berbagai cara: Minikube, Kind, K3s, hingga instalasi K8s manual menggunakan kubeadm"
 cover_image: "/images/posts/Belajar Kubernetes - Episode 3 - INSTALASI KUBERNETES CLUSTER (MASTER & WORKER NODE).png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

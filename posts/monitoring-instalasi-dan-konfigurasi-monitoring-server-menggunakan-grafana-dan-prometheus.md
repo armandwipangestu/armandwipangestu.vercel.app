@@ -6,7 +6,7 @@ date: "August 25 2023"
 excerpt: "Pada artikel ini saya akan melakukan instalasi dan konfigurasi untuk monitoring server menggunakan Grafana dan Prometheus"
 cover_image: "/images/posts/Monitoring - Grafana dan Prometheus.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

@@ -6,7 +6,7 @@ date: "January 25 2023"
 excerpt: "Pada artikel ini kita akan mencoba menambahkan Xdebug pada configurasi Apache di XAMPP"
 cover_image: "/images/posts/XAMPP - Install Xdebug.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

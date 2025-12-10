@@ -6,7 +6,7 @@ date: "July 04 2023"
 excerpt: "Pada artikel ini saya akan membuat langkah - langkah instalasi PowerDNS pada sistem operasi Ubuntu Server"
 cover_image: "/images/posts/PowerDNS - Install PowerDNS di Ubuntu Server.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

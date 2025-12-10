@@ -6,7 +6,7 @@ date: "December 28 2023"
 excerpt: "Pada pembahasan kali ini kita akan membahas sesuatu problem pada query database kita yang sangat berpengaruh terhadap performa aplikasi. Problem tersebut dinamakan N+1 Problem"
 cover_image: "/images/posts/Laravel 8 - N1 Problem.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

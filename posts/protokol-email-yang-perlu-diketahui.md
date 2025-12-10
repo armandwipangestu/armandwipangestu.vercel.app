@@ -6,7 +6,7 @@ date: "August 15 2023"
 excerpt: "Pada artikel ini kita akan membahas protokol email apa saja yang wajib diketahui"
 cover_image: "/images/posts/Email - Protokol Email Yang Wajib Diketahui.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

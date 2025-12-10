@@ -6,7 +6,7 @@ date: "January 24 2023"
 excerpt: "Pada artikel ini kita akan menggabungkan PHP dan JS untuk menangani select option pada form input"
 cover_image: "/images/posts/default.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

@@ -6,7 +6,7 @@ date: "January 6 2024"
 excerpt: "Pada pembahasan kali ini kita akan melanjutkan feature pengelolaan gambar pada blog post kita sebelumnya, kali ini kita akan menerapkan 3 buah feature, yaitu preview, update dan delete image."
 cover_image: "/images/posts/Laravel 8 - Preview, Update dan Delete Image.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

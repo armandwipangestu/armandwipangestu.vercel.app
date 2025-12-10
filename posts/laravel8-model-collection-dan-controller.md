@@ -6,7 +6,7 @@ date: "December 22 2023"
 excerpt: "Aplikasi yang sudah dibangun sebelumnya itu semua proses nya masih ditangani komponen `routes` kita, contohnya ketika kita melakukan request ke halaman `/posts` untuk menampilkan semua data dari blog post kita dilakukan di dalam routes, begitu pula dengan proses menampilkan halaman views, itu juga dilakukan di dalam routes. Hal tersebut tidak tepat, karena jika kita ingin menerapkan konsep MVC (Model, View, Controller) maka 2 proses tersebut seharusnya kita pisahkan sesuai dengan komponen nya."
 cover_image: "/images/posts/Laravel 8 - Model, Collection dan Controller.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

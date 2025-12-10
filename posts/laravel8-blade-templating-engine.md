@@ -6,7 +6,7 @@ date: "December 21 2023"
 excerpt: "Templating Engine adalah sebuah fitur atau tools untuk membantu kita dalam mengelola tampilan halaman web, khususnya untuk sebuah framework dan untuk framework laravel, templating engine nya dinamakan dengan Blade."
 cover_image: "/images/posts/Laravel 8 - Blade Templating Engine.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

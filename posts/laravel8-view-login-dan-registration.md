@@ -6,7 +6,7 @@ date: "December 31 2023"
 excerpt: "Pada pembahasan kali ini kita akan membuat view untuk feature login dan registration. Seperti biasa disini kita akan menggunakan bantuan framework frontend yaitu Bootstrap untuk bagian komponen nya."
 cover_image: "/images/posts/Laravel 8 - View Login dan Registration.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

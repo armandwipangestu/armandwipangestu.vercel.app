@@ -12,7 +12,7 @@ const AboutPage = () => {
     <>
       <Metadata
         title="Portofolio - Tentang Saya"
-        description="Saya adalah seorang Junior Web Developer, Network Technician, System Administrator"
+        description="Saya adalah seorang Cloud & Software Engineer"
         image="/metadata/home.png"
         url="tentang-saya"
       />
@@ -33,8 +33,8 @@ const AboutPage = () => {
               </h2>
 
               <p className="max-w-xl text-base font-medium text-secondary lg:text-lg">
-                Saya seorang Junior Web Developer yang bersemangat dalam hal
-                mempelajari teknologi yang dibutuhkan agar masalah dapat
+                Saya seorang Cloud & Software Engineer yang bersemangat dalam
+                hal mempelajari teknologi yang dibutuhkan agar masalah dapat
                 terselesaikan, Saya berusaha memberikan pengalaman pengguna yang
                 menarik dan fungsional.
                 <br />

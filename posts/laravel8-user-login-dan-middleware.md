@@ -6,7 +6,7 @@ date: "January 1 2024"
 excerpt: "Pada pembahasan kali ini kita akan melanjutkan pembahasan mengenai aplikasi blog kita, setelah sebelumnya kita berhasil membuat feature registrasi untuk user kita. Nah, sekarang saatnya kita akan membuat dan meng-aplikasikan feature login nya, sehingga nantinya user yang berhasil registrasi itu bisa masuk kedalam aplikasi kita. Selain kita membuat feature login, kita juga akan sambil mempelajari featrue `middleware` yang ada didalam Laravel."
 cover_image: "/images/posts/Laravel 8 - User Login dan Middleware.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

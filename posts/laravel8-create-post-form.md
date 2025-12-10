@@ -6,7 +6,7 @@ date: "January 3 2024"
 excerpt: "Kali ini kita akan melanjutkan kembali pembuatan feature CRUD pada aplikasi sistem blog sederhana kita, setelah sebelumnya kita berhasil membuat tampilan UI untuk bagian Dashboard kita sambil juga menampilkan data post dari user yang sudah berhasil login, feature tersebut sebetulnya sudah masuk kedalam CRUD yaitu bagian READ nya. Nah, sekarang tersisa 3 lagi yaitu CREATE, UPDATE dan DELETE."
 cover_image: "/images/posts/Laravel 8 - Create Post Form.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

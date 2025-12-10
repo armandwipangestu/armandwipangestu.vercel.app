@@ -6,7 +6,7 @@ date: "January 4 2024"
 excerpt: "Pada pembahasan kali ini kita akan melengkapi aplikasi blog sederhana kita, setelah sebelumnya kita berhasil menambahkan feature CREATE dan READ data, kali ini kita akan melengkapi lagi dengan menambahkan feature UPDATE dan DELETE, sehingga feature CRUD nya sudah bisa dijalankan semua."
 cover_image: "/images/posts/Laravel 8 - Update dan Delete Post.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

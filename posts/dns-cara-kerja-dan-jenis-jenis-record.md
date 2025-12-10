@@ -6,7 +6,7 @@ date: "July 11 2023"
 excerpt: "Pada artikel ini kita akan membahas apa itu DNS, bagaimana cara kerja DNS dan jenis - jenis record pada DNS"
 cover_image: "/images/posts/DNS - Jenis Jenis DNS Record.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

@@ -6,7 +6,7 @@ date: "June 26 2023"
 excerpt: "Pada artikel ini kita akan melakukan instalasi Proxmox VE"
 cover_image: "/images/posts/Proxmox - Installation Process.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

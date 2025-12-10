@@ -6,7 +6,7 @@ date: "January 28 2024"
 excerpt: "Pada artikel kali ini kita akan membahas mengenai Laravel Eloquent Relationship Has One of Many"
 cover_image: "/images/posts/Laravel Eloquent - Relationship Has One of Many.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

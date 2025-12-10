@@ -6,7 +6,7 @@ date: "February 17 2024"
 excerpt: "Pada artikel kali ini kita akan mencoba membuat sebuah Virtual Machine dengan sistem operasi Linux dengan distro nya adalah Debian pada VMware Workstation Player"
 cover_image: "/images/posts/VMware Workstation Player - Membuat Virtual Machine.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

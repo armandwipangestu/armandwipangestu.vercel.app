@@ -27,9 +27,7 @@ const HomePage = () => {
               <h2 className="mb-8 mt-2 text-md md:text-lg font-medium text-accents-300 dark:text-white/80 lg:mt-3 lg:text-xl">
                 Saya Seorang -{" "}
                 <ReactTyped
-                  strings={[
-                    "Software Engineer",
-                  ]}
+                  strings={["Cloud Engineer", "Software Engineer"]}
                   typeSpeed={40}
                   loop
                   backSpeed={15}

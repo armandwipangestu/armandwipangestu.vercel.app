@@ -6,7 +6,7 @@ date: "January 4 2024"
 excerpt: "Setelah sebelumnya kita berhasil membuat sebuah form untuk create blog post kita, pada pembahasan kali ini kita akan mencoba untuk melengkapi nya dengan feature validasi pada form nya dan insert kedalam databasenya."
 cover_image: "/images/posts/Laravel 8 - Validation dan Insert Post.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

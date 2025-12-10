@@ -6,7 +6,7 @@ date: "December 26 2023"
 excerpt: "Pada pembahasan kali ini kita akan membahas sesuatu feature yang tidak kalah keren pada Laravel yaitu Seeder"
 cover_image: "/images/posts/Laravel 8 - Database Seeder.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

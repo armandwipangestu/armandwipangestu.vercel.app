@@ -6,7 +6,7 @@ date: "January 17 2023"
 excerpt: "Pada artikel ini kita akan mencoba basic configuration pada Router Mikrotik"
 cover_image: "/images/posts/Mikrotik - Basic Configuration.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

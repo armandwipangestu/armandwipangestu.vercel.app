@@ -6,7 +6,7 @@ date: "October 6 2023"
 excerpt: "Pada artikel kali ini, saya akan membuat series untuk membahas mengenai Sistem Basis Data"
 cover_image: "/images/posts/default.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

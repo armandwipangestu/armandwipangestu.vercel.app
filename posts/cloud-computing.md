@@ -6,7 +6,7 @@ date: "October 29 2023"
 excerpt: "Ini adalah testing heading"
 cover_image: "/images/posts/default.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

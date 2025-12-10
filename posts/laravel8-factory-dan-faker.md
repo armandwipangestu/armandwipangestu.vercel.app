@@ -6,7 +6,7 @@ date: "December 27 2023"
 excerpt: "Pada pembahasan kali ini kita akan membahas sesuatu yang tidak kalah menarik yaitu Factory dan Faker pada Laravel, feature tersebut akan sangat berguna jika kita sedang mendevelop sesuatu yang berhubungan dengan dummy data."
 cover_image: "/images/posts/Laravel 8 - Factory dan Faker.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

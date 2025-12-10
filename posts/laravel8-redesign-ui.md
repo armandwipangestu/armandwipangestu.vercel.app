@@ -6,7 +6,7 @@ date: "December 29 2023"
 excerpt: "Pada pembahasan kali ini kita akan istirahat terlebih dahulu untuk mempelajari feature-feature utama yang ada didalam Laravel. Pada pembahasan kali ini kita akan mencoba memperbaiki tampilan halaman web blog kita agar lebih fresh lagi dan lebih mudah untuk digunakan."
 cover_image: "/images/posts/Laravel 8 - Redesign UI.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

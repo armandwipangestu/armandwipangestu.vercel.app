@@ -6,7 +6,7 @@ date: "December 25 2023"
 excerpt: "Pada pembahasan kali ini kita akan membahas sesuatu yang sangat menarik yaitu mengenai keterhubungan antar tabel atau didalam Laravel itu disebut nya dengan `Eloquent Relationship` (bagaimana hubungan antar model). Sehingga nantinya pada studi kasus sistem blog kita akan menerapkan sebuah category pada setiap post di blog kita."
 cover_image: "/images/posts/Laravel 8 - Post Category dan Eloquent Relationship.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

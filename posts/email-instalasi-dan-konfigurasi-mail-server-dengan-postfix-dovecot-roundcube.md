@@ -6,7 +6,7 @@ date: "August 23 2023"
 excerpt: "Pada artikel ini saya akan melakukan instalasi dan konfigurasi untuk mail server menggunakan Postfix, Dovecot dan Roundcube"
 cover_image: "/images/posts/Email - Instalasi dan Konfigurasi Mail Server dengan Postfix Dovecot dan Roundcube.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

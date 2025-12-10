@@ -6,7 +6,7 @@ date: "January 22 2024"
 excerpt: "Pada artikel kali ini kita akan membahas mengenai Laravel Eloquent Relationship untuk tipe One to Many atau hasMany"
 cover_image: "/images/posts/Laravel Eloquent - Relationship One to Many.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

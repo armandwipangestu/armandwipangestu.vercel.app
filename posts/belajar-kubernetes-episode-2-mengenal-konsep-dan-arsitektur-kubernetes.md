@@ -6,7 +6,7 @@ date: "May 04 2025"
 excerpt: "Di episode ini kita akan mengenal konsep dan arsitektur yang ada pada Kubernetes Cluster, mulai dari Control Plane (Master Node) dan Data Plane (Worker Node)"
 cover_image: "/images/posts/Belajar Kubernetes - Episode 2 - MENGENAL KONSEP DAN ARSITEKTUR KUBERNETES.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

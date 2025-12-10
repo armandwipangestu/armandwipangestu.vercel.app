@@ -6,7 +6,7 @@ date: "March 21 2023"
 excerpt: "Pada artikel ini kita akan melakukan hosting program codeigniter di cPanel"
 cover_image: "/images/posts/Codeigniter - Hosting di cPanel.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

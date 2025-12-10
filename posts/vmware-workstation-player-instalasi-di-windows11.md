@@ -6,7 +6,7 @@ date: "February 8 2024"
 excerpt: "Pada artikel kali ini kita akan mencoba menginstall VMware Workstation Player pada sistem operasi Windows 11"
 cover_image: "/images/posts/VMware Workstation Player - Instalasi di Windows 11.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

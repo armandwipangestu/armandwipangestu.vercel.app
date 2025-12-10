@@ -6,7 +6,7 @@ date: "December 24 2023"
 excerpt: "Pada pembahasan kali ini kita akan membahas kembali mengenai model didalam Laravel, yang dimana akan kita perbaiki model `Post` kita yang sebelumnya dibuat secara manual, kali ini kita akan coba buat agar model nya dengan cara yang benar yaitu dengan merepresentasikan class model nya sebagai tabel didalam database. Hal tersebut nantinya kita juga harus membuat sebuah migrasi untuk tabel Post tersebut."
 cover_image: "/images/posts/Laravel 8 - Post Model dan Route Model Binding.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

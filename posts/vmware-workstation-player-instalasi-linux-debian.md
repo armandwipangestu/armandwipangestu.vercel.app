@@ -6,7 +6,7 @@ date: "February 17 2024"
 excerpt: "Pada artikel kali ini kita akan mencoba melakukan instalasi Linux Debian pada Virtual Machine yang sudah dibuat pada pembahasan sebelumnya."
 cover_image: "/images/posts/VMware Workstation Player - Instalasi Linux Debian.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

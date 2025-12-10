@@ -6,7 +6,7 @@ date: "October 10 2023"
 excerpt: "Pada artikel ini Saya akan membahas mengenai CSS seperti anatomi, penempatan dan lainnya"
 cover_image: "/images/posts/default.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

@@ -6,7 +6,7 @@ date: "December 21 2023"
 excerpt: "Bagaimana struktur folder, routes dan view pada aplikasi Laravel?"
 cover_image: "/images/posts/Laravel 8 - Struktur Folder, Routes dan View.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

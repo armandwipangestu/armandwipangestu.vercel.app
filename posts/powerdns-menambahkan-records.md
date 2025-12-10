@@ -6,7 +6,7 @@ date: "July 12 2023"
 excerpt: "Pada artikel ini saya akan menambahkan DNS Records pada DNS Server yang berjalan menggunakan PowerDNS dan backend nya menggunakan MySQL"
 cover_image: "/images/posts/PowerDNS - Menambahkan Record.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 

@@ -5,7 +5,7 @@ date: "Februrary 13 2023"
 excerpt: "Pada artikel ini kita akan melakukan configurasi phpmyadmin agar dapat diakses melalui ip address"
 cover_image: "/images/posts/default.png"
 author_name: "Arman Dwi Pangestu"
-author_title: "Web Developer"
+author_title: "Cloud & Software Engineer"
 author_image: "/images/posts/author/arman.png"
 ---
 
