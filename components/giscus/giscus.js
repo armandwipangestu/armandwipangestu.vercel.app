@@ -1,31 +1,38 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function GiscusLoader() {
-  const [theme, setTheme] = useState("light");
+export const dynamic = "force-dynamic";
+export const ssr = false;
 
-  // Detect theme from <html> class
+export default function GiscusLoader() {
+  const [theme, setTheme] = useState(null);
+  const [ready, setReady] = useState(false);
+
+  // Detect theme ASAP
   useEffect(() => {
     const html = document.documentElement;
-    const observer = new MutationObserver(() => {
+
+    const updateTheme = () => {
       const isDark = html.classList.contains("dark");
       setTheme(isDark ? "dark" : "light");
-    });
+    };
 
+    updateTheme();
+    setReady(true);
+
+    const observer = new MutationObserver(updateTheme);
     observer.observe(html, { attributes: true, attributeFilter: ["class"] });
-
-    // Initial theme
-    const isDark = html.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light");
 
     return () => observer.disconnect();
   }, []);
 
-  // Inject + update Giscus theme
+  // Always run hook — only execute logic when ready + theme available
   useEffect(() => {
-    const existingScript = document.getElementById("giscus-script");
+    if (!ready || !theme) return; // ← Hook tetap dipanggil, logic-nya yang stop
 
-    if (!existingScript) {
+    const iframe = document.querySelector("iframe.giscus-frame");
+
+    if (!iframe) {
       const script = document.createElement("script");
       script.id = "giscus-script";
       script.src = "https://giscus.app/client.js";
@@ -42,20 +49,13 @@ export default function GiscusLoader() {
 
       document.getElementById("giscus-thread").appendChild(script);
     } else {
-      // Update theme dynamically
-      const iframe = document.querySelector("iframe.giscus-frame");
-      if (iframe) {
-        iframe.contentWindow.postMessage(
-          {
-            giscus: {
-              setConfig: { theme },
-            },
-          },
-          "https://giscus.app"
-        );
-      }
+      iframe.contentWindow.postMessage(
+        { giscus: { setConfig: { theme } } },
+        "https://giscus.app"
+      );
     }
-  }, [theme]);
+  }, [ready, theme]);
 
+  // Render container dulu saja
   return <div id="giscus-thread" className="mt-10"></div>;
 }

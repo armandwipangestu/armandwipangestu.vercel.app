@@ -8,7 +8,7 @@ import Link from "next/link";
 import { sortPostsByDate, formatDate } from "@/utilities/sortPostsByDate";
 import Metadata from "@/components/utilities/metadata";
 import React, { useState, useEffect } from "react";
-import ReactTyped from "react-typed";
+import { ReactTyped } from "react-typed";
 import { GoCopy, GoCheck } from "react-icons/go";
 import Image from "next/image";
 
