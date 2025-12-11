@@ -1,26 +1,11 @@
 import Metadata from "@/components/utilities/metadata";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { portos } from "@/types/portfolio";
+import Image from "next/image";
 
 const PortofolioPage = () => {
-  const [portos, setPortos] = useState([]);
   const [isHoveredIndex, setIsHoveredIndex] = useState(null);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/portofolio`
-      );
-      const data = await response.json();
-      setPortos(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <>
@@ -85,7 +70,7 @@ const PortofolioPage = () => {
                         inset: "0px",
                       }}
                     >
-                      <img
+                      <Image
                         alt=""
                         height="360"
                         width="640"

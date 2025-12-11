@@ -1,0 +1,53 @@
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# Build outputs
+.next
+out
+dist
+
+# Vercel / Netlify
+.vercel
+.netlify
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Editor
+.vscode
+.idea
+
+# OS Trash
+.DS_Store
+Thumbs.db
+
+# Tests
+coverage
+*.test.js
+*.spec.js
+__tests__
+
+# Docker files
+Dockerfile
+docker-compose*
+.dockerignore
+
+# Cache
+.cache
+.eslintcache
+
+# Temporary dirs
+tmp
+temp
+*.swp
+
+# Optional: ignore unused local-only folders
+drafts
+backup
+public/backup
+content-old

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { marked } from "marked";
 import hljs from "highlight.js";
 // import "highlight.js/styles/github-dark.css";
-import ReactTyped from "react-typed";
+import { ReactTyped } from "react-typed";
 import { GoCopy, GoCheck } from "react-icons/go";
 import Link from "next/link";
 import Metadata from "@/components/utilities/metadata";

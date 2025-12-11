@@ -10,9 +10,11 @@ import { useRef, useEffect, useState } from "react";
 import { GoCopy, GoCheck } from "react-icons/go";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
-import useReadingTime from "use-reading-time";
+import readingTime from "reading-time";
+import { useMemo } from "react";
 import Metadata from "@/components/utilities/metadata";
 import { sortPostsByDate, formatDate } from "@/utilities/sortPostsByDate";
+import GiscusLoader from "@/components/giscus/giscus";
 
 const DynamicSinglePagePost = ({
   frontmatter: {
@@ -203,8 +205,8 @@ const DynamicSinglePagePost = ({
     hljs.highlightAll();
   }, []);
 
-  const post = useRef();
-  const { readingTime, wordsCount } = useReadingTime(post);
+  const stats = useMemo(() => readingTime(content), [content]);
+  const minutes = Math.ceil(stats.minutes);
 
   return (
     <>
@@ -288,11 +290,14 @@ const DynamicSinglePagePost = ({
                         <div className="flex">
                           <div className="mr-4 flex-shrink-0">
                             <div className="LazyLoad is-visible">
-                              <img
+                              <Image
+                                alt="author"
                                 className="rounded-full w-12 h-12 transition duration-300 ease-in-out hover:scale-110"
                                 src={author_image}
                                 loading="lazy"
                                 style={{ opacity: 1 }}
+                                width={512}
+                                height={512}
                               />
                             </div>
                           </div>
@@ -303,7 +308,7 @@ const DynamicSinglePagePost = ({
                             <p className="mt-1 text-slate-400">
                               <span>{formatDate(date)}</span>
                               <span className="mx-1">•</span>
-                              <span>{readingTime} menit baca</span>
+                              <span>{minutes} menit baca</span>
                             </p>
                           </div>
                         </div>
@@ -328,6 +333,7 @@ const DynamicSinglePagePost = ({
                           height="720"
                           width="1280"
                           src={cover_image}
+                          alt="cover_image"
                         />
                       </div>
                     </div>
@@ -337,10 +343,8 @@ const DynamicSinglePagePost = ({
             </div>
             <div className="w-full rounded-lg mx-auto mb-5 md:max-w-3xl lg:max-w-5xl transition duration-300 ease-in-out prose prose-pre:mt-0 prose-pre:rounded-t-none prose-pre:rounded-b-lg prose-code:text-[#696a73] prose-code:dark:text-[#8B99AE] prose-code:font-bold prose-code:bg-[#E6ECF3] prose-code:dark:bg-[#0f1419] prose-code:py-1 prose-code:px-2 prose-code:rounded-md prose-table:border-collapse prose-blockquote:border-amber-500 prose-blockquote:bg-amber-300 prose-blockquote:bg-opacity-10 prose-blockquote:text-slate-500 prose-blockquote:dark:text-slate-400 prose-blockquote:not-italic prose-blockquote:px-5 prose-blockquote:py-2 prose-blockquote:rounded prose-headings:text-dark prose-headings:dark:text-white prose-strong:text-dark prose-strong:dark:text-white prose-p:text-accents-3 prose-p:dark:text-slate-400 prose-hr:border-slate-400 prose-li:text-accents-3 prose-li:dark:text-slate-400 prose-img:rounded prose-img:w-full prose-pre:bg-[#E6ECF3] prose-pre:dark:bg-[#0f1419]">
               <Toc content={content} />
-              <div
-                dangerouslySetInnerHTML={{ __html: marked(content) }}
-                ref={post}
-              ></div>
+              <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+              <GiscusLoader />
             </div>
           </div>
         </div>
