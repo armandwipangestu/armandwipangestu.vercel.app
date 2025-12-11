@@ -62,7 +62,7 @@ jobs:
     release-and-tagging-version:
         name: Release and Tagging Version
         runs-on: ubuntu-latest
-        needs: build-docker-sha
+        # needs: build-docker-sha
         permissions:
             contents: write
             issues: write
