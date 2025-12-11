@@ -58,6 +58,7 @@ import {
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiNodejs, DiNginx } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa6";
+import Image from "next/image";
 
 const SkillsPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -680,7 +681,12 @@ const SkillsPage = () => {
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
-                <img src="./skills/powerdns.svg" alt="PowerDNS" />
+                <Image
+                  src="./skills/powerdns.svg"
+                  alt="PowerDNS"
+                  width={512}
+                  height={512}
+                />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   PowerDNS
                 </span>
@@ -716,7 +722,12 @@ const SkillsPage = () => {
                 target="_blank"
                 className="group mx-4 max-w-[110px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
-                <img src="./skills/ruijie.png" alt="Rujie" />
+                <Image
+                  src="./skills/ruijie.png"
+                  alt="Rujie"
+                  width={512}
+                  height={512}
+                />
                 <span className="icon-skill absolute top-[5.5rem] -right-[2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   Ruijie/ReyeeOS
                 </span>

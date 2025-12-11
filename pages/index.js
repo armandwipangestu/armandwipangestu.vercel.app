@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Metadata from "@/components/utilities/metadata";
-import ReactTyped from "react-typed";
+import { ReactTyped } from "react-typed";
 
 const HomePage = () => {
   return (

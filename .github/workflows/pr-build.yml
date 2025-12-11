@@ -1,0 +1,58 @@
+name: PR Build & Test
+
+on:
+    pull_request:
+        branches:
+            - staging
+            - main
+        types:
+            - opened
+            - synchronize
+            - reopened
+
+jobs:
+    build-and-test:
+        name: Build and Test
+        runs-on: ubuntu-latest
+        environment: ${{ github.base_ref }}
+        env:
+            NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' }}
+            NEXT_PUBLIC_PUBLIC_ASSETS: ${{ vars.NEXT_PUBLIC_PUBLIC_ASSETS || 'http://localhost:3000/images/posts/assets' }}
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run lint
+              run: npm run lint
+
+            # - name: Run tests
+            #   run: npm test
+
+            - name: Build app (for validation)
+              run: npm run build
+
+            - name: Install semantic-release globally
+              run: |
+                  npm install -g \
+                    semantic-release \
+                    @semantic-release/changelog \
+                    @semantic-release/git \
+                    @semantic-release/exec \
+                    @semantic-release/github \
+                    conventional-changelog-conventionalcommits
+
+            - name: Test semantic-release (dry-run)
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
+                  DEBUG: "semantic-release:*"
+              run: npx semantic-release --dry-run --branches=${{ github.head_ref }}

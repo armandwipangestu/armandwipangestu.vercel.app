@@ -8,47 +8,11 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-// const menus = [
-//   { title: "Beranda", target: "/" },
-//   { title: "Tentang Saya", target: "/tentang-saya" },
-//   { title: "Portofolio", target: "/portofolio" },
-//   { title: "Skills", target: "/skills" },
-//   { title: "Pendidikan", target: "/pendidikan" },
-//   { title: "Pengalaman", target: "/pengalaman" },
-//   { title: "Blog", target: "/blog" },
-// ];
-
-const tags = [
-  { title: "Programming", target: "/blog/tag/programming" },
-  { title: "Cloud", target: "/blog/tag/cloud" },
-  { title: "DevOps", target: "/blog/tag/devops" },
-  { title: "SysAdmin", target: "/blog/tag/sysadmin" },
-  { title: "Networking", target: "/blog/tag/networking" },
-  { title: "Linux", target: "/blog/tag/linux" },
-  { title: "Git", target: "/blog/tag/git" },
-  { title: "Setup", target: "/blog/tag/setup" },
-];
+import { menus } from "@/types/menu";
+import { tags } from "@/types/tag";
 
 const Footer = () => {
-  const [menus, setMenus] = useState([]);
   const pathName = usePathname();
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`
-      );
-      const data = await response.json();
-      setMenus(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  });
 
   return (
     <footer className="relative w-full border-t border-dark/20 dark:border-white/20 pt-12 transition duration-300 ease-in-out dark:bg-dark dark:opacity-90 lg:pt-20">

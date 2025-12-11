@@ -8,7 +8,6 @@
 - [Menjalankan di Localhost](#menjalankan-di-localhost)
 - [Struktur Folder dan File](#struktur-folder-dan-file)
 - [List Dynamic Routes](#list-dynamic-routes)
-- [List NextJS API](#list-nextjs-api)
 
 ## Menjalankan di Localhost
 
@@ -90,10 +89,3 @@ utilities
 | ----------------------- | --------------------- |
 | `/blog/tag/[tag].js`    | DynamicTagPage        |
 | `/blog/posts/[slug].js` | DynamicSinglePagePost |
-
-## List NextJS API
-
-| Endpoint          | Method |
-| ----------------- | ------ |
-| `/api/menu`       | GET    |
-| `/api/portofolio` | GET    |

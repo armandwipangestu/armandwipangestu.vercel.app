@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { formatDate } from "@/utilities/sortPostsByDate";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const ArticleLayout = ({ posts, tag }) => {
   const [mainCard, setMainCard] = useState(posts[0]);
@@ -54,7 +55,7 @@ const ArticleLayout = ({ posts, tag }) => {
                               inset: "0px",
                             }}
                           >
-                            <img
+                            <Image
                               alt=""
                               height="360"
                               width="640"
@@ -214,7 +215,7 @@ const ArticleLayout = ({ posts, tag }) => {
                       }}
                     >
                       <Link href={`/blog/posts/${mainCard?.slug}`}>
-                        <img
+                        <Image
                           alt="Progressive Web Apps"
                           className={`h-full w-full object-cover object-center lg:rounded-md transition duration-300 ease-in-out hover:scale-110 ${
                             isHovered ? "scale-110" : ""
@@ -260,7 +261,7 @@ const ArticleLayout = ({ posts, tag }) => {
                                 inset: "0px",
                               }}
                             >
-                              <img
+                              <Image
                                 alt=""
                                 height="360"
                                 width="640"
