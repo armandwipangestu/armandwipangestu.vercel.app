@@ -13,6 +13,7 @@ import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 import useReadingTime from "use-reading-time";
 import Metadata from "@/components/utilities/metadata";
 import { sortPostsByDate, formatDate } from "@/utilities/sortPostsByDate";
+import GiscusLoader from "@/components/giscus/giscus";
 
 const DynamicSinglePagePost = ({
   frontmatter: {
@@ -341,6 +342,7 @@ const DynamicSinglePagePost = ({
                 dangerouslySetInnerHTML={{ __html: marked(content) }}
                 ref={post}
               ></div>
+              <GiscusLoader />
             </div>
           </div>
         </div>
