@@ -289,11 +289,14 @@ const DynamicSinglePagePost = ({
                         <div className="flex">
                           <div className="mr-4 flex-shrink-0">
                             <div className="LazyLoad is-visible">
-                              <img
+                              <Image
+                                alt="author"
                                 className="rounded-full w-12 h-12 transition duration-300 ease-in-out hover:scale-110"
                                 src={author_image}
                                 loading="lazy"
                                 style={{ opacity: 1 }}
+                                width={512}
+                                height={512}
                               />
                             </div>
                           </div>
@@ -329,6 +332,7 @@ const DynamicSinglePagePost = ({
                           height="720"
                           width="1280"
                           src={cover_image}
+                          alt="cover_image"
                         />
                       </div>
                     </div>

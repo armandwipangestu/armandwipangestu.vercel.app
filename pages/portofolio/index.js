@@ -2,6 +2,7 @@ import Metadata from "@/components/utilities/metadata";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { portos } from "@/types/portfolio";
+import Image from "next/image";
 
 const PortofolioPage = () => {
   const [isHoveredIndex, setIsHoveredIndex] = useState(null);
@@ -69,7 +70,7 @@ const PortofolioPage = () => {
                         inset: "0px",
                       }}
                     >
-                      <img
+                      <Image
                         alt=""
                         height="360"
                         width="640"

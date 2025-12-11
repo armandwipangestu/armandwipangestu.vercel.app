@@ -10,6 +10,7 @@ import Metadata from "@/components/utilities/metadata";
 import React, { useState, useEffect } from "react";
 import ReactTyped from "react-typed";
 import { GoCopy, GoCheck } from "react-icons/go";
+import Image from "next/image";
 
 const markdown = `
   \`\`\`jsx
@@ -202,7 +203,7 @@ const BlogPage = ({ posts }) => {
                                 inset: "0px",
                               }}
                             >
-                              <img
+                              <Image
                                 alt=""
                                 height="360"
                                 width="640"
