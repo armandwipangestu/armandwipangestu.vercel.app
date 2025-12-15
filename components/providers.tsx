@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "@/hooks/use-theme";
+import { QueryProvider } from "@/components/providers/query-provider";
 
 interface ProvidersProps {
     children: React.ReactNode;
@@ -8,8 +9,10 @@ interface ProvidersProps {
 
 export function Providers({ children }: ProvidersProps) {
     return (
-        <ThemeProvider defaultTheme="system" storageKey="app-theme">
-            {children}
-        </ThemeProvider>
+        <QueryProvider>
+            <ThemeProvider defaultTheme="system" storageKey="app-theme">
+                {children}
+            </ThemeProvider>
+        </QueryProvider>
     );
 }

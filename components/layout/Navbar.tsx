@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, X, Moon, Sun, Languages, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { VersionBadge } from "../ui/version-badge";
 import { useTheme } from "@/hooks/use-theme";
 import { useDictionary, useLanguageSwitcher } from "@/hooks/index";
 
@@ -97,12 +98,19 @@ export function Navbar() {
             }`}
         >
             <nav className="section-container flex items-center justify-between h-16">
-                <Link
-                    href="/"
-                    className="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity"
-                >
-                    devnull
-                </Link>
+                {/* Logo + Version Badge */}
+                <div className="flex items-center gap-3">
+                    <Link
+                        href="/"
+                        className="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity"
+                    >
+                        devnull
+                    </Link>
+                    {/* Desktop Version Badge - hidden on mobile */}
+                    <div className="hidden sm:block">
+                        <VersionBadge />
+                    </div>
+                </div>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-8">
@@ -150,6 +158,10 @@ export function Navbar() {
 
                 {/* Mobile Menu Button */}
                 <div className="flex md:hidden items-center gap-2">
+                    {/* Mobile Version Badge */}
+                    <div className="sm:hidden">
+                        <VersionBadge />
+                    </div>
                     <Button
                         variant="ghost"
                         size="icon"

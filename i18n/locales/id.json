@@ -19,5 +19,12 @@
         "projects": "Proyek",
         "contact": "Kontak",
         "blog": "Blog"
+    },
+    "version": {
+        "released": "Dirilis",
+        "preRelease": "Pra-rilis",
+        "viewReleaseNotes": "Lihat Catatan Rilis",
+        "viewChangelog": "Lihat Changelog",
+        "error": "Error"
     }
 }

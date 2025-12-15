@@ -18,5 +18,12 @@
         "experience": "Experience",
         "projects": "Projects",
         "blog": "Blog"
+    },
+    "version": {
+        "released": "Released",
+        "preRelease": "Pre-release",
+        "viewReleaseNotes": "View Release Notes",
+        "viewChangelog": "View Changelog",
+        "error": "Error"
     }
 }
