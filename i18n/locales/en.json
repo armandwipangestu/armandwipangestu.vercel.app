@@ -26,7 +26,8 @@
         "viewChangelog": "View Changelog",
         "error": "Error",
         "stars": "Stars",
-        "forks": "Forks"
+        "forks": "Forks",
+        "sponsor": "Sponsor this project"
     },
     "hero": {
         "greeting": "Hello, I'm",

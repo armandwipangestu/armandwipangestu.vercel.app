@@ -10,6 +10,7 @@ import {
     AlertCircle,
     Star,
     GitFork,
+    Heart,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLatestRelease, useRepoInfo } from "@/hooks/use-github";
@@ -18,6 +19,7 @@ import { useDictionary, useLanguageSwitcher } from "@/hooks";
 const GITHUB_OWNER = "armandwipangestu";
 const GITHUB_REPO = "armandwipangestu.vercel.app";
 const CHANGELOG_URL = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/blob/main/CHANGELOG.md`;
+const SPONSOR_URL = "https://saweria.co/armandwipangestu";
 
 // Helper function to format numbers (e.g., 1234 -> 1.2k)
 function formatNumber(num: number): string {
@@ -188,6 +190,23 @@ export function VersionBadge() {
                                 </div>
                             </div>
                         )}
+
+                        {/* Sponsor Button */}
+                        <div className="mb-2 pb-2 border-b border-border">
+                            <Link
+                                href={SPONSOR_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsOpen(false)}
+                                className="flex w-full items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors bg-pink-500/10 hover:bg-pink-500/20 text-pink-600 dark:text-pink-400"
+                            >
+                                <Heart className="h-4 w-4 fill-pink-500 text-pink-500" />
+                                <span>
+                                    {dict?.version?.sponsor ||
+                                        "Sponsor this project"}
+                                </span>
+                            </Link>
+                        </div>
 
                         <div className="space-y-1">
                             <Link

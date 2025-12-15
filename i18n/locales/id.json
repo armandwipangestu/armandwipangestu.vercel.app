@@ -27,7 +27,8 @@
         "viewChangelog": "Lihat Changelog",
         "error": "Error",
         "stars": "Stars",
-        "forks": "Forks"
+        "forks": "Forks",
+        "sponsor": "Dukung proyek ini"
     },
     "hero": {
         "greeting": "Halo, Saya",
