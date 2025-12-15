@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import { locales, type Locale } from "@/i18n/config";
+import { locales } from "@/i18n/config";
+import { Providers } from "@/components/providers";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -18,30 +19,55 @@ export const metadata: Metadata = {
     description: "Portfolio and Blog",
 };
 
-// Tell Next.js to pre-generate pages for all locales at build time
 export async function generateStaticParams() {
     return locales.map((lang) => {
         return { lang };
     });
 }
 
-// Layout component receives `params` with the current locale
 export default async function RootLayout({
     children,
     params,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-    params: Promise<{ lang: Locale }>;
-}>) {
+    params: Promise<{ lang: string }>;
+}) {
     const { lang } = await params;
 
     return (
-        <html lang={lang}>
-            {/* Dynamic lang attribute! */}
+        <html lang={lang} suppressHydrationWarning>
+            <head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function() {
+                                try {
+                                    var storageKey = 'app-theme';
+                                    var theme = localStorage.getItem(storageKey);
+                                    var root = document.documentElement;
+                                    
+                                    if (theme === 'dark') {
+                                        root.classList.add('dark');
+                                    } else if (theme === 'light') {
+                                        root.classList.add('light');
+                                    } else {
+                                        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                                            root.classList.add('dark');
+                                        } else {
+                                            root.classList.add('light');
+                                        }
+                                    }
+                                } catch (e) {}
+                            })()
+                        `,
+                    }}
+                />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                suppressHydrationWarning
             >
-                {children}
+                <Providers>{children}</Providers>
             </body>
         </html>
     );

@@ -10,5 +10,14 @@
         "blog": "Blog",
         "about": "Tentang",
         "contact": "Kontak"
+    },
+    "navigation": {
+        "hero": "Beranda",
+        "about": "Tentang",
+        "skills": "Keahlian",
+        "experience": "Pengalaman",
+        "projects": "Proyek",
+        "contact": "Kontak",
+        "blog": "Blog"
     }
 }

@@ -10,5 +10,13 @@
         "blog": "Blog",
         "about": "About",
         "contact": "Contact"
+    },
+    "navigation": {
+        "hero": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects",
+        "blog": "Blog"
     }
 }

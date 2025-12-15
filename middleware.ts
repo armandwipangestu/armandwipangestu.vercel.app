@@ -36,7 +36,9 @@ export function middleware(request: NextRequest) {
     );
     // If already has locale, do nothing
     if (pathnameHasLocale) {
-        return;
+        const response = NextResponse.next();
+        response.headers.set("x-pathname", pathname);
+        return response;
     }
 
     // Redirect to locale-prefixed path
