@@ -24,7 +24,9 @@
         "preRelease": "Pre-release",
         "viewReleaseNotes": "View Release Notes",
         "viewChangelog": "View Changelog",
-        "error": "Error"
+        "error": "Error",
+        "stars": "Stars",
+        "forks": "Forks"
     },
     "hero": {
         "greeting": "Hello, I'm",

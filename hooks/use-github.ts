@@ -4,7 +4,9 @@ import { useQuery } from "@tanstack/react-query";
 import {
     fetchLatestRelease,
     fetchReleases,
+    fetchRepoInfo,
     type ReleaseInfo,
+    type RepoInfo,
 } from "@/lib/api/github";
 
 // Query keys for caching
@@ -14,6 +16,8 @@ export const githubKeys = {
         [...githubKeys.all, "releases", owner, repo] as const,
     latestRelease: (owner: string, repo: string) =>
         [...githubKeys.all, "latest-release", owner, repo] as const,
+    repoInfo: (owner: string, repo: string) =>
+        [...githubKeys.all, "repo-info", owner, repo] as const,
 };
 
 interface UseLatestReleaseOptions {
@@ -58,6 +62,29 @@ export function useReleases({
     return useQuery<ReleaseInfo[], Error>({
         queryKey: githubKeys.releases(owner, repo),
         queryFn: () => fetchReleases(owner, repo, perPage),
+        enabled,
+        staleTime: 60 * 60 * 1000, // 1 hour
+        gcTime: 24 * 60 * 60 * 1000, // 24 hours
+    });
+}
+
+interface UseRepoInfoOptions {
+    owner: string;
+    repo: string;
+    enabled?: boolean;
+}
+
+/**
+ * Hook to fetch repository info from GitHub
+ */
+export function useRepoInfo({
+    owner,
+    repo,
+    enabled = true,
+}: UseRepoInfoOptions) {
+    return useQuery<RepoInfo, Error>({
+        queryKey: githubKeys.repoInfo(owner, repo),
+        queryFn: () => fetchRepoInfo(owner, repo),
         enabled,
         staleTime: 60 * 60 * 1000, // 1 hour
         gcTime: 24 * 60 * 60 * 1000, // 24 hours

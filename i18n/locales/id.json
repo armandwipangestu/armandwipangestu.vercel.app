@@ -25,7 +25,9 @@
         "preRelease": "Pra-rilis",
         "viewReleaseNotes": "Lihat Catatan Rilis",
         "viewChangelog": "Lihat Changelog",
-        "error": "Error"
+        "error": "Error",
+        "stars": "Stars",
+        "forks": "Forks"
     },
     "hero": {
         "greeting": "Halo, Saya",

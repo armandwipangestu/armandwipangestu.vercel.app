@@ -8,14 +8,29 @@ import {
     FileText,
     Tag,
     AlertCircle,
+    Star,
+    GitFork,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLatestRelease } from "@/hooks/use-github";
+import { useLatestRelease, useRepoInfo } from "@/hooks/use-github";
 import { useDictionary, useLanguageSwitcher } from "@/hooks";
 
 const GITHUB_OWNER = "armandwipangestu";
 const GITHUB_REPO = "armandwipangestu.vercel.app";
 const CHANGELOG_URL = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/blob/main/CHANGELOG.md`;
+
+// Helper function to format numbers (e.g., 1234 -> 1.2k)
+function formatNumber(num: number): string {
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "m";
+    }
+
+    if (num >= 1000) {
+        return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+    }
+
+    return num.toString();
+}
 
 export function VersionBadge() {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,13 +43,20 @@ export function VersionBadge() {
     // Use TanStack Query hook
     const {
         data: release,
-        isLoading,
-        isError,
-        error,
+        isLoading: isLoadingRelease,
+        isError: isErrorRelease,
+        error: errorRelease,
     } = useLatestRelease({
         owner: GITHUB_OWNER,
         repo: GITHUB_REPO,
     });
+
+    const { data: repoInfo, isLoading: isLoadingRepo } = useRepoInfo({
+        owner: GITHUB_OWNER,
+        repo: GITHUB_REPO,
+    });
+
+    const isLoading = isLoadingRelease;
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -68,11 +90,11 @@ export function VersionBadge() {
     }
 
     // Error state
-    if (isError) {
+    if (isErrorRelease) {
         return (
             <div
                 className="inline-flex items-center gap-1 rounded-full bg-desctructive/10 px-2 py-0.5 text-xs text-destructive"
-                title={error?.message}
+                title={errorRelease?.message}
             >
                 <AlertCircle className="h-3 w-3" />
                 <span>Error</span>
@@ -109,6 +131,7 @@ export function VersionBadge() {
                         transition={{ duration: 0.15 }}
                         className="absolute left-0 top-full z-50 mt-2 w-56 origin-top-left rounded-lg border border-border bg-popover p-2 shadow-lg"
                     >
+                        {/* Release Info Section */}
                         <div className="mb-2 border-b border-border">
                             <p className="text-sm font-medium text-foreground">
                                 {release.name}
@@ -123,6 +146,44 @@ export function VersionBadge() {
                                 </span>
                             )}
                         </div>
+
+                        {/* Stars & Forks Section */}
+                        {repoInfo && (
+                            <div className="mb-2 pb-2 border-b border-border">
+                                <div className="flex items-center gap-2">
+                                    <Link
+                                        href={`https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/stargazers`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex-1 flex items-center justify-center gap-1.5 rounded-md px-3 py-2 text-sm transition-colors bg-yellow-500/10 hover:bg-yellow-500/20 group"
+                                    >
+                                        <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                                        <span className="font-medium text-yellow-600 dark:text-yellow-400">
+                                            {formatNumber(repoInfo.stars)}
+                                        </span>
+                                        <span className="text-xs text-yellow-600/70 dark:text-yellow-400/70">
+                                            {dict?.version?.stars || "Stars"}
+                                        </span>
+                                    </Link>
+                                    <Link
+                                        href={`https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/fork`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setIsOpen(false)}
+                                        className="flex-1 flex items-center justify-center gap-1.5 rounded-md px-3 py-2 text-sm transition-colors bg-blue-500/10 hover:bg-blue-500/20 group"
+                                    >
+                                        <GitFork className="h-4 w-4 text-blue-500" />
+                                        <span className="font-medium text-blue-600 dark:text-blue-400">
+                                            {formatNumber(repoInfo.forks)}
+                                        </span>
+                                        <span className="text-xs text-blue-600/70 dark:text-blue-400/70">
+                                            {dict?.version?.forks || "Forks"}
+                                        </span>
+                                    </Link>
+                                </div>
+                            </div>
+                        )}
 
                         <div className="space-y-1">
                             <Link
