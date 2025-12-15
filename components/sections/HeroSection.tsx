@@ -93,7 +93,7 @@ export function HeroSection() {
                             {/* Image container */}
                             <div className="relative w-full h-full rounded-full overflow-hidden">
                                 <Image
-                                    src="/me.png"
+                                    src="/me6.jpg"
                                     alt={dict.hero.name}
                                     fill
                                     sizes="(max-width: 768px) 256px, 320px"
