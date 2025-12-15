@@ -25,5 +25,15 @@
         "viewReleaseNotes": "View Release Notes",
         "viewChangelog": "View Changelog",
         "error": "Error"
+    },
+    "hero": {
+        "greeting": "Hello, I'm",
+        "name": "Arman Dwi Pangestu",
+        "title": "Cloud & Software Engineer",
+        "description": "with ~4 years of experience in computer networking, cloud computing, DevOps, software development, big data, and site reliability engineering.",
+        "cta": "View Projects",
+        "resume": "Download CV",
+        "status": "Status",
+        "statusText": "Open to work"
     }
 }

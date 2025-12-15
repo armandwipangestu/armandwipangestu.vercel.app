@@ -26,5 +26,15 @@
         "viewReleaseNotes": "Lihat Catatan Rilis",
         "viewChangelog": "Lihat Changelog",
         "error": "Error"
+    },
+    "hero": {
+        "greeting": "Halo, Saya",
+        "name": "Arman Dwi Pangestu",
+        "title": "Cloud & Software Engineer",
+        "description": "dengan pengalaman ~4 tahun di bidang jaringan komputer, cloud computing, DevOps, pengembangan perangkat lunak, big data, dan site reliability engineering.",
+        "cta": "Lihat Proyek",
+        "resume": "Unduh CV",
+        "status": "Status",
+        "statusText": "Terbuka untuk bekerja"
     }
 }
