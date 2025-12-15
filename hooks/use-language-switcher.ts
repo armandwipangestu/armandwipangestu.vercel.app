@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "@/hooks/use-locale";
 import { locales, type Locale } from "@/i18n/config";
+import { useTransition } from "react";
 
 /**
  * Hook to handle language switching
@@ -11,16 +12,20 @@ export function useLanguageSwitcher() {
     const router = useRouter();
     const pathname = usePathname();
     const currentLocale = useLocale();
+    const [isPending, startTransition] = useTransition();
 
     /**
-     * Switch to a specifc locale
+     * Switch to a specific locale
      */
     const switchLocale = (newLocale: Locale) => {
-        // Replace current locale in pathname with new locale
         const segments = pathname.split("/");
         segments[1] = newLocale;
         const newPath = segments.join("/");
-        router.push(newPath);
+
+        // Use startTransition to prevent flickering
+        startTransition(() => {
+            router.push(newPath, { scroll: false });
+        });
     };
 
     /**
@@ -48,5 +53,6 @@ export function useLanguageSwitcher() {
         switchLocale,
         toggleLocale,
         getNextLocale,
+        isPending, // Can be used to show loading state
     };
 }
