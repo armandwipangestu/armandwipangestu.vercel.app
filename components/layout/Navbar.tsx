@@ -9,25 +9,54 @@ import { VersionBadge } from "../ui/version-badge";
 import { useTheme } from "@/hooks/use-theme";
 import { useDictionary, useLanguageSwitcher } from "@/hooks/index";
 
-// Theme cycle order: light -> dark -> system -> light, ...
-const themeOrder = ["light", "dark", "system"] as const;
+type Theme = "light" | "dark" | "system";
 
-// ThemeIcon OUTSIDE of Navbar component
-function ThemeIcon({ theme }: { theme: string }) {
-    switch (theme) {
-        case "light":
-            return <Sun className="h-4 w-4" />;
-        case "dark":
-            return <Moon className="h-4 w-4" />;
-        case "system":
-            return <Monitor className="h-4 w-4" />;
-        default:
-            return <Sun className="h-4 w-4" />;
-    }
+// ThemeToggle component with grouped icons
+function ThemeToggle() {
+    const { theme, setTheme } = useTheme();
+
+    const themes: { value: Theme; icon: React.ReactNode; label: string }[] = [
+        { value: "light", icon: <Sun className="h-4 w-4" />, label: "Light" },
+        { value: "dark", icon: <Moon className="h-4 w-4" />, label: "Dark" },
+        {
+            value: "system",
+            icon: <Monitor className="h-4 w-4" />,
+            label: "System",
+        },
+    ];
+
+    return (
+        <div className="flex items-center rounded-full border border-border bg-muted/50 p-1">
+            {themes.map((t) => (
+                <button
+                    key={t.value}
+                    onClick={() => setTheme(t.value)}
+                    className={`relative rounded-full p-1.5 transition-colors ${
+                        theme === t.value
+                            ? "text-foreground"
+                            : "text-muted-foreground hover:text-foreground"
+                    }`}
+                    title={t.label}
+                >
+                    {theme === t.value && (
+                        <motion.div
+                            layoutId="theme-indicator"
+                            className="absolute inset-0 rounded-full bg-background shadow-sm"
+                            transition={{
+                                type: "spring",
+                                duration: 0.3,
+                                bounce: 0.2,
+                            }}
+                        />
+                    )}
+                    <span className="relative z-10">{t.icon}</span>
+                </button>
+            ))}
+        </div>
+    );
 }
 
 export function Navbar() {
-    const { theme, setTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -55,13 +84,6 @@ export function Navbar() {
               },
           ]
         : [];
-
-    // Cycle through: light -> dark -> system -> light
-    const toggleTheme = () => {
-        const currentIndex = themeOrder.indexOf(theme);
-        const nextIndex = (currentIndex + 1) % themeOrder.length;
-        setTheme(themeOrder[nextIndex]);
-    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -138,14 +160,7 @@ export function Navbar() {
                             {getNextLocale()}
                         </span>
                     </Button>
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={toggleTheme}
-                        title={`Current: ${theme}`}
-                    >
-                        <ThemeIcon theme={theme} />
-                    </Button>
+                    <ThemeToggle />
                     <Button asChild size="sm">
                         <Link
                             href={`/${currentLocale}/blog`}
@@ -162,14 +177,7 @@ export function Navbar() {
                     <div className="sm:hidden">
                         <VersionBadge />
                     </div>
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={toggleTheme}
-                        title={`Current: ${theme}`}
-                    >
-                        <ThemeIcon theme={theme} />
-                    </Button>
+                    <ThemeToggle />
                     <Button
                         variant="ghost"
                         size="icon"
