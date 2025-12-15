@@ -1,0 +1,14 @@
+{
+    "home": {
+        "title": "Selamat Datang di Portofolio Saya",
+        "description": "Saya seorang pengembang yang bersemangat membangun aplikasi web.",
+        "getStarted": "Mulai",
+        "learnMore": "Pelajari Lebih Lanjut"
+    },
+    "common": {
+        "home": "Beranda",
+        "blog": "Blog",
+        "about": "Tentang",
+        "contact": "Kontak"
+    }
+}

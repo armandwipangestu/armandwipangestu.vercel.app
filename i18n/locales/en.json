@@ -1,0 +1,14 @@
+{
+    "home": {
+        "title": "Welcome to my Portfolio",
+        "description": "I'm a developer passionate about building web applications.",
+        "getStarted": "Get Started",
+        "learnMore": "Learn More"
+    },
+    "common": {
+        "home": "Home",
+        "blog": "Blog",
+        "about": "About",
+        "contact": "Contact"
+    }
+}
