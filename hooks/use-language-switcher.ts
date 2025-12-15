@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "@/hooks/use-locale";
 import { locales, type Locale } from "@/i18n/config";
-import { useTransition } from "react";
+import { useTransition, useCallback } from "react";
 
 /**
  * Hook to handle language switching
@@ -17,35 +17,45 @@ export function useLanguageSwitcher() {
     /**
      * Switch to a specific locale
      */
-    const switchLocale = (newLocale: Locale) => {
-        const segments = pathname.split("/");
-        segments[1] = newLocale;
-        const newPath = segments.join("/");
+    const switchLocale = useCallback(
+        (newLocale: Locale) => {
+            const segments = pathname.split("/");
+            segments[1] = newLocale;
+            const newPath = segments.join("/");
 
-        // Use startTransition to prevent flickering
-        startTransition(() => {
-            router.push(newPath, { scroll: false });
-        });
-    };
+            // Temporarily remove 'loaded' class to disable transitions during navigation
+            document.documentElement.classList.remove("loaded");
+
+            startTransition(() => {
+                router.push(newPath, { scroll: false });
+
+                // Re-add 'loaded' class after navigation
+                setTimeout(() => {
+                    document.documentElement.classList.add("loaded");
+                }, 50);
+            });
+        },
+        [pathname, router]
+    );
 
     /**
      * Toggle between available locales (for 2 languages)
      */
-    const toggleLocale = () => {
+    const toggleLocale = useCallback(() => {
         const currentIndex = locales.indexOf(currentLocale);
         const nextIndex = (currentIndex + 1) % locales.length;
         const nextLocale = locales[nextIndex];
         switchLocale(nextLocale);
-    };
+    }, [currentLocale, switchLocale]);
 
     /**
      * Get the next locale (useful for displaying "switch to X")
      */
-    const getNextLocale = (): Locale => {
+    const getNextLocale = useCallback((): Locale => {
         const currentIndex = locales.indexOf(currentLocale);
         const nextIndex = (currentIndex + 1) % locales.length;
         return locales[nextIndex];
-    };
+    }, [currentLocale]);
 
     return {
         currentLocale,
@@ -53,6 +63,6 @@ export function useLanguageSwitcher() {
         switchLocale,
         toggleLocale,
         getNextLocale,
-        isPending, // Can be used to show loading state
+        isPending,
     };
 }

@@ -25,6 +25,40 @@ export async function generateStaticParams() {
     });
 }
 
+// Critical inline script - runs before anything else
+const themeScript = `
+(function() {
+    function getTheme() {
+        try {
+            var stored = localStorage.getItem('app-theme');
+            if (stored === 'dark' || stored === 'light') return stored;
+            if (stored === 'system' || !stored) {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            return 'light';
+        } catch (e) {
+            return 'light';
+        }
+    }
+    
+    var theme = getTheme();
+    var root = document.documentElement;
+    
+    // Set immediately before any rendering
+    root.classList.add(theme);
+    root.style.colorScheme = theme;
+    root.dataset.theme = theme;
+})();
+`;
+
+// Critical CSS to prevent flash
+const criticalCSS = `
+    :root { --initial-bg: oklch(1 0 0); }
+    html.dark { --initial-bg: oklch(0.145 0 0); }
+    html { background-color: var(--initial-bg); }
+    body { background-color: var(--initial-bg); visibility: visible; }
+`;
+
 export default async function RootLayout({
     children,
     params,
@@ -37,45 +71,10 @@ export default async function RootLayout({
     return (
         <html lang={lang} suppressHydrationWarning>
             <head>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            (function() {
-                                try {
-                                    var storageKey = 'app-theme';
-                                    var theme = localStorage.getItem(storageKey);
-                                    var root = document.documentElement;
-                                    
-                                    // Remove any existing theme class first
-                                    root.classList.remove('light', 'dark');
-                                    
-                                    if (theme === 'dark') {
-                                        root.classList.add('dark');
-                                        root.style.colorScheme = 'dark';
-                                    } else if (theme === 'light') {
-                                        root.classList.add('light');
-                                        root.style.colorScheme = 'light';
-                                    } else {
-                                        // System preference
-                                        var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                                        root.classList.add(isDark ? 'dark' : 'light');
-                                        root.style.colorScheme = isDark ? 'dark' : 'light';
-                                    }
-                                } catch (e) {}
-                            })()
-                        `,
-                    }}
-                />
-                {/* Prevent FOUC (Flash of Unstyled Content) */}
-                <style
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            html { background-color: var(--background); }
-                            html.dark { background-color: oklch(0.145 0 0); }
-                            html.light { background-color: oklch(1 0 0); }
-                        `,
-                    }}
-                />
+                {/* Theme script MUST be first - blocking */}
+                <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+                {/* Critical CSS for preventing flash */}
+                <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
             </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}

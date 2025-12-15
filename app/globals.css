@@ -1,15 +1,28 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Prevent flash during navigation */
+/* CRITICAL: Prevent flash during navigation - MUST be at top */
 html {
     color-scheme: light;
     background-color: oklch(1 0 0);
+    /* Prevent transition during initial load */
+    transition: none !important;
 }
 
 html.dark {
     color-scheme: dark;
     background-color: oklch(0.145 0 0);
+}
+
+/* Re-enable transitions after load */
+html.loaded,
+html.loaded * {
+    transition: background-color 0.2s ease, color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+body {
+    background-color: inherit;
 }
 
 @custom-variant dark (&:is(.dark *));
