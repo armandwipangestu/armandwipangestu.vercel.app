@@ -1,15 +1,121 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Menu, X, Moon, Sun, Languages, Monitor } from "lucide-react";
+import {
+    Menu,
+    X,
+    Moon,
+    Sun,
+    Languages,
+    Monitor,
+    ChevronDown,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VersionBadge } from "../ui/version-badge";
 import { useTheme } from "@/hooks/use-theme";
 import { useDictionary, useLanguageSwitcher } from "@/hooks/index";
 
 type Theme = "light" | "dark" | "system";
+
+// Language Toggle with dropdown
+function LanguageToggle() {
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    const { currentLocale, switchLocale } = useLanguageSwitcher();
+
+    const languages = [
+        { code: "en" as const, label: "English", flag: "🇺🇸" },
+        { code: "id" as const, label: "Indonesia", flag: "🇮🇩" },
+    ];
+
+    // Get current language
+    const currentLang =
+        languages.find((l) => l.code === currentLocale) || languages[0];
+
+    // Close dropdown when clicking outside (but not on other dropdowns)
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            const target = event.target as HTMLElement;
+
+            // Don't close if clicking on another dropdown
+            if (target.closest("[data-dropdown]")) {
+                return;
+            }
+
+            if (dropdownRef.current && !dropdownRef.current.contains(target)) {
+                setIsOpen(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () =>
+            document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const handleSelect = (code: "en" | "id") => {
+        switchLocale(code);
+        setIsOpen(false);
+    };
+
+    return (
+        <div className="relative" ref={dropdownRef} data-dropdown="language">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="flex items-center gap-1.5 rounded-full border border-border bg-muted/50 px-2.5 py-1.5 text-sm transition-colors hover:bg-muted"
+            >
+                <Languages className="h-4 w-4 text-muted-foreground" />
+                <span className="uppercase text-xs font-medium">
+                    {currentLang.code}
+                </span>
+                <ChevronDown
+                    className={`h-3 w-3 text-muted-foreground transition-transform duration-200 ${
+                        isOpen ? "rotate-180" : ""
+                    }`}
+                />
+            </button>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute right-0 top-full z-50 mt-2 w-40 origin-top-right rounded-lg border border-border bg-popover p-1 shadow-lg"
+                    >
+                        {languages.map((lang) => {
+                            const isActive = currentLocale === lang.code;
+
+                            return (
+                                <button
+                                    key={lang.code}
+                                    onClick={() => handleSelect(lang.code)}
+                                    className={`flex w-full items-center gap-2.5 rounded-md px-2.5 py-2 text-sm transition-colors ${
+                                        isActive
+                                            ? "bg-accent text-accent-foreground"
+                                            : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                    }`}
+                                >
+                                    <span className="text-base">
+                                        {lang.flag}
+                                    </span>
+                                    <span className="font-medium">
+                                        {lang.label}
+                                    </span>
+                                    <span className="ml-auto uppercase text-xs opacity-60">
+                                        {lang.code}
+                                    </span>
+                                </button>
+                            );
+                        })}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 
 // ThemeToggle component with grouped icons
 function ThemeToggle() {
@@ -62,8 +168,7 @@ export function Navbar() {
 
     // i18n hooks
     const { dictionary: dict, isLoading } = useDictionary();
-    const { currentLocale, toggleLocale, getNextLocale } =
-        useLanguageSwitcher();
+    const { currentLocale } = useLanguageSwitcher();
 
     // Navigation links (generated from dictionary)
     const navLinks = dict
@@ -149,17 +254,7 @@ export function Navbar() {
                 </div>
 
                 <div className="hidden md:flex items-center gap-2">
-                    <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={toggleLocale}
-                        className="gap-2"
-                    >
-                        <Languages className="h-4 w-4" />
-                        <span className="uppercase text-xs font-medium">
-                            {getNextLocale()}
-                        </span>
-                    </Button>
+                    <LanguageToggle />
                     <ThemeToggle />
                     <Button asChild size="sm">
                         <Link
@@ -173,10 +268,7 @@ export function Navbar() {
 
                 {/* Mobile Menu Button */}
                 <div className="flex md:hidden items-center gap-2">
-                    {/* Mobile Version Badge */}
-                    <div className="sm:hidden">
-                        <VersionBadge />
-                    </div>
+                    <LanguageToggle />
                     <ThemeToggle />
                     <Button
                         variant="ghost"
@@ -199,7 +291,7 @@ export function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background border-b border-border overflow-hidden"
+                        className="md:hidden bg-background border-b border-border"
                     >
                         <div className="section-container py-4 space-y-4">
                             {navLinks.map((link) => (
@@ -213,20 +305,11 @@ export function Navbar() {
                                 </Link>
                             ))}
                             <div className="pt-4 border-t border-border flex items-center gap-4">
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    onClick={toggleLocale}
-                                    className="gap-2"
-                                >
-                                    <Languages className="h-4 w-4" />
-                                    <span className="uppercase text-xs font-medium">
-                                        {getNextLocale()}
-                                    </span>
-                                </Button>
+                                {/* Mobile Version Badge */}
+                                <VersionBadge />
                                 <Button asChild size="sm" className="flex-1">
                                     <Link
-                                        href="/blog"
+                                        href={`/${currentLocale}/blog`}
                                         rel="noopener noreferrer"
                                     >
                                         Blog

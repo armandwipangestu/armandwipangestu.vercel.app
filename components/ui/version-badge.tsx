@@ -58,13 +58,17 @@ export function VersionBadge() {
 
     const isLoading = isLoadingRelease;
 
-    // Close dropdown when clicking outside
+    // Close dropdown when clicking outside (but not on other dropdowns)
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target as Node)
-            ) {
+            const target = event.target as HTMLElement;
+
+            // Don't close if clicking on another dropdown
+            if (target.closest("[data-dropdown]")) {
+                return;
+            }
+
+            if (dropdownRef.current && !dropdownRef.current.contains(target)) {
                 setIsOpen(false);
             }
         }
@@ -108,7 +112,7 @@ export function VersionBadge() {
     }
 
     return (
-        <div className="relative" ref={dropdownRef}>
+        <div className="relative" ref={dropdownRef} data-dropdown="version">
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex items-center gap-1 rounded-full border border-green-500/50 bg-green-500/10 px-2 py-0.5 text-xs font-medium text-green-600 transition-colors hover:bg-green-500/20 hover:border-green-500 dark:text-green-400 dark:border-green-400/50 dark:bg-green-400/10 dark:hover:bg-green-400/20 dark:hover:border-green-400"
