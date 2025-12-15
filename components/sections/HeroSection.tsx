@@ -86,7 +86,7 @@ export function HeroSection() {
                 >
                     <div className="relative">
                         {/* Gradient Background */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30 blur-[80px] rounded-full scale-110"></div>
+                        <div className="absolute inset-0 bg-linear-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30 blur-[80px] rounded-full scale-110"></div>
 
                         {/* Border wrapper */}
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-border p-1">
