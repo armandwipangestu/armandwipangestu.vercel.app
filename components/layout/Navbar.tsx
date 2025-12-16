@@ -218,12 +218,11 @@ export function Navbar() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50">
-            {/* Spacer for padding animation - subtle shrink */}
+            {/* Spacer for padding animation */}
             <motion.div
                 initial={false}
                 animate={{
                     paddingTop: isScrolled ? "0.5rem" : "1rem",
-                    paddingBottom: isScrolled ? "0" : "0",
                     paddingLeft: isScrolled ? "1.5rem" : "1rem",
                     paddingRight: isScrolled ? "1.5rem" : "1rem",
                 }}
@@ -233,6 +232,7 @@ export function Navbar() {
                 <motion.nav
                     initial={false}
                     animate={{
+                        maxWidth: isScrolled ? "64rem" : "72rem", // 1024px -> 1152px (shrink ~88px total)
                         backgroundColor: isScrolled
                             ? "hsl(var(--background) / 0.85)"
                             : "hsl(var(--background) / 0.6)",
@@ -241,7 +241,7 @@ export function Navbar() {
                             : "0 0 0 1px hsl(var(--border) / 0.3)",
                     }}
                     transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-                    className="mx-auto max-w-6xl flex items-center justify-between h-14 px-4 sm:px-6 rounded-2xl backdrop-blur-md border border-border"
+                    className="mx-auto flex items-center justify-between h-14 px-4 sm:px-6 rounded-2xl backdrop-blur-md border border-border"
                 >
                     {/* Logo + Version Badge */}
                     <div className="flex items-center gap-3">
