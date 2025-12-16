@@ -31,13 +31,20 @@
         "sponsor": "Dukung proyek ini"
     },
     "hero": {
-        "greeting": "Halo, Saya",
+        "label": "PORTFOLIO",
+        "greeting": "Hai, Saya",
         "name": "Arman Dwi Pangestu",
         "title": "Cloud & Software Engineer",
-        "description": "Dengan pengalaman profesional sekitar 4 tahun di bidang Jaringan Komputer, Komputasi Awan, DevOps, Insinyur Keandalan Situs, Pengembangan Perangkat Lunak, dan Big Data.",
+        "description": "Seorang Engineer yang bersemangat dalam membangun aplikasi yang skalabel dengan pengalaman profesional sekitar 4 tahun di bidang Jaringan Komputer, Komputasi Awan, DevOps, Engineer Keandalan Situs, Pengembangan Perangkat Lunak, dan Big Data.",
+        "focusLabel": "Fokus",
+        "focusValue": "Cloud & Software Engineer",
+        "stackLabel": "Teknologi yang Digunakan Web Ini",
+        "stackValue": "NextJS · TypeScript · TanStack Query · TailwindCSS · Shadcn UI · MDX",
+        "experienceLabel": "Pengalaman",
+        "experienceValue": "~4 Tahun",
         "cta": "Lihat Proyek",
-        "resume": "Unduh CV",
-        "status": "Status",
-        "statusText": "Terbuka untuk bekerja"
+        "contact": "Hubungi Saya",
+        "resume": "Lihat CV",
+        "statusText": "Terbuka untuk Kerja"
     }
 }

@@ -30,13 +30,20 @@
         "sponsor": "Sponsor this project"
     },
     "hero": {
-        "greeting": "Hello, I'm",
+        "label": "PORTFOLIO",
+        "greeting": "Hi, I'm",
         "name": "Arman Dwi Pangestu",
         "title": "Cloud & Software Engineer",
-        "description": "with ~4 years of professional experience in Computer Networking, Cloud Computing, DevOps, Site Reliability Engineer, Software Development, and Big Data.",
+        "description": "A passionate Engineer who loves building scalable applications with ~4 years of professional experience in Computer Networking, Cloud Computing, DevOps, Site Reliability Engineer, Software Development, and Big Data.",
+        "focusLabel": "Focus",
+        "focusValue": "Cloud & Software Engineer",
+        "stackLabel": "This Web Tech Stack",
+        "stackValue": "NextJS · TypeScript · TanStack Query · TailwindCSS · Shadcn UI · MDX",
+        "experienceLabel": "Experience",
+        "experienceValue": "~4 Years",
         "cta": "View Projects",
-        "resume": "Download CV",
-        "status": "Status",
-        "statusText": "Open to work"
+        "contact": "Get in Touch",
+        "resume": "See CV",
+        "statusText": "Open to Work"
     }
 }
