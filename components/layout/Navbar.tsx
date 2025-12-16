@@ -95,7 +95,7 @@ function LanguageToggle() {
                     {currentLang.code}
                 </span>
                 <ChevronDown
-                    className={`h-3 w-3 text-muted-foreground transition-transform duration-200 ${
+                    className={`h-3 w-3 transition-transform duration-200 ${
                         isOpen ? "rotate-180" : ""
                     }`}
                 />
@@ -303,7 +303,7 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                                className="text-sm hover:text-foreground transition-colors link-underline"
                             >
                                 {link.label}
                             </Link>
