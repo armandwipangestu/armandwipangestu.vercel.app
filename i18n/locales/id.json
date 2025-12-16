@@ -414,5 +414,19 @@
                 "featured": true
             }
         ]
+    },
+    "footer": {
+        "description": "Membangun pengalaman digital dan berbagi pengetahuan melalui kode dan tulisan.",
+        "general": "Umum",
+        "website": "Website",
+        "resources": "Sumber Daya",
+        "techStack": "Tech Stack",
+        "analytics": "Analitik",
+        "guestbook": "Buku Tamu",
+        "snippets": "Snippets",
+        "uses": "Uses",
+        "subscribeTitle": "Berlangganan newsletter",
+        "subscribeDescription": "Dapatkan notifikasi saat saya menerbitkan post baru. Tanpa spam.",
+        "subscribeButton": "Berlangganan"
     }
 }

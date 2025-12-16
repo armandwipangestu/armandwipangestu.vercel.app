@@ -413,5 +413,19 @@
                 "featured": true
             }
         ]
+    },
+    "footer": {
+        "description": "Building digital experiences and sharing knowledge through code and writing.",
+        "general": "General",
+        "website": "The Website",
+        "resources": "Resources",
+        "techStack": "Tech Stack",
+        "analytics": "Analytics",
+        "guestbook": "Guestbook",
+        "snippets": "Snippets",
+        "uses": "Uses",
+        "subscribeTitle": "Subscribe to newsletter",
+        "subscribeDescription": "Get notified when I publish new posts. No spam.",
+        "subscribeButton": "Subscribe Now"
     }
 }
