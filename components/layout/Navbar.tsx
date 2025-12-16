@@ -218,28 +218,30 @@ export function Navbar() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50">
-            {/* Spacer for padding animation */}
+            {/* Spacer for padding animation - subtle shrink */}
             <motion.div
                 initial={false}
                 animate={{
-                    padding: isScrolled ? "0.5rem 1rem" : "1rem",
+                    paddingTop: isScrolled ? "0.5rem" : "1rem",
+                    paddingBottom: isScrolled ? "0" : "0",
+                    paddingLeft: isScrolled ? "1.5rem" : "1rem",
+                    paddingRight: isScrolled ? "1.5rem" : "1rem",
                 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             >
                 {/* Navbar Container */}
                 <motion.nav
                     initial={false}
                     animate={{
                         backgroundColor: isScrolled
-                            ? "hsl(var(--background) / 0.8)"
+                            ? "hsl(var(--background) / 0.85)"
                             : "hsl(var(--background) / 0.6)",
-                        borderRadius: isScrolled ? "1rem" : "1.5rem",
                         boxShadow: isScrolled
-                            ? "0 4px 20px -5px rgba(0, 0, 0, 0.1)"
-                            : "0 2px 10px -5px rgba(0, 0, 0, 0.05)",
+                            ? "0 4px 20px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px hsl(var(--border) / 0.5)"
+                            : "0 0 0 1px hsl(var(--border) / 0.3)",
                     }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="mx-auto max-w-6xl flex items-center justify-between h-14 px-4 sm:px-6 backdrop-blur-md border border-border/50"
+                    transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="mx-auto max-w-6xl flex items-center justify-between h-14 px-4 sm:px-6 rounded-2xl backdrop-blur-md border border-border"
                 >
                     {/* Logo + Version Badge */}
                     <div className="flex items-center gap-3">
