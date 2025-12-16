@@ -247,6 +247,19 @@ export function Footer() {
                         Copyright © 2023 - {currentYear} devnull. All rights
                         reserved.
                     </p>
+                    <p className="text-sm text-muted-foreground text-center">
+                        Built by{" "}
+                        <a
+                            href="https://github.com/armandwipangestu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transition-colors text-blue-600 hover:text-blue-800 hover:underline"
+                        >
+                            Arman Dwi Pangestu
+                        </a>{" "}
+                        using Next.js, TypeScript, Tailwind CSS, Shadcn/ui,
+                        Framer Motion, and TanStack Query.
+                    </p>
                 </div>
             </div>
         </footer>
