@@ -117,7 +117,7 @@ export function AboutSection() {
                                         Arman Dwi Pangestu
                                     </p>
                                     <p className="text-sm text-muted-foreground">
-                                        Indonesia · Remote Friendly
+                                        Indonesia · haters &{">"} /dev/null
                                     </p>
                                 </div>
                             </div>

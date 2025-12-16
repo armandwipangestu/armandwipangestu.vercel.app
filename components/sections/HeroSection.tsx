@@ -22,9 +22,21 @@ const socialLinks = {
     email: "armandwi.pangestu7@gmail.com",
 };
 
+// Career start year
+const CAREER_START_YEAR = 2021;
+
+// Calculate years of experience dynamically
+function getYearsOfExperience() {
+    const currentYear = new Date().getFullYear();
+    return currentYear - CAREER_START_YEAR;
+}
+
 export function HeroSection() {
     const { dictionary: dict, isLoading } = useDictionary();
     const { currentLocale } = useLanguageSwitcher();
+
+    // Get dynamic years of experience
+    const yearsOfExperience = getYearsOfExperience();
 
     if (isLoading || !dict) {
         return (
@@ -53,6 +65,12 @@ export function HeroSection() {
             </section>
         );
     }
+
+    // Format experience text based on locale
+    const experienceText =
+        currentLocale === "id"
+            ? `~${yearsOfExperience} Tahun`
+            : `~${yearsOfExperience} Years`;
 
     return (
         <section
@@ -113,7 +131,7 @@ export function HeroSection() {
                                 {dict.hero.experienceLabel || "Experience"}
                             </p>
                             <p className="font-medium text-sm">
-                                {dict.hero.experienceValue || "~4 Years"}
+                                {experienceText}
                             </p>
                         </div>
                         <div className="px-4 py-3 rounded-lg bg-card border border-border">
