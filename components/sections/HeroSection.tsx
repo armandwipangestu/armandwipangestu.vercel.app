@@ -217,7 +217,7 @@ export function HeroSection() {
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30 blur-[80px] rounded-full scale-110"></div>
 
                         {/* Border wrapper */}
-                        <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-border p-1">
+                        <div className="relative w-56 h-56 md:w-96 md:h-96 rounded-full border-4 border-border p-1">
                             {/* Image container */}
                             <div className="relative w-full h-full rounded-full overflow-hidden">
                                 <Image
