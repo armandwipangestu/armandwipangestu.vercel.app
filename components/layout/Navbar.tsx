@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
@@ -19,9 +20,11 @@ import { useDictionary, useLanguageSwitcher } from "@/hooks/index";
 
 type Theme = "light" | "dark" | "system";
 
-// Language Toggle with dropdown
+// Language Toggle with dropdown using Portal
 function LanguageToggle() {
     const [isOpen, setIsOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+    const buttonRef = useRef<HTMLButtonElement>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const { currentLocale, switchLocale } = useLanguageSwitcher();
 
@@ -34,17 +37,26 @@ function LanguageToggle() {
     const currentLang =
         languages.find((l) => l.code === currentLocale) || languages[0];
 
-    // Close dropdown when clicking outside (but not on other dropdowns)
+    // For portal to work
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // Close dropdown when clicking outside
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             const target = event.target as HTMLElement;
 
-            // Don't close if clicking on another dropdown
             if (target.closest("[data-dropdown]")) {
                 return;
             }
 
-            if (dropdownRef.current && !dropdownRef.current.contains(target)) {
+            if (
+                buttonRef.current &&
+                !buttonRef.current.contains(target) &&
+                dropdownRef.current &&
+                !dropdownRef.current.contains(target)
+            ) {
                 setIsOpen(false);
             }
         }
@@ -59,9 +71,22 @@ function LanguageToggle() {
         setIsOpen(false);
     };
 
+    // Calculate dropdown position based on button position
+    const getDropdownPosition = () => {
+        if (!buttonRef.current) return { top: 0, right: 0 };
+        const rect = buttonRef.current.getBoundingClientRect();
+        return {
+            top: rect.bottom + 8, // 8px gap
+            right: window.innerWidth - rect.right,
+        };
+    };
+
+    const position = getDropdownPosition();
+
     return (
-        <div className="relative" ref={dropdownRef} data-dropdown="language">
+        <div className="relative" data-dropdown="language">
             <button
+                ref={buttonRef}
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center gap-1.5 rounded-full border border-border bg-muted/50 px-2.5 py-1.5 text-sm transition-colors hover:bg-muted"
             >
@@ -76,43 +101,57 @@ function LanguageToggle() {
                 />
             </button>
 
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                        transition={{ duration: 0.15 }}
-                        className="absolute right-0 top-full z-50 mt-2 w-40 origin-top-right rounded-lg border border-border bg-popover p-1 shadow-lg"
-                    >
-                        {languages.map((lang) => {
-                            const isActive = currentLocale === lang.code;
+            {mounted &&
+                createPortal(
+                    <AnimatePresence>
+                        {isOpen && (
+                            <motion.div
+                                ref={dropdownRef}
+                                initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                                transition={{ duration: 0.15 }}
+                                style={{
+                                    position: "fixed",
+                                    top: position.top,
+                                    right: position.right,
+                                    zIndex: 99999,
+                                }}
+                                className="w-40 origin-top-right rounded-lg border border-border bg-popover/95 backdrop-blur-xl p-1 shadow-lg"
+                            >
+                                {languages.map((lang) => {
+                                    const isActive =
+                                        currentLocale === lang.code;
 
-                            return (
-                                <button
-                                    key={lang.code}
-                                    onClick={() => handleSelect(lang.code)}
-                                    className={`flex w-full items-center gap-2.5 rounded-md px-2.5 py-2 text-sm transition-colors ${
-                                        isActive
-                                            ? "bg-accent text-accent-foreground"
-                                            : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                                    }`}
-                                >
-                                    <span className="text-base">
-                                        {lang.flag}
-                                    </span>
-                                    <span className="font-medium">
-                                        {lang.label}
-                                    </span>
-                                    <span className="ml-auto uppercase text-xs opacity-60">
-                                        {lang.code}
-                                    </span>
-                                </button>
-                            );
-                        })}
-                    </motion.div>
+                                    return (
+                                        <button
+                                            key={lang.code}
+                                            onClick={() =>
+                                                handleSelect(lang.code)
+                                            }
+                                            className={`flex w-full items-center gap-2.5 rounded-md px-2.5 py-2 text-sm transition-colors ${
+                                                isActive
+                                                    ? "bg-accent text-accent-foreground"
+                                                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                            }`}
+                                        >
+                                            <span className="text-base">
+                                                {lang.flag}
+                                            </span>
+                                            <span className="font-medium">
+                                                {lang.label}
+                                            </span>
+                                            <span className="ml-auto uppercase text-xs opacity-60">
+                                                {lang.code}
+                                            </span>
+                                        </button>
+                                    );
+                                })}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>,
+                    document.body
                 )}
-            </AnimatePresence>
         </div>
     );
 }
