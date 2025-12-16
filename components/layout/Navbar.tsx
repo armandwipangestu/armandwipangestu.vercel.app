@@ -203,8 +203,8 @@ export function Navbar() {
     // Show skeleton or nothing while loading
     if (isLoading || !dict) {
         return (
-            <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-                <nav className="section-container flex items-center justify-between h-16">
+            <header className="fixed top-0 left-0 right-0 z-50 p-4">
+                <nav className="mx-auto max-w-6xl flex items-center justify-between h-14 px-4 rounded-2xl bg-background/60 backdrop-blur-md border border-border/50">
                     <div className="h-6 w-20 bg-muted animate-pulse rounded" />
                     <div className="hidden md:flex items-center gap-8">
                         <div className="h-4 w-16 bg-muted animate-pulse rounded" />
@@ -217,104 +217,130 @@ export function Navbar() {
     }
 
     return (
-        <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled
-                    ? "bg-background/80 backdrop-blur-md border-b border-border"
-                    : "bg-transparent"
-            }`}
-        >
-            <nav className="section-container flex items-center justify-between h-16">
-                {/* Logo + Version Badge */}
-                <div className="flex items-center gap-3">
-                    <Link
-                        href="/"
-                        className="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity"
-                    >
-                        devnull
-                    </Link>
-                    {/* Desktop Version Badge - hidden on mobile */}
-                    <div className="hidden sm:block">
-                        <VersionBadge />
+        <header className="fixed top-0 left-0 right-0 z-50">
+            {/* Spacer for padding animation */}
+            <motion.div
+                initial={false}
+                animate={{
+                    padding: isScrolled ? "0.5rem 1rem" : "1rem",
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+                {/* Navbar Container */}
+                <motion.nav
+                    initial={false}
+                    animate={{
+                        backgroundColor: isScrolled
+                            ? "hsl(var(--background) / 0.8)"
+                            : "hsl(var(--background) / 0.6)",
+                        borderRadius: isScrolled ? "1rem" : "1.5rem",
+                        boxShadow: isScrolled
+                            ? "0 4px 20px -5px rgba(0, 0, 0, 0.1)"
+                            : "0 2px 10px -5px rgba(0, 0, 0, 0.05)",
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="mx-auto max-w-6xl flex items-center justify-between h-14 px-4 sm:px-6 backdrop-blur-md border border-border/50"
+                >
+                    {/* Logo + Version Badge */}
+                    <div className="flex items-center gap-3">
+                        <Link
+                            href="/"
+                            className="text-lg font-bold tracking-tight hover:opacity-80 transition-opacity"
+                        >
+                            devnull
+                        </Link>
+                        {/* Desktop Version Badge - hidden on mobile */}
+                        <div className="hidden sm:block">
+                            <VersionBadge />
+                        </div>
                     </div>
-                </div>
 
-                {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-8">
-                    {/* Navigation link based on locales here! */}
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex items-center gap-6 lg:gap-8">
+                        {/* Navigation link based on locales here! */}
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
+
+                    <div className="hidden md:flex items-center gap-2">
+                        <LanguageToggle />
+                        <ThemeToggle />
+                        <Button asChild size="sm">
+                            <Link
+                                href={`/${currentLocale}/blog`}
+                                rel="noopener noreferrer"
+                            >
+                                {dict.navigation.blog}
+                            </Link>
+                        </Button>
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <div className="flex md:hidden items-center gap-2">
+                        <LanguageToggle />
+                        <ThemeToggle />
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-9 w-9"
+                            onClick={() => setIsOpen(!isOpen)}
                         >
-                            {link.label}
-                        </Link>
-                    ))}
-                </div>
+                            {isOpen ? (
+                                <X className="h-5 w-5" />
+                            ) : (
+                                <Menu className="h-5 w-5" />
+                            )}
+                        </Button>
+                    </div>
+                </motion.nav>
+            </motion.div>
 
-                <div className="hidden md:flex items-center gap-2">
-                    <LanguageToggle />
-                    <ThemeToggle />
-                    <Button asChild size="sm">
-                        <Link
-                            href={`/${currentLocale}/blog`}
-                            rel="noopener noreferrer"
-                        >
-                            {dict.navigation.blog}
-                        </Link>
-                    </Button>
-                </div>
-
-                {/* Mobile Menu Button */}
-                <div className="flex md:hidden items-center gap-2">
-                    <LanguageToggle />
-                    <ThemeToggle />
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        {isOpen ? (
-                            <X className="h-5 w-5" />
-                        ) : (
-                            <Menu className="h-5 w-5" />
-                        )}
-                    </Button>
-                </div>
-            </nav>
-
-            {/* Mobile Menu */}
+            {/* Mobile Menu - OUTSIDE the padding wrapper to avoid overflow issues */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background border-b border-border"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="mx-4 sm:mx-auto sm:max-w-6xl sm:px-4 rounded-2xl bg-background/95 backdrop-blur-md border border-border/50 shadow-lg"
                     >
-                        <div className="section-container py-4 space-y-4">
+                        <div className="p-4 space-y-2">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.href}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                                    className="block py-2.5 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                                 >
                                     {link.label}
                                 </Link>
                             ))}
-                            <div className="pt-4 border-t border-border flex items-center gap-4">
-                                {/* Mobile Version Badge */}
-                                <VersionBadge />
-                                <Button asChild size="sm" className="flex-1">
-                                    <Link
-                                        href={`/${currentLocale}/blog`}
-                                        rel="noopener noreferrer"
+                            {/* Version Badge section - no overflow hidden */}
+                            <div className="pt-3 mt-3 border-t border-border">
+                                <div className="flex items-center gap-3 relative">
+                                    {/* Mobile Version Badge */}
+                                    <VersionBadge />
+                                    <Button
+                                        asChild
+                                        size="sm"
+                                        className="flex-1"
                                     >
-                                        Blog
-                                    </Link>
-                                </Button>
+                                        <Link
+                                            href={`/${currentLocale}/blog`}
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            Blog
+                                        </Link>
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
