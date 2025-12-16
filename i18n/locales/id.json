@@ -46,5 +46,13 @@
         "contact": "Hubungi Saya",
         "resume": "Lihat CV",
         "statusText": "Terbuka untuk Kerja"
+    },
+    "about": {
+        "label": "TENTANG SAYA",
+        "title": "Membangun Solusi yang Skalabel",
+        "description": "Saya suka membuat websites, server, script, dan bot untuk diri sendiri dan teman-teman sebagai hobi, tetapi berharap bisa mendapatkan penghasilan dari hal ini. Sebagian besar yang telah saya buat sejauh ini bertujuan untuk mengatasi masalah yang sering saya hadapi. Ini bisa berupa membuat sesuatu yang meningkatkan produktivitas saya atau mengotomatisasi tugas yang monoton.",
+        "currentlyLabel": "Saat Ini",
+        "currentlyRole": "Software Engineer",
+        "currentlyDescription": "Mengerjakan proyek menarik, membangun aplikasi yang scalable, dan terus belajar teknologi baru untuk memberikan solusi terbaik."
     }
 }

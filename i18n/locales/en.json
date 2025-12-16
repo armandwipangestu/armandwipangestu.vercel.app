@@ -45,5 +45,13 @@
         "contact": "Get in Touch",
         "resume": "See CV",
         "statusText": "Open to Work"
+    },
+    "about": {
+        "label": "ABOUT ME",
+        "title": "Building Solutions That Scale",
+        "description": "I love building websites, servers, scripts, and bots for myself and friends for fun, but hope to make a living through it. The majority of what I've built so far was to solve issues I face a lot. This could be in the form of creating something that increases my productivity or automates a monotonous task.",
+        "currentlyLabel": "Currently",
+        "currentlyRole": "Software Engineer",
+        "currentlyDescription": "Working on exciting projects, building scalable applications, and continuously learning new technologies to deliver the best solutions."
     }
 }
