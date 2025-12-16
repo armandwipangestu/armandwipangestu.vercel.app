@@ -43,7 +43,7 @@ import {
     SiOpentelemetry,
     SiExpress,
     SiBruno,
-    SiShadcnui
+    SiShadcnui,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -360,7 +360,7 @@ export function ProjectsSection() {
 
     if (!dict) {
         return (
-            <section id="projects" className="py-20 md:py-32 bg-muted/30">
+            <section id="projects" className="py-20 md:py-32">
                 <div className="section-container">
                     <div className="max-w-5xl mx-auto">
                         <div className="h-4 w-24 bg-muted animate-pulse rounded mb-6" />
@@ -388,7 +388,7 @@ export function ProjectsSection() {
     }
 
     return (
-        <section id="projects" className="py-20 md:py-32 bg-muted/30">
+        <section id="projects" className="py-20 md:py-32">
             <div className="section-container">
                 <motion.div
                     initial="hidden"

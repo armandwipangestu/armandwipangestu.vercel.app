@@ -166,7 +166,7 @@ export function SkillsSection() {
 
     if (isLoading || !dict) {
         return (
-            <section id="skills" className="py-20 md:py-32 bg-muted/30">
+            <section id="skills" className="py-20 md:py-32">
                 <div className="section-container">
                     <div className="max-w-4xl mx-auto">
                         <div className="h-4 w-24 bg-muted animate-pulse rounded mb-6" />
@@ -187,7 +187,7 @@ export function SkillsSection() {
     }
 
     return (
-        <section id="skills" className="py-20 md:py-32 bg-muted/30">
+        <section id="skills" className="py-20 md:py-32">
             <div className="section-container">
                 <motion.div
                     initial="hidden"
