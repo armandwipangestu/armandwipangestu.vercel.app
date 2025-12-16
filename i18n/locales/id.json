@@ -272,6 +272,84 @@
             }
         ]
     },
+    "certifications": {
+        "label": "SERTIFIKASI",
+        "title": "Sertifikasi & Penghargaan",
+        "description": "Sertifikasi profesional dan pencapaian yang memvalidasi keahlian saya dalam berbagai teknologi dan metodologi.",
+        "viewCredential": "Lihat Kredensial",
+        "issuedOn": "Diterbitkan",
+        "expiresOn": "Kadaluarsa",
+        "noExpiry": "Tidak Ada Kadaluarsa",
+        "credentialId": "ID Kredensial",
+        "whatILearned": "Yang Saya Pelajari",
+        "items": [
+            {
+                "id": "bangkit-distinction-graduate",
+                "title": "Bangkit Academy - Distinction Graduate",
+                "issuer": "Bangkit Academy",
+                "issuerLogo": "/certifications/issuers/bangkit.png",
+                "image": "/certifications/certificates/Bangkit Academy - Distinction Graduate.png",
+                "issuedDate": "July 2024",
+                "credentialId": "BA24/DIST/XXIV-07/C161D4KY0913",
+                "description": "Diberikan penghargaan sebagai Lulusan Berprestasi (10% Teratas) dari Bangkit Academy 2024, program kompetitif yang didorong oleh industri dan didukung oleh Google, GoTo, dan Traveloka. Selama program ini, saya memperoleh pengetahuan komprehensif di bidang teknis dan non-teknis, termasuk pengembangan backend, komputasi awan, praktik DevOps, desain sistem, dan arsitektur perangkat lunak. Program ini juga menekankan keterampilan profesional dan soft skills seperti pemikiran kritis, pemecahan masalah, kerja tim, komunikasi, metodologi Agile/Scrum, pengembangan produk, dan mindset kewirausahaan. Sebagai bagian dari Proyek Akhir Jalur Kewirausahaan, saya berkolaborasi dalam tim multidisiplin untuk merancang, membangun, dan mengimplementasikan aplikasi dunia nyata, menerapkan praktik rekayasa modern, infrastruktur cloud, otomatisasi CI/CD, dan pengembangan API yang aman. Sertifikasi ini tidak hanya mencerminkan kompetensi teknis, tetapi juga kemampuan untuk bekerja dalam lingkungan kolaboratif, dinamis, dan selaras dengan industri."
+            },
+            {
+                "id": "menjadi-google-cloud-architect",
+                "title": "Menjadi Google Cloud Architect",
+                "issuer": "Dicoding",
+                "issuerLogo": "/certifications/issuers/dicoding.jpeg",
+                "image": "/certifications/certificates/Dicoding - Menjadi Google Cloud Architect.jpg",
+                "issuedDate": "August 2024",
+                "expiryDate": "August 2027",
+                "credentialId": "1OP8W8L1QXQK",
+                "credentialUrl": "https://www.dicoding.com/certificates/1OP8W8L1QXQK",
+                "description": "Selesai mengikuti kursus ‘Menjadi Google Cloud Architect’ yang diselenggarakan oleh Dicoding. Mendapatkan pengetahuan mendalam dan keterampilan praktis dalam merancang, mengimplementasikan, dan mengelola aplikasi di Google Cloud Platform (GCP). Materi yang dibahas mencakup topik-topik utama seperti desain arsitektur cloud, layanan GCP (Compute Engine, App Engine, Cloud Storage, BigQuery), jaringan, keamanan, dan praktik terbaik untuk membangun solusi cloud yang skalabel dan andal."
+            },
+            {
+                "id": "system-administrator-it-infrastructure-services",
+                "title": "System Administrator and IT Infrastructure Services",
+                "issuer": "Google",
+                "issuerLogo": "/certifications/issuers/google.png",
+                "image": "/certifications/certificates/Google - System Administrator and IT Infrastructure Services.jpg",
+                "issuedDate": "Feb 2024",
+                "credentialId": "ULQGHU7QEXB6",
+                "credentialUrl": "https://coursera.org/verify/ULQGHU7QEXB6",
+                "description": "Selesai mengikuti kursus ‘System Administrator and IT Infrastructure Services’ yang diselenggarakan oleh Google di Coursera. Mendapatkan pengetahuan dasar dan keterampilan praktis dalam administrasi sistem, termasuk mengelola layanan infrastruktur IT, mengonfigurasi server, memahami konsep jaringan, serta memastikan keamanan dan keandalan sistem."
+            },
+            {
+                "id": "the-bits-and-bytes-of-computer-networking",
+                "title": "The Bits and Bytes of Computer Networking",
+                "issuer": "Google",
+                "issuerLogo": "/certifications/issuers/google.png",
+                "image": "/certifications/certificates/Google - The Bits and Bytes of Computer Networking.jpg",
+                "issuedDate": "Feb 2024",
+                "credentialId": "4834JKE7W982",
+                "credentialUrl": "https://coursera.org/verify/4834JKE7W982",
+                "description": "Selesai mengikuti kursus ‘The Bits and Bytes of Computer Networking’ yang diselenggarakan oleh Google di Coursera. Memperoleh pengetahuan dasar tentang konsep jaringan komputer, termasuk protokol jaringan, alamat IP, routing, switching, dan dasar-dasar keamanan jaringan."
+            },
+            {
+                "id": "jr-backend-laravel",
+                "title": "Jr. Backend Laravel",
+                "issuer": "BuildWithAngga",
+                "issuerLogo": "/certifications/issuers/buildwithangga.jpg",
+                "image": "/certifications/certificates/BuildWidthAngga - Jr. Backend Laravel.jpg",
+                "issuedDate": "Nov 2024",
+                "description": "Selesai mengikuti program Jr. Backend Laravel di BuildWithAngga, yang berfokus pada pengembangan backend praktis menggunakan framework Laravel. Mendapatkan pengalaman langsung dalam membangun fitur-fitur dunia nyata, menerapkan kode yang bersih dan mudah dipelihara, serta berkolaborasi dalam lingkungan pengembangan berbasis tim. Program ini mencakup konsep inti backend seperti pengembangan RESTful API, desain database dan hubungan antar tabel, autentikasi dan otorisasi, serta pengenalan pengujian unit menggunakan PHPUnit. Selain keterampilan teknis, program ini juga menekankan praktik profesional termasuk pengendalian versi dengan Git dan GitHub, kolaborasi kode, dan dokumentasi. Sertifikasi ini melengkapi kontribusi langsung saya pada platform BuildWithAngga, di mana saya mengimplementasikan fitur produksi, menyusun materi pembelajaran teknis, dan berpartisipasi sebagai pembicara dalam webinar pendidikan."
+            },
+            {
+                "id": "proxmox-ceph-vm-anti-down",
+                "title": "Buat VM Proxmox Anti Down Dengan Ceph",
+                "issuer": "IDNetworkers",
+                "issuerLogo": "/certifications/issuers/idnetworkers.png",
+                "image": "/certifications/certificates/IDNetworkers - Buat VM Proxmox Anti Down Dengan Ceph Buat VM Proxmox Anti Down Dengan Ceph.jpg",
+                "issuedDate": "Nov 2025",
+                "expiryDate": "Nov 2028",
+                "credentialId": "IDN-1761988519-19678-3145",
+                "credentialUrl": "https://lms.idn.id/cert-verification/",
+                "description": "Selesai mengikuti kursus ‘Buat VM Proxmox Anti Down Dengan Ceph’ yang diselenggarakan oleh IDNetworkers. Mendapatkan keterampilan praktis dalam mengonfigurasi dan mengelola mesin virtual Proxmox dengan penyimpanan Ceph untuk memastikan ketersediaan tinggi dan ketahanan terhadap kegagalan."
+            }
+        ]
+    },
     "projects": {
         "label": "PROYEK",
         "title": "Proyek Unggulan",
@@ -312,7 +390,8 @@
                     "go",
                     "github",
                     "githubactions",
-                    "docker"
+                    "docker",
+                    "bruno"
                 ],
                 "repoUrl": "https://github.com/armandwipangestu/gis-ui",
                 "featured": true
