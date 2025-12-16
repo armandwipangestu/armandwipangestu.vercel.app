@@ -53,5 +53,19 @@
         "currentlyLabel": "Currently",
         "currentlyRole": "Software Engineer",
         "currentlyDescription": "Working on exciting projects, building scalable applications, and continuously learning new technologies to deliver the best solutions."
+    },
+    "skills": {
+        "label": "SKILLS & TECH STACK",
+        "title": "Technologies I Work With",
+        "description": "A pragmatic toolkit drawn from real projects in cloud platforms, product development, data, and operations. I lean on the right abstraction for the problem at hand.",
+        "toolsLabel": "tools",
+        "categories": {
+            "cloudPlatforms": "Cloud & Platforms",
+            "devopsSre": "DevOps & SRE",
+            "softwareEngineering": "Software Engineering",
+            "dataAnalytics": "Big Data & Analytics",
+            "networking": "Networking",
+            "tools": "Tools & Editors"
+        }
     }
 }

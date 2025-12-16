@@ -54,5 +54,19 @@
         "currentlyLabel": "Saat Ini",
         "currentlyRole": "Software Engineer",
         "currentlyDescription": "Mengerjakan proyek menarik, membangun aplikasi yang scalable, dan terus belajar teknologi baru untuk memberikan solusi terbaik."
+    },
+    "skills": {
+        "label": "KEAHLIAN & TEKNOLOGI",
+        "title": "Teknologi yang Saya Kuasai",
+        "description": "Sebuah kumpulan alat praktis yang diambil dari proyek-proyek nyata di platform cloud, pengembangan produk, data, dan operasional. Saya memilih abstraksi yang tepat sesuai dengan masalah yang dihadapi.",
+        "toolsLabel": "tools",
+        "categories": {
+            "cloudPlatforms": "Cloud & Platform",
+            "devopsSre": "DevOps & SRE",
+            "softwareEngineering": "Software Engineering",
+            "dataAnalytics": "Big Data & Analytics",
+            "networking": "Jaringan",
+            "tools": "Tools & Editor"
+        }
     }
 }
