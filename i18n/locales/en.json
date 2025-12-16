@@ -67,5 +67,208 @@
             "networking": "Networking",
             "tools": "Tools & Editors"
         }
+    },
+    "experience": {
+        "label": "EXPERIENCE",
+        "title": "Work Experience",
+        "description": "My professional journey and the companies I've had the privilege to work with over the years.",
+        "items": [
+            {
+                "company": "Self Employed",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Freelance Cloud & Software Engineer",
+                        "period": "Nov 2025 - Present",
+                        "type": "Freelance - Remote",
+                        "description": "Provided consulting services to individuals and companies across Asia in building, developing, and managing web and cloud-based applications. Handled end-to-end deployment for a wide range of technology stacks, including Node.js, PHP, Golang, Java, Python, and modern frameworks such as Express.js, NestJS, React.js, Next.js, Laravel, FastAPI, Django, and Flask. Designed and implemented cloud architectures on AWS and Google Cloud Platform, covering both IaaS and PaaS/serverless solutions. Configured core cloud services including VPC networking, IAM, container registries (ECR, GCR, GAR), compute and orchestration services (ECS, Cloud Run), storage solutions (S3, GCS), databases (RDS, Cloud SQL), and high-availability setups with Multi-AZ deployments and Application Load Balancers (Layer 7). Delivered DevOps solutions focused on containerization, CI/CD pipelines, and deployment automation, helping clients improve reliability, scalability, and delivery speed. Additionally, supported clients through technical documentation, debugging, performance optimization, and infrastructure consulting, ensuring maintainable and production-ready systems.",
+                        "technologies": [
+                            "AWS",
+                            "GCP",
+                            "Docker",
+                            "Containerization",
+                            "Linux",
+                            "Networking",
+                            "CI/CD",
+                            "Bash",
+                            "DevOps",
+                            "Front-End",
+                            "Back-End",
+                            "IAM",
+                            "VPC",
+                            "ECS",
+                            "ECR",
+                            "Cloud Run",
+                            "GCR",
+                            "GAR",
+                            "S3",
+                            "GCS",
+                            "RDS",
+                            "Cloud SQL",
+                            "Multi-AZ",
+                            "ALB"
+                        ],
+                        "isCurrent": true
+                    }
+                ]
+            },
+            {
+                "company": "Sovware Data Mandiri",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Junior System Administrator",
+                        "period": "Nov 2024 - Nov 2025",
+                        "type": "Full Time - Hybrid",
+                        "description": "Designed and implemented a Big Data architecture focused on scalability, high availability, fault tolerance, and load balancing, supporting both on-premise and cloud environments. Deployed and managed distributed systems on Proxmox hypervisor, leveraging technologies such as MinIO, Ceph, Dremio, Trino, Apache Hue, Zookeeper, Nessie, MariaDB Galera Cluster, HAProxy, Keepalived, Apache NiFi, and Nginx. Built comprehensive observability and monitoring stacks using Prometheus, Grafana, Thanos, Loki, and Alloy to ensure system reliability, performance tracking, and centralized logging. Developed and maintained CI/CD pipelines in GitLab using GitLab Runner, producing containerized artifacts and storing them in GitLab Container Registry. Led the transition from manual deployment processes (SCP/SFTP-based workflows and manual tagging) to a modern delivery pipeline by introducing CI/CD automation, Semantic Versioning, and Conventional Commits, significantly improving release consistency and deployment reliability. Implemented a centralized Single Sign-On (SSO) solution using Keycloak, enabling secure authentication via OAuth 2.0 with OpenID Connect (OIDC) support. Additionally, configured secure VPN services using L2TP, IPsec, and OpenVPN to support safe and reliable server connectivity.",
+                        "technologies": [
+                            "MinIO",
+                            "Ceph",
+                            "Nessie",
+                            "Dremio",
+                            "Trino",
+                            "Apache NiFi",
+                            "Apache Zookeeper",
+                            "Apache Iceberg",
+                            "Apache Parquet",
+                            "Apache Avro",
+                            "Superset",
+                            "Metabase",
+                            "Proxmox",
+                            "Gitlab",
+                            "Gitlab CI",
+                            "Prometheus",
+                            "Grafana",
+                            "Thanos",
+                            "Loki",
+                            "Docker",
+                            "Nginx",
+                            "HAProxy",
+                            "Keepalived",
+                            "MariaDB Galera Cluster",
+                            "OpenSSL",
+                            "OpenVPN",
+                            "L2TP",
+                            "Keycloak",
+                            "OAuth 2.0",
+                            "OIDC",
+                            "Bruno"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            },
+            {
+                "company": "BuildWithAngga",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Backend Laravel",
+                        "period": "Sep 2024 - Nov 2024",
+                        "type": "Internship - Remote",
+                        "description": "Contributed to the development of the BuildWithAngga website by implementing a saved article feature using the Laravel framework, following clean code and maintainable architecture principles. Collaborated with other developers using Git and GitHub as the primary version control system, actively participating in team-based development workflows. Gained hands-on experience in unit testing within the Laravel ecosystem using PHPUnit to ensure application reliability and code quality. Authored an educational ebook titled “Laravel Online Class 11: Service Repository Pattern using Filament – Web Event and Workshop Ticket”, focusing on backend architecture and best practices. Additionally, prepared technical materials and served as a speaker in a webinar entitled “Introduction to System Administration & DNS Server”, sharing foundational infrastructure knowledge with participants.",
+                        "technologies": [
+                            "Laravel",
+                            "Git",
+                            "Filament",
+                            "CMS",
+                            "GitHub",
+                            "Redis",
+                            "Meilisearch",
+                            "MySQL",
+                            "PHP",
+                            "RESTful API",
+                            "PHPUnit",
+                            "Unit Testing",
+                            "Postman"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            },
+            {
+                "company": "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Cloud Computing Cohort",
+                        "period": "Feb 2024 - Jul 2024",
+                        "type": "Full Time - Remote",
+                        "description": "Graduated with Distinction (Top 10%) and contributed to an Entrepreneur Track Capstone Project, ranked within the Top 30 teams. Played a key role in designing and deploying the project infrastructure on Google Cloud Platform (GCP), including architecture design, VPC configuration, Compute Engine setup, and Identity & Access Management (IAM). Developed a secure and scalable RESTful API using a modern backend tech stack, implementing best practices such as containerization with Docker, JWT-based authentication, and schema validation using Zod. Led the DevOps and deployment process by building a CI/CD pipeline with GitHub Actions, automating Docker image builds and deploying services to Google Cloud Run (serverless / PaaS) to ensure reliable, scalable, and efficient application delivery.",
+                        "technologies": [
+                            "Google Cloud Platform",
+                            "JavaScript",
+                            "Node.js",
+                            "Express.js",
+                            "Postman",
+                            "OpenAPI Swagger",
+                            "Networking",
+                            "DevOps",
+                            "Docker",
+                            "CI/CD"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            },
+            {
+                "company": "PT Citra Jelajah Informatika",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "System Administrator",
+                        "period": "Jun 2023 - Oct 2023",
+                        "type": "Full Time - On-site",
+                        "description": "Responsible for installing, configuring, and maintaining a wide range of server services, including DNS servers (PowerDNS, BIND), web servers (Apache, Nginx), databases (MySQL/MariaDB, MongoDB), and mail servers (Postfix, Dovecot, Roundcube). Ensured high availability, security, and optimal performance across all services. Managed monitoring and observability systems using tools such as Grafana, Prometheus, Cacti, PRTG, Zabbix, and The Dude to proactively detect issues, analyze system performance, and maintain infrastructure reliability. Handled hosting control panels including cPanel and CentOS Web Panel (CWP) for server and account management. Additionally, managed virtualization environments using Proxmox and VMware ESXi to deploy, maintain, and optimize virtual machines efficiently.",
+                        "technologies": [
+                            "PowerDNS",
+                            "BIND",
+                            "Apache",
+                            "Nginx",
+                            "cPanel",
+                            "CWP",
+                            "MySQL/MariaDB",
+                            "MongoDB",
+                            "Postfix",
+                            "Dovecot",
+                            "Roundcube",
+                            "Proxmox",
+                            "VMware ESXi",
+                            "Grafana",
+                            "Prometheus",
+                            "Cacti",
+                            "PRTG",
+                            "Zabbix",
+                            "The Dude"
+                        ],
+                        "isCurrent": false
+                    },
+                    {
+                        "title": "Network Engineer",
+                        "period": "Jun 2021 - Jun 2023",
+                        "type": "Full Time - On-site",
+                        "description": "Responsible for analyzing, designing, and implementing network infrastructure across various environments such as office buildings, shopping malls, schools, and hotels. Actively worked as an Engineer On-Site (EOS) to ensure smooth installation, configuration, and maintenance of network systems. Experienced in managing wireless and networking devices, including Ruijie, Ubiquiti (UniFi), TP-Link, as well as routers and switches from Mikrotik, Cisco, and Arista. Operated within a Network Operation Center (NOC) environment, handling network monitoring, troubleshooting, and modem registration using GPON OLT ZTE. Performed continuous network traffic monitoring and performance analysis using tools such as The Dude, Zabbix, and Cacti to ensure network reliability, stability, and optimal performance.",
+                        "technologies": [
+                            "OLT",
+                            "ONT",
+                            "VLAN",
+                            "WAN",
+                            "LAN",
+                            "Wireless",
+                            "Mikrotik",
+                            "Cisco",
+                            "Ruijie",
+                            "Ubiquiti",
+                            "The Dude",
+                            "Zabbix",
+                            "Arista",
+                            "TP-Link",
+                            "Cacti"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            }
+        ]
     }
 }

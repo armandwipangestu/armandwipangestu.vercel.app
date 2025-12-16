@@ -68,5 +68,208 @@
             "networking": "Jaringan",
             "tools": "Tools & Editor"
         }
+    },
+    "experience": {
+        "label": "PENGALAMAN",
+        "title": "Pengalaman Kerja",
+        "description": "Perjalanan profesional saya dan perusahaan-perusahaan yang pernah saya bekerja selama ini.",
+        "items": [
+            {
+                "company": "Self Employed",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Freelance Cloud & Software Engineer",
+                        "period": "Nov 2025 - Saat ini",
+                        "type": "Freelance - Remote",
+                        "description": "Memberikan layanan konsultasi kepada individu dan perusahaan di seluruh Asia dalam membangun, mengembangkan, dan mengelola aplikasi web dan berbasis cloud. Mengelola implementasi end-to-end untuk berbagai stack teknologi, termasuk Node.js, PHP, Golang, Java, Python, dan kerangka kerja modern seperti Express.js, NestJS, React.js, Next.js, Laravel, FastAPI, Django, dan Flask. Merancang dan mengimplementasikan arsitektur cloud di AWS dan Google Cloud Platform, mencakup solusi IaaS dan PaaS/serverless. Mengonfigurasi layanan cloud inti termasuk jaringan VPC, IAM, registri kontainer (ECR, GCR, GAR), layanan komputasi dan orkestrasi (ECS, Cloud Run), solusi penyimpanan (S3, GCS), basis data (RDS, Cloud SQL), dan konfigurasi ketersediaan tinggi dengan deployment Multi-AZ dan Application Load Balancers (Layer 7). Menyediakan solusi DevOps yang berfokus pada kontainerisasi, pipeline CI/CD, dan otomatisasi deployment, membantu klien meningkatkan keandalan, skalabilitas, dan kecepatan pengiriman. Selain itu, mendukung klien melalui dokumentasi teknis, debugging, optimasi kinerja, dan konsultasi infrastruktur, memastikan sistem yang dapat dipelihara dan siap produksi.",
+                        "technologies": [
+                            "AWS",
+                            "GCP",
+                            "Docker",
+                            "Containerization",
+                            "Linux",
+                            "Networking",
+                            "CI/CD",
+                            "Bash",
+                            "DevOps",
+                            "Front-End",
+                            "Back-End",
+                            "IAM",
+                            "VPC",
+                            "ECS",
+                            "ECR",
+                            "Cloud Run",
+                            "GCR",
+                            "GAR",
+                            "S3",
+                            "GCS",
+                            "RDS",
+                            "Cloud SQL",
+                            "Multi-AZ",
+                            "ALB"
+                        ],
+                        "isCurrent": true
+                    }
+                ]
+            },
+            {
+                "company": "Sovware Data Mandiri",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Junior System Administrator",
+                        "period": "Nov 2024 - Nov 2025",
+                        "type": "Penuh Waktu - Hybrid",
+                        "description": "Merancang dan mengimplementasikan arsitektur Big Data yang berfokus pada skalabilitas, ketersediaan tinggi, ketahanan terhadap kegagalan, dan penyeimbangan beban, mendukung lingkungan on-premise dan cloud. Menerapkan dan mengelola sistem terdistribusi di hypervisor Proxmox, memanfaatkan teknologi seperti MinIO, Ceph, Dremio, Trino, Apache Hue, Zookeeper, Nessie, MariaDB Galera Cluster, HAProxy, Keepalived, Apache NiFi, dan Nginx. Membangun tumpukan observabilitas dan pemantauan komprehensif menggunakan Prometheus, Grafana, Thanos, Loki, dan Alloy untuk memastikan keandalan sistem, pelacakan kinerja, dan pencatatan log terpusat. Mengembangkan dan memelihara pipeline CI/CD di GitLab menggunakan GitLab Runner, menghasilkan artefak kontainer dan menyimpannya di GitLab Container Registry. Memimpin transisi dari proses deployment manual (workflow berbasis SCP/SFTP dan penandaan manual) ke pipeline pengiriman modern dengan memperkenalkan otomatisasi CI/CD, Semantic Versioning, dan Conventional Commits, yang secara signifikan meningkatkan konsistensi rilis dan keandalan deployment. Menerapkan solusi Single Sign-On (SSO) terpusat menggunakan Keycloak, memfasilitasi autentikasi aman melalui OAuth 2.0 dengan dukungan OpenID Connect (OIDC). Selain itu, mengonfigurasi layanan VPN aman menggunakan L2TP, IPsec, dan OpenVPN untuk mendukung konektivitas server yang aman dan andal.",
+                        "technologies": [
+                            "MinIO",
+                            "Ceph",
+                            "Nessie",
+                            "Dremio",
+                            "Trino",
+                            "Apache NiFi",
+                            "Apache Zookeeper",
+                            "Apache Iceberg",
+                            "Apache Parquet",
+                            "Apache Avro",
+                            "Superset",
+                            "Metabase",
+                            "Proxmox",
+                            "Gitlab",
+                            "Gitlab CI",
+                            "Prometheus",
+                            "Grafana",
+                            "Thanos",
+                            "Loki",
+                            "Docker",
+                            "Nginx",
+                            "HAProxy",
+                            "Keepalived",
+                            "MariaDB Galera Cluster",
+                            "OpenSSL",
+                            "OpenVPN",
+                            "L2TP",
+                            "Keycloak",
+                            "OAuth 2.0",
+                            "OIDC",
+                            "Bruno"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            },
+            {
+                "company": "BuildWithAngga",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Backend Laravel",
+                        "period": "Sep 2024 - Nov 2024",
+                        "type": "Magang - Remote",
+                        "description": "Berpartisipasi dalam pengembangan situs web BuildWithAngga dengan mengimplementasikan fitur artikel yang disimpan menggunakan kerangka kerja Laravel, mengikuti prinsip kode bersih dan arsitektur yang mudah dipelihara. Bekerja sama dengan pengembang lain menggunakan Git dan GitHub sebagai sistem kontrol versi utama, aktif berpartisipasi dalam alur kerja pengembangan tim. Mendapatkan pengalaman praktis dalam pengujian unit di ekosistem Laravel menggunakan PHPUnit untuk memastikan keandalan aplikasi dan kualitas kode. Menulis buku elektronik edukatif berjudul “Laravel Online Class 11: Service Repository Pattern using Filament – Web Event and Workshop Ticket”, yang berfokus pada arsitektur backend dan praktik terbaik. Selain itu, menyiapkan materi teknis dan bertindak sebagai pembicara dalam webinar berjudul “Pengantar Administrasi Sistem & Server DNS”, berbagi pengetahuan dasar infrastruktur dengan peserta.",
+                        "technologies": [
+                            "Laravel",
+                            "Git",
+                            "Filament",
+                            "CMS",
+                            "GitHub",
+                            "Redis",
+                            "Meilisearch",
+                            "MySQL",
+                            "PHP",
+                            "RESTful API",
+                            "PHPUnit",
+                            "Unit Testing",
+                            "Postman"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            },
+            {
+                "company": "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "Cloud Computing Cohort",
+                        "period": "Feb 2024 - Jul 2024",
+                        "type": "Penuh Waktu - Remote",
+                        "description": "Lulusan terbaik (10% teratas) dan berkontribusi pada Proyek Akhir Jalur Kewirausahaan, yang masuk dalam 30 tim teratas. Memainkan peran kunci dalam merancang dan mengimplementasikan infrastruktur proyek di Google Cloud Platform (GCP), termasuk desain arsitektur, konfigurasi VPC, pengaturan Compute Engine, dan Manajemen Identitas dan Akses (IAM). Mengembangkan API RESTful yang aman dan skalabel menggunakan stack teknologi backend modern, menerapkan praktik terbaik seperti kontainerisasi dengan Docker, otentikasi berbasis JWT, dan validasi skema menggunakan Zod. Memimpin proses DevOps dan implementasi dengan membangun pipeline CI/CD menggunakan GitHub Actions, mengotomatisasi pembuatan gambar Docker, dan mengimplementasikan layanan ke Google Cloud Run (serverless / PaaS) untuk memastikan pengiriman aplikasi yang andal, skalabel, dan efisien.",
+                        "technologies": [
+                            "Google Cloud Platform",
+                            "JavaScript",
+                            "Node.js",
+                            "Express.js",
+                            "Postman",
+                            "OpenAPI Swagger",
+                            "Networking",
+                            "DevOps",
+                            "Docker",
+                            "CI/CD"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            },
+            {
+                "company": "PT Citra Jelajah Informatika",
+                "location": "Bandung, Indonesia",
+                "roles": [
+                    {
+                        "title": "System Administrator",
+                        "period": "Jun 2023 - Okt 2023",
+                        "type": "Penuh Waktu - On-site",
+                        "description": "Bertanggung jawab atas instalasi, konfigurasi, dan pemeliharaan berbagai layanan server, termasuk server DNS (PowerDNS, BIND), server web (Apache, Nginx), basis data (MySQL/MariaDB, MongoDB), dan server email (Postfix, Dovecot, Roundcube). Memastikan ketersediaan tinggi, keamanan, dan kinerja optimal di seluruh layanan. Mengelola sistem pemantauan dan observabilitas menggunakan alat seperti Grafana, Prometheus, Cacti, PRTG, Zabbix, dan The Dude untuk mendeteksi masalah secara proaktif, menganalisis kinerja sistem, dan menjaga keandalan infrastruktur. Mengelola panel kontrol hosting termasuk cPanel dan CentOS Web Panel (CWP) untuk pengelolaan server dan akun. Selain itu, mengelola lingkungan virtualisasi menggunakan Proxmox dan VMware ESXi untuk mengimplementasikan, memelihara, dan mengoptimalkan mesin virtual secara efisien.",
+                        "technologies": [
+                            "PowerDNS",
+                            "BIND",
+                            "Apache",
+                            "Nginx",
+                            "cPanel",
+                            "CWP",
+                            "MySQL/MariaDB",
+                            "MongoDB",
+                            "Postfix",
+                            "Dovecot",
+                            "Roundcube",
+                            "Proxmox",
+                            "VMware ESXi",
+                            "Grafana",
+                            "Prometheus",
+                            "Cacti",
+                            "PRTG",
+                            "Zabbix",
+                            "The Dude"
+                        ],
+                        "isCurrent": false
+                    },
+                    {
+                        "title": "Network Engineer",
+                        "period": "Jun 2021 - Jun 2023",
+                        "type": "Penuh Waktu - On-site",
+                        "description": "Bertanggung jawab atas analisis, perancangan, dan implementasi infrastruktur jaringan di berbagai lingkungan seperti gedung perkantoran, mal, sekolah, dan hotel. Aktif bekerja sebagai Engineer On-Site (EOS) untuk memastikan instalasi, konfigurasi, dan pemeliharaan sistem jaringan berjalan lancar. Berpengalaman dalam mengelola perangkat nirkabel dan jaringan, termasuk Ruijie, Ubiquiti (UniFi), TP-Link, serta router dan switch dari Mikrotik, Cisco, dan Arista. Bekerja di lingkungan Pusat Operasi Jaringan (NOC), menangani pemantauan jaringan, pemecahan masalah, dan pendaftaran modem menggunakan GPON OLT ZTE. Melakukan pemantauan lalu lintas jaringan secara terus-menerus dan analisis kinerja menggunakan alat seperti The Dude, Zabbix, dan Cacti untuk memastikan keandalan, stabilitas, dan kinerja optimal jaringan.",
+                        "technologies": [
+                            "OLT",
+                            "ONT",
+                            "VLAN",
+                            "WAN",
+                            "LAN",
+                            "Wireless",
+                            "Mikrotik",
+                            "Cisco",
+                            "Ruijie",
+                            "Ubiquiti",
+                            "The Dude",
+                            "Zabbix",
+                            "Arista",
+                            "TP-Link",
+                            "Cacti"
+                        ],
+                        "isCurrent": false
+                    }
+                ]
+            }
+        ]
     }
 }
