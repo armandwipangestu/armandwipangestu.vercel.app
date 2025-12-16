@@ -280,7 +280,7 @@ export function Navbar() {
                             : "0 0 0 1px hsl(var(--border) / 0.3)",
                     }}
                     transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-                    className="mx-auto flex items-center justify-between h-14 px-4 sm:px-6 rounded-2xl backdrop-blur-md border border-border"
+                    className="mx-auto flex items-center justify-between h-14 px-4 sm:px-6 rounded-2xl backdrop-blur-md border-2 border-border"
                 >
                     {/* Logo + Version Badge */}
                     <div className="flex items-center gap-3">
