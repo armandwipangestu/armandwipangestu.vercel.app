@@ -271,5 +271,69 @@
                 ]
             }
         ]
+    },
+    "projects": {
+        "label": "PROYEK",
+        "title": "Proyek Unggulan",
+        "description": "Kumpulan proyek yang telah saya kerjakan, mulai dari aplikasi web hingga infrastruktur cloud dan tools DevOps.",
+        "viewAll": "Lihat Semua Proyek",
+        "viewProject": "Lihat Proyek",
+        "repository": "Repository",
+        "liveSite": "Live Site",
+        "tools": "Tools",
+        "items": [
+            {
+                "slug": "portfolio",
+                "title": "Portfolio Website",
+                "description": "Situs web portofolio pribadi yang dibangun menggunakan Next.js, TypeScript, TailwindCSS, dan Shadcn UI. Situs ini menampilkan keterampilan, pengalaman, proyek, dan blog saya dalam desain yang bersih dan modern.",
+                "thumbnail": "/projects/portfolio/1.png",
+                "tools": [
+                    "nextjs",
+                    "typescript",
+                    "tailwind",
+                    "shadcn",
+                    "github",
+                    "githubactions",
+                    "docker"
+                ],
+                "repoUrl": "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
+                "liveUrl": "https://armandwipangestu.vercel.app",
+                "featured": true
+            },
+            {
+                "slug": "gis-application",
+                "title": "Gis Application",
+                "description": "Sebuah aplikasi GIS yang dibangun menggunakan React.js, Leaflet.js, dan Golang untuk menampilkan data geografis secara interaktif pada peta web. Proyek ini juga dilengkapi dengan pipeline CI otomatis menggunakan GitHub Actions untuk pengujian, pembangunan, dan pengiriman gambar kontainer ke GitHub Container Registry.",
+                "thumbnail": "/projects/gis-ui/1.png",
+                "tools": [
+                    "react",
+                    "typescript",
+                    "tailwind",
+                    "go",
+                    "github",
+                    "githubactions",
+                    "docker"
+                ],
+                "repoUrl": "https://github.com/armandwipangestu/gis-ui",
+                "featured": true
+            },
+            {
+                "slug": "express-otel",
+                "title": "Express Open Telemetry",
+                "description": "Sebuah aplikasi Node.js Express yang dilengkapi dengan OpenTelemetry, terintegrasi dengan Language SDK, Grafana Tempo, Grafana, dan PostgreSQL, yang dijalankan menggunakan Docker Compose.",
+                "thumbnail": "/projects/express-otel/1.png",
+                "tools": [
+                    "express",
+                    "typescript",
+                    "postgresql",
+                    "opentelemetry",
+                    "grafana",
+                    "docker",
+                    "bruno"
+                ],
+                "repoUrl": "https://github.com/armandwipangestu/example-express-otel",
+                "featured": true
+            }
+        ]
     }
 }

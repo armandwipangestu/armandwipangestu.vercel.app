@@ -270,5 +270,70 @@
                 ]
             }
         ]
+    },
+    "projects": {
+        "label": "PROJECTS",
+        "title": "Featured Projects",
+        "description": "A selection of projects I've worked on, from software to cloud infrastructure and DevOps tools.",
+        "viewAll": "View All Projects",
+        "viewProject": "View Project",
+        "repository": "Repository",
+        "liveSite": "Live Site",
+        "tools": "Tools",
+        "items": [
+            {
+                "slug": "portfolio",
+                "title": "Portfolio Website",
+                "description": "A personal portfolio website built with Next.js, TypeScript, TailwindCSS, and Shadcn UI. It showcases my skills, experience, projects, and blog in a clean and modern design.",
+                "thumbnail": "/projects/portfolio/1.png",
+                "tools": [
+                    "nextjs",
+                    "typescript",
+                    "tailwind",
+                    "shadcn",
+                    "github",
+                    "githubactions",
+                    "docker"
+                ],
+                "repoUrl": "https://github.com/armandwipangestu/armandwipangestu.vercel.app",
+                "liveUrl": "https://armandwipangestu.vercel.app",
+                "featured": true
+            },
+            {
+                "slug": "gis-application",
+                "title": "Gis Application",
+                "description": "A gis application built using React.js, Leaflet.js, and Golang to display geographic data interactively on a web map. This project also has automation CI pipeline using GitHub Actions for testing, building, and push container image to GitHub Container Registry.",
+                "thumbnail": "/projects/gis-ui/1.png",
+                "tools": [
+                    "react",
+                    "typescript",
+                    "tailwind",
+                    "go",
+                    "github",
+                    "githubactions",
+                    "docker",
+                    "bruno"
+                ],
+                "repoUrl": "https://github.com/armandwipangestu/gis-ui",
+                "featured": true
+            },
+            {
+                "slug": "express-otel",
+                "title": "Express Open Telemetry",
+                "description": "A sample Node.js Express application instrumented with OpenTelemetry, integrated with Language SDK, Grafana Tempo, Grafana, and PostgreSQL, running with Docker Compose.",
+                "thumbnail": "/projects/express-otel/1.png",
+                "tools": [
+                    "express",
+                    "typescript",
+                    "postgresql",
+                    "opentelemetry",
+                    "grafana",
+                    "docker",
+                    "bruno"
+                ],
+                "repoUrl": "https://github.com/armandwipangestu/example-express-otel",
+                "featured": true
+            }
+        ]
     }
 }
