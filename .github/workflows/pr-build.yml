@@ -50,8 +50,24 @@ jobs:
       - name: Build app (for validation)
         run: bun run build
 
+      - name: Setup Node.js 22 (for semantic-release)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install semantic-release
+        run: |
+          npm install -g \
+            semantic-release \
+            @semantic-release/changelog \
+            @semantic-release/git \
+            @semantic-release/exec \
+            @semantic-release/github \
+            conventional-changelog-conventionalcommits
+
       - name: Test semantic-release (dry-run)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
           DEBUG: "semantic-release:*"
-        run: bunx semantic-release --dry-run --branches=${{ github.head_ref }}
+        run: npx semantic-release --dry-run --branches=${{ github.head_ref }}
