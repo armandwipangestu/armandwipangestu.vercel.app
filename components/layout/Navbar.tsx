@@ -178,7 +178,7 @@ function ThemeToggle() {
                     onClick={() => setTheme(t.value)}
                     className={`relative rounded-full p-1.5 transition-colors ${
                         theme === t.value
-                            ? "text-background"
+                            ? "text-background bg-foreground"
                             : "text-muted-foreground hover:text-foreground hover:bg-accent"
                     }`}
                     title={t.label}
@@ -186,6 +186,7 @@ function ThemeToggle() {
                     {theme === t.value && (
                         <motion.div
                             layoutId="theme-indicator"
+                            initial={false} // <--- prevent initial disappearance
                             className="absolute inset-0 rounded-full bg-foreground shadow-sm"
                             transition={{
                                 type: "spring",
