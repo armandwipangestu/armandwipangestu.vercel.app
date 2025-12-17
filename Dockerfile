@@ -1,25 +1,26 @@
 # --------
 # 1. Builder
 # --------
-FROM node:22-alpine AS builder
+FROM oven/bun:1.2.23-alpine AS builder
 
 WORKDIR /app
 
 # Install dependencies using cached layer
-COPY package*.json ./
-RUN npm ci
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
 # Copy all source
 COPY . .
 
 # Build Next.js
-RUN npm run build
+RUN bun run build
 
 
 # --------
 # 2. Runner
 # --------
-FROM node:22-alpine AS runner
+FROM oven/bun:1.2.23-alpine AS runner
+
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -30,4 +31,5 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3000
-CMD ["node", "server.js"]
+
+CMD ["bun", "run", "server.js"]
