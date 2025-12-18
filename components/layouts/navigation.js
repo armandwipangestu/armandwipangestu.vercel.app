@@ -3,6 +3,7 @@ import { Moon, Sun } from "../utilities/icon";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { menus } from "@/types/menu";
+import ArchiveBanner from "./ArchiveBanner";
 
 const Navigation = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -65,139 +66,151 @@ const Navigation = () => {
     // <header
     //   className={`navbar-fixed fixed top-0 z-10 w-full items-center border-b border-dark/20 dark:border-white/20 bg-transparent transition-all duration-300 ease-in-out`}
     // >
-    <header
-      className={`absolute left-0 top-0 z-10 flex w-full items-center bg-transparent ${
-        navbar ? "navbar-fixed" : ""
-      } transition duration-300 ease-in-out`}
+    <div
+      className={
+        navbar
+          ? "fixed top-0 left-0 right-0 z-50 w-full bg-transparent"
+          : "relative"
+      }
     >
-      <div className="container">
-        <div className="relative flex items-center justify-between">
-          <div className="px-4">
-            <Link
-              href="/"
-              className="block py-5 text-lg font-bold lowercase text-dark dark:text-white"
-            >
-              &{">"} /dev/null
-            </Link>
-          </div>
+      <ArchiveBanner />
+      <header
+        className={`flex w-full items-center transition duration-300 ease-in-out ${
+          navbar
+            ? "relative bg-white bg-opacity-70 dark:bg-dark dark:bg-opacity-70 backdrop-blur-sm"
+            : "absolute left-0 bg-transparent"
+        }`}
+        style={isMobile ? { top: "4rem" } : { top: "2.5rem" }}
+      >
+        <div className="container">
+          <div className="relative flex items-center justify-between">
+            <div className="px-4">
+              <Link
+                href="/"
+                className="block py-5 text-lg font-bold lowercase text-dark dark:text-white"
+              >
+                &{">"} /dev/null
+              </Link>
+            </div>
 
-          <div className="flex items-center px-4">
-            <button
-              id="hamburger"
-              name="hamburger"
-              type="button"
-              className={`absolute right-4 block lg:hidden ${
-                hamburger ? "hamburger-active" : ""
-              }`}
-              onClick={hamburgerToggle}
-            >
-              <span className="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
-              <span className="hamburger-line transition duration-300 ease-in-out"></span>
-              <span className="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
-            </button>
+            <div className="flex items-center px-4">
+              <button
+                id="hamburger"
+                name="hamburger"
+                type="button"
+                className={`absolute right-4 block lg:hidden ${
+                  hamburger ? "hamburger-active" : ""
+                }`}
+                onClick={hamburgerToggle}
+              >
+                <span className="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                <span className="hamburger-line transition duration-300 ease-in-out"></span>
+                <span className="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+              </button>
 
-            {isMobile ? (
-              <div className="absolute right-16 flex">
-                <label
-                  htmlFor="dark-toggle"
-                  className="cursor-pointer"
-                  onClick={handleDarkMode}
-                >
-                  <div
-                    className={`group toggle-icon rounded-full p-1 ${
-                      darkMode
-                        ? "hover:dark:bg-cyan-300/20"
-                        : "hover:bg-emphasis-200"
-                    }`}
+              {isMobile ? (
+                <div className="absolute right-16 flex">
+                  <label
+                    htmlFor="dark-toggle"
+                    className="cursor-pointer"
+                    onClick={handleDarkMode}
                   >
-                    {darkMode ? (
-                      <>
-                        <Sun className="transition duration-300 ease-in-out dark:text-white" />
-                        {/* <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-100 ease-in-out font-bold">
+                    <div
+                      className={`group toggle-icon rounded-full p-1 ${
+                        darkMode
+                          ? "hover:dark:bg-cyan-300/20"
+                          : "hover:bg-emphasis-200"
+                      }`}
+                    >
+                      {darkMode ? (
+                        <>
+                          <Sun className="transition duration-300 ease-in-out dark:text-white" />
+                          {/* <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-100 ease-in-out font-bold">
                           ✨ Light Mode
                         </span> */}
-                      </>
-                    ) : (
-                      <>
-                        <Moon className="transition duration-300 ease-in-out text-dark" />
-                        {/* <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-100 ease-in-out font-bold">
+                        </>
+                      ) : (
+                        <>
+                          <Moon className="transition duration-300 ease-in-out text-dark" />
+                          {/* <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 w-[6.5rem] whitespace-normal transition duration-100 ease-in-out font-bold">
                           ✨ Dark Mode
                         </span> */}
-                      </>
-                    )}
-                  </div>
-                </label>
-              </div>
-            ) : (
-              ""
-            )}
-
-            <nav
-              className={`${hamburger ? "mt-1" : "hidden"} ${
-                isMobile
-                  ? "border dark:border-white/20 dark:bg-dark z-[9999]"
-                  : ""
-              } transition duration-300 ease-in-out absolute right-0 top-full w-full max-w-full rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none`}
-            >
-              <ul className="block lg:flex">
-                {menus.map((menu, index) => (
-                  <Link
-                    href={menu.target}
-                    className={`group mx-2 ${
-                      isMobile ? "my-2" : ""
-                    } flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 hover:bg-blue-200/60 hover:text-cyan-600 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 ${
-                      pathName === menu.target
-                        ? "bg-cyan-200/60 text-cyan-600 dark:bg-cyan-300/30 dark:text-cyan-600"
-                        : "text-accents-300 dark:text-slate-400"
-                    }`}
-                    key={index}
-                  >
-                    <li>{menu.title}</li>
-                  </Link>
-                ))}
-                {!isMobile ? (
-                  <li className="mt-3 flex items-center pl-7 lg:mt-0 lg:pl-5">
-                    <div className="flex">
-                      <label
-                        htmlFor="dark-toggle"
-                        className="cursor-pointer"
-                        onClick={handleDarkMode}
-                      >
-                        <div
-                          className={`group toggle-icon rounded-full p-1 ${
-                            darkMode
-                              ? "hover:dark:bg-cyan-300/20" //dark
-                              : "hover:bg-blue-200/60" //light
-                          }`}
-                        >
-                          {darkMode ? (
-                            <>
-                              <Sun className="transition duration-300 ease-in-out dark:text-white" />
-                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 whitespace-normal transition duration-100 ease-in-out font-bold">
-                                ✨ Light Mode
-                              </span>
-                            </>
-                          ) : (
-                            <>
-                              <Moon className="transition duration-300 ease-in-out text-dark" />
-                              <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 whitespace-normal transition duration-100 ease-in-out font-bold">
-                                ✨ Dark Mode
-                              </span>
-                            </>
-                          )}
-                        </div>
-                      </label>
+                        </>
+                      )}
                     </div>
-                  </li>
-                ) : (
-                  ""
-                )}
-              </ul>
-            </nav>
+                  </label>
+                </div>
+              ) : (
+                ""
+              )}
+
+              <nav
+                className={`${hamburger ? "mt-1" : "hidden"} ${
+                  isMobile
+                    ? "border dark:border-white/20 dark:bg-dark z-[9999]"
+                    : ""
+                } transition duration-300 ease-in-out absolute right-0 top-full w-full max-w-full rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none`}
+              >
+                <ul className="block lg:flex">
+                  {menus.map((menu, index) => (
+                    <Link
+                      href={menu.target}
+                      className={`group mx-2 ${
+                        isMobile ? "my-2" : ""
+                      } flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 hover:bg-blue-200/60 hover:text-cyan-600 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 ${
+                        pathName === menu.target
+                          ? "bg-cyan-200/60 text-cyan-600 dark:bg-cyan-300/30 dark:text-cyan-600"
+                          : "text-accents-300 dark:text-slate-400"
+                      }`}
+                      key={index}
+                    >
+                      <li>{menu.title}</li>
+                    </Link>
+                  ))}
+                  {!isMobile ? (
+                    <li className="mt-3 flex items-center pl-7 lg:mt-0 lg:pl-5">
+                      <div className="flex">
+                        <label
+                          htmlFor="dark-toggle"
+                          className="cursor-pointer"
+                          onClick={handleDarkMode}
+                        >
+                          <div
+                            className={`group toggle-icon rounded-full p-1 ${
+                              darkMode
+                                ? "hover:dark:bg-cyan-300/20" //dark
+                                : "hover:bg-blue-200/60" //light
+                            }`}
+                          >
+                            {darkMode ? (
+                              <>
+                                <Sun className="transition duration-300 ease-in-out dark:text-white" />
+                                <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-white p-2 text-xs text-dark group-hover:scale-100 whitespace-normal transition duration-100 ease-in-out font-bold">
+                                  ✨ Light Mode
+                                </span>
+                              </>
+                            ) : (
+                              <>
+                                <Moon className="transition duration-300 ease-in-out text-dark" />
+                                <span className="absolute top-[4.2rem] -right-6 scale-0 rounded bg-dark p-2 text-xs text-white group-hover:scale-100 whitespace-normal transition duration-100 ease-in-out font-bold">
+                                  ✨ Dark Mode
+                                </span>
+                              </>
+                            )}
+                          </div>
+                        </label>
+                      </div>
+                    </li>
+                  ) : (
+                    ""
+                  )}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 
