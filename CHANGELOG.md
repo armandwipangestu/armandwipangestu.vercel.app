@@ -1,3 +1,10 @@
+# [1.1.0-rc.1](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.0.0...v1.1.0-rc.1) (2025-12-18)
+
+
+### Features
+
+* add archive banner :'( ([06c67c9](https://github.com/armandwipangestu/armandwipangestu.vercel.app/commit/06c67c9c715ab0f7c138cfe6b55f3e20c469d555))
+
 # 1.0.0 (2025-12-11)
 
 
