@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.1.0...v1.2.0) (2026-01-29)
+
+
+### Features
+
+* **analytics:** add umami, google analytics, posthog integration ([b5e690a](https://github.com/armandwipangestu/armandwipangestu.vercel.app/commit/b5e690a4a39977c0e3e650dae30ad3ffa223ef88))
+
 # [1.1.0](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.0.0...v1.1.0) (2025-12-18)
 
 
