@@ -10,6 +10,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { menus } from "@/types/menu";
 import { tags } from "@/types/tag";
+import { gaEvent } from "@/utilities/ga";
+import { phCapture } from "@/utilities/posthog";
 
 const Footer = () => {
   const pathName = usePathname();
@@ -37,6 +39,19 @@ const Footer = () => {
             <a
               href="mailto:armandwi.pangestu7@gmail.com"
               className="hover:text-primary text-accents-300 dark:text-white/80 dark:hover:text-primary"
+              onClick={() => {
+                gaEvent({
+                  action: 'footer_clicked',
+                  category: 'navigation',
+                  label: 'Email',
+                });
+
+                phCapture('footer_clicked', {
+                  label: 'Email',
+                  target: 'mailto:armandwi.pangestu7@gmail.com',
+                  location: 'footer',
+                });
+              }}
             >
               <span>armandwi.pangestu7@gmail.com</span>
             </a>
@@ -46,6 +61,19 @@ const Footer = () => {
                 href="https://github.com/armandwipangestu"
                 target="_blank"
                 className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
+                onClick={() => {
+                  gaEvent({
+                    action: 'footer_clicked',
+                    category: 'navigation',
+                    label: 'Github',
+                  });
+
+                  phCapture('footer_clicked', {
+                    label: 'Github',
+                    target: 'https://github.com/armandwipangestu',
+                    location: 'footer',
+                  });
+                }}
               >
                 <FaGithub className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -58,6 +86,19 @@ const Footer = () => {
                 href="https://gitlab.com/armandwipangestu"
                 target="_blank"
                 className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
+                onClick={() => {
+                  gaEvent({
+                    action: 'footer_clicked',
+                    category: 'navigation',
+                    label: 'GitLab',
+                  });
+
+                  phCapture('footer_clicked', {
+                    label: 'GitLab',
+                    target: 'https://gitlab.com/armandwipangestu',
+                    location: 'footer',
+                  });
+                }}
               >
                 <FaGitlab className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -67,9 +108,22 @@ const Footer = () => {
 
               {/* Youtube */}
               <a
-                href="https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A"
+                href="https://youtube.com/@armandwipangestu"
                 target="_blank"
                 className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
+                onClick={() => {
+                  gaEvent({
+                    action: 'footer_clicked',
+                    category: 'navigation',
+                    label: 'Youtube',
+                  });
+
+                  phCapture('footer_clicked', {
+                    label: 'Youtube',
+                    target: 'https://youtube.com/@armandwipangestu',
+                    location: 'footer',
+                  });
+                }}
               >
                 <FaYoutube className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -79,9 +133,22 @@ const Footer = () => {
 
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/devvnnull/"
+                href="https://instagram.com/armandwi.pangestu"
                 target="_blank"
                 className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
+                onClick={() => {
+                  gaEvent({
+                    action: 'footer_clicked',
+                    category: 'navigation',
+                    label: 'Instagram',
+                  });
+
+                  phCapture('footer_clicked', {
+                    label: 'Instagram',
+                    target: 'https://instagram.com/armandwi.pangestu',
+                    location: 'footer',
+                  });
+                }}
               >
                 <FaInstagram className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -94,6 +161,19 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/arman-dwi-pangestu"
                 target="_blank"
                 className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
+                onClick={() => {
+                  gaEvent({
+                    action: 'footer_clicked',
+                    category: 'navigation',
+                    label: 'Linkedin',
+                  });
+
+                  phCapture('footer_clicked', {
+                    label: 'Linkedin',
+                    target: 'https://www.linkedin.com/in/arman-dwi-pangestu',
+                    location: 'footer',
+                  });
+                }}
               >
                 <FaLinkedin className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -118,11 +198,34 @@ const Footer = () => {
                             : "text-slate-500 dark:text-slate-400"
                         } hover:text-primary dark:hover:text-primary`}
                         href={menu.target}
+                        onClick={() => {
+                          gaEvent({
+                            action: 'footer_clicked',
+                            category: 'navigation',
+                            label: menu.title,
+                          });
+  
+                          phCapture('footer_clicked', {
+                            label: menu.title,
+                            target: menu.target,
+                            location: 'footer',
+                          });
+                        }}
                       >
                         {menu.title}
                       </Link>
                     </li>
                   ))}
+
+                  <li>
+                      <Link
+                        className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary`}
+                        href="https://cloud.umami.is/share/Gs19siHSi2c5YgAn"
+                        target="_blank"
+                      >
+                        Analytics
+                      </Link>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -141,6 +244,19 @@ const Footer = () => {
                             : "text-slate-500 dark:text-slate-400"
                         } hover:text-primary dark:hover:text-primary`}
                         href={tag.target}
+                        onClick={() => {
+                          gaEvent({
+                            action: 'footer_clicked',
+                            category: 'navigation',
+                            label: tag.title,
+                          });
+  
+                          phCapture('footer_clicked', {
+                            label: tag.title,
+                            target: tag.target,
+                            location: 'footer',
+                          });
+                        }}
                       >
                         {tag.title}
                       </a>
@@ -163,6 +279,19 @@ const Footer = () => {
             href="https://github.com/armandwipangestu/armandwipangestu.vercel.app"
             target="_blank"
             className="font-bold text-primary hover:text-primary/80"
+            onClick={() => {
+              gaEvent({
+                action: 'footer_clicked',
+                category: 'navigation',
+                label: 'Arman Dwi Pangestu',
+              });
+  
+              phCapture('footer_clicked', {
+                label: 'Arman Dwi Pangestu',
+                target: 'https://github.com/armandwipangestu/armandwipangestu.vercel.app',
+                location: 'footer',
+              });
+            }}
           >
             Arman Dwi Pangestu
           </a>

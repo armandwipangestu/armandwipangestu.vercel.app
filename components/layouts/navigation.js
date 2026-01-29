@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { menus } from "@/types/menu";
 import ArchiveBanner from "./ArchiveBanner";
+import { gaEvent } from "@/utilities/ga";
+import { phCapture } from "@/utilities/posthog";
 
 const Navigation = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -13,9 +15,25 @@ const Navigation = () => {
   const pathName = usePathname();
 
   const handleDarkMode = () => {
-    const currentTheme = !darkMode;
-    setDarkMode(currentTheme);
-    localStorage.setItem("dark-mode", currentTheme);
+    const nextTheme = !darkMode;
+
+    setDarkMode(nextTheme);
+    localStorage.setItem("dark-mode", nextTheme);
+
+    const themeName = nextTheme ? 'dark' : 'light';
+    const deviceType = isMobile ? 'mobile' : 'desktop';
+
+    gaEvent({
+      action: 'theme_toggled',
+      category: 'ui_preference',
+      label: themeName,
+    });
+
+    phCapture('theme_toggled', {
+      theme: themeName,
+      location: 'navbar',
+      device: deviceType,
+    });
   };
 
   const hamburgerToggle = () => {
@@ -163,6 +181,19 @@ const Navigation = () => {
                           : "text-accents-300 dark:text-slate-400"
                       }`}
                       key={index}
+                      onClick={() => {
+                        gaEvent({
+                          action: 'navigation_clicked',
+                          category: 'navigation',
+                          label: menu.title,
+                        });
+
+                        phCapture('navigation_clicked', {
+                          label: menu.title,
+                          target: menu.target,
+                          location: 'navbar',
+                        });
+                      }}
                     >
                       <li>{menu.title}</li>
                     </Link>

@@ -1,5 +1,25 @@
+import { gaEvent } from "@/utilities/ga";
+import { phCapture } from "@/utilities/posthog";
 import { marked } from "marked";
 import Link from "next/link";
+
+const handleTocClick = ({ text, depth, index, id }) => {
+  gaEvent({
+    action: "toc_click",
+    category: "blog_engagement",
+    label: text,
+    value: depth,
+  });
+
+  phCapture("toc_clicked", {
+    heading_text: text,
+    heading_depth: depth,
+    heading_index: index,
+    target_id: id,
+    location: "blog_toc",
+  });
+};
+
 
 export default function Toc({ content }) {
   const tokens = marked.lexer(content);
@@ -27,7 +47,16 @@ export default function Toc({ content }) {
                     return (
                       <li key={i} data-depth={heading.depth}>
                         <Link href={`#${id}`} legacyBehavior>
-                          <a>{heading.text}</a>
+                          <a
+                            onClick={() =>
+                              handleTocClick({
+                                text: heading.text,
+                                depth: heading.depth,
+                                index: i,
+                                id,
+                              })
+                            }
+                          >{heading.text}</a>
                         </Link>
                       </li>
                     );
@@ -36,7 +65,16 @@ export default function Toc({ content }) {
                     return (
                       <li key={i} data-depth={heading.depth} className="ml-4">
                         <Link href={`#${id}`} legacyBehavior>
-                          <a>{heading.text}</a>
+                          <a
+                            onClick={() =>
+                              handleTocClick({
+                                text: heading.text,
+                                depth: heading.depth,
+                                index: i,
+                                id,
+                              })
+                            }
+                          >{heading.text}</a>
                         </Link>
                       </li>
                     );
@@ -45,7 +83,16 @@ export default function Toc({ content }) {
                     return (
                       <li key={i} data-depth={heading.depth} className="ml-8">
                         <Link href={`#${id}`} legacyBehavior>
-                          <a>{heading.text}</a>
+                          <a
+                            onClick={() =>
+                              handleTocClick({
+                                text: heading.text,
+                                depth: heading.depth,
+                                index: i,
+                                id,
+                              })
+                            }
+                          >{heading.text}</a>
                         </Link>
                       </li>
                     );
@@ -54,7 +101,16 @@ export default function Toc({ content }) {
                     return (
                       <li key={i} data-depth={heading.depth} className="ml-12">
                         <Link href={`#${id}`} legacyBehavior>
-                          <a>{heading.text}</a>
+                          <a
+                            onClick={() =>
+                              handleTocClick({
+                                text: heading.text,
+                                depth: heading.depth,
+                                index: i,
+                                id,
+                              })
+                            }
+                          >{heading.text}</a>
                         </Link>
                       </li>
                     );
@@ -63,7 +119,16 @@ export default function Toc({ content }) {
                     return (
                       <li key={i} data-depth={heading.depth} className="ml-16">
                         <Link href={`#${id}`} legacyBehavior>
-                          <a>{heading.text}</a>
+                          <a
+                            onClick={() =>
+                              handleTocClick({
+                                text: heading.text,
+                                depth: heading.depth,
+                                index: i,
+                                id,
+                              })
+                            }
+                          >{heading.text}</a>
                         </Link>
                       </li>
                     );
@@ -72,7 +137,16 @@ export default function Toc({ content }) {
                     return (
                       <li key={i} data-depth={heading.depth} className="ml-20">
                         <Link href={`#${id}`} legacyBehavior>
-                          <a>{heading.text}</a>
+                          <a
+                            onClick={() =>
+                              handleTocClick({
+                                text: heading.text,
+                                depth: heading.depth,
+                                index: i,
+                                id,
+                              })
+                            }
+                          >{heading.text}</a>
                         </Link>
                       </li>
                     );

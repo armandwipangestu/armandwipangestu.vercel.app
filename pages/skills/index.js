@@ -59,6 +59,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { DiNodejs, DiNginx } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa6";
 import Image from "next/image";
+import { trackSkillHover } from "@/utilities/analytics";
 
 const SkillsPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -139,6 +140,7 @@ const SkillsPage = () => {
               <a
                 href="https://www.w3.org/html/"
                 target="_blank"
+                onMouseEnter={() => trackSkillHover('HTML5')}
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
               >
                 <SiHtml5 className="w-16 h-16" />
@@ -152,6 +154,7 @@ const SkillsPage = () => {
                 href="https://www.markdownguide.org/"
                 target="_blank"
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Markdown')}
               >
                 <SiMarkdown className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -164,6 +167,7 @@ const SkillsPage = () => {
                 href="https://www.w3schools.com/css/"
                 target="_blank"
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('CSS3')}
               >
                 <SiCss3 className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -176,6 +180,7 @@ const SkillsPage = () => {
                 href="https://getbootstrap.com/"
                 target="_blank"
                 className="group mx-4 max-w-[65px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Bootstrap')}
               >
                 <SiBootstrap className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -188,6 +193,7 @@ const SkillsPage = () => {
                 href="https://tailwindcss.com/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('TailwindCSS')}
               >
                 <SiTailwindcss className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -200,6 +206,7 @@ const SkillsPage = () => {
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                 target="_blank"
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('JavaScript')}
               >
                 <SiJavascript className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.9rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -212,6 +219,7 @@ const SkillsPage = () => {
                 href="https://www.typescriptlang.org"
                 target="_blank"
                 className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('TypeScript')}
               >
                 <SiTypescript className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.9rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -224,6 +232,7 @@ const SkillsPage = () => {
                 href="https://react.dev/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('React.js')}
               >
                 <SiReact className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -236,6 +245,7 @@ const SkillsPage = () => {
                 href="https://nodejs.org/en"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Node.js')}
               >
                 <FaNodeJs className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -248,6 +258,7 @@ const SkillsPage = () => {
                 href="https://expressjs.com/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Express.js')}
               >
                 <SiExpress className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -260,6 +271,7 @@ const SkillsPage = () => {
                 href="https://nextjs.org/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Next.js')}
               >
                 <TbBrandNextjs className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -272,6 +284,7 @@ const SkillsPage = () => {
                 href="https://www.php.net/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('PHP')}
               >
                 <SiPhp className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -284,6 +297,7 @@ const SkillsPage = () => {
                 href="https://laravel.com/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Laravel')}
               >
                 <SiLaravel className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -296,6 +310,7 @@ const SkillsPage = () => {
                 href="https://codeigniter.com/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('CodeIgniter')}
               >
                 <SiCodeigniter className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.8rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -308,6 +323,7 @@ const SkillsPage = () => {
                 href="https://jwt.io/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('JWT')}
               >
                 <SiJsonwebtokens className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[-0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -320,6 +336,7 @@ const SkillsPage = () => {
                 href="https://www.mysql.com/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('MySQL/MariaDB')}
               >
                 <SiMysql className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -332,6 +349,7 @@ const SkillsPage = () => {
                 href="https://www.mysql.com/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('PostgreSQL')}
               >
                 <SiPostgresql className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -344,6 +362,7 @@ const SkillsPage = () => {
                 href="https://firebase.google.com/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Firebase')}
               >
                 <SiFirebase className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -356,6 +375,7 @@ const SkillsPage = () => {
                 href="https://www.mongodb.com/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('MongoDB')}
               >
                 <SiMongodb className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -368,6 +388,7 @@ const SkillsPage = () => {
                 href="https://git-scm.com/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Git')}
               >
                 <SiGit className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -380,6 +401,7 @@ const SkillsPage = () => {
                 href="https://github.com"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('GitHub')}
               >
                 <SiGithub className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -392,6 +414,7 @@ const SkillsPage = () => {
                 href="https://github.com/features/actions"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('GitHub Actions')}
               >
                 <SiGithubactions className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -404,6 +427,7 @@ const SkillsPage = () => {
                 href="https://www.jenkins.io/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Jenkins')}
               >
                 <SiJenkins className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -416,6 +440,7 @@ const SkillsPage = () => {
                 href="https://gitlab.com"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('GitLab')}
               >
                 <SiGitlab className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -428,6 +453,7 @@ const SkillsPage = () => {
                 href="https://www.linux.org/"
                 target="_blank"
                 className="group mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Linux')}
               >
                 <SiLinux className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -440,6 +466,7 @@ const SkillsPage = () => {
                 href="https://www.gnu.org/software/bash/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('GNU Bash')}
               >
                 <SiGnubash className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -452,6 +479,7 @@ const SkillsPage = () => {
                 href="https://httpd.apache.org/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Apache')}
               >
                 <SiApache className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -464,6 +492,7 @@ const SkillsPage = () => {
                 href="https://www.nginx.com/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Nginx')}
               >
                 <DiNginx className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -476,6 +505,7 @@ const SkillsPage = () => {
                 href="https://www.docker.com/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Docker')}
               >
                 <SiDocker className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -488,6 +518,7 @@ const SkillsPage = () => {
                 href="https://kubernetes.io/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Kubernetes')}
               >
                 <SiKubernetes className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[-1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -500,6 +531,7 @@ const SkillsPage = () => {
                 href="https://cloud.google.com/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('GCP')}
               >
                 <SiGooglecloud className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -512,6 +544,7 @@ const SkillsPage = () => {
                 href="https://www.terraform.io/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Terraform')}
               >
                 <SiTerraform className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[-0.7rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -524,6 +557,7 @@ const SkillsPage = () => {
                 href="https://www.min.io"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('MinIO')}
               >
                 <SiMinio className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -536,6 +570,7 @@ const SkillsPage = () => {
                 href="https://ceph.io"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Ceph')}
               >
                 <SiCeph className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -548,6 +583,7 @@ const SkillsPage = () => {
                 href="https://hadoop.apache.org"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Apache Hadoop')}
               >
                 <SiApachehadoop className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -560,6 +596,7 @@ const SkillsPage = () => {
                 href="https://trino.io"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Trino')}
               >
                 <SiTrino className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -572,6 +609,7 @@ const SkillsPage = () => {
                 href="https://hive.apache.org"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Apache Hive')}
               >
                 <SiApachehive className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -584,6 +622,7 @@ const SkillsPage = () => {
                 href="https://parquet.apache.org"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Apache Parquet')}
               >
                 <SiApacheparquet className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -596,6 +635,7 @@ const SkillsPage = () => {
                 href="https://nifi.apache.org"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Apache NiFi')}
               >
                 <SiApachenifi className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -608,6 +648,7 @@ const SkillsPage = () => {
                 href="https://grafana.com"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Grafana')}
               >
                 <SiGrafana className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -620,6 +661,7 @@ const SkillsPage = () => {
                 href="https://prometheus.io"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Prometheus')}
               >
                 <SiPrometheus className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -632,6 +674,7 @@ const SkillsPage = () => {
                 href="https://thanos.io"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Thanos')}
               >
                 <SiThanos className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -644,6 +687,7 @@ const SkillsPage = () => {
                 href="https://www.proxmox.com"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Proxmox')}
               >
                 <SiProxmox className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -656,6 +700,7 @@ const SkillsPage = () => {
                 href="https://www.vmware.com"
                 target="_blank"
                 className="group mx-4 max-w-[140px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('VMware')}
               >
                 <SiVmware className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -668,6 +713,7 @@ const SkillsPage = () => {
                 href="https://cpanel.net/"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('cPanel')}
               >
                 <SiCpanel className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -680,6 +726,7 @@ const SkillsPage = () => {
                 href="https://www.powerdns.com"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('PowerDNS')}
               >
                 <Image
                   src="./skills/powerdns.svg"
@@ -697,6 +744,7 @@ const SkillsPage = () => {
                 href="https://mikrotik.com"
                 target="_blank"
                 className="group mx-4 max-w-[150px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Mikrotik')}
               >
                 <SiMikrotik className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -709,6 +757,7 @@ const SkillsPage = () => {
                 href="https://www.cisco.com"
                 target="_blank"
                 className="group mx-4 max-w-[150px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Cisco')}
               >
                 <SiCisco className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[-0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -721,6 +770,7 @@ const SkillsPage = () => {
                 href="https://www.ruijienetworks.com"
                 target="_blank"
                 className="group mx-4 max-w-[110px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Ruijie')}
               >
                 <Image
                   src="./skills/ruijie.png"
@@ -738,6 +788,7 @@ const SkillsPage = () => {
                 href="https://www.ui.com"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Ubiquiti')}
               >
                 <SiUbiquiti className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[1.6rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -750,6 +801,7 @@ const SkillsPage = () => {
                 href="https://www.figma.com"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Figma')}
               >
                 <SiFigma className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -762,6 +814,7 @@ const SkillsPage = () => {
                 href="https://www.postman.com"
                 target="_blank"
                 className="group mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Postman')}
               >
                 <SiPostman className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.4rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -774,6 +827,7 @@ const SkillsPage = () => {
                 href="https://www.arduino.cc"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Arduino Uno')}
               >
                 <SiArduino className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.3rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -786,6 +840,7 @@ const SkillsPage = () => {
                 href="https://www.notion.so/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Notion')}
               >
                 <SiNotion className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -798,6 +853,7 @@ const SkillsPage = () => {
                 href="https://www.trello.com/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Trello')}
               >
                 <SiTrello className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] right-[0.2rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -810,6 +866,7 @@ const SkillsPage = () => {
                 href="https://colab.research.google.com/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Google Colab')}
               >
                 <SiGooglecolab className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -822,6 +879,7 @@ const SkillsPage = () => {
                 href="https://jupyter.org/"
                 target="_blank"
                 className="group mx-4 max-w-[70px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
+                onMouseEnter={() => trackSkillHover('Jupyter Notebook')}
               >
                 <SiJupyter className="w-16 h-16" />
                 <span className="icon-skill absolute top-[5.5rem] -right-[0.1rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">

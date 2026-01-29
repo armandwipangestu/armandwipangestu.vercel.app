@@ -4,6 +4,15 @@ import { useEffect, useState } from "react";
 export const dynamic = "force-dynamic";
 export const ssr = false;
 
+const giscusConfig = {
+  repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
+  repoId: process.env.NEXT_PUBLIC_GISCUS_REPO_ID,
+  category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
+  categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
+  mapping: process.env.NEXT_PUBLIC_GISCUS_MAPPING ?? "pathname",
+  lang: process.env.NEXT_PUBLIC_GISCUS_LANG ?? "en",
+};
+
 export default function GiscusLoader() {
   const [theme, setTheme] = useState(null);
   const [ready, setReady] = useState(false);
@@ -39,13 +48,13 @@ export default function GiscusLoader() {
       script.async = true;
       script.crossOrigin = "anonymous";
 
-      script.setAttribute("data-repo", "armandwipangestu/giscus-comments");
-      script.setAttribute("data-repo-id", "R_kgDOQm7OKQ");
-      script.setAttribute("data-category", "Blog-Comments");
-      script.setAttribute("data-category-id", "DIC_kwDOQm7OKc4Czqkl");
-      script.setAttribute("data-mapping", "pathname");
+      script.setAttribute("data-repo", giscusConfig.repo);
+      script.setAttribute("data-repo-id", giscusConfig.repoId);
+      script.setAttribute("data-category", giscusConfig.category);
+      script.setAttribute("data-category-id", giscusConfig.categoryId);
+      script.setAttribute("data-mapping", giscusConfig.mapping);
       script.setAttribute("data-theme", theme);
-      script.setAttribute("data-lang", "en");
+      script.setAttribute("data-lang", giscusConfig.lang);
 
       document.getElementById("giscus-thread").appendChild(script);
     } else {

@@ -15,6 +15,9 @@ import { useMemo } from "react";
 import Metadata from "@/components/utilities/metadata";
 import { sortPostsByDate, formatDate } from "@/utilities/sortPostsByDate";
 import GiscusLoader from "@/components/giscus/giscus";
+import { gaEvent } from "@/utilities/ga";
+import { phCapture } from "@/utilities/posthog";
+import { ANALYTICS_ENABLED } from "@/utilities/env";
 
 const DynamicSinglePagePost = ({
   frontmatter: {
@@ -31,6 +34,51 @@ const DynamicSinglePagePost = ({
   content,
   posts,
 }) => {
+  useEffect(() => {
+    if (!ANALYTICS_ENABLED) return;
+    if (typeof window === "undefined") return;
+
+    const thresholds = [25, 50, 75, 100];
+    const reached = new Set();
+
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const clientHeight = window.innerHeight;
+
+      const scrollPercent = Math.round(
+        ((scrollTop + clientHeight) / scrollHeight) * 100
+      );
+
+      thresholds.forEach((threshold) => {
+        if (scrollPercent >= threshold && !reached.has(threshold)) {
+          reached.add(threshold);
+
+          gaEvent({
+            action: "scroll_depth",
+            category: "blog_engagement",
+            label: `${threshold}%`,
+            value: threshold,
+          });
+
+          phCapture("scroll_depth_reached", {
+            percentage: threshold,
+            post_title: title,
+            post_slug: slug,
+            content_type: "blog_post",
+          });
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [title, slug]);
+
   useEffect(() => {
     const relativeTable = () => {
       const tables = document.querySelectorAll("table");
@@ -127,6 +175,13 @@ const DynamicSinglePagePost = ({
         languageSpan.innerText = languageName.split("-")[1]?.split(" ")[0]
           ? languageName.split("-")[1]?.split(" ")[0]
           : "";
+        
+        const language =
+          languageName?.split("-")[1]?.split(" ")[0] || "unknown";
+
+        const codeText = codeBlock.innerText.trim();
+        const codeLength = codeText.length;
+
         languageDiv.appendChild(languageSpan);
 
         innerDiv.appendChild(languageDiv);
@@ -153,7 +208,6 @@ const DynamicSinglePagePost = ({
 
         copyDiv.addEventListener("click", () => {
           if (navigator.clipboard && window.isSecureContext) {
-            const codeText = codeBlock.innerText.trim();
             navigator.clipboard.writeText(codeText);
           } else {
             const textArea = document.createElement("textarea");
@@ -181,6 +235,19 @@ const DynamicSinglePagePost = ({
             // Menggunakan Text
             copyDiv.innerText = "Copy";
           }, 2000);
+
+          gaEvent({
+            action: "copy_code",
+            category: "blog_engagement",
+            label: language,
+            value: codeLength,
+          });
+
+          phCapture("code_copied", {
+            language,
+            code_length: codeLength,
+            location: "blog_post",
+          });
         });
 
         const newPre = document.createElement("pre");
@@ -280,6 +347,19 @@ const DynamicSinglePagePost = ({
                         <Link
                           className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs tracking-tight font-medium transition-colors focus:outline-none border-cyan-500/40 bg-cyan-500/10 text-cyan-500 hover:bg-cyan-500/20"
                           href={`/blog/tag/${tag.toLowerCase()}`}
+                          onClick={() => {
+                            gaEvent({
+                              action: 'blog_clicked',
+                              category: 'navigation',
+                              label: tag.toLowerCase(),
+                            });
+
+                            phCapture('blog_clicked', {
+                              label: tag.toLowerCase(),
+                              target: `/blog/tag/${tag.toLowerCase()}`,
+                              location: 'blog',
+                            });
+                          }}
                         >
                           {tag}
                         </Link>
