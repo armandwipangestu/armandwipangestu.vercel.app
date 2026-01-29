@@ -11,6 +11,8 @@ import React, { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 import { GoCopy, GoCheck } from "react-icons/go";
 import Image from "next/image";
+import { gaEvent } from "@/utilities/ga";
+import { phCapture } from "@/utilities/posthog";
 
 const markdown = `
   \`\`\`jsx
@@ -37,6 +39,51 @@ const BlogPage = ({ posts }) => {
   const [languageText, setLanguageText] = useState("");
   const [isHoveredIndex, setIsHoveredIndex] = useState(null);
 
+  const handleCopy = () => {
+    const codeBlock = document.querySelector("pre code");
+    if (!codeBlock) return;
+
+    const language =
+      codeBlock.getAttribute("hljs") ||
+      codeBlock.className ||
+      "";
+
+    const lang =
+      language.includes("-")
+        ? language.split("-")[1]?.split(" ")[0]
+        : "";
+
+    // ==== COPY LOGIC ====
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(codeBlock.innerText.trim());
+    } else {
+      const textArea = document.createElement("textarea");
+      textArea.value = codeBlock.innerText;
+      textArea.style.position = "absolute";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      textArea.remove();
+    }
+
+    setLanguageText(lang);
+    setCopyButtonText("Copied!");
+    setTimeout(() => setCopyButtonText("Copy"), 2000);
+
+    gaEvent({
+      action: "copy_code",
+      category: "blog_engagement",
+      label: lang || "unknown_language",
+    });
+
+    phCapture("code_copied", {
+      language: lang,
+      location: "blog_hero_codeblock",
+      page: "blog",
+    });
+  };
+
   const copyButton = () => {
     const codeBlock = document.querySelector("pre code");
     const copyCode = document.querySelector("#copy-code");
@@ -46,36 +93,6 @@ const BlogPage = ({ posts }) => {
         ? language.split("-")[1].split(" ")[0]
         : ""
     );
-
-    copyCode.addEventListener("click", () => {
-      if (navigator.clipboard && window.isSecureContext) {
-        const codeText = codeBlock.innerText.trim();
-        navigator.clipboard.writeText(codeText);
-      } else {
-        const textArea = document.createElement("textarea");
-        textArea.value = codeBlock.innerText;
-
-        textArea.style.position = "absolute";
-        textArea.style.left = "-999999px";
-
-        document.body.prepend(textArea);
-        textArea.select();
-
-        try {
-          document.execCommand("copy");
-        } catch (error) {
-          console.error(error);
-        } finally {
-          textArea.remove();
-        }
-      }
-
-      // Update the button text and set a timer to reset it
-      setCopyButtonText("Copied!");
-      setTimeout(() => {
-        setCopyButtonText("Copy");
-      }, 2000);
-    });
   };
 
   useEffect(() => {
@@ -125,6 +142,19 @@ const BlogPage = ({ posts }) => {
               <a
                 href="#artikel-terbaru"
                 className="rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
+                onClick={() => {
+                  gaEvent({
+                    action: 'blog_clicked',
+                    category: 'navigation',
+                    label: 'Baca Artikel',
+                  });
+
+                  phCapture('blog_clicked', {
+                    label: 'Baca Artikel',
+                    target: '#artikel-terbaru',
+                    location: 'blog',
+                  });
+                }}
               >
                 Baca Artikel
               </a>
@@ -144,6 +174,7 @@ const BlogPage = ({ posts }) => {
                   <div
                     className="group cursor-pointer text-center text-sm font-semibold text-white"
                     id="copy-code"
+                    onClick={handleCopy}
                   >
                     {copyButtonText === "Copy" ? (
                       <>
@@ -187,7 +218,22 @@ const BlogPage = ({ posts }) => {
                   <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24">
                     {posts.slice(0, 6).map((post, index) => (
                       <div key={index}>
-                        <Link href={`/blog/posts/${post.slug}`}>
+                        <Link 
+                          href={`/blog/posts/${post.slug}`} 
+                          onClick={() => {
+                            gaEvent({
+                              action: 'blog_clicked',
+                              category: 'navigation',
+                              label: post.frontmatter.title,
+                            });
+
+                            phCapture('blog_clicked', {
+                              label: post.frontmatter.title,
+                              target: `/blog/posts/${post.slug}`,
+                              location: 'blog',
+                            });
+                          }}
+                        >
                           <div
                             data-radix-aspect-ratio-wrapper=""
                             style={{
@@ -259,6 +305,19 @@ const BlogPage = ({ posts }) => {
                     <Link
                       href="/blog/posts"
                       className="rounded-full bg-dark px-7 py-2.5 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-white dark:text-dark md:px-8 md:py-3"
+                      onClick={() => {
+                        gaEvent({
+                          action: 'blog_clicked',
+                          category: 'navigation',
+                          label: 'Lihat Lebih Banyak',
+                        });
+
+                        phCapture('blog_clicked', {
+                          label: 'Lihat Lebih Banyak',
+                          target: '/blog/posts',
+                          location: 'blog',
+                        });
+                      }}
                     >
                       Lihat Lebih Banyak
                     </Link>

@@ -31,6 +31,79 @@ const ExperiencePage = () => {
                   <div className="flex-start flex items-center pt-3">
                     <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-primary"></div>
                     <p className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
+                      November 2025 - Sekarang
+                    </p>
+                  </div>
+                  <div className="mb-6 ml-4 mt-2">
+                    <h4 className="tex-dark mb-1.5 text-xl font-semibold dark:text-white">
+                      Self Employed
+                    </h4>
+                    <p className="mb-3 text-neutral-500 dark:text-neutral-300">
+                      Freelance Cloud & Software Engineer - Remote
+                    </p>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Memberikan layanan konsultasi kepada individu dan perusahaan 
+                        di seluruh Asia dalam membangun, mengembangkan, dan mengelola 
+                        aplikasi web dan berbasis cloud.
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Mengelola implementasi end-to-end untuk berbagai stack teknologi, 
+                        termasuk Node.js, PHP, Golang, Java, Python, dan framework modern 
+                        seperti Express.js, NestJS, React.js, Next.js, Laravel, FastAPI, 
+                        Django, dan Flask.
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Merancang dan mengimplementasikan arsitektur cloud di AWS 
+                        dan Google Cloud Platform, mencakup solusi IaaS dan PaaS/serverless.
+                      </p>
+                    </div>
+                    
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Mengonfigurasi layanan cloud inti termasuk jaringan VPC, IAM, 
+                        container registry (ECR, GCR, GAR), compute service (ECS, Cloud Run), 
+                        storage solution (S3, GCS), database (RDS, Cloud SQL), dan 
+                        konfigurasi ketersediaan tinggi dengan deployment Multi-AZ dan 
+                        Application Load Balancers (Layer 7).
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Menyediakan solusi DevOps yang berfokus pada containerization, 
+                        pipeline CI/CD, dan otomatisasi deployment, membantu klien 
+                        meningkatkan keandalan, skalabilitas, dan kecepatan pengiriman.
+                      </p>
+                    </div>
+
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Selain itu, mendukung klien melalui dokumentasi teknis, debugging, 
+                        optimasi kinerja, dan konsultasi infrastruktur, memastikan sistem 
+                        yang dapat dipelihara dan siap production.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div className="flex-start flex items-center pt-3">
+                    <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-primary"></div>
+                    <p className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
                       November 2024 - November 2025
                     </p>
                   </div>
@@ -69,6 +142,18 @@ const ExperiencePage = () => {
                         Membuat CI/CD Pipeline untuk kebutuhan automation
                         deployment di GitLab menggunakan GitLab Runner dengan
                         output containerized dan disimpan di GitLab Registry.
+                      </p>
+                    </div>
+                    
+                    <div className="flex-start flex items-center">
+                      <div className="mr-3 h-[8px] w-[8px] rounded-full bg-dark dark:bg-white"></div>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-300">
+                        Memimpin transisi dari proses deployment manual
+                        (workflow berbasis SCP/SFTP dan penandaan manual) 
+                        ke pipeline pengiriman modern dengan memperkenalkan 
+                        otomatisasi CI/CD, Semantic Versioning, dan 
+                        Conventional Commits, yang secara signifikan meningkatkan
+                        konsistensi rilis dan keandalan deployment
                       </p>
                     </div>
 

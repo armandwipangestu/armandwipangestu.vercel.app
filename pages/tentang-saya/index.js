@@ -1,4 +1,6 @@
 import Metadata from "@/components/utilities/metadata";
+import { gaEvent } from "@/utilities/ga";
+import { phCapture } from "@/utilities/posthog";
 import {
   FaGithub,
   FaGitlab,
@@ -79,6 +81,19 @@ const AboutPage = () => {
                   href="https://github.com/armandwipangestu"
                   target="_blank"
                   className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  onClick={() => {
+                    gaEvent({
+                      action: 'about_me_clicked',
+                      category: 'navigation',
+                      label: 'Github',
+                    });
+  
+                    phCapture('about_me_clicked', {
+                      label: 'Github',
+                      target: 'https://github.com/armandwipangestu',
+                      location: 'about_me',
+                    });
+                  }}
                 >
                   <FaGithub className="h-6 w-6" />
                   <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -91,6 +106,19 @@ const AboutPage = () => {
                   href="https://gitlab.com/armandwipangestu"
                   target="_blank"
                   className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  onClick={() => {
+                    gaEvent({
+                      action: 'about_me_clicked',
+                      category: 'navigation',
+                      label: 'GitLab',
+                    });
+  
+                    phCapture('about_me_clicked', {
+                      label: 'GitLab',
+                      target: 'https://gitlab.com/armandwipangestu',
+                      location: 'about_me',
+                    });
+                  }}
                 >
                   <FaGitlab className="h-6 w-6" />
                   <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -100,9 +128,22 @@ const AboutPage = () => {
 
                 {/* Youtube */}
                 <a
-                  href="https://www.youtube.com/channel/UCqo9Q_EpEJWGJLB2xmm_g3A"
+                  href="https://youtube.com/@armandwipangestu"
                   target="_blank"
                   className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  onClick={() => {
+                    gaEvent({
+                      action: 'about_me_clicked',
+                      category: 'navigation',
+                      label: 'Youtube',
+                    });
+  
+                    phCapture('about_me_clicked', {
+                      label: 'Youtube',
+                      target: 'https://youtube.com/@armandwipangestu',
+                      location: 'about_me',
+                    });
+                  }}
                 >
                   <FaYoutube className="h-6 w-6" />
                   <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -112,9 +153,22 @@ const AboutPage = () => {
 
                 {/* Instagram */}
                 <a
-                  href="https://www.instagram.com/devvnnull/"
+                  href="https://instagram.com/armandwi.pangestu"
                   target="_blank"
                   className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  onClick={() => {
+                    gaEvent({
+                      action: 'about_me_clicked',
+                      category: 'navigation',
+                      label: 'Instagram',
+                    });
+  
+                    phCapture('about_me_clicked', {
+                      label: 'Instagram',
+                      target: 'https://instagram.com/armandwi.pangestu',
+                      location: 'about_me',
+                    });
+                  }}
                 >
                   <FaInstagram className="h-6 w-6" />
                   <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
@@ -127,6 +181,19 @@ const AboutPage = () => {
                   href="https://www.linkedin.com/in/arman-dwi-pangestu"
                   target="_blank"
                   className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                  onClick={() => {
+                    gaEvent({
+                      action: 'about_me_clicked',
+                      category: 'navigation',
+                      label: 'LinkedIn',
+                    });
+  
+                    phCapture('about_me_clicked', {
+                      label: 'LinkedIn',
+                      target: 'https://www.linkedin.com/in/arman-dwi-pangestu',
+                      location: 'about_me',
+                    });
+                  }}
                 >
                   <FaLinkedin className="h-6 w-6" />
                   <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">

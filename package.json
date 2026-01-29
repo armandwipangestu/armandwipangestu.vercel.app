@@ -18,6 +18,7 @@
     "highlight.js": "^11.9.0",
     "marked": "4.2.5",
     "next": "13.5.6",
+    "posthog-js": "^1.336.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",

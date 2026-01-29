@@ -3,6 +3,8 @@ import Link from "next/link";
 import { formatDate } from "@/utilities/sortPostsByDate";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { gaEvent } from "@/utilities/ga";
+import { phCapture } from "@/utilities/posthog";
 
 const ArticleLayout = ({ posts, tag }) => {
   const [mainCard, setMainCard] = useState(posts[0]);
@@ -39,7 +41,22 @@ const ArticleLayout = ({ posts, tag }) => {
                 <div style={{ opacity: 1, transform: "none" }}>
                   <section>
                     <div className="grid gap-y-6 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24">
-                      <Link href={`/blog/posts/${mainCard?.slug}`}>
+                      <Link 
+                        href={`/blog/posts/${mainCard?.slug}`}
+                        onClick={() => {
+                          gaEvent({
+                            action: 'blog_clicked',
+                            category: 'navigation',
+                            label: mainCard?.frontmatter.title,
+                          });
+
+                          phCapture('blog_clicked', {
+                            label: mainCard?.frontmatter.title,
+                            target: `/blog/posts/${mainCard?.slug}`,
+                            location: 'blog',
+                          });
+                        }}
+                      >
                         <div
                           data-radix-aspect-ratio-wrapper=""
                           style={{
@@ -74,6 +91,19 @@ const ArticleLayout = ({ posts, tag }) => {
                           <Link
                             className="text-lg font-medium"
                             href={`/blog/posts/${mainCard?.slug}`}
+                            onClick={() => {
+                              gaEvent({
+                                action: 'blog_clicked',
+                                category: 'navigation',
+                                label: mainCard?.frontmatter.title,
+                              });
+
+                              phCapture('blog_clicked', {
+                                label: mainCard?.frontmatter.title,
+                                target: `/blog/posts/${mainCard?.slug}`,
+                                location: 'blog',
+                              });
+                            }}
                           >
                             <span
                               className={`hover:text-primary transition duration-300 ease-in-out ${
@@ -93,6 +123,19 @@ const ArticleLayout = ({ posts, tag }) => {
                           <div className="flex items-center gap-x-1">
                             <Link
                               href={`/blog/tag/${mainCard?.frontmatter.tag.toLowerCase()}`}
+                              onClick={() => {
+                                gaEvent({
+                                  action: 'blog_clicked',
+                                  category: 'navigation',
+                                  label: mainCard?.frontmatter.tag.toLowerCase(),
+                                });
+
+                                phCapture('blog_clicked', {
+                                  label: mainCard?.frontmatter.tag.toLowerCase(),
+                                  target: `/blog/tag/${mainCard?.frontmatter.tag.toLowerCase()}`,
+                                  location: 'blog',
+                                });
+                              }}
                             >
                               <div className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
                                 {mainCard?.frontmatter.tag}
@@ -169,6 +212,19 @@ const ArticleLayout = ({ posts, tag }) => {
                       <Link
                         className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none"
                         href={`/blog/tag/${mainCard?.frontmatter.tag.toLowerCase()}`}
+                        onClick={() => {
+                          gaEvent({
+                            action: 'blog_clicked',
+                            category: 'navigation',
+                            label: mainCard?.frontmatter.tag.toLowerCase(),
+                          });
+
+                          phCapture('blog_clicked', {
+                            label: mainCard?.frontmatter.tag.toLowerCase(),
+                            target: `/blog/tag/${mainCard?.frontmatter.tag.toLowerCase()}`,
+                            location: 'blog',
+                          });
+                        }}
                       >
                         {mainCard?.frontmatter.tag}
                       </Link>
@@ -182,6 +238,19 @@ const ArticleLayout = ({ posts, tag }) => {
                         isHovered ? "opacity-80 shadow-lg" : ""
                       }`}
                       href={`/blog/posts/${mainCard?.slug}`}
+                      onClick={() => {
+                        gaEvent({
+                          action: 'blog_clicked',
+                          category: 'navigation',
+                          label: mainCard?.frontmatter.title,
+                        });
+
+                        phCapture('blog_clicked', {
+                          label: mainCard?.frontmatter.title,
+                          target: `/blog/posts/${mainCard?.slug}`,
+                          location: 'blog',
+                        });
+                      }}
                     >
                       Baca selengkapnya
                     </Link>
@@ -214,7 +283,22 @@ const ArticleLayout = ({ posts, tag }) => {
                         inset: "0px",
                       }}
                     >
-                      <Link href={`/blog/posts/${mainCard?.slug}`}>
+                      <Link 
+                        href={`/blog/posts/${mainCard?.slug}`}
+                        onClick={() => {
+                          gaEvent({
+                            action: 'blog_clicked',
+                            category: 'navigation',
+                            label: mainCard?.frontmatter.title,
+                          });
+
+                          phCapture('blog_clicked', {
+                            label: mainCard?.frontmatter.title,
+                            target: `/blog/posts/${mainCard?.slug}`,
+                            location: 'blog',
+                          });
+                        }}
+                      >
                         <Image
                           alt="Progressive Web Apps"
                           className={`h-full w-full object-cover object-center lg:rounded-md transition duration-300 ease-in-out hover:scale-110 ${
@@ -245,7 +329,22 @@ const ArticleLayout = ({ posts, tag }) => {
                   <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24">
                     {cards.map((card, index) => (
                       <div key={index}>
-                        <Link href={`/blog/posts/${card.slug}`}>
+                        <Link 
+                          href={`/blog/posts/${card.slug}`}
+                          onClick={() => {
+                            gaEvent({
+                              action: 'blog_clicked',
+                              category: 'navigation',
+                              label: card?.frontmatter.title,
+                            });
+
+                            phCapture('blog_clicked', {
+                              label: card?.frontmatter.title,
+                              target: `/blog/posts/${card?.slug}`,
+                              location: 'blog',
+                            });
+                          }}
+                        >
                           <div
                             data-radix-aspect-ratio-wrapper=""
                             style={{
@@ -280,6 +379,19 @@ const ArticleLayout = ({ posts, tag }) => {
                             <Link
                               className="text-lg font-medium"
                               href={`/blog/posts/${card.slug}`}
+                              onClick={() => {
+                                gaEvent({
+                                  action: 'blog_clicked',
+                                  category: 'navigation',
+                                  label: card?.frontmatter.title,
+                                });
+
+                                phCapture('blog_clicked', {
+                                  label: card?.frontmatter.title,
+                                  target: `/blog/posts/${card?.slug}`,
+                                  location: 'blog',
+                                });
+                              }}
                             >
                               <span
                                 onMouseEnter={() => setIsHoveredIndex(index)}
@@ -299,6 +411,19 @@ const ArticleLayout = ({ posts, tag }) => {
                             <div className="flex items-center gap-x-1">
                               <Link
                                 href={`/blog/tag/${card.frontmatter.tag.toLowerCase()}`}
+                                onClick={() => {
+                                  gaEvent({
+                                    action: 'blog_clicked',
+                                    category: 'navigation',
+                                    label: card.frontmatter.tag.toLowerCase(),
+                                  });
+
+                                  phCapture('blog_clicked', {
+                                    label: card.frontmatter.tag.toLowerCase(),
+                                    target: `/blog/tag/${card.frontmatter.tag.toLowerCase()}`,
+                                    location: 'blog',
+                                  });
+                                }}
                               >
                                 <div className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none">
                                   {card.frontmatter.tag}
