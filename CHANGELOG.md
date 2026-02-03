@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.3.0...v1.3.1) (2026-02-03)
+
+
+### Bug Fixes
+
+* typo url 'apliaksi' ([abdb169](https://github.com/armandwipangestu/armandwipangestu.vercel.app/commit/abdb169f45ccdf88699adea8518de90016445e5a))
+
 # [1.3.0](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.2.0...v1.3.0) (2026-02-03)
 
 
