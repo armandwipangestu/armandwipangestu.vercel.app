@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.3.1...v1.3.2) (2026-02-03)
+
+
+### Bug Fixes
+
+* update mapping legacy slug ([ae10238](https://github.com/armandwipangestu/armandwipangestu.vercel.app/commit/ae10238b9a0a881e5fc1cfbe2b788e57b7e8c814))
+
 ## [1.3.1](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.3.0...v1.3.1) (2026-02-03)
 
 
