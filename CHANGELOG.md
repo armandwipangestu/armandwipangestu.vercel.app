@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.2.0...v1.3.0) (2026-02-03)
+
+
+### Features
+
+* add enable redirect to new website ([a3cb148](https://github.com/armandwipangestu/armandwipangestu.vercel.app/commit/a3cb148021e0b8b9757ede365b08641b4355c936))
+
 # [1.2.0](https://github.com/armandwipangestu/armandwipangestu.vercel.app/compare/v1.1.0...v1.2.0) (2026-01-29)
 
 
